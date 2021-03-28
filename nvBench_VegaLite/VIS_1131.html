@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1131</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1130.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1132.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1131</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of professors who is in office DRE 102 hired in each weekday with a bar chart.</p></li><li><p>How many professors whose office is located in DRE 102 are hired in each weekday? Return a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT EMP_HIREDATE , COUNT(EMP_HIREDATE) FROM employee AS T1 JOIN professor AS T2 ON T1.emp_num = T2.emp_num WHERE T2.prof_office = 'DRE 102' GROUP BY EMP_LNAME BIN EMP_HIREDATE BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>551</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Stacked Bar</p><p><b>DB: </b>college_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: employee</h4><table><tr><th>EMP_NUM</th><th>EMP_LNAME</th><th>EMP_FNAME</th><th>EMP_INITIAL</th><th>EMP_JOBCODE</th><th>EMP_HIREDATE</th><th>EMP_DOB</th></tr><tr><td>100</td><td>Worley</td><td>James</td><td>F</td><td>CUST</td><td>1978-2-23</td><td>1950-6-12</td></tr><tr><td>101</td><td>Ramso</td><td>Henry</td><td>B</td><td>CUST</td><td>1994-11-15</td><td>1961-11-2</td></tr><tr><td>102</td><td>Edwards</td><td>Rosemary</td><td>D</td><td>TECH</td><td>1990-7-23</td><td>1953-7-3</td></tr><tr><td>103</td><td>Donelly</td><td>Ronald</td><td>O</td><td>PROF</td><td>1987-7-1</td><td>1952-10-2</td></tr><tr><td>104</td><td>Yukon</td><td>Preston</td><td>D</td><td>PROF</td><td>1992-5-1</td><td>1948-2-23</td></tr><tr><td>105</td><td>Heffington</td><td>Arnelle</td><td>B</td><td>PROF</td><td>1991-7-1</td><td>1950-11-2</td></tr><tr><td>106</td><td>Washington</td><td>Ross</td><td>E</td><td>PROF</td><td>1976-8-1</td><td>1941-3-4</td></tr><tr><td>108</td><td>Robertson</td><td>Elaine</td><td>W</td><td>TECH</td><td>1983-10-18</td><td>1961-6-20</td></tr><tr><td>110</td><td>Thieu</td><td>Van</td><td>S</td><td>PROF</td><td>1989-8-1</td><td>1951-8-12</td></tr><tr><td>114</td><td>Graztevski</td><td>Gerald</td><td>B</td><td>PROF</td><td>1978-8-1</td><td>1939-3-18</td></tr><tr><td>122</td><td>Wilson</td><td>Todd</td><td>H</td><td>CUST</td><td>1990-11-6</td><td>1966-10-19</td></tr><tr><td>123</td><td>Jones</td><td>Suzanne</td><td>B</td><td>TECH</td><td>1994-1-5</td><td>1967-12-30</td></tr><tr><td>124</td><td>Smith</td><td>Elsa</td><td>K</td><td>CLRK</td><td>1982-12-16</td><td>1943-9-13</td></tr><tr><td>126</td><td>Ardano</td><td>James</td><td>G</td><td>CLRK</td><td>1994-10-1</td><td>1970-3-12</td></tr><tr><td>155</td><td>Ritula</td><td>Annelise</td><td></td><td>PROF</td><td>1990-8-1</td><td>1957-5-24</td></tr><tr><td>160</td><td>Smith</td><td>Robert</td><td>T</td><td>PROF</td><td>1992-8-1</td><td>1955-6-19</td></tr><tr><td>161</td><td>Watson</td><td>George</td><td>F</td><td>CUST</td><td>1994-11-1</td><td>1962-10-2</td></tr><tr><td>162</td><td>Rob</td><td>Peter</td><td></td><td>PROF</td><td>1981-8-1</td><td>1940-6-20</td></tr><tr><td>165</td><td>Williamson</td><td>Kathryn</td><td>A</td><td>CLRK</td><td>1992-6-15</td><td>1968-11-17</td></tr><tr><td>166</td><td>Herndon</td><td>Jill</td><td>M</td><td>TECH</td><td>1990-8-18</td><td>1965-8-29</td></tr><tr><td>173</td><td>Teng</td><td>Weston</td><td>J</td><td>TECH</td><td>1980-7-15</td><td>1951-11-17</td></tr><tr><td>191</td><td>Dexter</td><td>Willa</td><td>N</td><td>PROF</td><td>1984-8-1</td><td>1953-5-17</td></tr><tr><td>195</td><td>Williams</td><td>Herman</td><td>H</td><td>PROF</td><td>1988-8-1</td><td>1955-11-19</td></tr><tr><td>209</td><td>Smith</td><td>Melanie</td><td>K</td><td>PROF</td><td>1983-8-1</td><td>1946-5-24</td></tr><tr><td>228</td><td>Coronel</td><td>Carlos</td><td>M</td><td>PROF</td><td>1988-8-1</td><td>1949-5-16</td></tr><tr><td>231</td><td>Shebert</td><td>Rebecca</td><td>A</td><td>CUST</td><td>1994-2-21</td><td>1963-2-27</td></tr><tr><td>297</td><td>Jones</td><td>Hermine</td><td></td><td>PROF</td><td>1985-1-1</td><td>1950-7-4</td></tr><tr><td>299</td><td>Stoddard</td><td>Doreen</td><td>L</td><td>PROF</td><td>1994-8-1</td><td>1960-4-25</td></tr><tr><td>301</td><td>Osaki</td><td>Ismael</td><td>K</td><td>PROF</td><td>1989-8-1</td><td>1952-5-25</td></tr><tr><td>333</td><td>Jordan</td><td>Julian</td><td>H</td><td>TECH</td><td>1991-4-23</td><td>1968-7-16</td></tr><tr><td>335</td><td>Okomoto</td><td>Ronald</td><td>F</td><td>PROF</td><td>1975-8-1</td><td>1944-3-3</td></tr><tr><td>342</td><td>Smith</td><td>Robert</td><td>A</td><td>PROF</td><td>1978-8-1</td><td>1937-12-30</td></tr><tr><td>387</td><td>Smithson</td><td>George</td><td>D</td><td>PROF</td><td>1982-8-1</td><td>1948-10-1</td></tr><tr><td>401</td><td>Blalock</td><td>James</td><td>G</td><td>PROF</td><td>1981-8-1</td><td>1945-3-15</td></tr><tr><td>412</td><td>Smith</td><td>Robert</td><td>E</td><td>CUST</td><td>1985-6-24</td><td>1963-9-25</td></tr><tr><td>425</td><td>Matler</td><td>Ralph</td><td>F</td><td>PROF</td><td>1995-8-1</td><td>1973-12-2</td></tr><tr><td>435</td><td>Doornberg</td><td>Anne</td><td>D</td><td>PROF</td><td>1992-8-1</td><td>1963-10-2</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Wed', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Thur', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Fri', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Sat', 'y_data': 1, 'classify': 'Smith'}, {'x_data': 'Sun', 'y_data': 0, 'classify': 'Smith'}, {'x_data': 'Mon', 'y_data': 0, 'classify': 'Yukon'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'Yukon'}, {'x_data': 'Wed', 'y_data': 0, 'classify': 'Yukon'}, {'x_data': 'Thur', 'y_data': 0, 'classify': 'Yukon'}, {'x_data': 'Fri', 'y_data': 1, 'classify': 'Yukon'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'Yukon'}, {'x_data': 'Sun', 'y_data': 0, 'classify': 'Yukon'}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'EMP_HIREDATE', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(EMP_HIREDATE)'}, 'color': {'field': 'classify'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

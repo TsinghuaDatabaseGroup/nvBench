@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6925</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6924.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6926.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6925</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of apartment bookings for each weekday and bin booking start date by weekday interval in a bar chart.</p></li><li><p>How many apartment bookings for each weekday? Draw a bar chart binning booking start date by weekday interval.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT booking_start_date , COUNT(booking_start_date) FROM Apartment_Bookings AS T1 JOIN Guests AS T2 ON T1.guest_id = T2.guest_id BIN booking_start_date BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>90</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>apartment_rentals</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: apartment_rentals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Apartment_Bookings</h4><table><tr><th>apt_booking_id</th><th>apt_id</th><th>guest_id</th><th>booking_status_code</th><th>booking_start_date</th><th>booking_end_date</th></tr><tr><td>258</td><td>10</td><td>2</td><td>Provisional</td><td>2016-09-26 17:13:49</td><td>2017-10-07 11:38:48</td></tr><tr><td>279</td><td>15</td><td>15</td><td>Provisional</td><td>2016-04-01 06:28:08</td><td>2017-10-25 11:08:42</td></tr><tr><td>337</td><td>8</td><td>5</td><td>Provisional</td><td>2017-03-13 16:20:14</td><td>2018-02-19 16:59:08</td></tr><tr><td>343</td><td>4</td><td>13</td><td>Confirmed</td><td>2016-08-04 10:33:00</td><td>2017-09-29 12:43:50</td></tr><tr><td>365</td><td>9</td><td>12</td><td>Confirmed</td><td>2017-02-11 14:34:14</td><td>2017-10-07 20:47:19</td></tr><tr><td>401</td><td>7</td><td>14</td><td>Provisional</td><td>2016-05-24 20:09:38</td><td>2017-10-03 01:56:21</td></tr><tr><td>497</td><td>10</td><td>8</td><td>Confirmed</td><td>2016-07-25 02:57:04</td><td>2017-09-28 11:08:15</td></tr><tr><td>526</td><td>8</td><td>7</td><td>Confirmed</td><td>2016-11-26 05:04:31</td><td>2018-02-25 15:15:37</td></tr><tr><td>575</td><td>6</td><td>3</td><td>Provisional</td><td>2017-05-13 18:17:20</td><td>2017-10-06 11:15:58</td></tr><tr><td>577</td><td>12</td><td>2</td><td>Provisional</td><td>2017-03-04 02:23:49</td><td>2018-02-06 16:57:05</td></tr><tr><td>623</td><td>4</td><td>5</td><td>Provisional</td><td>2016-06-07 05:05:18</td><td>2017-11-13 13:59:45</td></tr><tr><td>807</td><td>11</td><td>2</td><td>Provisional</td><td>2016-04-17 12:53:59</td><td>2018-03-20 17:32:58</td></tr><tr><td>889</td><td>10</td><td>4</td><td>Confirmed</td><td>2016-09-28 05:00:50</td><td>2017-09-30 18:41:04</td></tr><tr><td>920</td><td>2</td><td>2</td><td>Confirmed</td><td>2017-04-07 04:53:27</td><td>2017-11-29 12:59:42</td></tr><tr><td>924</td><td>8</td><td>3</td><td>Confirmed</td><td>2017-07-03 14:15:56</td><td>2017-11-12 01:05:09</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 4}, {'x_data': 'Tue', 'y_data': 2}, {'x_data': 'Wed', 'y_data': 1}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Fri', 'y_data': 2}, {'x_data': 'Sat', 'y_data': 4}, {'x_data': 'Sun', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'booking_start_date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(booking_start_date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

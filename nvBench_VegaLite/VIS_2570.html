@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2570</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2569.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2571.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2570</td><td><h4>NL Queries: </h4><ol><li><p>Find the total revenue for each manufacturer Plot them as bar chart, and show by the x axis from high to low.</p></li><li><p>What is the total revenue of each manufacturer, and order in desc by the names.</p></li><li><p>Bar graph to show sum revenue from different name, and show from high to low by the x axis.</p></li><li><p>A bar chart about what is the total revenue of each manufacturer?, display by the x-axis in descending please.</p></li><li><p>Return a bar chart on what is the total revenue of each manufacturer?, could you sort by the bars from high to low?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , sum(revenue) FROM manufacturers GROUP BY name ORDER BY Name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2181@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>manufactory_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: manufactory_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: manufacturers</h4><table><tr><th>Code</th><th>Name</th><th>Headquarter</th><th>Founder</th><th>Revenue</th></tr><tr><td>1</td><td>Sony</td><td>Tokyo</td><td>Andy</td><td>120.0</td></tr><tr><td>2</td><td>Creative Labs</td><td>Austin</td><td>Owen</td><td>100.0</td></tr><tr><td>3</td><td>Hewlett-Packard</td><td>Los Angeles</td><td>James</td><td>50.0</td></tr><tr><td>4</td><td>Iomega</td><td>Beijing</td><td>Mary</td><td>200.0</td></tr><tr><td>5</td><td>Fujitsu</td><td>Taiwan</td><td>John</td><td>130.0</td></tr><tr><td>6</td><td>Winchester</td><td>Paris</td><td>Robert</td><td>30.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Winchester', 'y_data': 30}, {'x_data': 'Sony', 'y_data': 120}, {'x_data': 'Iomega', 'y_data': 200}, {'x_data': 'Hewlett-Packard', 'y_data': 50}, {'x_data': 'Fujits', 'y_data': 130}, {'x_data': 'Creative Labs', 'y_data': 100}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'sum(revenue)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

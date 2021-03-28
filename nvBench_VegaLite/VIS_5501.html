@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5501</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5500.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5502.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5501</td><td><h4>NL Queries: </h4><ol><li><p>How many patients do each physician take care of? List their names and number of patients they take care of Show bar chart, and list by the y-axis in desc.</p></li><li><p>Draw a bar chart for how many patients do each physician take care of? List their names and number of patients they take care of, sort total number from high to low order.</p></li><li><p>How many patients do each physician take care of? List their names and number of patients they take care of in a bar chart, sort total number from high to low order.</p></li><li><p>Return a bar chart on how many patients do each physician take care of? List their names and number of patients they take care of, and show by the Y-axis in desc.</p></li><li><p>Return the name of each physician and the number of patients he or she treats in a bar chart, and sort total number from high to low order.</p></li><li><p>Return the name of each physician and the number of patients he or she treats, and show by the Y-axis in desc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Name , count(*) FROM physician AS T1 JOIN patient AS T2 ON T1.employeeid = T2.PCP GROUP BY T1.employeeid ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1535@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>hospital_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: hospital_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: physician</h4><table><tr><th>EmployeeID</th><th>Name</th><th>Position</th><th>SSN</th></tr><tr><td>1</td><td>John Dorian</td><td>Staff Internist</td><td>111111111</td></tr><tr><td>2</td><td>Elliot Reid</td><td>Attending Physician</td><td>222222222</td></tr><tr><td>3</td><td>Christopher Turk</td><td>Surgical Attending Physician</td><td>333333333</td></tr><tr><td>4</td><td>Percival Cox</td><td>Senior Attending Physician</td><td>444444444</td></tr><tr><td>5</td><td>Bob Kelso</td><td>Head Chief of Medicine</td><td>555555555</td></tr><tr><td>6</td><td>Todd Quinlan</td><td>Surgical Attending Physician</td><td>666666666</td></tr><tr><td>7</td><td>John Wen</td><td>Surgical Attending Physician</td><td>777777777</td></tr><tr><td>8</td><td>Keith Dudemeister</td><td>MD Resident</td><td>888888888</td></tr><tr><td>9</td><td>Molly Clock</td><td>Attending Psychiatrist</td><td>999999999</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Elliot Reid', 'y_data': 2}, {'x_data': 'John Dorian', 'y_data': 1}, {'x_data': 'Christopher Turk', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

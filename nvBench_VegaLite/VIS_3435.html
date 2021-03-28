@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3435</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3434.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3436.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3435</td><td><h4>NL Queries: </h4><ol><li><p>Give me a bar chart to show the proportion of each type of the thing that has the status 'Close' or has a status record before the date '2017-06-19 02:59:21'.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Type_of_Thing_Code , COUNT(Type_of_Thing_Code) FROM Timed_Status_of_Things AS T1 JOIN Things AS T2 ON T1.thing_id = T2.thing_id WHERE T1.Status_of_Thing_Code = 'Close' OR T1.Date_and_Date < '2017-06-19 02:59:21' GROUP BY Type_of_Thing_Code</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2075</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>local_govt_and_lot</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_and_lot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Timed_Status_of_Things</h4><table><tr><th>thing_id</th><th>Date_and_Date</th><th>Status_of_Thing_Code</th></tr><tr><td>2</td><td>2016-05-27 23:33:34</td><td>Open</td></tr><tr><td>2</td><td>2016-07-17 08:35:27</td><td>Close</td></tr><tr><td>2</td><td>2017-06-19 02:59:21</td><td>In Progress</td></tr><tr><td>10</td><td>2016-09-06 16:31:13</td><td>Close</td></tr><tr><td>10</td><td>2016-11-14 17:30:51</td><td>Open</td></tr><tr><td>14</td><td>2017-07-03 02:22:12</td><td>In Progress</td></tr><tr><td>26</td><td>2016-04-10 06:32:15</td><td>Close</td></tr><tr><td>26</td><td>2017-08-05 02:10:02</td><td>In Progress</td></tr><tr><td>26</td><td>2018-02-04 02:44:39</td><td>Close</td></tr><tr><td>35</td><td>2017-11-27 06:32:46</td><td>In Progress</td></tr><tr><td>47</td><td>2016-04-02 00:57:17</td><td>In Progress</td></tr><tr><td>47</td><td>2016-12-02 11:08:16</td><td>Close</td></tr><tr><td>58</td><td>2017-05-31 00:52:33</td><td>In Progress</td></tr><tr><td>80</td><td>2016-10-08 08:02:57</td><td>Open</td></tr><tr><td>84</td><td>2017-12-28 16:05:08</td><td>Open</td></tr><tr><td>85</td><td>2017-03-24 12:12:46</td><td>Close</td></tr><tr><td>92</td><td>2016-11-24 12:44:00</td><td>In Progress</td></tr><tr><td>92</td><td>2017-09-27 01:35:51</td><td>Close</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Commen', 'y_data': 4}, {'x_data': 'Electronics', 'y_data': 3}, {'x_data': 'Furniture', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Type_of_Thing_Code', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Type_of_Thing_Code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

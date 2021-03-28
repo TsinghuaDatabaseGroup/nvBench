@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1545</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1544.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1546.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1545</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart about the number of end dates for incidents with incident type code "NOISE"?, sort by the Y in ascending please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_incident_end , COUNT(date_incident_end) FROM Behavior_Incident WHERE incident_type_code = "NOISE" GROUP BY date_incident_end ORDER BY COUNT(date_incident_end) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>280@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>behavior_monitoring</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: behavior_monitoring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Behavior_Incident</h4><table><tr><th>incident_id</th><th>incident_type_code</th><th>student_id</th><th>date_incident_start</th><th>date_incident_end</th><th>incident_summary</th><th>recommendations</th><th>other_details</th></tr><tr><td>1</td><td>NOISE</td><td>6</td><td>2017-07-09 10:04:13</td><td>2018-03-08 14:08:54</td><td>None</td><td>None</td><td>None</td></tr><tr><td>2</td><td>DISTURB</td><td>13</td><td>2018-01-31 10:51:13</td><td>2018-03-18 18:40:05</td><td>None</td><td>None</td><td>None</td></tr><tr><td>3</td><td>VIOLENCE</td><td>1</td><td>2017-10-10 22:43:54</td><td>2018-03-22 02:10:35</td><td>None</td><td>Transfer schools</td><td>None</td></tr><tr><td>4</td><td>VIOLENCE</td><td>10</td><td>2017-07-20 17:43:50</td><td>2018-03-09 06:28:44</td><td>None</td><td>None</td><td>None</td></tr><tr><td>5</td><td>NOISE</td><td>7</td><td>2017-08-13 22:15:05</td><td>2018-02-25 05:38:58</td><td>None</td><td>None</td><td>None</td></tr><tr><td>6</td><td>VIOLENCE</td><td>8</td><td>2017-06-09 18:32:28</td><td>2018-03-20 10:32:10</td><td>None</td><td>None</td><td>None</td></tr><tr><td>7</td><td>VIOLENCE</td><td>4</td><td>2017-04-23 07:03:17</td><td>2018-03-19 02:35:39</td><td>None</td><td>None</td><td>None</td></tr><tr><td>8</td><td>DISTURB</td><td>1</td><td>2017-05-02 12:52:09</td><td>2018-03-18 01:23:29</td><td>None</td><td>None</td><td>None</td></tr><tr><td>9</td><td>NOISE</td><td>11</td><td>2017-06-19 14:25:54</td><td>2018-03-08 09:36:36</td><td>None</td><td>None</td><td>None</td></tr><tr><td>10</td><td>NOISE</td><td>1</td><td>2018-01-27 09:24:45</td><td>2018-03-13 05:18:05</td><td>None</td><td>None</td><td>None</td></tr><tr><td>11</td><td>VIOLENCE</td><td>9</td><td>2018-03-06 21:03:58</td><td>2018-03-06 14:44:37</td><td>None</td><td>Transfer schools</td><td>None</td></tr><tr><td>12</td><td>DISTURB</td><td>7</td><td>2017-08-27 03:21:30</td><td>2018-03-02 16:06:34</td><td>None</td><td>None</td><td>None</td></tr><tr><td>13</td><td>VIOLENCE</td><td>5</td><td>2017-05-25 15:02:53</td><td>2018-03-10 21:12:22</td><td>None</td><td>None</td><td>None</td></tr><tr><td>14</td><td>NOISE</td><td>1</td><td>2017-08-29 20:48:56</td><td>2018-03-16 14:37:20</td><td>None</td><td>Transfer schools</td><td>None</td></tr><tr><td>15</td><td>NOISE</td><td>15</td><td>2018-02-05 13:13:45</td><td>2018-03-08 09:00:48</td><td>None</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2018-02-25', 'y_data': 1}, {'x_data': '2018-03-13', 'y_data': 1}, {'x_data': '2018-03-16', 'y_data': 1}, {'x_data': '2018-03-08', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_incident_end', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_incident_end)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7244</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7243.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7245.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7244</td><td><h4>NL Queries: </h4><ol><li><p>Show how many flights each pilot has flied in a pie chart.</p></li><li><p>Create a pie chart showing how many pilot across pilot.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Pilot , COUNT(Pilot) FROM flight GROUP BY Pilot</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1422</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>flight_company</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: flight_company&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: flight</h4><table><tr><th>id</th><th>Vehicle_Flight_number</th><th>Date</th><th>Pilot</th><th>Velocity</th><th>Altitude</th><th>airport_id</th><th>company_id</th></tr><tr><td>1</td><td>M2-F1 #0</td><td>March 1, 1963</td><td>Thompson</td><td>135.0</td><td>0.0</td><td>1</td><td>2</td></tr><tr><td>2</td><td>M2-F1 #1</td><td>August 16, 1963</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>2</td><td>3</td></tr><tr><td>3</td><td>M2-F1 #6</td><td>September 3, 1963</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>2</td><td>4</td></tr><tr><td>4</td><td>M2-F1 #13</td><td>October 25, 1963</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>3</td><td>4</td></tr><tr><td>5</td><td>M2-F1 #14</td><td>November 8, 1963</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>4</td><td>5</td></tr><tr><td>6</td><td>M2-F1 #21</td><td>January 29, 1964</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>4</td><td>6</td></tr><tr><td>7</td><td>M2-F1 #33</td><td>March 30, 1964</td><td>Peterson</td><td>240.0</td><td>3650.0</td><td>5</td><td>11</td></tr><tr><td>8</td><td>M2-F1 #39</td><td>May 19, 1964</td><td>Peterson</td><td>240.0</td><td>3650.0</td><td>2</td><td>13</td></tr><tr><td>9</td><td>M2-F1 #61</td><td>July 16, 1965</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>6</td><td>11</td></tr><tr><td>10</td><td>M2-F1 #64</td><td>August 30, 1965</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>9</td><td>1</td></tr><tr><td>11</td><td>M2-F1 #70</td><td>October 8, 1965</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>4</td><td>5</td></tr><tr><td>12</td><td>M2-F1 #71</td><td>March 28, 1966</td><td>Thompson</td><td>240.0</td><td>3650.0</td><td>6</td><td>7</td></tr><tr><td>13</td><td>M2-F1 #73</td><td>August 4, 1966</td><td>Peterson</td><td>240.0</td><td>3650.0</td><td>8</td><td>9</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Peterson', 'y_data': 3}, {'x_data': 'Thompson', 'y_data': 10}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Pilot)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Pilot'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

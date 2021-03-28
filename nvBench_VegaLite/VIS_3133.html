@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3133</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3132.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3134.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3133</td><td><h4>NL Queries: </h4><ol><li><p>Show all the actual delivery dates and bin by year in a line chart.</p></li><li><p>Can you draw the trend of the number of actual delivery date over the actual delivery date?</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Actual_Delivery_Date , COUNT(Actual_Delivery_Date) FROM BOOKINGS BIN Actual_Delivery_Date BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>864</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Drama_Workshop_Groups</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Drama_Workshop_Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: BOOKINGS</h4><table><tr><th>Booking_ID</th><th>Customer_ID</th><th>Workshop_Group_ID</th><th>Status_Code</th><th>Store_ID</th><th>Order_Date</th><th>Planned_Delivery_Date</th><th>Actual_Delivery_Date</th><th>Other_Order_Details</th></tr><tr><td>1</td><td>938</td><td>140</td><td>good</td><td>8</td><td>2016-12-12 10:43:01</td><td>2013-03-10 18:47:05</td><td>1997-11-21 10:07:40</td><td>None</td></tr><tr><td>2</td><td>868</td><td>838</td><td>stop</td><td>7</td><td>1976-08-20 00:33:08</td><td>2009-07-09 09:18:38</td><td>1976-01-08 07:19:23</td><td>None</td></tr><tr><td>3</td><td>735</td><td>176</td><td>good</td><td>9</td><td>1975-11-23 06:28:47</td><td>1989-01-05 19:24:45</td><td>1990-03-16 19:38:47</td><td>None</td></tr><tr><td>4</td><td>527</td><td>708</td><td>stop</td><td>6</td><td>1995-02-02 15:52:57</td><td>2017-04-27 00:16:00</td><td>1996-10-24 21:15:27</td><td>None</td></tr><tr><td>5</td><td>591</td><td>176</td><td>good</td><td>9</td><td>1995-05-10 14:49:47</td><td>1979-07-19 19:44:01</td><td>1971-01-13 13:24:52</td><td>None</td></tr><tr><td>6</td><td>953</td><td>735</td><td>good</td><td>1</td><td>1992-11-26 18:11:10</td><td>2016-06-06 20:35:14</td><td>2016-04-30 11:45:39</td><td>None</td></tr><tr><td>7</td><td>735</td><td>954</td><td>stop</td><td>4</td><td>1975-12-30 14:12:32</td><td>2008-07-18 18:15:40</td><td>1983-10-09 10:48:48</td><td>None</td></tr><tr><td>8</td><td>605</td><td>176</td><td>good</td><td>2</td><td>1992-05-11 23:22:41</td><td>1973-04-02 03:10:21</td><td>1983-07-01 22:10:19</td><td>None</td></tr><tr><td>9</td><td>508</td><td>405</td><td>good</td><td>4</td><td>1971-05-11 06:53:01</td><td>1974-05-07 21:40:39</td><td>1986-10-04 13:31:10</td><td>None</td></tr><tr><td>10</td><td>938</td><td>735</td><td>good</td><td>4</td><td>1982-05-19 05:37:51</td><td>1999-05-11 01:26:06</td><td>1989-11-17 00:32:13</td><td>None</td></tr><tr><td>11</td><td>423</td><td>136</td><td>good</td><td>4</td><td>1991-10-11 17:24:15</td><td>1978-04-10 12:23:59</td><td>1983-02-07 20:27:10</td><td>None</td></tr><tr><td>12</td><td>776</td><td>954</td><td>good</td><td>5</td><td>1984-12-17 12:53:51</td><td>2014-06-05 10:19:46</td><td>1985-09-02 11:34:39</td><td>None</td></tr><tr><td>13</td><td>605</td><td>685</td><td>good</td><td>6</td><td>1996-09-14 10:17:55</td><td>1993-04-17 23:53:01</td><td>1982-04-18 02:59:08</td><td>None</td></tr><tr><td>14</td><td>426</td><td>954</td><td>stop</td><td>6</td><td>2007-08-05 15:46:29</td><td>1971-06-29 03:04:47</td><td>1995-12-21 05:01:38</td><td>None</td></tr><tr><td>15</td><td>426</td><td>176</td><td>stop</td><td>8</td><td>1976-10-24 07:40:47</td><td>1972-06-25 15:51:34</td><td>2004-02-22 04:37:14</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1971~1975', 'y_data': 1}, {'x_data': '1976~1980', 'y_data': 1}, {'x_data': '1981~1985', 'y_data': 5}, {'x_data': '1986~1990', 'y_data': 3}, {'x_data': '1991~1995', 'y_data': 1}, {'x_data': '1996~2000', 'y_data': 2}, {'x_data': '2001~2005', 'y_data': 1}, {'x_data': '2006~2010', 'y_data': 0}, {'x_data': '2011~2015', 'y_data': 0}, {'x_data': '2016', 'y_data': 1}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Actual_Delivery_Date', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Actual_Delivery_Date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

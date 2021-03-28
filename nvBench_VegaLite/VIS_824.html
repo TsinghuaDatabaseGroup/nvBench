@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_824</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_823.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_825.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>824</td><td><h4>NL Queries: </h4><ol><li><p>Show the sum of account details for different statement details in a bar chart, and sort Statement_Details in asc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Statement_Details , SUM(Account_Details) FROM Accounts AS T1 JOIN Statements AS T2 ON T1.statement_id = T2.statement_id GROUP BY Statement_Details ORDER BY Statement_Details ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>816@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Docs_and_Epenses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Docs_and_Epenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Accounts</h4><table><tr><th>Account_ID</th><th>Statement_ID</th><th>Account_Details</th></tr><tr><td>7</td><td>57</td><td>495.063</td></tr><tr><td>61</td><td>57</td><td>930.14</td></tr><tr><td>98</td><td>57</td><td>6035.84</td></tr><tr><td>136</td><td>57</td><td>199.52</td></tr><tr><td>164</td><td>192</td><td>12223.93</td></tr><tr><td>209</td><td>57</td><td>11130.23</td></tr><tr><td>211</td><td>192</td><td>1230.454</td></tr><tr><td>240</td><td>192</td><td>6352.31</td></tr><tr><td>262</td><td>57</td><td>147.96</td></tr><tr><td>280</td><td>57</td><td>187.14</td></tr><tr><td>321</td><td>192</td><td>745.817</td></tr><tr><td>346</td><td>192</td><td>127.9</td></tr><tr><td>414</td><td>57</td><td>25.41</td></tr><tr><td>427</td><td>57</td><td>1168.32</td></tr><tr><td>451</td><td>192</td><td>658.26</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Open Project', 'y_data': 20316}, {'x_data': 'Private Project', 'y_data': 21335}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Statement_Details', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'SUM(Account_Details)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1955</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1954.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1956.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1955</td><td><h4>NL Queries: </h4><ol><li><p>Which directors had a movie in either 1999 or 2000, and count them by a bar chart, I want to order Y from low to high order.</p></li><li><p>Show all director names who have a movie in the year 1999 or 2000, and count them by a bar chart, and could you sort Y in ascending order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Director , COUNT(Director) FROM movie WHERE YEAR = 1999 OR YEAR = 2000 GROUP BY Director ORDER BY COUNT(Director) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>901@y_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>culture_company</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: culture_company&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: movie</h4><table><tr><th>movie_id</th><th>Title</th><th>Year</th><th>Director</th><th>Budget_million</th><th>Gross_worldwide</th></tr><tr><td>1</td><td>The Boondock Saints</td><td>1999</td><td>Troy Duffy</td><td>6.0</td><td>30471</td></tr><tr><td>2</td><td>The Big Kahuna</td><td>1999</td><td>John Swanbeck</td><td>7.0</td><td>3728888</td></tr><tr><td>3</td><td>Storm Catcher</td><td>1999</td><td>Anthony Hickox</td><td>5.0</td><td>40500</td></tr><tr><td>4</td><td>Jill Rips</td><td>2000</td><td>Anthony Hickox</td><td>4.0</td><td>456774</td></tr><tr><td>5</td><td>The Whole Nine Yards</td><td>2000</td><td>Jonathan Lynn</td><td>41.3</td><td>106371651</td></tr><tr><td>6</td><td>Battlefield Earth</td><td>2000</td><td>Roger Christian</td><td>44.0</td><td>29725663</td></tr><tr><td>7</td><td>Get Carter</td><td>2000</td><td>Stephen Kay</td><td>63.6</td><td>19412993</td></tr><tr><td>8</td><td>The Art of War</td><td>2000</td><td>Christian Duguay</td><td>60.0</td><td>40400425</td></tr><tr><td>9</td><td>Agent Red</td><td>2000</td><td>Damian Lee</td><td>47.0</td><td>543356</td></tr><tr><td>10</td><td>3000 Miles to Graceland</td><td>2001</td><td>Demian Lichtenstein</td><td>62.0</td><td>18720175</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Christian Duguay', 'y_data': 1}, {'x_data': 'Damian Lee', 'y_data': 1}, {'x_data': 'John Swanbeck', 'y_data': 1}, {'x_data': 'Jonathan Lynn', 'y_data': 1}, {'x_data': 'Roger Christian', 'y_data': 1}, {'x_data': 'Stephen Kay', 'y_data': 1}, {'x_data': 'Troy Duffy', 'y_data': 1}, {'x_data': 'Anthony Hickox', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Director', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Director)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4686</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4685.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4687.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4686</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a scatter chart about the correlation between  Snatch and  Clean_Jerk .</p></li><li><p>What is the relationship between  Snatch and  Clean_Jerk ?</p></li><li><p>Visualize the relationship between  Snatch and  Clean_Jerk .</p></li><li><p>Return a scatter chart about the correlation between  Snatch and  Clean_Jerk .</p></li><li><p>Show me about the correlation between  Snatch and  Clean_Jerk  in a scatter chart.</p></li><li><p>Scatter plot to show snatch on x axis and clean_jerk on y axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT Snatch , Clean_Jerk FROM body_builder</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>356</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>body_builder</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: body_builder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: body_builder</h4><table><tr><th>Body_Builder_ID</th><th>People_ID</th><th>Snatch</th><th>Clean_Jerk</th><th>Total</th></tr><tr><td>1.0</td><td>1.0</td><td>142.5</td><td>175.0</td><td>317.5</td></tr><tr><td>2.0</td><td>2.0</td><td>137.5</td><td>177.5</td><td>315.0</td></tr><tr><td>3.0</td><td>3.0</td><td>140.0</td><td>175.0</td><td>315.0</td></tr><tr><td>4.0</td><td>5.0</td><td>137.5</td><td>175.0</td><td>312.5</td></tr><tr><td>5.0</td><td>6.0</td><td>130.0</td><td>162.5</td><td>292.5</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 142.5, 'y_data': 175}, {'x_data': 137.5, 'y_data': 177.5}, {'x_data': 140, 'y_data': 175}, {'x_data': 137.5, 'y_data': 175}, {'x_data': 130, 'y_data': 162.5}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'Snatch'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Clean_Jerk'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

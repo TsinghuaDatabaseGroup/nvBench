@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4098</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4097.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4099.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4098</td><td><h4>NL Queries: </h4><ol><li><p>Bar graph to show the number of name from different name, display by the x axis in desc.</p></li><li><p>Count the names of each high schooler using a bar chart, display by the x axis in desc.</p></li><li><p>Can you show me a bar chart to answer how many people with different names for each high schooler?, and show from high to low by the x axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT name , COUNT(name) FROM Highschooler GROUP BY name ORDER BY name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2451@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>network_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: network_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Highschooler</h4><table><tr><th>ID</th><th>name</th><th>grade</th></tr><tr><td>1510</td><td>Jordan</td><td>9</td></tr><tr><td>1689</td><td>Gabriel</td><td>9</td></tr><tr><td>1381</td><td>Tiffany</td><td>9</td></tr><tr><td>1709</td><td>Cassandra</td><td>9</td></tr><tr><td>1101</td><td>Haley</td><td>10</td></tr><tr><td>1782</td><td>Andrew</td><td>10</td></tr><tr><td>1468</td><td>Kris</td><td>10</td></tr><tr><td>1641</td><td>Brittany</td><td>10</td></tr><tr><td>1247</td><td>Alexis</td><td>11</td></tr><tr><td>1316</td><td>Austin</td><td>11</td></tr><tr><td>1911</td><td>Gabriel</td><td>11</td></tr><tr><td>1501</td><td>Jessica</td><td>11</td></tr><tr><td>1304</td><td>Jordan</td><td>12</td></tr><tr><td>1025</td><td>John</td><td>12</td></tr><tr><td>1934</td><td>Kyle</td><td>12</td></tr><tr><td>1661</td><td>Logan</td><td>12</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tiffany', 'y_data': 1}, {'x_data': 'Logan', 'y_data': 1}, {'x_data': 'Kyle', 'y_data': 1}, {'x_data': 'Kris', 'y_data': 1}, {'x_data': 'Jordan', 'y_data': 2}, {'x_data': 'John', 'y_data': 1}, {'x_data': 'Jessica', 'y_data': 1}, {'x_data': 'Haley', 'y_data': 1}, {'x_data': 'Gabriel', 'y_data': 2}, {'x_data': 'Cassandra', 'y_data': 1}, {'x_data': 'Brittany', 'y_data': 1}, {'x_data': 'Austin', 'y_data': 1}, {'x_data': 'Andrew', 'y_data': 1}, {'x_data': 'Alexis', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

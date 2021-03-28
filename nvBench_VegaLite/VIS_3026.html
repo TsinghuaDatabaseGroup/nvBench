@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3026</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3025.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3027.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3026</td><td><h4>NL Queries: </h4><ol><li><p>What are the number of the descriptions of all the project outcomes?, and I want to show by the bar in ascending.</p></li><li><p>A bar chart for what are the number of the descriptions of all the project outcomes?, list from low to high by the X.</p></li><li><p>What are the descriptions of all the project outcomes, and count them by a bar chart, and rank bars from low to high order.</p></li><li><p>List the number of the description of the outcomes for all projects, and show by the X-axis in ascending.</p></li><li><p>List the description of the outcomes for all projects, and count them by a bar chart, rank bars from low to high order.</p></li><li><p>A bar chart for listing the number of the description of the outcomes for all projects, and could you list by the X in asc?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT outcome_description , COUNT(outcome_description) FROM Research_outcomes AS T1 JOIN Project_outcomes AS T2 ON T1.outcome_code = T2.outcome_code GROUP BY outcome_description ORDER BY outcome_description ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2959@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>tracking_grants_for_research</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_grants_for_research&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Research_outcomes</h4><table><tr><th>outcome_code</th><th>outcome_description</th></tr><tr><td>Paper</td><td>Published Research Paper</td></tr><tr><td>Patent</td><td>Research Patent</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Published Research Paper', 'y_data': 10}, {'x_data': 'Research Patent', 'y_data': 5}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'outcome_description', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(outcome_description)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

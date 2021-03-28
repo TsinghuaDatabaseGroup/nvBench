@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5309</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5308.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5310.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5309</td><td><h4>NL Queries: </h4><ol><li><p>How many professors in each office? Show me a bar chart, could you display in descending by the bars?</p></li><li><p>Find the number of professors in each office with a bar chart, could you display in descending by the bars?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT PROF_OFFICE , COUNT(PROF_OFFICE) FROM professor AS T1 JOIN employee AS T2 ON T1.emp_num = T2.emp_num GROUP BY PROF_OFFICE ORDER BY PROF_OFFICE DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>544@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: professor</h4><table><tr><th>EMP_NUM</th><th>DEPT_CODE</th><th>PROF_OFFICE</th><th>PROF_EXTENSION</th><th>PROF_HIGH_DEGREE</th></tr><tr><td>103</td><td>HIST</td><td>DRE 156</td><td>6783</td><td>Ph.D.</td></tr><tr><td>104</td><td>ENG</td><td>DRE 102</td><td>5561</td><td>MA</td></tr><tr><td>105</td><td>ACCT</td><td>KLR 229D</td><td>8665</td><td>Ph.D.</td></tr><tr><td>106</td><td>MKT/MGT</td><td>KLR 126</td><td>3899</td><td>Ph.D.</td></tr><tr><td>110</td><td>BIOL</td><td>AAK 160</td><td>3412</td><td>Ph.D.</td></tr><tr><td>114</td><td>ACCT</td><td>KLR 211</td><td>4436</td><td>Ph.D.</td></tr><tr><td>155</td><td>MATH</td><td>AAK 201</td><td>4440</td><td>Ph.D.</td></tr><tr><td>160</td><td>ENG</td><td>DRE 102</td><td>2248</td><td>Ph.D.</td></tr><tr><td>162</td><td>CIS</td><td>KLR 203E</td><td>2359</td><td>Ph.D.</td></tr><tr><td>191</td><td>MKT/MGT</td><td>KLR 409B</td><td>4016</td><td>DBA</td></tr><tr><td>195</td><td>PSYCH</td><td>AAK 297</td><td>3550</td><td>Ph.D.</td></tr><tr><td>209</td><td>CIS</td><td>KLR 333</td><td>3421</td><td>Ph.D.</td></tr><tr><td>228</td><td>CIS</td><td>KLR 300</td><td>3000</td><td>Ph.D.</td></tr><tr><td>297</td><td>MATH</td><td>AAK 194</td><td>1145</td><td>Ph.D.</td></tr><tr><td>299</td><td>ECON/FIN</td><td>KLR 284</td><td>2851</td><td>Ph.D.</td></tr><tr><td>301</td><td>ACCT</td><td>KLR 244</td><td>4683</td><td>Ph.D.</td></tr><tr><td>335</td><td>ENG</td><td>DRE 208</td><td>2000</td><td>Ph.D.</td></tr><tr><td>342</td><td>SOC</td><td>BBG 208</td><td>5514</td><td>Ph.D.</td></tr><tr><td>387</td><td>BIOL</td><td>AAK 230</td><td>8665</td><td>Ph.D.</td></tr><tr><td>401</td><td>HIST</td><td>DRE 156</td><td>6783</td><td>MA</td></tr><tr><td>425</td><td>ECON/FIN</td><td>KLR 284</td><td>2851</td><td>MBA</td></tr><tr><td>435</td><td>ART</td><td>BBG 185</td><td>2278</td><td>Ph.D.</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'KLR 409B', 'y_data': 1}, {'x_data': 'KLR 333', 'y_data': 1}, {'x_data': 'KLR 300', 'y_data': 1}, {'x_data': 'KLR 284', 'y_data': 2}, {'x_data': 'KLR 244', 'y_data': 1}, {'x_data': 'KLR 229D', 'y_data': 1}, {'x_data': 'KLR 211', 'y_data': 1}, {'x_data': 'KLR 203E', 'y_data': 1}, {'x_data': 'KLR 126', 'y_data': 1}, {'x_data': 'DRE 208', 'y_data': 1}, {'x_data': 'DRE 156', 'y_data': 2}, {'x_data': 'DRE 102', 'y_data': 2}, {'x_data': 'BBG 208', 'y_data': 1}, {'x_data': 'BBG 185', 'y_data': 1}, {'x_data': 'AAK 297', 'y_data': 1}, {'x_data': 'AAK 230', 'y_data': 1}, {'x_data': 'AAK 201', 'y_data': 1}, {'x_data': 'AAK 194', 'y_data': 1}, {'x_data': 'AAK 160', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'PROF_OFFICE', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(PROF_OFFICE)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

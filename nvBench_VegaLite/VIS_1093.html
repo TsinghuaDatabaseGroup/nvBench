@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1093</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1092.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1094.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1093</td><td><h4>NL Queries: </h4><ol><li><p>Scatter chart. how many residents does each property have? List property id and resident count.</p></li><li><p>plot scatter on how many residents does each property have? List property id and resident count.</p></li><li><p>How many residents does each property have? List property id and resident count with a scatter chart.</p></li><li><p>How many residents does each property have? List property id and resident count. Visualize by scatter chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT T1.property_id , count(*) FROM properties AS T1 JOIN residents AS T2 ON T1.property_id = T2.property_id GROUP BY T1.property_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2125</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>local_govt_and_lot</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_and_lot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: properties</h4><table><tr><th>property_id</th><th>property_type_code</th><th>property_address</th><th>other_details</th></tr><tr><td>24</td><td>apartment</td><td>85456 Annie Lodge Suite 449</td><td>USA</td></tr><tr><td>107</td><td>house</td><td>2580 Yundt Plains</td><td>USA</td></tr><tr><td>108</td><td>house</td><td>5983 Fleta Throughway</td><td>USA</td></tr><tr><td>120</td><td>apartment</td><td>322 Johnston Parkway Suite 422</td><td>USA</td></tr><tr><td>373</td><td>apartment</td><td>5384 Sipes Land Apt. 344</td><td>USA</td></tr><tr><td>445</td><td>flat</td><td>04164 Raul Stream</td><td>USA</td></tr><tr><td>586</td><td>apartment</td><td>54591 Bernard Ridges Suite 864</td><td>USA</td></tr><tr><td>605</td><td>house</td><td>7713 Bode Burgs Apt. 113</td><td>USA</td></tr><tr><td>629</td><td>house</td><td>830 Jayne Points Suite 290</td><td>USA</td></tr><tr><td>669</td><td>house</td><td>824 Kiehn Vista</td><td>USA</td></tr><tr><td>748</td><td>apartment</td><td>3927 Spinka Loaf Suite 347</td><td>USA</td></tr><tr><td>791</td><td>house</td><td>72659 Frank Locks</td><td>USA</td></tr><tr><td>849</td><td>house</td><td>76714 Verla Radial Apt. 306</td><td>USA</td></tr><tr><td>879</td><td>flat</td><td>129 Chasity Brook</td><td>USA</td></tr><tr><td>954</td><td>flat</td><td>91002 Melvina Haven</td><td>USA</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 107, 'y_data': 2}, {'x_data': 108, 'y_data': 1}, {'x_data': 120, 'y_data': 1}, {'x_data': 373, 'y_data': 1}, {'x_data': 445, 'y_data': 1}, {'x_data': 605, 'y_data': 1}, {'x_data': 629, 'y_data': 1}, {'x_data': 669, 'y_data': 2}, {'x_data': 748, 'y_data': 2}, {'x_data': 879, 'y_data': 1}, {'x_data': 954, 'y_data': 2}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'property_id'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4361</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4360.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4362.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4361</td><td><h4>NL Queries: </h4><ol><li><p>Show the price of each product supplied by supplier id 3 in a bar chart, and list from low to high by the y axis.</p></li><li><p>What is the price of each product supplied by supplier id 3? Return a bar chart, and rank y-axis in asc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT product_name , product_price FROM product_suppliers AS T1 JOIN products AS T2 ON T1.product_id = T2.product_id WHERE T1.supplier_id = 3 ORDER BY product_price ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1142@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>department_store</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: department_store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: product_suppliers</h4><table><tr><th>product_id</th><th>supplier_id</th><th>date_supplied_from</th><th>date_supplied_to</th><th>total_amount_purchased</th><th>total_value_purchased</th></tr><tr><td>4</td><td>3</td><td>2017-06-19 00:49:05</td><td>2018-03-24 19:29:18</td><td>89366.05</td><td>36014.6</td></tr><tr><td>8</td><td>4</td><td>2017-07-02 00:35:12</td><td>2018-03-25 07:30:49</td><td>25085.57</td><td>36274.56</td></tr><tr><td>3</td><td>3</td><td>2017-10-14 19:15:37</td><td>2018-03-24 02:29:44</td><td>15752.45</td><td>7273.74</td></tr><tr><td>7</td><td>1</td><td>2017-08-22 00:58:42</td><td>2018-03-24 02:38:31</td><td>22332.08</td><td>8042.78</td></tr><tr><td>15</td><td>4</td><td>2017-12-08 09:14:05</td><td>2018-03-24 23:03:30</td><td>25318.21</td><td>29836.26</td></tr><tr><td>11</td><td>1</td><td>2017-12-01 19:46:53</td><td>2018-03-24 05:22:36</td><td>35149.74</td><td>67216.31</td></tr><tr><td>11</td><td>3</td><td>2017-07-13 15:02:24</td><td>2018-03-24 23:01:03</td><td>31862.59</td><td>76992.42</td></tr><tr><td>5</td><td>2</td><td>2017-07-28 19:23:39</td><td>2018-03-24 09:17:15</td><td>85922.86</td><td>82524.95</td></tr><tr><td>6</td><td>2</td><td>2017-12-20 07:07:31</td><td>2018-03-24 23:25:58</td><td>64444.18</td><td>97371.12</td></tr><tr><td>4</td><td>1</td><td>2017-09-19 02:14:02</td><td>2018-03-25 09:15:30</td><td>32881.38</td><td>29987.71</td></tr><tr><td>15</td><td>2</td><td>2017-08-07 12:08:00</td><td>2018-03-23 19:21:12</td><td>13712.91</td><td>48100.23</td></tr><tr><td>4</td><td>4</td><td>2017-06-09 01:30:40</td><td>2018-03-24 12:35:08</td><td>79316.31</td><td>98086.8</td></tr><tr><td>8</td><td>2</td><td>2017-06-25 14:59:40</td><td>2018-03-24 12:27:13</td><td>83873.58</td><td>99049.01</td></tr><tr><td>7</td><td>4</td><td>2017-11-17 08:23:16</td><td>2018-03-25 12:03:33</td><td>20689.78</td><td>61800.95</td></tr><tr><td>14</td><td>1</td><td>2017-08-09 21:26:38</td><td>2018-03-24 18:16:47</td><td>20447.99</td><td>27257.6</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'black jeans', 'y_data': 695.16}, {'x_data': 'mouse', 'y_data': 803.74}, {'x_data': 'blue jeans', 'y_data': 939.57}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'product_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'product_price'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

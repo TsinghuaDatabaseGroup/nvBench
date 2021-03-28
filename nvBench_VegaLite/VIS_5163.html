@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5163</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5162.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5164.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5163</td><td><h4>NL Queries: </h4><ol><li><p>When do all the researcher role staff start to work? Bin the time into YEAR interval and count them with a line chart, and rank X from high to low order.</p></li><li><p>Give me the trend about the date_from attributes of all researchers, and bin the date into Year interval, rank by the x axis in desc.</p></li><li><p>Can you draw the trend of how many date from over the date from?, I want to rank in desc by the X-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT date_from , COUNT(date_from) FROM Project_Staff ORDER BY date_from DESC BIN date_from BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2964@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Line</p><p><b>DB: </b>tracking_grants_for_research</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_grants_for_research&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Project_Staff</h4><table><tr><th>staff_id</th><th>project_id</th><th>role_code</th><th>date_from</th><th>date_to</th><th>other_details</th></tr><tr><td>0.0</td><td>2</td><td>leader</td><td>1981-10-04 22:44:50</td><td>1985-05-30 22:26:30</td><td>None</td></tr><tr><td>674810.0</td><td>5</td><td>leader</td><td>2003-04-19 15:06:20</td><td>2010-12-08 11:55:36</td><td>None</td></tr><tr><td>779.0</td><td>2</td><td>researcher</td><td>1981-10-09 21:32:53</td><td>2004-12-16 13:03:36</td><td>None</td></tr><tr><td>6572.0</td><td>4</td><td>researcher</td><td>1983-02-07 17:55:59</td><td>2004-07-28 03:11:47</td><td>None</td></tr><tr><td>5353407.0</td><td>15</td><td>leader</td><td>2004-11-01 23:52:38</td><td>1988-03-04 19:30:05</td><td>None</td></tr><tr><td>5137097.0</td><td>7</td><td>researcher</td><td>1991-01-11 16:57:50</td><td>1993-06-09 12:44:28</td><td>None</td></tr><tr><td>29.0</td><td>9</td><td>researcher</td><td>2005-01-13 11:49:48</td><td>1973-07-19 04:51:26</td><td>None</td></tr><tr><td>3.0</td><td>8</td><td>researcher</td><td>1970-03-25 06:18:11</td><td>1985-12-05 12:00:58</td><td>None</td></tr><tr><td>3100031.0</td><td>11</td><td>researcher</td><td>1972-01-17 19:42:16</td><td>2016-03-15 00:33:18</td><td>None</td></tr><tr><td>49698449.0</td><td>1</td><td>leader</td><td>1970-04-06 15:50:21</td><td>1983-03-19 16:06:31</td><td>None</td></tr><tr><td>45.0</td><td>11</td><td>researcher</td><td>2000-08-28 11:49:17</td><td>2007-02-02 17:26:02</td><td>None</td></tr><tr><td>37.0</td><td>5</td><td>researcher</td><td>1989-04-24 23:51:54</td><td>2002-03-19 18:00:36</td><td>None</td></tr><tr><td>6065505.0</td><td>3</td><td>leader</td><td>1999-10-21 22:07:15</td><td>2008-09-25 20:06:28</td><td>None</td></tr><tr><td>56.0</td><td>1</td><td>leader</td><td>1970-01-02 15:35:05</td><td>1985-09-22 09:06:08</td><td>None</td></tr><tr><td>13739108.0</td><td>2</td><td>researcher</td><td>1973-12-12 11:46:28</td><td>1971-07-19 22:49:05</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2002~2005', 'y_data': 1}, {'x_data': '1998~2001', 'y_data': 1}, {'x_data': '1994~1997', 'y_data': 0}, {'x_data': '1990~1993', 'y_data': 1}, {'x_data': '1986~1989', 'y_data': 1}, {'x_data': '1982~1985', 'y_data': 1}, {'x_data': '1978~1981', 'y_data': 1}, {'x_data': '1974~1977', 'y_data': 0}, {'x_data': '1970~1973', 'y_data': 3}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_from', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_from)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

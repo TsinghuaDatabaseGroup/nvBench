@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5387</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5386.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5388.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5387</td><td><h4>NL Queries: </h4><ol><li><p>Give me a bar chart showing the number of films for each director, rank in ascending by the Y-axis.</p></li><li><p>Bar graph to show the number of directed by from different directed by, order by the y axis in asc.</p></li><li><p>What is the number of films of each director? Return a bar chart, and could you display by the how many directed by in asc?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Directed_by , COUNT(Directed_by) FROM film GROUP BY Directed_by ORDER BY COUNT(Directed_by) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>443@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cinema</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cinema&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: film</h4><table><tr><th>Film_ID</th><th>Rank_in_series</th><th>Number_in_season</th><th>Title</th><th>Directed_by</th><th>Original_air_date</th><th>Production_code</th></tr><tr><td>1</td><td>26</td><td>1</td><td>The Case of the Mystery Weekend</td><td>Bill Schreiner</td><td>September 21â25, 1992</td><td>50021â50025</td></tr><tr><td>2</td><td>27</td><td>2</td><td>The Case of the Smart Dummy</td><td>Bill Schreiner</td><td>September 28âOctober 2, 1992</td><td>50231â50235</td></tr><tr><td>3</td><td>28</td><td>3</td><td>The Case: Off the Record</td><td>Bill Schreiner</td><td>October 5â9, 1992</td><td>50011â50015</td></tr><tr><td>4</td><td>29</td><td>4</td><td>The Case of the Bermuda Triangle</td><td>Jesus Salvador TreviÃ±o</td><td>October 12â16, 1992</td><td>50251â50255</td></tr><tr><td>5</td><td>30</td><td>5</td><td>The Case of the Piggy Banker</td><td>Bill Schreiner</td><td>October 19â23, 1992</td><td>50241â50245</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Jesus Salvador Treviño', 'y_data': 1}, {'x_data': 'Bill Schreiner', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Directed_by', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Directed_by)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

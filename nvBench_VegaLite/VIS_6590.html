@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6590</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6589.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6591.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6590</td><td><h4>NL Queries: </h4><ol><li><p>Show the position of players and the corresponding number of players with a bar chart.</p></li><li><p>Show the position of players and the corresponding number of players. Visualize by bar chart.</p></li><li><p>Return a bar chart on how many players played each position?</p></li><li><p>Draw a bar chart for how many players played each position?</p></li><li><p>How many players played each position. Plot them as bar chart.</p></li><li><p>Give me a bar chart for the total number of each position</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Position , COUNT(*) FROM match_season GROUP BY POSITION</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2321</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>match_season</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: match_season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: match_season</h4><table><tr><th>Season</th><th>Player</th><th>Position</th><th>Country</th><th>Team</th><th>Draft_Pick_Number</th><th>Draft_Class</th><th>College</th></tr><tr><td>1996.0</td><td>Steve Ralston Category:Articles with hCards</td><td>Midfielder</td><td>6</td><td>1</td><td>18</td><td>1996 MLS College Draft</td><td>Florida International</td></tr><tr><td>1997.0</td><td>Mike Duhaney Category:Articles with hCards</td><td>Defender</td><td>6</td><td>2</td><td>87</td><td>1996 MLS Inaugural Player Draft</td><td>UNLV</td></tr><tr><td>1998.0</td><td>Ben Olsen Category:Articles with hCards</td><td>Midfielder</td><td>4</td><td>3</td><td>2</td><td>Project-40</td><td>Virginia</td></tr><tr><td>1999.0</td><td>Jay Heaps Category:Articles with hCards</td><td>Defender</td><td>5</td><td>4</td><td>5</td><td>1999 MLS College Draft</td><td>Duke</td></tr><tr><td>2000.0</td><td>Carlos Bocanegra Category:Articles with hCards</td><td>Defender</td><td>5</td><td>5</td><td>4</td><td>2000 MLS SuperDraft</td><td>UCLA</td></tr><tr><td>2001.0</td><td>Rodrigo Faria Category:Articles with hCards</td><td>Forward</td><td>4</td><td>5</td><td>13</td><td>2001 MLS SuperDraft</td><td>Concordia College</td></tr><tr><td>2002.0</td><td>Kyle Martino Category:Articles with hCards</td><td>Midfielder</td><td>6</td><td>3</td><td>8</td><td>2002 MLS SuperDraft</td><td>Virginia</td></tr><tr><td>2003.0</td><td>Damani Ralph Category:Articles with hCards</td><td>Forward</td><td>1</td><td>2</td><td>18</td><td>2003 MLS SuperDraft</td><td>Connecticut</td></tr><tr><td>2004.0</td><td>Clint Dempsey Category:Articles with hCards</td><td>Midfielder</td><td>6</td><td>3</td><td>8</td><td>2004 MLS SuperDraft</td><td>Furman</td></tr><tr><td>2005.0</td><td>Michael Parkhurst Category:Articles with hCards</td><td>Defender</td><td>6</td><td>4</td><td>9</td><td>2005 MLS SuperDraft</td><td>Wake Forest</td></tr><tr><td>2006.0</td><td>Jonathan Bornstein Category:Articles with hCards</td><td>Defender</td><td>6</td><td>10</td><td>37</td><td>2006 MLS SuperDraft</td><td>UCLA</td></tr><tr><td>2007.0</td><td>Maurice Edu Category:Articles with hCards</td><td>Midfielder</td><td>4</td><td>9</td><td>1</td><td>2007 MLS SuperDraft</td><td>Maryland</td></tr><tr><td>2008.0</td><td>Sean Franklin Category:Articles with hCards</td><td>Defender</td><td>6</td><td>5</td><td>4</td><td>2008 MLS SuperDraft</td><td>Cal State Northridge</td></tr><tr><td>2009.0</td><td>Omar Gonzalez Category:Articles with hCards</td><td>Defender</td><td>6</td><td>5</td><td>3</td><td>2009 MLS SuperDraft</td><td>Maryland</td></tr><tr><td>2010.0</td><td>Andy Najar Category:Articles with hCards</td><td>Midfielder</td><td>4</td><td>5</td><td>6</td><td>D.C. United Academy</td><td>none</td></tr><tr><td>2011.0</td><td>C. J. Sapong Category:Articles with hCards</td><td>Forward</td><td>6</td><td>3</td><td>10</td><td>2011 MLS SuperDraft</td><td>James Madison</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Defender', 'y_data': 7}, {'x_data': 'Forward', 'y_data': 3}, {'x_data': 'Midfielder', 'y_data': 6}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Position', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

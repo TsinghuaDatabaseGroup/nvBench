@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3481</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3480.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3482.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3481</td><td><h4>NL Queries: </h4><ol><li><p>Pie. what is minimum hours of the students playing in different position?</p></li><li><p>what is minimum hours of the students playing in different position?</p></li><li><p>What is minimum hours of the students playing in different position. Show the proportion.</p></li><li><p>For each position, what is the minimum time students spent practicing. Show a pie chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT pPos , min(T2.HS) FROM tryout AS T1 JOIN player AS T2 ON T1.pID = T2.pID GROUP BY pPos</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2787</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>soccer_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: soccer_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: tryout</h4><table><tr><th>pID</th><th>cName</th><th>pPos</th><th>decision</th></tr><tr><td>10001</td><td>LSU</td><td>goalie</td><td>no</td></tr><tr><td>10001</td><td>ASU</td><td>goalie</td><td>yes</td></tr><tr><td>20002</td><td>FSU</td><td>striker</td><td>yes</td></tr><tr><td>30003</td><td>OU</td><td>mid</td><td>no</td></tr><tr><td>40004</td><td>ASU</td><td>goalie</td><td>no</td></tr><tr><td>50005</td><td>LSU</td><td>mid</td><td>no</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'goalie', 'y_data': 1200}, {'x_data': 'mid', 'y_data': 300}, {'x_data': 'striker', 'y_data': 1600}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'min(T2.HS)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'pPos'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

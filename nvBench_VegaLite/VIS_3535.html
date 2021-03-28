@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3535</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3534.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3536.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3535</td><td><h4>NL Queries: </h4><ol><li><p>Find the id and cell phone of the professionals who operate two or more types of treatments. </p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.cell_number , T1.professional_id FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id = T2.professional_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1161</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>dog_kennels</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: dog_kennels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Professionals</h4><table><tr><th>professional_id</th><th>role_code</th><th>first_name</th><th>street</th><th>city</th><th>state</th><th>zip_code</th><th>last_name</th><th>email_address</th><th>home_phone</th><th>cell_number</th></tr><tr><td>1</td><td>Employee</td><td>Taryn</td><td>6915 Oberbrunner Point Suite 491
+Gleasonville, LA </td><td>West Heidi</td><td>Indiana</td><td>06646</td><td>Braun</td><td>deanna.schuster@example.com</td><td>+71(6)2898266914</td><td>(275)939-2435x80863</td></tr><tr><td>2</td><td>Employee</td><td>Jayson</td><td>88665 Terence Lodge Apt. 904
+Corneliusfort, NC 194</td><td>North Odellfurt</td><td>Connecticut</td><td>43129</td><td>Ullrich</td><td>lucile.shanahan@example.org</td><td>+02(1)0259033559</td><td>889-940-2676</td></tr><tr><td>3</td><td>Employee</td><td>Olaf</td><td>68589 Bradly Manor
+New Audrey, IN 91497</td><td>Jaceton</td><td>Wisconsin</td><td>77129</td><td>Watsica</td><td>uboehm@example.org</td><td>325-155-0801x7005</td><td>(369)908-7311x065</td></tr><tr><td>4</td><td>Veterenarian</td><td>Vernice</td><td>72532 Hane Course
+Lake Berylland, ND 95283</td><td>Domenickton</td><td>Mississippi</td><td>02281</td><td>Tillman</td><td>lourdes.lowe@example.net</td><td>312.216.3352</td><td>00230569697</td></tr><tr><td>5</td><td>Veterenarian</td><td>Danny</td><td>188 VonRueden Tunnel Suite 630
+North Macibury, NV </td><td>New Laurytown</td><td>Hawaii</td><td>84515</td><td>Considine</td><td>mekhi.little@example.org</td><td>1-609-566-2752x25197</td><td>011.193.9081x3186</td></tr><tr><td>6</td><td>Veterenarian</td><td>Ruben</td><td>17286 Waters Green
+East Bernadinefort, CA 89573</td><td>Baileymouth</td><td>NewMexico</td><td>52476</td><td>O'Reilly</td><td>jacynthe.mclaughlin@example.net</td><td>+43(5)1132733868</td><td>139-321-7313</td></tr><tr><td>7</td><td>Veterenarian</td><td>Velva</td><td>44234 Marvin Shoals Suite 659
+North Frances, AL 23</td><td>McLaughlinfort</td><td>NorthCarolina</td><td>67980</td><td>Hayes</td><td>lambert62@example.org</td><td>022.529.0550x1319</td><td>499-434-0215x1628</td></tr><tr><td>8</td><td>Employee</td><td>Karley</td><td>36895 Eli Ferry
+Port Marcelle, FL 45712</td><td>Kirastad</td><td>Indiana</td><td>33020</td><td>Hyatt</td><td>goyette.roosevelt@example.net</td><td>891.475.2256</td><td>328.842.3792</td></tr><tr><td>9</td><td>Veterenarian</td><td>Monte</td><td>07073 Brenna Ways Suite 089
+Lowehaven, KY 93275-96</td><td>South Rockyport</td><td>SouthCarolina</td><td>80775</td><td>Kshlerin</td><td>schneider.kathryne@example.org</td><td>320-508-6023</td><td>962-983-8109x3509</td></tr><tr><td>10</td><td>Employee</td><td>Domenica</td><td>7284 Torphy Flats Apt. 610
+Diannaburgh, SC 78560</td><td>New Maryjane</td><td>California</td><td>54312</td><td>Jacobs</td><td>jerrod.bahringer@example.org</td><td>(230)338-3342x585</td><td>461-801-2600</td></tr><tr><td>11</td><td>Employee</td><td>Brady</td><td>09615 McKenzie Stravenue Apt. 128
+West Elliottview</td><td>Raynorfort</td><td>Alabama</td><td>07412</td><td>Pouros</td><td>west.eula@example.net</td><td>(920)304-4499x59146</td><td>609-405-2990</td></tr><tr><td>12</td><td>Veterenarian</td><td>Winfield</td><td>92912 Langworth Valleys Apt. 743
+Thompsonborough, </td><td>Juddton</td><td>Utah</td><td>34041</td><td>Christiansen</td><td>marquardt.furman@example.org</td><td>246-951-0080x76716</td><td>1-181-670-9466</td></tr><tr><td>13</td><td>Veterenarian</td><td>Ericka</td><td>7783 Abraham Alley
+Port Madelynhaven, KY 59172-273</td><td>Borisside</td><td>Wyoming</td><td>17902</td><td>Murazik</td><td>delphine29@example.com</td><td>346.594.3739</td><td>880-659-7577x736</td></tr><tr><td>14</td><td>Employee</td><td>Sigurd</td><td>390 Bryce Drive
+North Dock, LA 65357-7228</td><td>East Ila</td><td>Connecticut</td><td>41215</td><td>Frami</td><td>cole.margarita@example.org</td><td>971.048.3763x9404</td><td>1-185-137-1945x409</td></tr><tr><td>15</td><td>Employee</td><td>Lesly</td><td>63949 Keeling Landing Apt. 502
+Johnsview, SD 06780</td><td>North Adelberttown</td><td>Montana</td><td>98844</td><td>Walter</td><td>jeichmann@example.com</td><td>1-138-287-3775</td><td>1-258-285-4707x8020</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '00230569697', 'y_data': 4}, {'x_data': '139-321-7313', 'y_data': 6}, {'x_data': '328.842.3792', 'y_data': 8}, {'x_data': '962-983-8109x3509', 'y_data': 9}, {'x_data': '461-801-2600', 'y_data': 10}, {'x_data': '1-185-137-1945x409', 'y_data': 14}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'cell_number', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'professional_id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

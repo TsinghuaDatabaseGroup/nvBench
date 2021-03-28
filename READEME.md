@@ -1,14 +1,17 @@
-## Introduction to NVBench
+# nvBench: Natural Language to Visualization (NL2VIS) Benchmarks
 
+nvBench is a large dataset for complex and cross-domain NL2VIS task, which covers 105 domains, supports seven common types of visualizations, and contains 25,750 (NL, VIS) pairs.
 This repository contains the corpus of NL2VIS, with JSON format and Vega-Lite format.
 
-- **NVBench.json** stores the JSON format of (NL, VIS) pairs in the NVBench benchmark.
+## Introduction to nvBench
 
-- **NVBench_Vega** contains all (NL, VIS) pairs in the NVBench benchmark, and renders the VIS using the [Vega-Lite](https://vega.github.io/vega-lite/) visualization library.
+- **nvBench.json** stores the JSON format of (NL, VIS) pairs in the NVBench benchmark.
+
+- **nvBench_VegaLite** contains all (NL, VIS) pairs in the NVBench benchmark, and renders the VIS using the [Vega-Lite](https://vega.github.io/vega-lite/) visualization library.
 
 - **database** contains all DB used by the NVBench benchmark.
 
-### NVBench.json
+### nvBench.json
 
 #### (NL, VIS) JSON format
 Each (NL, VIS) pair is denoted as a JSON object in NVBench.json, with the following fields:
@@ -63,3 +66,36 @@ Below is an example:
         ]
     }
 ```
+
+Citation
+When you use the nvBench dataset and the corresponding baseline models, we would appreciate it if you cite the following:
+
+```
+@inproceedings{nvBench_SIGMOD21,
+  author    = {Yuyu Luo and
+               Nan Tang and
+               Guoliang Li and
+               Chengliang Chai and
+               Wenbo Li and
+               Xuedi Qin},
+  title     = {Synthesizing Natural Language to Visualization (NL2VIS) Benchmarks from NL2SQL Benchmarks},
+  booktitle = {Proceedings of the 2021 International Conference on Management of
+               Data, {SIGMOD} Conference 2021, June 20–25, 2021, Virtual Event, China},
+  publisher = {{ACM}},
+  year      = {2021},
+}
+```
+
+Publications
+===========================
+For more techniq
+- Yuyu Luo, Nan Tang, Guoliang Li, et al. [Synthesizing Natural Language to Visualization (NL2VIS) Benchmarks from NL2SQL Benchmarks](https://github.com/TsinghuaDatabaseGroup/nvBench). **SIGMOD 2021**
+
+Contributors
+===========================
+|#|Contributor|Affiliation|Contact|
+|---|----|-----|-----|
+|1|[Guoliang Li](http://dbgroup.cs.tsinghua.edu.cn/ligl/)|Professor, Tsinghua University| LastName+FirstName@tsinghua.edu.cn
+|2|[Nan Tang](http://da.qcri.org/ntang/index.html)|Senior Scientist, Qatar Computing Research Institute|ntang@hbku.edu.qa
+|3|[Yuyu Luo](https://luoyuyu.vip)| PhD Student, Tsinghua University| luoyy18@mails.tsinghua.edu.cn
+##### If you have any questions or feedbacks about this project, please feel free to contact Yuyu Luo (luoyy18@mails.tsinghua.edu.cn).

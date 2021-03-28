@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4756</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4755.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4757.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4756</td><td><h4>NL Queries: </h4><ol><li><p>What is the country of origin of the artist who is female and produced a song in Bangla, and count them by a bar chart</p></li><li><p>What countries are the female artists who sung in the language Bangla from, and count them by a bar chart</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.country , T1.country FROM artist AS T1 JOIN song AS T2 ON T1.artist_name = T2.artist_name WHERE T1.gender = "Female" AND T2.languages = "bangla" GROUP BY T1.country</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2430</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>music_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: music_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: artist</h4><table><tr><th>artist_name</th><th>country</th><th>gender</th><th>preferred_genre</th></tr><tr><td>Shrikanta</td><td>India</td><td>Male</td><td>tagore</td></tr><tr><td>Prity</td><td>Bangladesh</td><td>Female</td><td>nazrul</td></tr><tr><td>Farida</td><td>Bangladesh</td><td>Female</td><td>folk</td></tr><tr><td>Topu</td><td>India</td><td>Female</td><td>modern</td></tr><tr><td>Enrique</td><td>USA</td><td>Male</td><td>blues</td></tr><tr><td>Michel</td><td>UK</td><td>Male</td><td>pop</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Bangladesh', 'y_data': 2}, {'x_data': 'India', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'country', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(country)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

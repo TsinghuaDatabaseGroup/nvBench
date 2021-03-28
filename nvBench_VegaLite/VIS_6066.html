@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6066</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6065.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6067.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6066</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart for listing the number of the names of patients who have made appointments.</p></li><li><p>What are the number of names of patients who made an appointment?</p></li><li><p>List the names of patients who have made appointments, and count them by a bar chart</p></li><li><p>What are names of patients who made an appointment, and count them by a bar chart</p></li><li><p>List the number of the names of patients who have made appointments.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , COUNT(Name) FROM appointment AS T1 JOIN patient AS T2 ON T1.patient = T2.ssn GROUP BY Name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1530</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>hospital_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: hospital_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: appointment</h4><table><tr><th>AppointmentID</th><th>Patient</th><th>PrepNurse</th><th>Physician</th><th>Start</th><th>End</th><th>ExaminationRoom</th></tr><tr><td>13216584</td><td>100000001</td><td>101.0</td><td>1</td><td>2008-04-24 10:00</td><td>2008-04-24 11:00</td><td>A</td></tr><tr><td>26548913</td><td>100000002</td><td>101.0</td><td>2</td><td>2008-04-24 10:00</td><td>2008-04-24 11:00</td><td>B</td></tr><tr><td>36549879</td><td>100000001</td><td>102.0</td><td>1</td><td>2008-04-25 10:00</td><td>2008-04-25 11:00</td><td>A</td></tr><tr><td>46846589</td><td>100000004</td><td>103.0</td><td>4</td><td>2008-04-25 10:00</td><td>2008-04-25 11:00</td><td>B</td></tr><tr><td>59871321</td><td>100000004</td><td>nan</td><td>4</td><td>2008-04-26 10:00</td><td>2008-04-26 11:00</td><td>C</td></tr><tr><td>69879231</td><td>100000003</td><td>103.0</td><td>2</td><td>2008-04-26 11:00</td><td>2008-04-26 12:00</td><td>C</td></tr><tr><td>76983231</td><td>100000001</td><td>nan</td><td>3</td><td>2008-04-26 12:00</td><td>2008-04-26 13:00</td><td>C</td></tr><tr><td>86213939</td><td>100000004</td><td>102.0</td><td>9</td><td>2008-04-27 10:00</td><td>2008-04-21 11:00</td><td>A</td></tr><tr><td>93216548</td><td>100000002</td><td>101.0</td><td>2</td><td>2008-04-27 10:00</td><td>2008-04-27 11:00</td><td>B</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Dennis Doe', 'y_data': 3}, {'x_data': 'Grace Ritchie', 'y_data': 2}, {'x_data': 'John Smith', 'y_data': 3}, {'x_data': 'Random J. Patient', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

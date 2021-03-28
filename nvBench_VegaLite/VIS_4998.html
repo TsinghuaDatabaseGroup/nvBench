@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4998</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4997.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4999.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4998</td><td><h4>NL Queries: </h4><ol><li><p>Count the hometown by hometown, and sort from high to low by the y-axis.</p></li><li><p>Show the hometown of all members, and list in descending by the Y.</p></li><li><p>Bar chart of the number of hometown from each hometown, and I want to display total number in descending order.</p></li><li><p>Count the hometown by hometown using a bar chart, and could you list y axis in desc order please?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Hometown , COUNT(Hometown) FROM member GROUP BY Hometown ORDER BY COUNT(Hometown) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2769@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>shop_membership</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: shop_membership&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: member</h4><table><tr><th>Member_ID</th><th>Card_Number</th><th>Name</th><th>Hometown</th><th>Level</th></tr><tr><td>1</td><td>LE99</td><td>Jeremy Jarmon</td><td>Collierville, Tennessee</td><td>6</td></tr><tr><td>2</td><td>LT98</td><td>Myron Pryor</td><td>Louisville, Kentucky</td><td>6</td></tr><tr><td>3</td><td>RT91</td><td>Corey Peters</td><td>Louisville, Kentucky</td><td>6</td></tr><tr><td>4</td><td>RE95</td><td>Ventrell Jenkins</td><td>Columbia, South Carolina</td><td>6</td></tr><tr><td>5</td><td>OLB56</td><td>Braxton Kelley</td><td>LaGrange, Georgia</td><td>6</td></tr><tr><td>6</td><td>MLB4</td><td>Micah Johnson</td><td>Fort Campbell, Kentucky</td><td>4</td></tr><tr><td>7</td><td>SLB51</td><td>Johnny Williams</td><td>Jacksonville, Florida</td><td>6</td></tr><tr><td>8</td><td>RCB32</td><td>Trevard Lindley</td><td>Hiram, Georgia</td><td>6</td></tr><tr><td>9</td><td>LCB7</td><td>David Jones</td><td>Red Jacket, West Virginia</td><td>6</td></tr><tr><td>10</td><td>FS10</td><td>Matt Lentz</td><td>Simpsonville, South Carolina</td><td>2</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Louisville, Kentucky', 'y_data': 2}, {'x_data': 'Simpsonville, South Carolina', 'y_data': 1}, {'x_data': 'Red Jacket, West Virginia', 'y_data': 1}, {'x_data': 'LaGrange, Georgia', 'y_data': 1}, {'x_data': 'Jacksonville, Florida', 'y_data': 1}, {'x_data': 'Hiram, Georgia', 'y_data': 1}, {'x_data': 'Fort Campbell, Kentucky', 'y_data': 1}, {'x_data': 'Columbia, South Carolina', 'y_data': 1}, {'x_data': 'Collierville, Tennessee', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Hometown', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Hometown)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

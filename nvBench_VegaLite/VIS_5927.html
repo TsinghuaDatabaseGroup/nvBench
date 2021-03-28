@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5927</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5926.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5928.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5927</td><td><h4>NL Queries: </h4><ol><li><p>Draw a bar chart for how many storms occured in each region?, I want to rank the total number from low to high order.</p></li><li><p>How many storms occured in each region Visualize by bar chart, and could you display the total number from low to high order?</p></li><li><p>Show the name for regions and the number of storms for each region, and I want to list by the y axis in asc.</p></li><li><p>Show me a bar chart for how many storms occured in each region?, sort by the y axis from low to high please.</p></li><li><p>Show the name for regions and the number of storms for each region by a bar chart, and order total number from low to high order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Region_name , count(*) FROM region AS T1 JOIN affected_region AS T2 ON T1.region_id = T2.region_id GROUP BY T1.region_id ORDER BY count(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2867@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>storm_record</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: storm_record&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: region</h4><table><tr><th>Region_id</th><th>Region_code</th><th>Region_name</th></tr><tr><td>1</td><td>AF</td><td>Afghanistan</td></tr><tr><td>2</td><td>AL</td><td>Albania</td></tr><tr><td>3</td><td>DZ</td><td>Algeria</td></tr><tr><td>4</td><td>DS</td><td>American Samoa</td></tr><tr><td>5</td><td>AD</td><td>Andorra</td></tr><tr><td>6</td><td>AO</td><td>Angola</td></tr><tr><td>7</td><td>AI</td><td>Anguilla</td></tr><tr><td>8</td><td>AQ</td><td>Antarctica</td></tr><tr><td>9</td><td>AG</td><td>Antigua and Barbuda</td></tr><tr><td>10</td><td>CY</td><td>Cyprus</td></tr><tr><td>11</td><td>CZ</td><td>Czech Republic</td></tr><tr><td>12</td><td>DK</td><td>Denmark</td></tr><tr><td>13</td><td>DJ</td><td>Djibouti</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Algeria', 'y_data': 1}, {'x_data': 'Denmark', 'y_data': 1}, {'x_data': 'Afghanistan', 'y_data': 2}, {'x_data': 'Albania', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Region_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

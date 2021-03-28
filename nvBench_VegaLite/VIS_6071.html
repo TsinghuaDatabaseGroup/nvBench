@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6071</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6070.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6072.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6071</td><td><h4>NL Queries: </h4><ol><li><p>What is the number of professors for different school Plot them as bar chart, and show by the names from high to low.</p></li><li><p>Return a bar chart on what is the number of professors for different school?, and show by the names from high to low.</p></li><li><p>A bar chart about how many different professors are there for the different schools?, and I want to list from high to low by the X.</p></li><li><p>How many different professors are there for the different schools Show bar chart, sort bars from high to low order.</p></li><li><p>Return a bar chart on how many different professors are there for the different schools?, and sort x axis in desc order.</p></li><li><p>Give me a histogram for what is the number of professors for different school?, sort x axis in desc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT SCHOOL_CODE , count(*) FROM department AS T1 JOIN professor AS T2 ON T1.dept_code = T2.dept_code GROUP BY T1.school_code ORDER BY SCHOOL_CODE DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>574@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: department</h4><table><tr><th>DEPT_CODE</th><th>DEPT_NAME</th><th>SCHOOL_CODE</th><th>EMP_NUM</th><th>DEPT_ADDRESS</th><th>DEPT_EXTENSION</th></tr><tr><td>ACCT</td><td>Accounting</td><td>BUS</td><td>114</td><td>KLR 211, Box 52</td><td>3119</td></tr><tr><td>ART</td><td>Fine Arts</td><td>A&SCI</td><td>435</td><td>BBG 185, Box 128</td><td>2278</td></tr><tr><td>BIOL</td><td>Biology</td><td>A&SCI</td><td>387</td><td>AAK 230, Box 415</td><td>4117</td></tr><tr><td>CIS</td><td>Computer Info. Systems</td><td>BUS</td><td>209</td><td>KLR 333, Box 56</td><td>3245</td></tr><tr><td>ECON/FIN</td><td>Economics/Finance</td><td>BUS</td><td>299</td><td>KLR 284, Box 63</td><td>3126</td></tr><tr><td>ENG</td><td>English</td><td>A&SCI</td><td>160</td><td>DRE 102, Box 223</td><td>1004</td></tr><tr><td>HIST</td><td>History</td><td>A&SCI</td><td>103</td><td>DRE 156, Box 284</td><td>1867</td></tr><tr><td>MATH</td><td>Mathematics</td><td>A&SCI</td><td>297</td><td>AAK 194, Box 422</td><td>4234</td></tr><tr><td>MKT/MGT</td><td>Marketing/Management</td><td>BUS</td><td>106</td><td>KLR 126, Box 55</td><td>3342</td></tr><tr><td>PSYCH</td><td>Psychology</td><td>A&SCI</td><td>195</td><td>AAK 297, Box 438</td><td>4110</td></tr><tr><td>SOC</td><td>Sociology</td><td>A&SCI</td><td>342</td><td>BBG 208, Box 132</td><td>2008</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'BUS', 'y_data': 10}, {'x_data': 'A&SCI', 'y_data': 12}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'SCHOOL_CODE', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

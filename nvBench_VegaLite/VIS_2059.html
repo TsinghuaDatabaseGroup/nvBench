@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2059</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2058.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2060.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2059</td><td><h4>NL Queries: </h4><ol><li><p>For each type of store, how many of them are there Plot them as bar chart, and display from high to low by the Y-axis.</p></li><li><p>Bar chart x axis type y axis the total number, display from high to low by the Y-axis.</p></li><li><p>Find all types of store and number of them Visualize by bar chart, rank by the y axis in descending please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Type , count(*) FROM store GROUP BY TYPE ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2862@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>store_product</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: store_product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: store</h4><table><tr><th>Store_ID</th><th>Store_Name</th><th>Type</th><th>Area_size</th><th>Number_of_product_category</th><th>Ranking</th></tr><tr><td>1</td><td>Miramichi</td><td>City Mall</td><td>179.84</td><td>17811.0</td><td>2</td></tr><tr><td>2</td><td>Neguac</td><td>Village Store</td><td>26.69</td><td>1678.0</td><td>3</td></tr><tr><td>3</td><td>Rogersville</td><td>Village Store</td><td>7.23</td><td>1170.0</td><td>1</td></tr><tr><td>4</td><td>Blackville</td><td>Village Store</td><td>21.73</td><td>990.0</td><td>10</td></tr><tr><td>5</td><td>Doaktown</td><td>City Mall</td><td>28.74</td><td>793.0</td><td>9</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Village Store', 'y_data': 3}, {'x_data': 'City Mall', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Type', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

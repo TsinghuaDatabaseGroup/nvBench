@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3397</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3396.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3398.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3397</td><td><h4>NL Queries: </h4><ol><li><p>Bar graph to show the number of last name from different last name, and I want to order in ascending by the bar.</p></li><li><p>what is the total number of last names of all candidates?, and order x-axis in ascending order.</p></li><li><p>Give me a bar graph for what is the total number of last names of all candidates?, sort in asc by the x axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT last_name , COUNT(last_name) FROM people GROUP BY last_name ORDER BY last_name ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2879@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>student_assessment</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: student_assessment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: people</h4><table><tr><th>person_id</th><th>first_name</th><th>middle_name</th><th>last_name</th><th>cell_mobile_number</th><th>email_address</th><th>login_name</th><th>password</th></tr><tr><td>111</td><td>Shannon</td><td>Elissa</td><td>Senger</td><td>01955267735</td><td>javier.trantow@example.net</td><td>pgub</td><td>5e4ff49a61b3544da3ad7dc7e2cf28847564c64c</td></tr><tr><td>121</td><td>Virginie</td><td>Jasmin</td><td>Hartmann</td><td>(508)319-2970x043</td><td>boyer.lonie@example.com</td><td>bkkv</td><td>b063331ea8116befaa7b84c59c6a22200f5f8caa</td></tr><tr><td>131</td><td>Dariana</td><td>Hayley</td><td>Bednar</td><td>(262)347-9364x516</td><td>leila14@example.net</td><td>zops</td><td>b20b6a9f24aadeda70d54e410c3219f61fb063fb</td></tr><tr><td>141</td><td>Verna</td><td>Arielle</td><td>Grant</td><td>1-372-548-7538x314</td><td>adele.gibson@example.net</td><td>uuol</td><td>7be9c03d5467d563555c51ebb3eb78e7f90832ec</td></tr><tr><td>151</td><td>Hoyt</td><td>Mercedes</td><td>Wintheiser</td><td>1-603-110-0647</td><td>stanley.monahan@example.org</td><td>bnto</td><td>c55795df86182959094b83e27900f7cf44ced570</td></tr><tr><td>161</td><td>Mayra</td><td>Haley</td><td>Hartmann</td><td>724-681-4161x51632</td><td>terry.kuhlman@example.org</td><td>rzxu</td><td>ecae473cb54601e01457078ac0cdf4a1ced837bb</td></tr><tr><td>171</td><td>Lizeth</td><td>Bell</td><td>Bartoletti</td><td>812.228.0645x91481</td><td>celestine11@example.net</td><td>mkou</td><td>76a93d1d3b7becc932d203beac61d064bd54e947</td></tr><tr><td>181</td><td>Nova</td><td>Amiya</td><td>Feest</td><td>766-272-9964</td><td>oreynolds@example.com</td><td>qrwl</td><td>7dce9b688636ee212294c257dd2f6b85c7f65f2e</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Bartoletti', 'y_data': 1}, {'x_data': 'Bednar', 'y_data': 1}, {'x_data': 'Feest', 'y_data': 1}, {'x_data': 'Grant', 'y_data': 1}, {'x_data': 'Hartmann', 'y_data': 2}, {'x_data': 'Senger', 'y_data': 1}, {'x_data': 'Wintheiser', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'last_name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(last_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

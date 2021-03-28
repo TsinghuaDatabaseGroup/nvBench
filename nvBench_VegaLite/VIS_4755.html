@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4755</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4754.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4756.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4755</td><td><h4>NL Queries: </h4><ol><li><p>Bin the claim date into the Year interval and count them for visualizing a bar chart.</p></li><li><p>Create a bar chart showing the number of date claim made across date claim made</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Date_Claim_Made , COUNT(Date_Claim_Made) FROM Settlements BIN Date_Claim_Made BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2019</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_policies</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_policies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Settlements</h4><table><tr><th>Settlement_ID</th><th>Claim_ID</th><th>Date_Claim_Made</th><th>Date_Claim_Settled</th><th>Amount_Claimed</th><th>Amount_Settled</th><th>Customer_Policy_ID</th></tr><tr><td>357</td><td>486</td><td>2018-08-07</td><td>2018-01-16</td><td>38543</td><td>1181</td><td>515</td></tr><tr><td>412</td><td>621</td><td>2017-08-27</td><td>2018-02-04</td><td>57669</td><td>1427</td><td>617</td></tr><tr><td>476</td><td>801</td><td>2016-09-05</td><td>2018-03-02</td><td>30954</td><td>1805</td><td>943</td></tr><tr><td>512</td><td>801</td><td>2016-05-18</td><td>2018-02-11</td><td>82506</td><td>1737</td><td>133</td></tr><tr><td>516</td><td>563</td><td>2017-05-19</td><td>2017-10-06</td><td>37302</td><td>1767</td><td>638</td></tr><tr><td>527</td><td>801</td><td>2018-11-10</td><td>2018-02-15</td><td>25078</td><td>930</td><td>727</td></tr><tr><td>558</td><td>569</td><td>2018-05-12</td><td>2017-11-30</td><td>16603</td><td>1516</td><td>536</td></tr><tr><td>564</td><td>761</td><td>2016-07-04</td><td>2018-02-20</td><td>62680</td><td>1676</td><td>839</td></tr><tr><td>597</td><td>486</td><td>2017-04-18</td><td>2017-12-24</td><td>4456</td><td>1698</td><td>359</td></tr><tr><td>616</td><td>957</td><td>2017-07-31</td><td>2018-01-27</td><td>24055</td><td>1262</td><td>590</td></tr><tr><td>648</td><td>761</td><td>2017-09-22</td><td>2018-02-14</td><td>32079</td><td>1266</td><td>805</td></tr><tr><td>682</td><td>801</td><td>2017-03-04</td><td>2018-02-20</td><td>56850</td><td>1508</td><td>564</td></tr><tr><td>756</td><td>571</td><td>2017-04-14</td><td>2017-11-15</td><td>8634</td><td>1293</td><td>448</td></tr><tr><td>897</td><td>843</td><td>2017-03-29</td><td>2018-02-20</td><td>20569</td><td>1885</td><td>678</td></tr><tr><td>983</td><td>621</td><td>2016-07-19</td><td>2017-11-04</td><td>3864</td><td>1042</td><td>419</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2016', 'y_data': 4}, {'x_data': '2017', 'y_data': 8}, {'x_data': '2018', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date_Claim_Made', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Date_Claim_Made)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

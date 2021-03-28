@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7114</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7113.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7115.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7114</td><td><h4>NL Queries: </h4><ol><li><p>What is the placement date of the order whose invoice number is 10, and count them by a bar chart</p></li><li><p>On what day was the order with invoice number 10 placed, and count them by a bar chart</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_order_placed , COUNT(date_order_placed) FROM orders AS T1 JOIN shipments AS T2 ON T1.order_id = T2.order_id WHERE T2.invoice_number = 10 BIN date_order_placed BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2974</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>tracking_orders</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_orders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: orders</h4><table><tr><th>order_id</th><th>customer_id</th><th>order_status</th><th>date_order_placed</th><th>order_details</th></tr><tr><td>1</td><td>2</td><td>Shipped</td><td>2009-02-21 15:26:19</td><td>None</td></tr><tr><td>2</td><td>11</td><td>Shipped</td><td>1974-06-24 22:10:26</td><td>None</td></tr><tr><td>3</td><td>4</td><td>Shipped</td><td>1982-12-29 21:10:11</td><td>None</td></tr><tr><td>4</td><td>15</td><td>Packing</td><td>1974-08-10 08:15:16</td><td>None</td></tr><tr><td>5</td><td>5</td><td>Packing</td><td>2010-06-08 02:20:49</td><td>None</td></tr><tr><td>6</td><td>7</td><td>Packing</td><td>1975-12-23 15:59:43</td><td>None</td></tr><tr><td>7</td><td>15</td><td>Packing</td><td>1976-09-01 09:27:00</td><td>None</td></tr><tr><td>8</td><td>10</td><td>On Road</td><td>1997-01-27 19:12:01</td><td>None</td></tr><tr><td>9</td><td>3</td><td>On Road</td><td>1983-09-08 12:32:49</td><td>None</td></tr><tr><td>10</td><td>2</td><td>On Road</td><td>1982-12-09 09:42:23</td><td>None</td></tr><tr><td>11</td><td>9</td><td>On Road</td><td>1979-12-07 02:03:49</td><td>None</td></tr><tr><td>12</td><td>2</td><td>On Road</td><td>1976-01-18 08:09:12</td><td>None</td></tr><tr><td>13</td><td>15</td><td>On Road</td><td>2002-12-06 14:13:30</td><td>None</td></tr><tr><td>14</td><td>10</td><td>On Road</td><td>2002-09-13 07:38:09</td><td>None</td></tr><tr><td>15</td><td>8</td><td>On Road</td><td>1971-05-10 01:54:18</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 1}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 1}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Fri', 'y_data': 0}, {'x_data': 'Sat', 'y_data': 0}, {'x_data': 'Sun', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_order_placed', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_order_placed)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

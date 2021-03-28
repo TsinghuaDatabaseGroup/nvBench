@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6030</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6029.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6031.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6030</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart showing the sum of capacity of cinemas open for each year, rank by the X from low to high please.</p></li><li><p>Give me a bar chart for total number of capacity of each openning year, and could you show in ascending by the names please?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Openning_year , SUM(Capacity) FROM cinema GROUP BY Openning_year ORDER BY Openning_year ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>468@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cinema</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cinema&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: cinema</h4><table><tr><th>Cinema_ID</th><th>Name</th><th>Openning_year</th><th>Capacity</th><th>Location</th></tr><tr><td>1</td><td>Codling</td><td>2010</td><td>1100</td><td>County Wicklow</td></tr><tr><td>2</td><td>Carrowleagh</td><td>2012</td><td>368</td><td>County Cork</td></tr><tr><td>3</td><td>Dublin Array</td><td>2015</td><td>364</td><td>County Dublin</td></tr><tr><td>4</td><td>Glenmore</td><td>2009</td><td>305</td><td>County Clare</td></tr><tr><td>5</td><td>Glenough</td><td>2010</td><td>325</td><td>County Tipperary</td></tr><tr><td>6</td><td>Gortahile</td><td>2010</td><td>208</td><td>County Laois</td></tr><tr><td>7</td><td>Grouse Lodge</td><td>2011</td><td>203</td><td>County Tipperary</td></tr><tr><td>8</td><td>Moneypoint</td><td>2011</td><td>225</td><td>County Clare</td></tr><tr><td>9</td><td>Mount Callan</td><td>2011</td><td>908</td><td>County Clare</td></tr><tr><td>10</td><td>Oriel</td><td>2013</td><td>330</td><td>County Louth</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2009-01-01', 'y_data': 305}, {'x_data': '2010-01-01', 'y_data': 1633}, {'x_data': '2011-01-01', 'y_data': 1336}, {'x_data': '2012-01-01', 'y_data': 368}, {'x_data': '2013-01-01', 'y_data': 330}, {'x_data': '2015-01-01', 'y_data': 364}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Openning_year', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'SUM(Capacity)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

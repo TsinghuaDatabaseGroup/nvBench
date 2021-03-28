@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6448</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6447.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6449.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6448</td><td><h4>NL Queries: </h4><ol><li><p>Plot the total number by grouped by industry as a bar graph, and sort in ascending by the Industry.</p></li><li><p>, order by the bars from low to high.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Industry , COUNT(*) FROM Companies GROUP BY Industry ORDER BY Industry ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>685@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>company_office</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: company_office&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Companies</h4><table><tr><th>id</th><th>name</th><th>Headquarters</th><th>Industry</th><th>Sales_billion</th><th>Profits_billion</th><th>Assets_billion</th><th>Market_Value_billion</th></tr><tr><td>1</td><td>JPMorgan Chase</td><td>USA</td><td>Banking</td><td>115.5</td><td>17.4</td><td>2117.6</td><td>182.2</td></tr><tr><td>2</td><td>HSBC</td><td>UK</td><td>Banking</td><td>103.3</td><td>13.3</td><td>2467.9</td><td>186.5</td></tr><tr><td>3</td><td>General Electric</td><td>USA</td><td>Conglomerate</td><td>156.2</td><td>11.6</td><td>751.2</td><td>216.2</td></tr><tr><td>4</td><td>ExxonMobil</td><td>USA</td><td>Oil and gas</td><td>341.6</td><td>30.5</td><td>302.5</td><td>407.2</td></tr><tr><td>5</td><td>Royal Dutch Shell</td><td>Netherlands</td><td>Oil and gas</td><td>369.1</td><td>20.1</td><td>317.2</td><td>212.9</td></tr><tr><td>6</td><td>PetroChina</td><td>China</td><td>Oil and gas</td><td>222.3</td><td>21.2</td><td>251.3</td><td>320.8</td></tr><tr><td>7</td><td>Industrial and Commercial Bank of China</td><td>China</td><td>Banking</td><td>69.2</td><td>18.8</td><td>1723.5</td><td>239.5</td></tr><tr><td>8</td><td>Berkshire Hathaway</td><td>USA</td><td>Conglomerate</td><td>136.2</td><td>13.0</td><td>372.2</td><td>211</td></tr><tr><td>9</td><td>Petrobras</td><td>Brazil</td><td>Oil and gas</td><td>121.3</td><td>21.2</td><td>313.2</td><td>238.8</td></tr><tr><td>10</td><td>Citigroup</td><td>USA</td><td>Banking</td><td>111.5</td><td>10.6</td><td>1913.9</td><td>132.8</td></tr><tr><td>11</td><td>BNP Paribas</td><td>France</td><td>Banking</td><td>130.4</td><td>10.5</td><td>2680.7</td><td>88</td></tr><tr><td>12</td><td>Wells Fargo</td><td>USA</td><td>Banking</td><td>93.2</td><td>12.4</td><td>1258.1</td><td>170.6</td></tr><tr><td>13</td><td>Santander Group</td><td>Spain</td><td>Banking</td><td>109.7</td><td>12.8</td><td>1570.6</td><td>94.7</td></tr><tr><td>14</td><td>AT&T Inc.</td><td>USA</td><td>Telecommunications</td><td>124.3</td><td>19.9</td><td>268.5</td><td>168.2</td></tr><tr><td>15</td><td>Gazprom</td><td>Russia</td><td>Oil and gas</td><td>98.7</td><td>25.7</td><td>275.9</td><td>172.9</td></tr><tr><td>16</td><td>Chevron</td><td>USA</td><td>Oil and gas</td><td>189.6</td><td>19.0</td><td>184.8</td><td>200.6</td></tr><tr><td>17</td><td>China Construction Bank</td><td>China</td><td>Banking</td><td>58.2</td><td>15.6</td><td>1408.0</td><td>224.8</td></tr><tr><td>18</td><td>Walmart</td><td>USA</td><td>Retailing</td><td>421.8</td><td>16.4</td><td>180.7</td><td>187.3</td></tr><tr><td>19</td><td>Total</td><td>France</td><td>Oil and gas</td><td>188.1</td><td>14.2</td><td>192.8</td><td>138</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Banking', 'y_data': 8}, {'x_data': 'Conglomerate', 'y_data': 2}, {'x_data': 'Oil and gas', 'y_data': 7}, {'x_data': 'Retailing', 'y_data': 1}, {'x_data': 'Telecommunications', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Industry', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

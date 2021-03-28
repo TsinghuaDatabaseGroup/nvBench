@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4420</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4419.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4421.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4420</td><td><h4>NL Queries: </h4><ol><li><p>Find the name and population of districts with population between 200000 and 200000 Show a bar chart, and sort District_name from high to low order.</p></li><li><p>Return a bar chart on what are the district names and city populations for all districts that between 200,000 and 2,000,000 residents?, and display in desc by the bars.</p></li><li><p>What are the district names and city populations for all districts that between 200,000 and 2,000,000 residents? Show a bar graph, and rank in desc by the X.</p></li><li><p>Visualize a bar chart for what are the district names and city populations for all districts that between 200,000 and 2,000,000 residents?, I want to list X from high to low order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT District_name , City_Population FROM district WHERE City_Population BETWEEN 200000 AND 2000000 ORDER BY District_name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2860@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>store_product</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: store_product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: district</h4><table><tr><th>District_ID</th><th>District_name</th><th>Headquartered_City</th><th>City_Population</th><th>City_Area</th></tr><tr><td>1</td><td>Attock District</td><td>Attock City</td><td>94620.0</td><td>20.0</td></tr><tr><td>2</td><td>Bahawalnagar District</td><td>Bahawalnagar City</td><td>134936.0</td><td>13.0</td></tr><tr><td>3</td><td>Bahawalpur District</td><td>Bahawalpur City</td><td>530438.0</td><td>38.0</td></tr><tr><td>4</td><td>Bhakkar District</td><td>Bhakkar City</td><td>89380.0</td><td>15.0</td></tr><tr><td>5</td><td>Chakwal District</td><td>Chakwal City</td><td>113524.0</td><td>10.0</td></tr><tr><td>6</td><td>Chiniot District</td><td>Chiniot City</td><td>219254.0</td><td>12.0</td></tr><tr><td>7</td><td>Dera Ghazi Khan District</td><td>Dera Ghazi Khan City</td><td>464742.0</td><td>22.0</td></tr><tr><td>8</td><td>Faisalabad District</td><td>Faisalabad City</td><td>2793721.0</td><td>147.0</td></tr><tr><td>9</td><td>Gujranwala District</td><td>Gujranwala City</td><td>1526168.0</td><td>75.0</td></tr><tr><td>10</td><td>Gujrat District</td><td>Gujrat City</td><td>328512.0</td><td>25.0</td></tr><tr><td>11</td><td>Hafizabad District</td><td>Hafizabad City</td><td>165936.0</td><td>10.0</td></tr><tr><td>12</td><td>Jhang District</td><td>Jhang City</td><td>365198.0</td><td>28.0</td></tr><tr><td>13</td><td>Jhelum District</td><td>Jhelum City</td><td>172073.0</td><td>22.0</td></tr><tr><td>14</td><td>Kasur District</td><td>Kasur City</td><td>314617.0</td><td>18.0</td></tr><tr><td>15</td><td>Khanewal District</td><td>Khanewal City</td><td>165038.0</td><td>17.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Kasur District', 'y_data': 314617}, {'x_data': 'Jhang District', 'y_data': 365198}, {'x_data': 'Gujrat District', 'y_data': 328512}, {'x_data': 'Gujranwala District', 'y_data': 1526168}, {'x_data': 'Dera Ghazi Khan District', 'y_data': 464742}, {'x_data': 'Chiniot District', 'y_data': 219254}, {'x_data': 'Bahawalpur District', 'y_data': 530438}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'District_name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'City_Population'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

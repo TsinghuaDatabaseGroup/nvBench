@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5524</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5523.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5525.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5524</td><td><h4>NL Queries: </h4><ol><li><p>Bar graph to show how many country name from different country name, and show by the y-axis from low to high.</p></li><li><p>You can give me a bar chart, that groups and counts the country name, sort from low to high by the Y-axis please.</p></li><li><p>Please show me how many employees working on different countries using a bar chart, could you list in asc by the the number of country name?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT COUNTRY_NAME , COUNT(COUNTRY_NAME) FROM countries GROUP BY COUNTRY_NAME ORDER BY COUNT(COUNTRY_NAME) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1797@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>hr_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: hr_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: countries</h4><table><tr><th>COUNTRY_ID</th><th>COUNTRY_NAME</th><th>REGION_ID</th></tr><tr><td>AR</td><td>Argentina</td><td>2</td></tr><tr><td>AU</td><td>Australia</td><td>3</td></tr><tr><td>BE</td><td>Belgium</td><td>1</td></tr><tr><td>BR</td><td>Brazil</td><td>2</td></tr><tr><td>CA</td><td>Canada</td><td>2</td></tr><tr><td>CH</td><td>Switzerland</td><td>1</td></tr><tr><td>CN</td><td>China</td><td>3</td></tr><tr><td>DE</td><td>Germany</td><td>1</td></tr><tr><td>DK</td><td>Denmark</td><td>1</td></tr><tr><td>EG</td><td>Egypt</td><td>4</td></tr><tr><td>FR</td><td>France</td><td>1</td></tr><tr><td>HK</td><td>HongKong</td><td>3</td></tr><tr><td>IL</td><td>Israel</td><td>4</td></tr><tr><td>IN</td><td>India</td><td>3</td></tr><tr><td>IT</td><td>Italy</td><td>1</td></tr><tr><td>JP</td><td>Japan</td><td>3</td></tr><tr><td>KW</td><td>Kuwait</td><td>4</td></tr><tr><td>MX</td><td>Mexico</td><td>2</td></tr><tr><td>NG</td><td>Nigeria</td><td>4</td></tr><tr><td>NL</td><td>Netherlands</td><td>1</td></tr><tr><td>SG</td><td>Singapore</td><td>3</td></tr><tr><td>UK</td><td>United Kingdom</td><td>1</td></tr><tr><td>US</td><td>United States of America</td><td>2</td></tr><tr><td>ZM</td><td>Zambia</td><td>4</td></tr><tr><td>ZW</td><td>Zimbabwe</td><td>4</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Germany', 'y_data': 1}, {'x_data': 'United Kingdom', 'y_data': 1}, {'x_data': 'Canada', 'y_data': 2}, {'x_data': 'United States of America', 'y_data': 68}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'COUNTRY_NAME', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(COUNTRY_NAME)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

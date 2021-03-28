@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6329</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6328.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6330.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6329</td><td><h4>NL Queries: </h4><ol><li><p>When are the birthdays of customer who are classified as 'Good Customer' status, and count them by a line chart, and could you list by the date_of_birth from low to high?</p></li><li><p>What is the date of birth of every customer whose status code is 'Good Customer', and count them by a line chart, and show from low to high by the X-axis please.</p></li><li><p>What is the date of birth of every customer whose status code is 'Good Customer', and count them by a line chart, could you display by the X in ascending please?</p></li><li><p>When are the birthdays of customer who are classified as 'Good Customer' status, and count them by a line chart, and show from low to high by the X-axis please.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT date_of_birth , COUNT(date_of_birth) FROM Customers WHERE customer_status_code = 'Good Customer'  ORDER BY date_of_birth ASC BIN date_of_birth BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1243@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Line</p><p><b>DB: </b>driving_school</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: driving_school&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customers</h4><table><tr><th>customer_id</th><th>customer_address_id</th><th>customer_status_code</th><th>date_became_customer</th><th>date_of_birth</th><th>first_name</th><th>last_name</th><th>amount_outstanding</th><th>email_address</th><th>phone_number</th><th>cell_mobile_phone_number</th></tr><tr><td>1</td><td>13</td><td>Bad Customer</td><td>2016-05-11 17:03:48</td><td>1998-12-15 13:24:40</td><td>Carole</td><td>Bernhard</td><td>255.0</td><td>everette.goyette@example.org</td><td>07278206718</td><td>861-638-9797</td></tr><tr><td>2</td><td>10</td><td>Bad Customer</td><td>2015-11-16 22:52:14</td><td>1995-07-17 12:13:16</td><td>Genevieve</td><td>Terry</td><td>7256.0</td><td>huel.jana@example.org</td><td>+14(5)2351480248</td><td>578-518-4785x612</td></tr><tr><td>3</td><td>10</td><td>Good Customer</td><td>2016-04-08 00:28:15</td><td>1994-06-21 01:34:56</td><td>Clara</td><td>Ortiz</td><td>9443.0</td><td>hilario.sporer@example.org</td><td>374-483-2758x85087</td><td>1-197-686-2849x8761</td></tr><tr><td>4</td><td>8</td><td>Good Customer</td><td>2016-07-22 15:53:44</td><td>1993-02-07 05:40:26</td><td>Jordy</td><td>Tromp</td><td>3751.0</td><td>afranecki@example.com</td><td>218.550.1362</td><td>081-097-3684</td></tr><tr><td>5</td><td>2</td><td>Bad Customer</td><td>2017-11-12 04:34:44</td><td>1991-02-10 00:42:17</td><td>Millie</td><td>Bruen</td><td>5687.0</td><td>asha.kilback@example.org</td><td>1-618-535-9750</td><td>00659133944</td></tr><tr><td>6</td><td>9</td><td>Good Customer</td><td>2017-04-16 05:12:21</td><td>1993-03-08 08:48:42</td><td>Amya</td><td>Spinka</td><td>3900.0</td><td>kozey.citlalli@example.org</td><td>1-673-962-8158x7646</td><td>(780)719-4206x033</td></tr><tr><td>7</td><td>1</td><td>Bad Customer</td><td>2015-06-24 03:50:04</td><td>1996-11-07 05:30:55</td><td>Marina</td><td>Koelpin</td><td>8144.0</td><td>mayert.judy@example.com</td><td>(662)490-3108</td><td>848-099-2095x785</td></tr><tr><td>8</td><td>10</td><td>Bad Customer</td><td>2017-10-05 14:15:46</td><td>1998-09-18 04:45:01</td><td>Dianna</td><td>Trantow</td><td>9500.0</td><td>kroberts@example.org</td><td>206-054-0689x05861</td><td>739-333-6966x187</td></tr><tr><td>9</td><td>12</td><td>Bad Customer</td><td>2016-02-17 08:26:23</td><td>1991-12-05 02:50:15</td><td>Leif</td><td>Mertz</td><td>7093.0</td><td>mariela28@example.org</td><td>753.921.0871</td><td>1-387-258-1016x96963</td></tr><tr><td>10</td><td>1</td><td>Bad Customer</td><td>2017-11-25 01:42:26</td><td>1996-08-29 00:03:08</td><td>Rylan</td><td>Goodwin</td><td>1000.0</td><td>nichole59@example.com</td><td>1-387-884-0656</td><td>+45(6)4872981083</td></tr><tr><td>11</td><td>13</td><td>Good Customer</td><td>2016-11-30 10:37:41</td><td>1994-05-07 01:32:16</td><td>Ray</td><td>Kohler</td><td>9447.0</td><td>karina.carroll@example.net</td><td>(297)122-0086</td><td>577-584-4864</td></tr><tr><td>12</td><td>9</td><td>Bad Customer</td><td>2016-05-13 07:38:23</td><td>1993-07-09 11:11:36</td><td>Omer</td><td>Leuschke</td><td>2099.0</td><td>myrl.lind@example.net</td><td>417.136.2900x672</td><td>200.830.8723</td></tr><tr><td>13</td><td>7</td><td>Good Customer</td><td>2016-09-04 23:08:20</td><td>1988-09-19 14:45:56</td><td>Sigrid</td><td>Schmeler</td><td>2255.0</td><td>wehner.harold@example.com</td><td>192-395-2411</td><td>+57(9)4602098297</td></tr><tr><td>14</td><td>10</td><td>Good Customer</td><td>2016-03-18 06:14:18</td><td>1996-05-23 01:21:54</td><td>Estelle</td><td>Grant</td><td>5494.0</td><td>ehowell@example.com</td><td>1-875-045-0806</td><td>1-401-108-8016x078</td></tr><tr><td>15</td><td>1</td><td>Bad Customer</td><td>2015-09-25 13:59:21</td><td>1996-08-30 06:17:50</td><td>Dameon</td><td>Sanford</td><td>9332.0</td><td>kitty.hand@example.net</td><td>(729)396-4354x3576</td><td>(630)964-2426</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1988', 'y_data': 1}, {'x_data': '1989', 'y_data': 0}, {'x_data': '1990', 'y_data': 0}, {'x_data': '1991', 'y_data': 0}, {'x_data': '1992', 'y_data': 0}, {'x_data': '1993', 'y_data': 2}, {'x_data': '1994', 'y_data': 2}, {'x_data': '1995', 'y_data': 0}, {'x_data': '1996', 'y_data': 1}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_of_birth', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_of_birth)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

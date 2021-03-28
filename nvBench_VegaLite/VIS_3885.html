@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3885</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3884.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3886.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3885</td><td><h4>NL Queries: </h4><ol><li><p>Show how many customer addresses in each address type code with a bar chart, show y-axis in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT address_type_code , COUNT(address_type_code) FROM customer_addresses AS T1 JOIN premises AS T2 ON T1.premise_id = T2.premise_id GROUP BY address_type_code ORDER BY COUNT(address_type_code) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1017@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_campaigns_ecommerce</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_campaigns_ecommerce&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customer_addresses</h4><table><tr><th>customer_id</th><th>premise_id</th><th>date_address_from</th><th>address_type_code</th><th>date_address_to</th></tr><tr><td>15</td><td>1</td><td>1992-08-23 21:17:38</td><td>Billing</td><td>2018-02-28 20:54:58</td></tr><tr><td>2</td><td>2</td><td>2010-02-23 02:49:50</td><td>Billing</td><td>2018-03-15 18:34:41</td></tr><tr><td>1</td><td>1</td><td>1975-12-24 10:01:37</td><td>Shipping</td><td>2018-03-08 08:03:51</td></tr><tr><td>3</td><td>2</td><td>1995-03-26 17:39:46</td><td>Shipping</td><td>2018-02-27 17:42:19</td></tr><tr><td>7</td><td>1</td><td>1929-05-14 04:29:43</td><td>Billing</td><td>2018-03-16 18:51:47</td></tr><tr><td>8</td><td>4</td><td>1939-01-15 17:55:39</td><td>Shipping</td><td>2018-03-13 08:21:27</td></tr><tr><td>5</td><td>5</td><td>1931-03-24 11:44:07</td><td>Shipping</td><td>2018-03-05 02:34:01</td></tr><tr><td>11</td><td>6</td><td>1975-04-23 20:41:01</td><td>Billing</td><td>2018-03-04 03:08:46</td></tr><tr><td>11</td><td>3</td><td>1920-08-18 04:42:55</td><td>Shipping</td><td>2018-03-22 22:46:52</td></tr><tr><td>11</td><td>5</td><td>1960-07-31 06:10:20</td><td>Shipping</td><td>2018-03-09 03:34:11</td></tr><tr><td>13</td><td>6</td><td>1990-12-19 22:02:27</td><td>Billing</td><td>2018-03-24 07:12:35</td></tr><tr><td>4</td><td>8</td><td>1985-03-18 20:46:30</td><td>Shipping</td><td>2018-02-27 16:47:24</td></tr><tr><td>10</td><td>10</td><td>1972-06-06 01:50:40</td><td>Billing</td><td>2018-03-08 21:09:30</td></tr><tr><td>8</td><td>12</td><td>1984-06-16 10:10:37</td><td>Billing</td><td>2018-03-05 11:26:03</td></tr><tr><td>3</td><td>14</td><td>2002-02-01 02:55:13</td><td>Billing</td><td>2018-03-16 11:55:11</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Shipping', 'y_data': 7}, {'x_data': 'Billing', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'address_type_code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(address_type_code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

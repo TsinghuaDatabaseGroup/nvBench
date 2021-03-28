@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3274</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3273.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3275.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3274</td><td><h4>NL Queries: </h4><ol><li><p>Bar chart of the number of years played from each years played, sort how many years played from low to high order please.</p></li><li><p>Group and count the years played to draw a bar chart, sort how many years played from low to high order please.</p></li><li><p>Please give me a bar chart to show the number of players in each years played, and display by the y-axis in ascending.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Years_Played , COUNT(Years_Played) FROM player GROUP BY Years_Played ORDER BY COUNT(Years_Played) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2316@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>match_season</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: match_season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: player</h4><table><tr><th>Player_ID</th><th>Player</th><th>Years_Played</th><th>Total_WL</th><th>Singles_WL</th><th>Doubles_WL</th><th>Team</th></tr><tr><td>1</td><td>Cho Soong-Jae (630)</td><td>1 (2011)</td><td>2â0</td><td>1â0</td><td>1â0</td><td>1</td></tr><tr><td>2</td><td>Chung Hong (717)</td><td>1 (2011)</td><td>0â0</td><td>0â0</td><td>0â0</td><td>1</td></tr><tr><td>3</td><td>Im Kyu-tae (492)</td><td>8 (2003â2005, 2007â2011)</td><td>6â9</td><td>5â7</td><td>1â2</td><td>1</td></tr><tr><td>4</td><td>Jeong Suk-Young (793)</td><td>2 (2010â2011)</td><td>1â2</td><td>1â2</td><td>0â0</td><td>1</td></tr><tr><td>5</td><td>Kim Hyun-Joon (908)</td><td>2 (2010â2011)</td><td>3â4</td><td>2â1</td><td>1â3</td><td>2</td></tr><tr><td>6</td><td>Kim Young-Jun (474)</td><td>4 (2003â2004, 2010â2011)</td><td>6â4</td><td>6â3</td><td>0â1</td><td>4</td></tr><tr><td>7</td><td>Lim Yong-Kyu (288)</td><td>3 (2009â2011)</td><td>7â6</td><td>5â6</td><td>2â0</td><td>6</td></tr><tr><td>8</td><td>Seol Jae-Min (none)</td><td>2 (2010-2011)</td><td>2â2</td><td>0â0</td><td>2â2</td><td>1</td></tr><tr><td>9</td><td>An Jae-Sung</td><td>3 (2005, 2007â2008)</td><td>4â3</td><td>3â2</td><td>1â1</td><td>1</td></tr><tr><td>10</td><td>Bae Nam-Ju</td><td>2 (1988, 1990)</td><td>1â3</td><td>0â2</td><td>1â1</td><td>8</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2 (1988, 1990)', 'y_data': 1}, {'x_data': '2 (2010-2011)', 'y_data': 1}, {'x_data': '3 (2005, 2007–2008)', 'y_data': 1}, {'x_data': '3 (2009–2011)', 'y_data': 1}, {'x_data': '4 (2003–2004, 2010–2011)', 'y_data': 1}, {'x_data': '8 (2003–2005, 2007–2011)', 'y_data': 1}, {'x_data': '1 (2011)', 'y_data': 2}, {'x_data': '2 (2010–2011)', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Years_Played', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Years_Played)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

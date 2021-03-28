@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3451</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3450.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3452.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3451</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of documents for each receipt date and bin by year with a line chart, sort by the x-axis in desc please.</p></li><li><p>List the number of documents for each receipt date and bin by year with a line chart, and sort by the x-axis in desc please.</p></li><li><p>I want to see trend of how many receipt date by receipt date, and order by the X in desc please.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT receipt_date , COUNT(receipt_date) FROM Documents  ORDER BY receipt_date DESC BIN receipt_date BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>729@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Doc_Control_Systems</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Control_Systems&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Documents</h4><table><tr><th>document_id</th><th>document_status_code</th><th>document_type_code</th><th>shipping_agent_code</th><th>receipt_date</th><th>receipt_number</th><th>other_details</th></tr><tr><td>1</td><td>working</td><td>CD</td><td>UP</td><td>2008-04-21 20:42:25</td><td>19</td><td>z</td></tr><tr><td>2</td><td>done</td><td>Paper</td><td>US</td><td>1974-05-08 00:00:46</td><td>34</td><td>h</td></tr><tr><td>3</td><td>done</td><td>Paper</td><td>UP</td><td>2014-12-25 17:22:44</td><td>93</td><td>h</td></tr><tr><td>4</td><td>done</td><td>Paper</td><td>US</td><td>1973-11-05 21:48:53</td><td>80</td><td>q</td></tr><tr><td>7</td><td>working</td><td>CD</td><td>SH</td><td>1982-09-27 14:52:15</td><td>61</td><td>w</td></tr><tr><td>10</td><td>overdue</td><td>Paper</td><td>UP</td><td>1976-09-15 19:24:17</td><td>8</td><td>m</td></tr><tr><td>12</td><td>overdue</td><td>Hard Drive</td><td>US</td><td>1996-05-31 06:51:58</td><td>69</td><td>n</td></tr><tr><td>13</td><td>working</td><td>CD</td><td>UP</td><td>2015-04-03 09:36:19</td><td>79</td><td>y</td></tr><tr><td>14</td><td>working</td><td>CD</td><td>FE</td><td>2017-07-02 17:39:09</td><td>117</td><td>u</td></tr><tr><td>15</td><td>overdue</td><td>CD</td><td>UP</td><td>1986-12-14 14:18:59</td><td>37</td><td>r</td></tr><tr><td>17</td><td>done</td><td>Paper</td><td>FE</td><td>1983-09-26 09:32:56</td><td>55</td><td>p</td></tr><tr><td>20</td><td>working</td><td>Paper</td><td>UP</td><td>1996-07-27 03:30:40</td><td>189</td><td>x</td></tr><tr><td>23</td><td>working</td><td>Hard Drive</td><td>FE</td><td>1999-04-17 14:19:32</td><td>124</td><td>b</td></tr><tr><td>24</td><td>working</td><td>Hard Drive</td><td>FE</td><td>2005-09-30 00:10:02</td><td>114</td><td>j</td></tr><tr><td>25</td><td>overdue</td><td>Hard Drive</td><td>AL</td><td>1985-11-05 17:59:34</td><td>83</td><td>u</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2013~2017', 'y_data': 3}, {'x_data': '2008~2012', 'y_data': 1}, {'x_data': '2003~2007', 'y_data': 1}, {'x_data': '1998~2002', 'y_data': 1}, {'x_data': '1993~1997', 'y_data': 2}, {'x_data': '1988~1992', 'y_data': 0}, {'x_data': '1983~1987', 'y_data': 3}, {'x_data': '1978~1982', 'y_data': 1}, {'x_data': '1973~1977', 'y_data': 3}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'receipt_date', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(receipt_date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

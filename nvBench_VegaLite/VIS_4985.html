@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4985</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4984.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4986.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4985</td><td><h4>NL Queries: </h4><ol><li><p>Return the number of music festivals of each category, show by the Category in desc.</p></li><li><p>Return the number of music festivals of each category in a bar chart, and could you order x axis in descending order?</p></li><li><p>Show me the total number by category in a histogram, list in descending by the names.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Category , COUNT(*) FROM music_festival GROUP BY Category ORDER BY Category DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2436@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>music_4</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: music_4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: music_festival</h4><table><tr><th>ID</th><th>Music_Festival</th><th>Date_of_ceremony</th><th>Category</th><th>Volume</th><th>Result</th></tr><tr><td>1</td><td>34th England Academy Prize</td><td>18 February 2011</td><td>Best Song</td><td>1</td><td>Nominated</td></tr><tr><td>2</td><td>34th Japan Academy Prize</td><td>18 February 2011</td><td>Best Lyrics</td><td>2</td><td>Nominated</td></tr><tr><td>3</td><td>34th European Academy Prize</td><td>18 February 2011</td><td>Best Song</td><td>3</td><td>Awarded</td></tr><tr><td>4</td><td>36th Japan Academy Prize</td><td>18 February 2011</td><td>Best Song</td><td>4</td><td>Awarded</td></tr><tr><td>5</td><td>34th USA Academy Prize</td><td>18 February 2011</td><td>Best Song</td><td>5</td><td>Nominated</td></tr><tr><td>6</td><td>40th Japan Academy Prize</td><td>18 February 2011</td><td>Best Song</td><td>6</td><td>Nominated</td></tr><tr><td>7</td><td>37th Sweden Academy Prize</td><td>18 February 2011</td><td>Best Lyrics</td><td>7</td><td>Nominated</td></tr><tr><td>8</td><td>37th Canadian Academy Prize</td><td>18 February 2011</td><td>Best Lyrics</td><td>8</td><td>Nominated</td></tr><tr><td>9</td><td>35th China Academy Prize</td><td>18 February 2011</td><td>Best Sound Song</td><td>9</td><td>Awarded</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Best Sound Song', 'y_data': 1}, {'x_data': 'Best Song', 'y_data': 5}, {'x_data': 'Best Lyrics', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Category', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

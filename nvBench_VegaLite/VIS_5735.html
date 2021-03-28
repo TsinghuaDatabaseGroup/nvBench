@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5735</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5734.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5736.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5735</td><td><h4>NL Queries: </h4><ol><li><p>For each distinct product name, show its average product price, and show by the the average of product price from low to high.</p></li><li><p>Give me a bar chart for mean product price of each product name, show from low to high by the total number.</p></li><li><p>Show me a bar chart for what are the different product names? What is the average product price for each of them?, and sort by the total number from low to high.</p></li><li><p>A bar chart about what are the different product names? What is the average product price for each of them?, sort by the total number from low to high.</p></li><li><p>What are the different product names? What is the average product price for each of them Show bar chart, could you list total number from low to high order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Product_Name , avg(Product_Price) FROM PRODUCTS GROUP BY Product_Name ORDER BY avg(Product_Price) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>859@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Drama_Workshop_Groups</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Drama_Workshop_Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: PRODUCTS</h4><table><tr><th>Product_ID</th><th>Product_Name</th><th>Product_Price</th><th>Product_Description</th><th>Other_Product_Service_Details</th></tr><tr><td>11</td><td>photo</td><td>4448536</td><td>None</td><td>None</td></tr><tr><td>154</td><td>film</td><td>2302</td><td>None</td><td>None</td></tr><tr><td>156</td><td>film</td><td>17622723</td><td>None</td><td>None</td></tr><tr><td>179</td><td>film</td><td>1432324</td><td>None</td><td>None</td></tr><tr><td>188</td><td>film</td><td>49097627</td><td>None</td><td>None</td></tr><tr><td>21</td><td>photo</td><td>22082866</td><td>None</td><td>None</td></tr><tr><td>216</td><td>film</td><td>157216</td><td>None</td><td>None</td></tr><tr><td>232</td><td>photo</td><td>22</td><td>None</td><td>None</td></tr><tr><td>233</td><td>photo</td><td>4082352</td><td>None</td><td>None</td></tr><tr><td>250</td><td>photo</td><td>797</td><td>None</td><td>None</td></tr><tr><td>273</td><td>photo</td><td>1577</td><td>None</td><td>None</td></tr><tr><td>300</td><td>dinning</td><td>30625</td><td>None</td><td>None</td></tr><tr><td>46</td><td>dinning</td><td>50828</td><td>None</td><td>None</td></tr><tr><td>81</td><td>dinning</td><td>634660</td><td>None</td><td>None</td></tr><tr><td>83</td><td>film</td><td>900</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'dinning', 'y_data': 238704.33333333328}, {'x_data': 'photo', 'y_data': 5102691.666666667}, {'x_data': 'film', 'y_data': 11385515.333333336}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Product_Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'avg(Product_Price)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

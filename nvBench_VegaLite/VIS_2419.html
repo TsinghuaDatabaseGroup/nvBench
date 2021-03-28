@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2419</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2418.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2420.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2419</td><td><h4>NL Queries: </h4><ol><li><p>A pie chart about what are the job titles, and range of salaries for jobs with maximum salary between 12000 and 18000?</p></li><li><p>Return a pie chart on what are the job titles, and range of salaries for jobs with maximum salary between 12000 and 18000?</p></li><li><p>What are the job titles, and range of salaries for jobs with maximum salary between 12000 and 18000. Visualize by pie chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT JOB_TITLE , max_salary - min_salary FROM jobs WHERE max_salary BETWEEN 12000 AND 18000</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1701</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>hr_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: hr_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: jobs</h4><table><tr><th>JOB_ID</th><th>JOB_TITLE</th><th>MIN_SALARY</th><th>MAX_SALARY</th></tr><tr><td>AD_PRES</td><td>President</td><td>20000</td><td>40000</td></tr><tr><td>AD_VP</td><td>Administration Vice President</td><td>15000</td><td>30000</td></tr><tr><td>AD_ASST</td><td>Administration Assistant</td><td>3000</td><td>6000</td></tr><tr><td>FI_MGR</td><td>Finance Manager</td><td>8200</td><td>16000</td></tr><tr><td>FI_ACCOUNT</td><td>Accountant</td><td>4200</td><td>9000</td></tr><tr><td>AC_MGR</td><td>Accounting Manager</td><td>8200</td><td>16000</td></tr><tr><td>AC_ACCOUNT</td><td>Public Accountant</td><td>4200</td><td>9000</td></tr><tr><td>SA_MAN</td><td>Sales Manager</td><td>10000</td><td>20000</td></tr><tr><td>SA_REP</td><td>Sales Representative</td><td>6000</td><td>12000</td></tr><tr><td>PU_MAN</td><td>Purchasing Manager</td><td>8000</td><td>15000</td></tr><tr><td>PU_CLERK</td><td>Purchasing Clerk</td><td>2500</td><td>5500</td></tr><tr><td>ST_MAN</td><td>Stock Manager</td><td>5500</td><td>8500</td></tr><tr><td>ST_CLERK</td><td>Stock Clerk</td><td>2000</td><td>5000</td></tr><tr><td>SH_CLERK</td><td>Shipping Clerk</td><td>2500</td><td>5500</td></tr><tr><td>IT_PROG</td><td>Programmer</td><td>4000</td><td>10000</td></tr><tr><td>MK_MAN</td><td>Marketing Manager</td><td>9000</td><td>15000</td></tr><tr><td>MK_REP</td><td>Marketing Representative</td><td>4000</td><td>9000</td></tr><tr><td>HR_REP</td><td>Human Resources Representative</td><td>4000</td><td>9000</td></tr><tr><td>PR_REP</td><td>Public Relations Representative</td><td>4500</td><td>10500</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Finance Manager', 'y_data': 7800}, {'x_data': 'Accounting Manager', 'y_data': 7800}, {'x_data': 'Sales Representative', 'y_data': 6000}, {'x_data': 'Purchasing Manager', 'y_data': 7000}, {'x_data': 'Marketing Manager', 'y_data': 6000}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'max_salary - min_salary'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'JOB_TITLE'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

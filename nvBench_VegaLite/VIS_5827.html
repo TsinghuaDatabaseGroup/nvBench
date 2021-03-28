@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5827</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5826.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5828.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5827</td><td><h4>NL Queries: </h4><ol><li><p>Show the names of climbers and the heights of mountains they climb by a bar chart.</p></li><li><p>Show the names of climbers and the heights of mountains they climb. Show bar chart.</p></li><li><p>Display a bar chart for what are the names of climbers and the corresponding heights of the mountains that they climb?</p></li><li><p>A bar chart about what are the names of climbers and the corresponding heights of the mountains that they climb?</p></li><li><p>What are the names of climbers and the corresponding heights of the mountains that they climb. Show bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Name , T2.Height FROM climber AS T1 JOIN mountain AS T2 ON T1.Mountain_ID = T2.Mountain_ID</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>486</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>climbing</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: climbing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: climber</h4><table><tr><th>Climber_ID</th><th>Name</th><th>Country</th><th>Time</th><th>Points</th><th>Mountain_ID</th></tr><tr><td>1</td><td>Klaus Enders</td><td>West Germany</td><td>1:13.05.6</td><td>15.0</td><td>1</td></tr><tr><td>2</td><td>Siegfried Schauzu</td><td>West Germany</td><td>1:14.56.4</td><td>12.0</td><td>1</td></tr><tr><td>3</td><td>Hans Luthringhauser</td><td>West Germany</td><td>1:16.58.0</td><td>10.0</td><td>2</td></tr><tr><td>4</td><td>Jean Claude Castella</td><td>Switzerland</td><td>1:17.16.0</td><td>8.0</td><td>2</td></tr><tr><td>5</td><td>Horst Owesle</td><td>West Germany</td><td>1:17.22.0</td><td>6.0</td><td>2</td></tr><tr><td>6</td><td>Georg Auerbacher</td><td>West Germany</td><td>1:18.14.6</td><td>5.0</td><td>3</td></tr><tr><td>7</td><td>Arseneus Butscher</td><td>West Germany</td><td>1:21.35.6</td><td>4.0</td><td>5</td></tr><tr><td>8</td><td>Charlie Freedman</td><td>United Kingdom</td><td>1:25.02.8</td><td>3.0</td><td>5</td></tr><tr><td>9</td><td>L Currie</td><td>United Kingdom</td><td>1:25.40.6</td><td>2.0</td><td>7</td></tr><tr><td>10</td><td>Mick Horsepole</td><td>United Kingdom</td><td>1:27.28.8</td><td>1.0</td><td>7</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Klaus Enders', 'y_data': 5895}, {'x_data': 'Siegfried Schauz', 'y_data': 5895}, {'x_data': 'Hans Luthringhauser', 'y_data': 5199}, {'x_data': 'Jean Claude Castella', 'y_data': 5199}, {'x_data': 'Horst Owesle', 'y_data': 5199}, {'x_data': 'Georg Auerbacher', 'y_data': 5148}, {'x_data': 'Arseneus Butscher', 'y_data': 4985}, {'x_data': 'Charlie Freedman', 'y_data': 4985}, {'x_data': 'L Currie', 'y_data': 4890}, {'x_data': 'Mick Horsepole', 'y_data': 4890}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Height'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

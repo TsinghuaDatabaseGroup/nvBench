@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1260</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1259.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1261.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1260</td><td><h4>NL Queries: </h4><ol><li><p>Show all customer ids and the number of accounts for each customer with a scatter chart.</p></li><li><p>Show all customer ids and the number of accounts for each customer. Show the correlation.</p></li><li><p>Draw a scatter chart for how many accounts are there for each customer id?</p></li><li><p>Visualize a scatter chart on how many accounts are there for each customer id?</p></li><li><p>How many accounts are there for each customer id. Plot them as scatter chart.</p></li><li><p>Show me a scatter plot of customer id and the total number for .</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT customer_id , count(*) FROM Accounts GROUP BY customer_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1066</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>customers_card_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_card_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Accounts</h4><table><tr><th>account_id</th><th>customer_id</th><th>account_name</th><th>other_account_details</th></tr><tr><td>1</td><td>6</td><td>338</td><td>Regular</td></tr><tr><td>2</td><td>14</td><td>562</td><td>VIP</td></tr><tr><td>3</td><td>9</td><td>162</td><td>VIP</td></tr><tr><td>4</td><td>12</td><td>038</td><td>Regular</td></tr><tr><td>5</td><td>13</td><td>858</td><td>Regular</td></tr><tr><td>6</td><td>12</td><td>262</td><td>Regular</td></tr><tr><td>7</td><td>9</td><td>621</td><td>Regular</td></tr><tr><td>8</td><td>8</td><td>381</td><td>Regular</td></tr><tr><td>9</td><td>9</td><td>546</td><td>Regular</td></tr><tr><td>10</td><td>4</td><td>767</td><td>VIP</td></tr><tr><td>11</td><td>4</td><td>022</td><td>VIP</td></tr><tr><td>12</td><td>2</td><td>866</td><td>VIP</td></tr><tr><td>13</td><td>10</td><td>234</td><td>VIP</td></tr><tr><td>14</td><td>9</td><td>557</td><td>VIP</td></tr><tr><td>15</td><td>4</td><td>725</td><td>VIP</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 2, 'y_data': 1}, {'x_data': 4, 'y_data': 3}, {'x_data': 6, 'y_data': 1}, {'x_data': 8, 'y_data': 1}, {'x_data': 9, 'y_data': 4}, {'x_data': 10, 'y_data': 1}, {'x_data': 12, 'y_data': 2}, {'x_data': 13, 'y_data': 1}, {'x_data': 14, 'y_data': 1}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'customer_id'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

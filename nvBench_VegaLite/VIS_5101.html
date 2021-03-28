@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5101</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5100.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5102.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5101</td><td><h4>NL Queries: </h4><ol><li><p>For each classroom, show the classroom number and find how many students are using it. Plot them as scatter chart.</p></li><li><p>Scatter plot to show classroom on x axis and the total number on y axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT Classroom , count(*) FROM list GROUP BY classroom</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2871</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>student_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: student_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: list</h4><table><tr><th>LastName</th><th>FirstName</th><th>Grade</th><th>Classroom</th></tr><tr><td>CAR</td><td> MAUDE</td><td>2</td><td>101</td></tr><tr><td>KRISTENSEN</td><td> STORMY</td><td>6</td><td>112</td></tr><tr><td>VANDERWOUDE</td><td> SHERWOOD</td><td>3</td><td>107</td></tr><tr><td>NOGODA</td><td> ISMAEL</td><td>0</td><td>105</td></tr><tr><td>DANESE</td><td> JANEE</td><td>4</td><td>111</td></tr><tr><td>AMY</td><td> PATRINA</td><td>1</td><td>102</td></tr><tr><td>PREHM</td><td> SHANEL</td><td>0</td><td>104</td></tr><tr><td>GRUNIN</td><td> EMILE</td><td>5</td><td>109</td></tr><tr><td>GELL</td><td> TAMI</td><td>0</td><td>104</td></tr><tr><td>MADLOCK</td><td> RAY</td><td>4</td><td>110</td></tr><tr><td>SUDA</td><td> DARLEEN</td><td>4</td><td>110</td></tr><tr><td>DROP</td><td> SHERMAN</td><td>0</td><td>104</td></tr><tr><td>PINNELL</td><td> ROBBY</td><td>3</td><td>107</td></tr><tr><td>BROMLEY</td><td> EVELINA</td><td>1</td><td>103</td></tr><tr><td>YUEN</td><td> ANIKA</td><td>1</td><td>103</td></tr><tr><td>BUSTILLOS</td><td> HILMA</td><td>0</td><td>106</td></tr><tr><td>GOODNOE</td><td> GAYLE</td><td>4</td><td>111</td></tr><tr><td>BALBOA</td><td> MEL</td><td>1</td><td>103</td></tr><tr><td>BARTKUS</td><td> REYNALDO</td><td>1</td><td>102</td></tr><tr><td>GROENEWEG</td><td> CRYSTA</td><td>3</td><td>107</td></tr><tr><td>HOUTCHENS</td><td> THEO</td><td>0</td><td>106</td></tr><tr><td>GERSTEIN</td><td> AL</td><td>5</td><td>109</td></tr><tr><td>MACIAG</td><td> CHET</td><td>5</td><td>109</td></tr><tr><td>SAADE</td><td> TOBIE</td><td>4</td><td>110</td></tr><tr><td>BRINE</td><td> FRANKLYN</td><td>0</td><td>106</td></tr><tr><td>HANNEMANN</td><td> CHANTAL</td><td>1</td><td>102</td></tr><tr><td>BYRUM</td><td> BENNIE</td><td>0</td><td>105</td></tr><tr><td>NETZEL</td><td> JODY</td><td>0</td><td>105</td></tr><tr><td>VANVLIET</td><td> COLLIN</td><td>0</td><td>106</td></tr><tr><td>HONES</td><td> GUILLERMINA</td><td>0</td><td>104</td></tr><tr><td>FLACHS</td><td> JEFFRY</td><td>5</td><td>109</td></tr><tr><td>GRABILL</td><td> JULIENNE</td><td>0</td><td>106</td></tr><tr><td>AREHART</td><td> VERTIE</td><td>3</td><td>107</td></tr><tr><td>RUNKLE</td><td> MARCUS</td><td>1</td><td>102</td></tr><tr><td>MOWATT</td><td> KITTIE</td><td>0</td><td>105</td></tr><tr><td>HOOSOCK</td><td> LANCE</td><td>1</td><td>103</td></tr><tr><td>LEAPER</td><td> ADRIAN</td><td>4</td><td>111</td></tr><tr><td>PASSEY</td><td> RAYLENE</td><td>4</td><td>110</td></tr><tr><td>NAKAHARA</td><td> SHERON</td><td>0</td><td>105</td></tr><tr><td>STIRE</td><td> SHIRLEY</td><td>6</td><td>112</td></tr><tr><td>RODDEY</td><td> CYRUS</td><td>4</td><td>110</td></tr><tr><td>CRANMER</td><td> CAREY</td><td>5</td><td>109</td></tr><tr><td>SCHUTZE</td><td> LANELLE</td><td>5</td><td>109</td></tr><tr><td>FULVIO</td><td> ELTON</td><td>4</td><td>111</td></tr><tr><td>HOESCHEN</td><td> LYNNETTE</td><td>4</td><td>108</td></tr><tr><td>SOLOMAN</td><td> BRODERICK</td><td>0</td><td>106</td></tr><tr><td>LAPLANT</td><td> SUMMER</td><td>2</td><td>101</td></tr><tr><td>LUSKEY</td><td> BRITT</td><td>4</td><td>108</td></tr><tr><td>JAGNEAUX</td><td> ELVIRA</td><td>6</td><td>112</td></tr><tr><td>BIBB</td><td> SHANAE</td><td>1</td><td>103</td></tr><tr><td>WIRTZFELD</td><td> DELORAS</td><td>0</td><td>106</td></tr><tr><td>RANSLER</td><td> RODGER</td><td>1</td><td>102</td></tr><tr><td>NABOZNY</td><td> CHRISSY</td><td>3</td><td>107</td></tr><tr><td>ATWOOD</td><td> BETHEL</td><td>5</td><td>109</td></tr><tr><td>CHIARAMONTE</td><td> NOVELLA</td><td>2</td><td>101</td></tr><tr><td>TRAYWICK</td><td> KERI</td><td>1</td><td>102</td></tr><tr><td>BRIGHTBILL</td><td> ANTONY</td><td>1</td><td>102</td></tr><tr><td>HUANG</td><td> TAWANNA</td><td>5</td><td>109</td></tr><tr><td>SANTORY</td><td> JORDON</td><td>3</td><td>107</td></tr><tr><td>LARKINS</td><td> GAYLE</td><td>4</td><td>110</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 101, 'y_data': 3}, {'x_data': 102, 'y_data': 7}, {'x_data': 103, 'y_data': 5}, {'x_data': 104, 'y_data': 4}, {'x_data': 105, 'y_data': 5}, {'x_data': 106, 'y_data': 7}, {'x_data': 107, 'y_data': 6}, {'x_data': 108, 'y_data': 2}, {'x_data': 109, 'y_data': 8}, {'x_data': 110, 'y_data': 6}, {'x_data': 111, 'y_data': 4}, {'x_data': 112, 'y_data': 3}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'Classroom'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

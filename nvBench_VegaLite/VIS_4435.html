@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4435</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4434.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4436.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4435</td><td><h4>NL Queries: </h4><ol><li><p>Show the id of each employee and the number of document destruction authorised by that employee by a scatter chart.</p></li><li><p>Show the id of each employee and the number of document destruction authorised by that employee. Show scatter chart.</p></li><li><p>plot scatter on what are the id of each employee and the number of document destruction authorised by that employee?</p></li><li><p>Return a scatter chart on what are the id of each employee and the number of document destruction authorised by that employee?</p></li><li><p>What are the id of each employee and the number of document destruction authorised by that employee. Visualize by scatter chart.</p></li><li><p>Scatter plot to show destruction authorised by employee id on x axis and the total number on y axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT Destruction_Authorised_by_Employee_ID , count(*) FROM Documents_to_be_destroyed GROUP BY Destruction_Authorised_by_Employee_ID</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>767</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>cre_Doc_Tracking_DB</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Tracking_DB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Documents_to_be_destroyed</h4><table><tr><th>Document_ID</th><th>Destruction_Authorised_by_Employee_ID</th><th>Destroyed_by_Employee_ID</th><th>Planned_Destruction_Date</th><th>Actual_Destruction_Date</th><th>Other_Details</th></tr><tr><td>7</td><td>156</td><td>138</td><td>1988-02-01 14:41:52</td><td>2017-01-06 23:17:22</td><td>None</td></tr><tr><td>11</td><td>55</td><td>173</td><td>2010-11-26 19:22:50</td><td>1986-10-14 17:53:39</td><td>None</td></tr><tr><td>25</td><td>183</td><td>156</td><td>2009-08-18 03:29:08</td><td>1995-01-01 03:52:11</td><td>None</td></tr><tr><td>39</td><td>183</td><td>136</td><td>1976-06-15 03:40:06</td><td>2009-08-18 03:29:08</td><td>None</td></tr><tr><td>99</td><td>55</td><td>99</td><td>2017-01-06 23:17:22</td><td>1986-10-14 17:53:39</td><td>None</td></tr><tr><td>111</td><td>38</td><td>173</td><td>1972-03-31 09:47:22</td><td>2009-08-18 03:29:08</td><td>None</td></tr><tr><td>120</td><td>183</td><td>173</td><td>1972-03-31 09:47:22</td><td>1995-01-01 03:52:11</td><td>None</td></tr><tr><td>166</td><td>156</td><td>38</td><td>1987-11-05 06:11:22</td><td>2012-07-03 09:48:46</td><td>None</td></tr><tr><td>170</td><td>123</td><td>136</td><td>2017-01-06 23:17:22</td><td>1988-02-01 14:41:52</td><td>None</td></tr><tr><td>252</td><td>30</td><td>55</td><td>1972-03-31 09:47:22</td><td>1985-05-13 12:19:43</td><td>None</td></tr><tr><td>260</td><td>55</td><td>99</td><td>2017-01-06 23:17:22</td><td>2017-01-06 23:17:22</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 30, 'y_data': 1}, {'x_data': 38, 'y_data': 1}, {'x_data': 55, 'y_data': 3}, {'x_data': 123, 'y_data': 1}, {'x_data': 156, 'y_data': 2}, {'x_data': 183, 'y_data': 3}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'Destruction_Authorised_by_Employee_ID'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

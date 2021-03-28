@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1767</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1766.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1768.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1767</td><td><h4>NL Queries: </h4><ol><li><p>A pie chart showing the number of companies for each industry.</p></li><li><p>Give me a pie to show how many industry from different industry.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Industry , COUNT(Industry) FROM company GROUP BY Industry</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>681</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>company_employee</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: company_employee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: company</h4><table><tr><th>Company_ID</th><th>Name</th><th>Headquarters</th><th>Industry</th><th>Sales_in_Billion</th><th>Profits_in_Billion</th><th>Assets_in_Billion</th><th>Market_Value_in_Billion</th></tr><tr><td>1.0</td><td>ExxonMobil</td><td>USA</td><td>Oil and gas</td><td>433.5</td><td>41.1</td><td>331.1</td><td>407.4</td></tr><tr><td>2.0</td><td>JPMorgan Chase</td><td>USA</td><td>Banking</td><td>110.8</td><td>19.0</td><td>2265.8</td><td>170.1</td></tr><tr><td>3.0</td><td>General Electric</td><td>USA</td><td>Conglomerate</td><td>147.3</td><td>14.2</td><td>717.2</td><td>213.7</td></tr><tr><td>4.0</td><td>Royal Dutch Shell</td><td>Netherlands</td><td>Oil and gas</td><td>470.2</td><td>30.9</td><td>340.5</td><td>227.6</td></tr><tr><td>5.0</td><td>Industrial and Commercial Bank of China</td><td>China</td><td>Banking</td><td>82.6</td><td>25.1</td><td>2039.1</td><td>237.4</td></tr><tr><td>6.0</td><td>HSBC</td><td>UK</td><td>Banking</td><td>102.0</td><td>16.2</td><td>2550.0</td><td>164.3</td></tr><tr><td>7.0</td><td>PetroChina</td><td>China</td><td>Oil and gas</td><td>310.1</td><td>20.6</td><td>304.7</td><td>294.7</td></tr><tr><td>8.0</td><td>Berkshire Hathaway</td><td>USA</td><td>Conglomerate</td><td>143.7</td><td>10.3</td><td>392.6</td><td>202.2</td></tr><tr><td>9.0</td><td>Wells Fargo</td><td>USA</td><td>Banking</td><td>87.6</td><td>15.9</td><td>1313.9</td><td>178.7</td></tr><tr><td>10.0</td><td>Petrobras</td><td>Brazil</td><td>Oil and gas</td><td>145.9</td><td>20.1</td><td>319.4</td><td>180.0</td></tr><tr><td>11.0</td><td>BP</td><td>UK</td><td>Oil and gas</td><td>375.5</td><td>25.7</td><td>292.5</td><td>147.4</td></tr><tr><td>12.0</td><td>Chevron</td><td>USA</td><td>Oil and gas</td><td>236.3</td><td>26.9</td><td>209.5</td><td>218.0</td></tr><tr><td>13.0</td><td>China Construction Bank</td><td>China</td><td>Banking</td><td>68.7</td><td>20.5</td><td>1637.8</td><td>201.9</td></tr><tr><td>14.0</td><td>Citigroup</td><td>USA</td><td>Banking</td><td>102.6</td><td>11.1</td><td>1873.9</td><td>107.5</td></tr><tr><td>15.0</td><td>Gazprom</td><td>Russia</td><td>Oil and gas</td><td>117.6</td><td>31.7</td><td>302.6</td><td>159.8</td></tr><tr><td>16.0</td><td>Walmart</td><td>USA</td><td>Retailing</td><td>447.0</td><td>15.7</td><td>193.4</td><td>208.4</td></tr><tr><td>17.0</td><td>Volkswagen Group</td><td>Germany</td><td>Automotive</td><td>221.9</td><td>21.5</td><td>328.7</td><td>79.5</td></tr><tr><td>18.0</td><td>Total</td><td>France</td><td>Oil and gas</td><td>216.2</td><td>15.9</td><td>213.0</td><td>132.4</td></tr><tr><td>19.0</td><td>Agricultural Bank of China</td><td>China</td><td>Banking</td><td>62.4</td><td>14.4</td><td>1563.9</td><td>154.8</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Automotive', 'y_data': 1}, {'x_data': 'Banking', 'y_data': 7}, {'x_data': 'Conglomerate', 'y_data': 2}, {'x_data': 'Oil and gas', 'y_data': 8}, {'x_data': 'Retailing', 'y_data': 1}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Industry)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Industry'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

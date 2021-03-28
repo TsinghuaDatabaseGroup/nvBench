@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5070</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5069.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5071.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5070</td><td><h4>NL Queries: </h4><ol><li><p>Compare the frequency of each payment method code using a bar chart, and could you display x-axis in descending order please?</p></li><li><p>Plot the number of payment method code by grouped by payment method code as a bar graph, order in descending by the Payment_Method_Code.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Payment_Method_Code , COUNT(Payment_Method_Code) FROM Payments GROUP BY Payment_Method_Code ORDER BY Payment_Method_Code DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2010@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_policies</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_policies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Payments</h4><table><tr><th>Payment_ID</th><th>Settlement_ID</th><th>Payment_Method_Code</th><th>Date_Payment_Made</th><th>Amount_Payment</th></tr><tr><td>384</td><td>516</td><td>MasterCard</td><td>2018-02-16</td><td>241730</td></tr><tr><td>435</td><td>476</td><td>MasterCard</td><td>2017-05-28</td><td>448613</td></tr><tr><td>484</td><td>516</td><td>MasterCard</td><td>2017-06-24</td><td>456098</td></tr><tr><td>498</td><td>682</td><td>Discover Card</td><td>2017-08-06</td><td>38324</td></tr><tr><td>542</td><td>597</td><td>MasterCard</td><td>2018-01-10</td><td>407235</td></tr><tr><td>559</td><td>512</td><td>MasterCard</td><td>2018-02-18</td><td>235893</td></tr><tr><td>678</td><td>516</td><td>Visa</td><td>2017-12-16</td><td>459407</td></tr><tr><td>739</td><td>597</td><td>Discover Card</td><td>2017-10-07</td><td>71246</td></tr><tr><td>754</td><td>516</td><td>Visa</td><td>2018-02-24</td><td>7343</td></tr><tr><td>774</td><td>527</td><td>MasterCard</td><td>2018-01-28</td><td>319142</td></tr><tr><td>779</td><td>564</td><td>Visa</td><td>2017-05-28</td><td>155654</td></tr><tr><td>791</td><td>983</td><td>Visa</td><td>2017-05-03</td><td>172309</td></tr><tr><td>886</td><td>516</td><td>MasterCard</td><td>2017-07-31</td><td>423154</td></tr><tr><td>912</td><td>648</td><td>Discover Card</td><td>2017-05-04</td><td>123255</td></tr><tr><td>983</td><td>682</td><td>American Express</td><td>2018-01-19</td><td>177130</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Visa', 'y_data': 4}, {'x_data': 'MasterCard', 'y_data': 7}, {'x_data': 'Discover Card', 'y_data': 3}, {'x_data': 'American Express', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Payment_Method_Code', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Payment_Method_Code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

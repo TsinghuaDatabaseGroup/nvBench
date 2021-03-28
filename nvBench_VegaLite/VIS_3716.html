@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3716</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3715.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3717.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3716</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of documents for different document name in a bar chart.</p></li><li><p>How many documents for different document name? Draw a bar chart.</p></li><li><p>Bar chart x axis document name y axis the number of document name</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Document_Name , COUNT(Document_Name) FROM Documents GROUP BY Document_Name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>809</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Docs_and_Epenses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Docs_and_Epenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Documents</h4><table><tr><th>Document_ID</th><th>Document_Type_Code</th><th>Project_ID</th><th>Document_Date</th><th>Document_Name</th><th>Document_Description</th><th>Other_Details</th></tr><tr><td>29</td><td>CV</td><td>30</td><td>2004-08-28 06:59:19</td><td>Review on UK files</td><td>None</td><td>None</td></tr><tr><td>42</td><td>BK</td><td>105</td><td>2012-12-27 19:09:18</td><td>Review on Canadian files</td><td>None</td><td>None</td></tr><tr><td>57</td><td>CV</td><td>195</td><td>1980-10-22 14:17:11</td><td>Review on French files</td><td>None</td><td>None</td></tr><tr><td>121</td><td>BK</td><td>105</td><td>1981-11-29 10:23:01</td><td>Review on USA files</td><td>None</td><td>None</td></tr><tr><td>181</td><td>PP</td><td>105</td><td>1970-06-17 14:03:21</td><td>Chapter on private files</td><td>None</td><td>None</td></tr><tr><td>192</td><td>PP</td><td>134</td><td>2013-01-26 15:15:25</td><td>Book on USA files</td><td>None</td><td>None</td></tr><tr><td>226</td><td>BK</td><td>30</td><td>1991-07-08 08:49:59</td><td>Review on UK files</td><td>None</td><td>None</td></tr><tr><td>227</td><td>BK</td><td>30</td><td>1970-03-06 07:34:49</td><td>Deontae files</td><td>None</td><td>None</td></tr><tr><td>240</td><td>BK</td><td>105</td><td>1971-06-09 19:03:41</td><td>Winona Book</td><td>None</td><td>None</td></tr><tr><td>300</td><td>FM</td><td>35</td><td>2007-09-26 02:39:11</td><td>Trenton Presentation</td><td>None</td><td>None</td></tr><tr><td>309</td><td>BK</td><td>35</td><td>1978-10-15 10:33:17</td><td>Noel CV</td><td>None</td><td>None</td></tr><tr><td>318</td><td>PP</td><td>134</td><td>1970-01-30 10:53:35</td><td>King Book</td><td>None</td><td>None</td></tr><tr><td>367</td><td>CV</td><td>134</td><td>1983-08-24 17:10:26</td><td>Jevon Paper</td><td>None</td><td>None</td></tr><tr><td>371</td><td>PP</td><td>105</td><td>1976-05-06 12:56:12</td><td>Katheryn statement</td><td>None</td><td>None</td></tr><tr><td>383</td><td>PP</td><td>35</td><td>2005-10-28 03:17:16</td><td>Review on UK files</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Book on USA files', 'y_data': 1}, {'x_data': 'Chapter on private files', 'y_data': 1}, {'x_data': 'Deontae files', 'y_data': 1}, {'x_data': 'Jevon Paper', 'y_data': 1}, {'x_data': 'Katheryn statement', 'y_data': 1}, {'x_data': 'King Book', 'y_data': 1}, {'x_data': 'Noel CV', 'y_data': 1}, {'x_data': 'Review on Canadian files', 'y_data': 1}, {'x_data': 'Review on French files', 'y_data': 1}, {'x_data': 'Review on UK files', 'y_data': 3}, {'x_data': 'Review on USA files', 'y_data': 1}, {'x_data': 'Trenton Presentation', 'y_data': 1}, {'x_data': 'Winona Book', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Document_Name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Document_Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

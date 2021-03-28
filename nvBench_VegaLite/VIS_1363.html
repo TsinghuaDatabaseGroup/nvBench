@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1363</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1362.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1364.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1363</td><td><h4>NL Queries: </h4><ol><li><p>Draw a bar chart about the distribution of  password and  author_tutor_ATB .</p></li><li><p>Find  password and  author_tutor_ATB , and visualize them by a bar chart.</p></li><li><p>Return a bar chart about the distribution of  password and  author_tutor_ATB .</p></li><li><p>Give me the comparison about  author_tutor_ATB over the  password .</p></li><li><p>Visualize a bar chart about the distribution of  password and  author_tutor_ATB .</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT password , author_tutor_ATB FROM Course_Authors_and_Tutors ORDER BY personal_name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1262</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>e_learning</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: e_learning&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Course_Authors_and_Tutors</h4><table><tr><th>author_id</th><th>author_tutor_ATB</th><th>login_name</th><th>password</th><th>personal_name</th><th>middle_name</th><th>family_name</th><th>gender_mf</th><th>address_line_1</th></tr><tr><td>1</td><td>331</td><td>jmckenzie</td><td>c40fa148bdd0d2d45cd6e9ec1e685750fe07f81b</td><td>Cathrine</td><td>Ruthie</td><td>Grant</td><td>0</td><td>756 Monahan Mews
+Spinkashire, NJ 64230-5098</td></tr><tr><td>2</td><td>975</td><td>heidenreich.ara</td><td>24b0ee84063c3b017ab1839e01b7280f47f7c7c2</td><td>Retha</td><td>Corene</td><td>Armstrong</td><td>0</td><td>98623 Huels Manor
+Jasttown, DE 31611</td></tr><tr><td>3</td><td>349</td><td>clementina29</td><td>cdaf6c3483f19e2253659a40a3aab786a3390f78</td><td>Darius</td><td>Ethyl</td><td>Reichel</td><td>0</td><td>99296 Keeling Courts
+North Audreanne, IL 28272</td></tr><tr><td>4</td><td>782</td><td>wlehner</td><td>d34378200c9b5f72d3039fa640e7920aaec0fdf2</td><td>Julio</td><td>Aniyah</td><td>Nader</td><td>1</td><td>644 Montana Hill Suite 489
+Daijamouth, CA 19587-4254</td></tr><tr><td>5</td><td>388</td><td>nyundt</td><td>2c196efe8aee23a1b9a7e752fe63029c5879af6f</td><td>Yessenia</td><td>Zena</td><td>Barrows</td><td>1</td><td>5284 Champlin Roads
+Cassinport, WY 54636</td></tr><tr><td>6</td><td>817</td><td>al75</td><td>e96c0bcbbbb14747747a56ff4c17354f343a5b4f</td><td>Adolf</td><td>Keira</td><td>Rohan</td><td>1</td><td>92220 Hellen Skyway Apt. 635
+Rennerview, MS 81036</td></tr><tr><td>7</td><td>869</td><td>marty.bergnaum</td><td>3e2f7bf1e6acf0d616a8703ee0050fba13bc007f</td><td>Logan</td><td>Ethelyn</td><td>Treutel</td><td>1</td><td>67541 Osborne Creek Suite 532
+Bernhardview, WV 30288-1050</td></tr><tr><td>8</td><td>557</td><td>medhurst.alvah</td><td>02d64f11de97436343a0beba41bfcf69af61be1e</td><td>Kelsie</td><td>Kennith</td><td>Rowe</td><td>0</td><td>0256 Walter Meadows Suite 523
+Norbertoborough, AZ 49193</td></tr><tr><td>9</td><td>505</td><td>antonetta19</td><td>4d8e909ae9b8888c93a2c5f1eccbd0c4ac6a01c3</td><td>Georgiana</td><td>Mathew</td><td>Zboncak</td><td>0</td><td>445 Quigley Fall
+Port Antonette, IN 81992-1255</td></tr><tr><td>10</td><td>159</td><td>adam.rippin</td><td>b517a107b5f08fafe9628e88e7263a6f3a4a55c0</td><td>Deja</td><td>Joyce</td><td>Champlin</td><td>1</td><td>22575 Effertz Neck Apt. 046
+Port Scotty, NY 67108-9197</td></tr><tr><td>11</td><td>229</td><td>dschaefer</td><td>4f149f75ecd84afcdf27343509cdd03d81edb119</td><td>Ciara</td><td>Alejandra</td><td>Greenholt</td><td>0</td><td>425 White Brooks
+Emmaleefort, IN 97850-2510</td></tr><tr><td>12</td><td>847</td><td>nellie.mosciski</td><td>a48e25a58b3088e9cfdaca61130555ed2c772452</td><td>Sheldon</td><td>Jayce</td><td>Kreiger</td><td>1</td><td>513 Collins Plain Apt. 829
+Clementinaville, VT 59908-2793</td></tr><tr><td>13</td><td>613</td><td>qking</td><td>6b9979a83b4a9e03ead034c8de47f1b013a3d3af</td><td>Madonna</td><td>Jaclyn</td><td>Effertz</td><td>1</td><td>139 O'Conner Circles
+Virginieland, KS 23365</td></tr><tr><td>14</td><td>833</td><td>fiona77</td><td>120ac8a5744f5b710ecaebbd8dd1633e3e33886e</td><td>Dusty</td><td>Amani</td><td>Crist</td><td>1</td><td>3602 Boehm Forest
+Zulaufton, DC 35229-0366</td></tr><tr><td>15</td><td>974</td><td>ekshlerin</td><td>6d587cec8006e3a40565e1dad2c5b5b12b475b8f</td><td>Shakira</td><td>Fritz</td><td>Haley</td><td>0</td><td>8928 Kunze Valley Apt. 747
+South Jedidiahmouth, DE 28167</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'e96c0bcbbbb14747747a56ff4c17354f343a5b4f', 'y_data': 817}, {'x_data': 'c40fa148bdd0d2d45cd6e9ec1e685750fe07f81b', 'y_data': 331}, {'x_data': '4f149f75ecd84afcdf27343509cdd03d81edb119', 'y_data': 229}, {'x_data': 'cdaf6c3483f19e2253659a40a3aab786a3390f78', 'y_data': 349}, {'x_data': 'b517a107b5f08fafe9628e88e7263a6f3a4a55c0', 'y_data': 159}, {'x_data': '120ac8a5744f5b710ecaebbd8dd1633e3e33886e', 'y_data': 833}, {'x_data': '4d8e909ae9b8888c93a2c5f1eccbd0c4ac6a01c3', 'y_data': 505}, {'x_data': 'd34378200c9b5f72d3039fa640e7920aaec0fdf2', 'y_data': 782}, {'x_data': '02d64f11de97436343a0beba41bfcf69af61be1e', 'y_data': 557}, {'x_data': '3e2f7bf1e6acf0d616a8703ee0050fba13bc007f', 'y_data': 869}, {'x_data': '6b9979a83b4a9e03ead034c8de47f1b013a3d3af', 'y_data': 613}, {'x_data': '24b0ee84063c3b017ab1839e01b7280f47f7c7c2', 'y_data': 975}, {'x_data': '6d587cec8006e3a40565e1dad2c5b5b12b475b8f', 'y_data': 974}, {'x_data': 'a48e25a58b3088e9cfdaca61130555ed2c772452', 'y_data': 847}, {'x_data': '2c196efe8aee23a1b9a7e752fe63029c5879af6f', 'y_data': 388}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'password', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'author_tutor_ATB'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6742</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6741.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6743.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6742</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart showing the number of accelerators for each browser in the descending order of compatible year.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.name , COUNT(T2.name) FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id = T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id = T3.id GROUP BY T2.name ORDER BY T1.compatible_since_year DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>368</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>browser_web</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: browser_web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: accelerator_compatible_browser</h4><table><tr><th>accelerator_id</th><th>browser_id</th><th>compatible_since_year</th></tr><tr><td>1</td><td>1</td><td>1995</td></tr><tr><td>1</td><td>2</td><td>1996</td></tr><tr><td>2</td><td>3</td><td>1996</td></tr><tr><td>2</td><td>4</td><td>2000</td></tr><tr><td>3</td><td>1</td><td>2005</td></tr><tr><td>3</td><td>2</td><td>2007</td></tr><tr><td>3</td><td>3</td><td>2008</td></tr><tr><td>4</td><td>4</td><td>2009</td></tr><tr><td>9</td><td>1</td><td>2010</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Firefox', 'y_data': 2}, {'x_data': 'Internet Explorer', 'y_data': 3}, {'x_data': 'Opera', 'y_data': 2}, {'x_data': 'Safari', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

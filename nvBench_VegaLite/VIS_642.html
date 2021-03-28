@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_642</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_641.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_643.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>642</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of cards in different card type code in a bar chart, rank Y-axis in asc order.</p></li><li><p>Show me the number of card type code by card type code in a histogram, display from low to high by the y axis.</p></li><li><p>How many cards in different card type code? Plot a bar chart, sort total number in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT card_type_code , COUNT(card_type_code) FROM Customers_cards GROUP BY card_type_code ORDER BY COUNT(card_type_code) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1043@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_card_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_card_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customers_cards</h4><table><tr><th>card_id</th><th>customer_id</th><th>card_type_code</th><th>card_number</th><th>date_valid_from</th><th>date_valid_to</th><th>other_card_details</th></tr><tr><td>1</td><td>14</td><td>Credit</td><td>4560596484842</td><td>2011-04-17 09:05:28</td><td>2018-03-07 17:06:19</td><td>5567915676420343</td></tr><tr><td>2</td><td>9</td><td>Credit</td><td>4859448397570735</td><td>2012-05-22 02:05:41</td><td>2018-02-25 15:43:32</td><td>4539333582760</td></tr><tr><td>3</td><td>6</td><td>Debit</td><td>348237249146948</td><td>2014-08-01 14:26:45</td><td>2018-03-24 15:29:00</td><td>4916210554814</td></tr><tr><td>4</td><td>15</td><td>Credit</td><td>4485460762694</td><td>2009-11-05 09:26:01</td><td>2018-03-19 05:34:08</td><td>5296134475180061</td></tr><tr><td>5</td><td>13</td><td>Credit</td><td>5122249720639438</td><td>2015-12-21 22:07:49</td><td>2018-03-22 08:31:28</td><td>5388642773088467</td></tr><tr><td>6</td><td>10</td><td>Debit</td><td>5102229294602335</td><td>2017-01-01 13:34:04</td><td>2018-03-11 01:12:33</td><td>5513587359761653</td></tr><tr><td>7</td><td>9</td><td>Credit</td><td>4716674779726</td><td>2016-12-11 03:01:12</td><td>2018-03-15 06:27:45</td><td>6011771512810699</td></tr><tr><td>8</td><td>12</td><td>Credit</td><td>6011225247353230</td><td>2016-09-17 13:31:05</td><td>2018-03-24 00:38:54</td><td>5428692691195935</td></tr><tr><td>9</td><td>3</td><td>Debit</td><td>4929590358481</td><td>2015-03-27 02:01:12</td><td>2018-03-12 02:16:45</td><td>5307019264041461</td></tr><tr><td>10</td><td>10</td><td>Debit</td><td>4532488235104</td><td>2011-06-15 23:10:10</td><td>2018-03-17 21:27:32</td><td>5571147786750739</td></tr><tr><td>11</td><td>8</td><td>Debit</td><td>4707949584519</td><td>2013-11-17 02:58:22</td><td>2018-03-14 14:00:07</td><td>377852690396160</td></tr><tr><td>12</td><td>3</td><td>Debit</td><td>4929896676202959</td><td>2015-05-09 04:05:26</td><td>2018-03-16 16:00:19</td><td>4556142375374</td></tr><tr><td>13</td><td>2</td><td>Credit</td><td>5484846021884483</td><td>2008-08-20 17:59:51</td><td>2018-03-20 02:08:02</td><td>4916493714393</td></tr><tr><td>14</td><td>5</td><td>Debit</td><td>4929384762825</td><td>2013-05-23 07:55:36</td><td>2018-03-11 06:05:44</td><td>4485258248930151</td></tr><tr><td>15</td><td>2</td><td>Debit</td><td>345475370003028</td><td>2014-07-03 20:19:31</td><td>2018-02-28 22:26:31</td><td>4716851737494984</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Credit', 'y_data': 7}, {'x_data': 'Debit', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'card_type_code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(card_type_code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

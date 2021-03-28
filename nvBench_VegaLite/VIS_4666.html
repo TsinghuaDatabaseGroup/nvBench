@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4666</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4665.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4667.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4666</td><td><h4>NL Queries: </h4><ol><li><p>Bar graph to show the total number from different nationality, list in ascending by the the total number .</p></li><li><p>What are the different nationalities of pilots? Show each nationality and the number of pilots of each nationality Show bar chart, display in asc by the total number.</p></li><li><p>Draw a bar chart for what are the different nationalities of pilots? Show each nationality and the number of pilots of each nationality, and could you display total number from low to high order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Nationality , COUNT(*) FROM pilot GROUP BY Nationality ORDER BY COUNT(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2587@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>pilot_record</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: pilot_record&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: pilot</h4><table><tr><th>Pilot_ID</th><th>Pilot_name</th><th>Rank</th><th>Age</th><th>Nationality</th><th>Position</th><th>Join_Year</th><th>Team</th></tr><tr><td>1</td><td>Patrick O'Bryant</td><td>13</td><td>33</td><td>United States</td><td>Center Team</td><td>2009</td><td>Bradley</td></tr><tr><td>2</td><td>Jermaine O'Neal</td><td>6</td><td>40</td><td>United States</td><td>Forward-Center Team</td><td>2008</td><td>Eau Claire High School</td></tr><tr><td>3</td><td>Dan O'Sullivan</td><td>45</td><td>37</td><td>United States</td><td>Center Team</td><td>1999</td><td>Fordham</td></tr><tr><td>4</td><td>Charles Oakley</td><td>34</td><td>22</td><td>United Kindom</td><td>Forward Team</td><td>2001</td><td>Virginia Union</td></tr><tr><td>5</td><td>Hakeem Olajuwon</td><td>34</td><td>32</td><td>Nigeria</td><td>Center Team</td><td>2010</td><td>Houston</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Nigeria', 'y_data': 1}, {'x_data': 'United Kindom', 'y_data': 1}, {'x_data': 'United States', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Nationality', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

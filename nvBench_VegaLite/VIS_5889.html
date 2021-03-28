@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5889</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5888.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5890.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5889</td><td><h4>NL Queries: </h4><ol><li><p>Show the minimum room count of apartments in different type with a bar chart, display by the bars in ascending.</p></li><li><p>Bar graph to show minimal room count from different apt type code, and sort X in asc order.</p></li><li><p>Return a bar chart showing the minimum room count of apartments in different type, order in asc by the x axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT apt_type_code , min(room_count) FROM Apartments GROUP BY apt_type_code ORDER BY apt_type_code ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>96@x_name@ASC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>apartment_rentals</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: apartment_rentals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Apartments</h4><table><tr><th>apt_id</th><th>building_id</th><th>apt_type_code</th><th>apt_number</th><th>bathroom_count</th><th>bedroom_count</th><th>room_count</th></tr><tr><td>1</td><td>808</td><td>Flat</td><td>Suite 645</td><td>1</td><td>3</td><td>7</td></tr><tr><td>2</td><td>624</td><td>Flat</td><td>Apt. 585</td><td>2</td><td>4</td><td>5</td></tr><tr><td>3</td><td>225</td><td>Studio</td><td>Apt. 908</td><td>1</td><td>6</td><td>7</td></tr><tr><td>4</td><td>225</td><td>Duplex</td><td>Suite 749</td><td>1</td><td>5</td><td>8</td></tr><tr><td>5</td><td>744</td><td>Flat</td><td>Suite 307</td><td>2</td><td>4</td><td>9</td></tr><tr><td>6</td><td>191</td><td>Studio</td><td>Apt. 187</td><td>3</td><td>5</td><td>9</td></tr><tr><td>7</td><td>790</td><td>Studio</td><td>Suite 088</td><td>2</td><td>4</td><td>6</td></tr><tr><td>8</td><td>153</td><td>Flat</td><td>Suite 693</td><td>2</td><td>3</td><td>9</td></tr><tr><td>9</td><td>624</td><td>Studio</td><td>Apt. 940</td><td>1</td><td>4</td><td>8</td></tr><tr><td>10</td><td>225</td><td>Duplex</td><td>Apt. 859</td><td>2</td><td>3</td><td>6</td></tr><tr><td>11</td><td>734</td><td>Flat</td><td>Apt. 794</td><td>1</td><td>5</td><td>3</td></tr><tr><td>12</td><td>673</td><td>Duplex</td><td>Apt. 477</td><td>2</td><td>6</td><td>3</td></tr><tr><td>13</td><td>744</td><td>Duplex</td><td>Apt. 411</td><td>2</td><td>5</td><td>9</td></tr><tr><td>14</td><td>225</td><td>Flat</td><td>Apt. 837</td><td>2</td><td>4</td><td>8</td></tr><tr><td>15</td><td>790</td><td>Duplex</td><td>Suite 634</td><td>3</td><td>6</td><td>8</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Duplex', 'y_data': 3}, {'x_data': 'Flat', 'y_data': 3}, {'x_data': 'Studio', 'y_data': 6}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'apt_type_code', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'min(room_count)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

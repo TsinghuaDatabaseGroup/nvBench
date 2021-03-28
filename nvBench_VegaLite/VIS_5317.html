@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5317</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5316.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5318.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5317</td><td><h4>NL Queries: </h4><ol><li><p>List all the log entry descriptions and count them using a bar chart.</p></li><li><p>What is the number of entry descriptions of each problem?</p></li><li><p>Draw a bar chart for what is the number of entry descriptions of each problem?</p></li><li><p>Bar chart x axis log entry description y axis the number of log entry description</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT log_entry_description , COUNT(log_entry_description) FROM problem_log GROUP BY log_entry_description</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3033</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>tracking_software_problems</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_software_problems&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: problem_log</h4><table><tr><th>problem_log_id</th><th>assigned_to_staff_id</th><th>problem_id</th><th>problem_category_code</th><th>problem_status_code</th><th>log_entry_date</th><th>log_entry_description</th><th>log_entry_fix</th><th>other_log_details</th></tr><tr><td>1</td><td>11</td><td>11</td><td>Middleware</td><td>Solved</td><td>2011-03-13 13:11:57</td><td>t</td><td>k</td><td>p</td></tr><tr><td>2</td><td>11</td><td>8</td><td>GUI</td><td>Solved</td><td>1976-03-31 14:03:02</td><td>a</td><td>k</td><td>s</td></tr><tr><td>3</td><td>12</td><td>1</td><td>GUI</td><td>Solved</td><td>1974-12-11 01:06:22</td><td>b</td><td>j</td><td>e</td></tr><tr><td>4</td><td>12</td><td>12</td><td>GUI</td><td>Reported</td><td>1993-04-02 11:07:29</td><td>a</td><td>t</td><td>b</td></tr><tr><td>5</td><td>6</td><td>12</td><td>Middleware</td><td>Reported</td><td>1976-09-17 09:01:12</td><td>c</td><td>n</td><td>u</td></tr><tr><td>6</td><td>2</td><td>13</td><td>GUI</td><td>Solved</td><td>1983-07-01 02:12:36</td><td>h</td><td>g</td><td>n</td></tr><tr><td>7</td><td>13</td><td>1</td><td>Datatabase</td><td>Solved</td><td>1974-09-13 00:37:26</td><td>s</td><td>c</td><td>v</td></tr><tr><td>8</td><td>4</td><td>15</td><td>Datatabase</td><td>Solved</td><td>1999-08-17 00:00:18</td><td>j</td><td>h</td><td>j</td></tr><tr><td>9</td><td>10</td><td>13</td><td>GUI</td><td>Reported</td><td>1993-06-21 22:33:35</td><td>p</td><td>i</td><td>f</td></tr><tr><td>10</td><td>6</td><td>1</td><td>Middleware</td><td>Reported</td><td>2001-05-14 10:03:53</td><td>d</td><td>x</td><td>d</td></tr><tr><td>11</td><td>1</td><td>8</td><td>Datatabase</td><td>Solved</td><td>1973-03-12 16:30:50</td><td>w</td><td>k</td><td>a</td></tr><tr><td>12</td><td>4</td><td>10</td><td>Middleware</td><td>Solved</td><td>1997-08-31 08:19:12</td><td>c</td><td>y</td><td>c</td></tr><tr><td>13</td><td>6</td><td>10</td><td>Middleware</td><td>Reported</td><td>2009-04-10 19:09:30</td><td>q</td><td>t</td><td>o</td></tr><tr><td>14</td><td>8</td><td>4</td><td>Datatabase</td><td>Reported</td><td>2011-11-12 23:30:53</td><td>a</td><td>s</td><td>c</td></tr><tr><td>15</td><td>5</td><td>7</td><td>GUI</td><td>Reported</td><td>1982-11-17 06:05:52</td><td>v</td><td>o</td><td>d</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'a', 'y_data': 3}, {'x_data': 'b', 'y_data': 1}, {'x_data': 'c', 'y_data': 2}, {'x_data': 'd', 'y_data': 1}, {'x_data': 'h', 'y_data': 1}, {'x_data': 'j', 'y_data': 1}, {'x_data': 'p', 'y_data': 1}, {'x_data': 'q', 'y_data': 1}, {'x_data': 's', 'y_data': 1}, {'x_data': 't', 'y_data': 1}, {'x_data': 'v', 'y_data': 1}, {'x_data': 'w', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'log_entry_description', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(log_entry_description)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

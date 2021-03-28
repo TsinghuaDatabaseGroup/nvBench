@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_439</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_438.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_440.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>439</td><td><h4>NL Queries: </h4><ol><li><p>List the number of treatments in each day with a bar chart that bins date of treatment by weekday, and I want to display by the y-axis from high to low please.</p></li><li><p>How many treatments in each day? Return a bar chart that bins date of treatment by weekday, and could you order in desc by the y-axis?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_of_treatment , COUNT(date_of_treatment) FROM Treatments AS T1 JOIN Professionals AS T2 ON T1.professional_id = T2.professional_id  ORDER BY COUNT(date_of_treatment) DESC BIN date_of_treatment BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1164@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>dog_kennels</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: dog_kennels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Treatments</h4><table><tr><th>treatment_id</th><th>dog_id</th><th>professional_id</th><th>treatment_type_code</th><th>date_of_treatment</th><th>cost_of_treatment</th></tr><tr><td>1</td><td>14</td><td>9</td><td>WALK</td><td>2018-03-19 04:39:54</td><td>567</td></tr><tr><td>2</td><td>4</td><td>10</td><td>VAC</td><td>2018-03-15 20:25:34</td><td>147</td></tr><tr><td>3</td><td>14</td><td>4</td><td>EXAM</td><td>2018-03-08 05:26:23</td><td>429</td></tr><tr><td>4</td><td>2</td><td>8</td><td>VAC</td><td>2018-03-01 04:14:46</td><td>266</td></tr><tr><td>5</td><td>12</td><td>14</td><td>VAC</td><td>2018-03-23 13:52:10</td><td>668</td></tr><tr><td>6</td><td>10</td><td>4</td><td>EXAM</td><td>2018-03-11 04:23:15</td><td>313</td></tr><tr><td>7</td><td>15</td><td>14</td><td>EXAM</td><td>2018-03-10 11:45:58</td><td>852</td></tr><tr><td>8</td><td>2</td><td>6</td><td>EXAM</td><td>2018-03-24 22:25:58</td><td>407</td></tr><tr><td>9</td><td>14</td><td>10</td><td>WALK</td><td>2018-03-14 19:10:40</td><td>139</td></tr><tr><td>10</td><td>10</td><td>7</td><td>WALK</td><td>2018-02-28 17:09:43</td><td>681</td></tr><tr><td>11</td><td>15</td><td>5</td><td>VAC</td><td>2018-03-13 12:22:58</td><td>514</td></tr><tr><td>12</td><td>13</td><td>9</td><td>EXAM</td><td>2018-03-16 10:27:36</td><td>428</td></tr><tr><td>13</td><td>7</td><td>8</td><td>VAC</td><td>2018-02-26 09:08:53</td><td>945</td></tr><tr><td>14</td><td>10</td><td>9</td><td>WALK</td><td>2018-03-04 20:33:43</td><td>349</td></tr><tr><td>15</td><td>1</td><td>6</td><td>WALK</td><td>2018-03-15 19:10:02</td><td>656</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Thur', 'y_data': 4}, {'x_data': 'Wed', 'y_data': 2}, {'x_data': 'Sun', 'y_data': 2}, {'x_data': 'Sat', 'y_data': 2}, {'x_data': 'Mon', 'y_data': 2}, {'x_data': 'Fri', 'y_data': 2}, {'x_data': 'Tue', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_of_treatment', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_of_treatment)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

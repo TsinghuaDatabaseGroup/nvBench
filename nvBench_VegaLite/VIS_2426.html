@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2426</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2425.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2427.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2426</td><td><h4>NL Queries: </h4><ol><li><p>Find the correlation between average age and experience working length of journalists working on different role type with a scatter plot.</p></li><li><p>Please return a scatter chart with two attributes: the average age and experience working length of journalists working on different role type.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT avg(t1.age) , avg(Years_working) FROM journalist AS t1 JOIN news_report AS t2 ON t1.journalist_id = t2.journalist_id GROUP BY Work_Type</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2479</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Grouping Scatter</p><p><b>DB: </b>news_report</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: news_report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: journalist</h4><table><tr><th>journalist_ID</th><th>Name</th><th>Nationality</th><th>Age</th><th>Years_working</th></tr><tr><td>1</td><td>Herbert Swindells</td><td>England</td><td>37</td><td>10</td></tr><tr><td>2</td><td>Fred Keenor</td><td>Wales</td><td>27</td><td>5</td></tr><tr><td>3</td><td>George Gilchrist</td><td>England</td><td>28</td><td>6</td></tr><tr><td>4</td><td>Jackie Waring</td><td>England</td><td>43</td><td>21</td></tr><tr><td>5</td><td>Fred Chandler</td><td>England</td><td>34</td><td>6</td></tr><tr><td>6</td><td>Ray Ferris</td><td>Northern Ireland</td><td>29</td><td>3</td></tr><tr><td>7</td><td>John Meaney</td><td>England</td><td>28</td><td>7</td></tr><tr><td>8</td><td>Tony Waddington</td><td>England</td><td>43</td><td>12</td></tr><tr><td>9</td><td>Jack Meaney</td><td>England</td><td>37</td><td>8</td></tr><tr><td>10</td><td>Frank Mitcheson</td><td>England</td><td>33</td><td>9</td></tr><tr><td>11</td><td>Tom Briggs</td><td>England</td><td>25</td><td>1</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 43, 'y_data': 16.5, 'classify': 'Host'}, {'x_data': 35.5, 'y_data': 14, 'classify': 'Music'}, {'x_data': 30.33333333333333, 'y_data': 4.666666666666667, 'classify': 'Screening'}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'avg(t1.age)', 'scale': {'zero': 'false'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'avg(Years_working)', 'scale': {'zero': 'false'}}, 'color': {'field': 'classify', 'type': 'nominal'}, 'shape': {'field': 'classify', 'type': 'nominal'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

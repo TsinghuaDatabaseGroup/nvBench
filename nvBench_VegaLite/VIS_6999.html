@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6999</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6998.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7000.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6999</td><td><h4>NL Queries: </h4><ol><li><p>Find the average rating star for each movie that are not reviewed by Brittany Harris. Plot them as scatter chart.</p></li><li><p>Show me the correlation about what is the average rating for each movie that has never been reviewed by Brittany Harris?</p></li><li><p>What is the average rating for each movie that has never been reviewed by Brittany Harris. </p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT mID , avg(stars) FROM Rating WHERE mID NOT IN (SELECT T1.mID FROM Rating AS T1 JOIN Reviewer AS T2 ON T1.rID = T2.rID WHERE T2.name = "Brittany Harris") GROUP BY mID</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2378</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>movie_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: movie_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Rating</h4><table><tr><th>rID</th><th>mID</th><th>stars</th><th>ratingDate</th></tr><tr><td>201</td><td>101</td><td>2</td><td>2011-01-22</td></tr><tr><td>201</td><td>101</td><td>4</td><td>2011-01-27</td></tr><tr><td>202</td><td>106</td><td>4</td><td>None</td></tr><tr><td>203</td><td>103</td><td>2</td><td>2011-01-20</td></tr><tr><td>203</td><td>108</td><td>4</td><td>2011-01-12</td></tr><tr><td>203</td><td>108</td><td>2</td><td>2011-01-30</td></tr><tr><td>204</td><td>101</td><td>3</td><td>2011-01-09</td></tr><tr><td>205</td><td>103</td><td>3</td><td>2011-01-27</td></tr><tr><td>205</td><td>104</td><td>2</td><td>2011-01-22</td></tr><tr><td>205</td><td>108</td><td>4</td><td>None</td></tr><tr><td>206</td><td>107</td><td>3</td><td>2011-01-15</td></tr><tr><td>206</td><td>106</td><td>5</td><td>2011-01-19</td></tr><tr><td>207</td><td>107</td><td>5</td><td>2011-01-20</td></tr><tr><td>208</td><td>104</td><td>3</td><td>2011-01-02</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 101, 'y_data': 3}, {'x_data': 104, 'y_data': 2.5}, {'x_data': 106, 'y_data': 4.5}, {'x_data': 107, 'y_data': 4}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'mID'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'avg(stars)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

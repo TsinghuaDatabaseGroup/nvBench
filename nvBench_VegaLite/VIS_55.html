@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_55</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_54.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_56.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>55</td><td><h4>NL Queries: </h4><ol><li><p>How many documents are created in each day? Bin the document date by weekday and group by document type description with a stacked bar chart, sort from low to high by the total number.</p></li><li><p>Show the number of documents created in each day and bin document date by weekday and group by document type description with a stacked bar chart, could you display in asc by the y-axis?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Document_Date , COUNT(Document_Date) FROM Ref_document_types AS T1 JOIN Documents AS T2 ON T1.document_type_code = T2.document_type_code GROUP BY Document_Type_Description ORDER BY COUNT(Document_Date) ASC BIN Document_Date BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>851@y_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Stacked Bar</p><p><b>DB: </b>cre_Docs_and_Epenses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Docs_and_Epenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Ref_document_types</h4><table><tr><th>Document_Type_Code</th><th>Document_Type_Name</th><th>Document_Type_Description</th></tr><tr><td>BK</td><td>Book</td><td>excellent</td></tr><tr><td>CV</td><td>CV</td><td>excellent</td></tr><tr><td>PT</td><td>Presentation</td><td>very good</td></tr><tr><td>PP</td><td>Paper</td><td>good</td></tr><tr><td>FM</td><td>Film</td><td>fun</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tue', 'y_data': 0, 'classify': 'excellent'}, {'x_data': 'Mon', 'y_data': 1, 'classify': 'excellent'}, {'x_data': 'Sun', 'y_data': 1, 'classify': 'excellent'}, {'x_data': 'Sat', 'y_data': 1, 'classify': 'excellent'}, {'x_data': 'Thur', 'y_data': 2, 'classify': 'excellent'}, {'x_data': 'Fri', 'y_data': 1, 'classify': 'excellent'}, {'x_data': 'Wed', 'y_data': 3, 'classify': 'excellent'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Mon', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Sun', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Thur', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Fri', 'y_data': 0, 'classify': 'fun'}, {'x_data': 'Wed', 'y_data': 1, 'classify': 'fun'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'good'}, {'x_data': 'Mon', 'y_data': 0, 'classify': 'good'}, {'x_data': 'Sun', 'y_data': 0, 'classify': 'good'}, {'x_data': 'Sat', 'y_data': 1, 'classify': 'good'}, {'x_data': 'Thur', 'y_data': 1, 'classify': 'good'}, {'x_data': 'Fri', 'y_data': 2, 'classify': 'good'}, {'x_data': 'Wed', 'y_data': 1, 'classify': 'good'}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Document_Date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Document_Date)'}, 'color': {'field': 'classify'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

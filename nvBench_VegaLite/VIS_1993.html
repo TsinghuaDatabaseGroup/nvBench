@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1993</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1992.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1994.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1993</td><td><h4>NL Queries: </h4><ol><li><p>For each faculty rank, show the number of faculty members who have it Show bar chart, and could you show total number from low to high order please?</p></li><li><p>A bar chart about how many faculty members do we have for each faculty rank?, and display by the Y in ascending.</p></li><li><p>How many faculty members do we have for each faculty rank Show bar chart, I want to list in asc by the Y.</p></li><li><p>Show me a bar chart for how many faculty members do we have for each faculty rank?, and list by the total number in ascending.</p></li><li><p>Create a bar chart showing the total number across rank, rank by the the total number from low to high.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Rank , count(*) FROM Faculty GROUP BY rank ORDER BY count(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>24@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>activity_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: activity_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Faculty</h4><table><tr><th>FacID</th><th>Lname</th><th>Fname</th><th>Rank</th><th>Sex</th><th>Phone</th><th>Room</th><th>Building</th></tr><tr><td>1082</td><td>Giuliano</td><td>Mark</td><td>Instructor</td><td>M</td><td>2424</td><td>224</td><td>NEB</td></tr><tr><td>1121</td><td>Goodrich</td><td>Michael</td><td>Professor</td><td>M</td><td>3593</td><td>219</td><td>NEB</td></tr><tr><td>1148</td><td>Masson</td><td>Gerald</td><td>Professor</td><td>M</td><td>3402</td><td>224B</td><td>NEB</td></tr><tr><td>1172</td><td>Runolfsson</td><td>Thordur</td><td>AssocProf</td><td>M</td><td>3121</td><td>119</td><td>Barton</td></tr><tr><td>1177</td><td>Naiman</td><td>Daniel</td><td>Professor</td><td>M</td><td>3571</td><td>288</td><td>Krieger</td></tr><tr><td>1193</td><td>Jones</td><td>Stacey</td><td>Instructor</td><td>F</td><td>3550</td><td>224</td><td>NEB</td></tr><tr><td>1823</td><td>Davidson</td><td>Frederic</td><td>Professor</td><td>M</td><td>5629</td><td>119</td><td>Barton</td></tr><tr><td>2028</td><td>Brody</td><td>William</td><td>Professor</td><td>M</td><td>6073</td><td>119</td><td>Barton</td></tr><tr><td>2119</td><td>Meyer</td><td>Gerard</td><td>Professor</td><td>M</td><td>6350</td><td>119</td><td>Barton</td></tr><tr><td>2192</td><td>Yarowsky</td><td>David</td><td>AsstProf</td><td>M</td><td>6587</td><td>324</td><td>NEB</td></tr><tr><td>2291</td><td>Scheinerman</td><td>Edward</td><td>Professor</td><td>M</td><td>6654</td><td>288</td><td>Krieger</td></tr><tr><td>2311</td><td>Priebe</td><td>Carey</td><td>AsstProf</td><td>M</td><td>6953</td><td>288</td><td>Krieger</td></tr><tr><td>2738</td><td>Fill</td><td>James</td><td>Professor</td><td>M</td><td>8209</td><td>288</td><td>Krieger</td></tr><tr><td>2881</td><td>Goldman</td><td>Alan</td><td>Professor</td><td>M</td><td>8335</td><td>288</td><td>Krieger</td></tr><tr><td>3457</td><td>Smith</td><td>Scott</td><td>AssocProf</td><td>M</td><td>1035</td><td>318</td><td>NEB</td></tr><tr><td>4230</td><td>Houlahan</td><td>Joanne</td><td>Instructor</td><td>F</td><td>1260</td><td>328</td><td>NEB</td></tr><tr><td>4432</td><td>Burzio</td><td>Luigi</td><td>Professor</td><td>M</td><td>1813</td><td>288</td><td>Krieger</td></tr><tr><td>5718</td><td>Frank</td><td>Robert</td><td>AsstProf</td><td>M</td><td>1751</td><td>288</td><td>Krieger</td></tr><tr><td>6112</td><td>Beach</td><td>Louis</td><td>Instructor</td><td>M</td><td>1838</td><td>207</td><td>NEB</td></tr><tr><td>6182</td><td>Cheng</td><td>Cheng</td><td>AsstProf</td><td>M</td><td>1856</td><td>288</td><td>Krieger</td></tr><tr><td>6191</td><td>Kaplan</td><td>Alexander</td><td>Professor</td><td>M</td><td>1825</td><td>119</td><td>Barton</td></tr><tr><td>6330</td><td>Byrne</td><td>William</td><td>Instructor</td><td>M</td><td>1691</td><td>119</td><td>Barton</td></tr><tr><td>6541</td><td>Han</td><td>Shih-Ping</td><td>Professor</td><td>M</td><td>1914</td><td>288</td><td>Krieger</td></tr><tr><td>6910</td><td>Smolensky</td><td>Paul</td><td>Professor</td><td>M</td><td>2072</td><td>288</td><td>Krieger</td></tr><tr><td>6925</td><td>Iglesias</td><td>Pablo</td><td>AsstProf</td><td>M</td><td>2021</td><td>119</td><td>Barton</td></tr><tr><td>7134</td><td>Goutsias</td><td>John</td><td>Professor</td><td>M</td><td>2184</td><td>119</td><td>Barton</td></tr><tr><td>7231</td><td>Rugh</td><td>Wilson</td><td>Professor</td><td>M</td><td>2191</td><td>119</td><td>Barton</td></tr><tr><td>7271</td><td>Jelinek</td><td>Frederick</td><td>Professor</td><td>M</td><td>2890</td><td>119</td><td>Barton</td></tr><tr><td>7506</td><td>Westgate</td><td>Charles</td><td>Professor</td><td>M</td><td>2932</td><td>119</td><td>Barton</td></tr><tr><td>7712</td><td>Awerbuch</td><td>Baruch</td><td>Professor</td><td>M</td><td>2105</td><td>220</td><td>NEB</td></tr><tr><td>7723</td><td>Taylor</td><td>Russell</td><td>Professor</td><td>M</td><td>2435</td><td>317</td><td>NEB</td></tr><tr><td>7792</td><td>Brill</td><td>Eric</td><td>AsstProf</td><td>M</td><td>2303</td><td>324B</td><td>NEB</td></tr><tr><td>8102</td><td>James</td><td>Lancelot</td><td>AsstProf</td><td>M</td><td>2792</td><td>288</td><td>Krieger</td></tr><tr><td>8114</td><td>Angelopoulou</td><td>Ellie</td><td>Instructor</td><td>F</td><td>2152</td><td>316</td><td>NEB</td></tr><tr><td>8118</td><td>Weinert</td><td>Howard</td><td>Professor</td><td>M</td><td>3272</td><td>119</td><td>Barton</td></tr><tr><td>8122</td><td>Wierman</td><td>John</td><td>Professor</td><td>M</td><td>3392</td><td>288</td><td>Krieger</td></tr><tr><td>8423</td><td>Kumar</td><td>Subodh</td><td>AsstProf</td><td>M</td><td>2522</td><td>218</td><td>NEB</td></tr><tr><td>8721</td><td>Wolff</td><td>Lawrence</td><td>AssocProf</td><td>M</td><td>2342</td><td>316</td><td>NEB</td></tr><tr><td>8722</td><td>Cauwenberghs</td><td>Gert</td><td>AsstProf</td><td>M</td><td>1372</td><td>119</td><td>Barton</td></tr><tr><td>8723</td><td>Andreou</td><td>Andreas</td><td>Professor</td><td>M</td><td>1402</td><td>119</td><td>Barton</td></tr><tr><td>8741</td><td>Salzberg</td><td>Steven</td><td>AssocProf</td><td>M</td><td>2641</td><td>324A</td><td>NEB</td></tr><tr><td>8772</td><td>Cowen</td><td>Lenore</td><td>AsstProf</td><td>F</td><td>2870</td><td>288</td><td>Krieger</td></tr><tr><td>8791</td><td>McCloskey</td><td>Michael</td><td>Professor</td><td>M</td><td>3440</td><td>288</td><td>Krieger</td></tr><tr><td>8918</td><td>Amir</td><td>Yair</td><td>AsstProf</td><td>M</td><td>2672</td><td>308</td><td>NEB</td></tr><tr><td>8989</td><td>Brent</td><td>Michael</td><td>AsstProf</td><td>M</td><td>9373</td><td>288</td><td>Krieger</td></tr><tr><td>9011</td><td>Rapp</td><td>Brenda</td><td>AsstProf</td><td>F</td><td>2032</td><td>288</td><td>Krieger</td></tr><tr><td>9172</td><td>Kosaraju</td><td>Rao</td><td>Professor</td><td>M</td><td>2757</td><td>319</td><td>NEB</td></tr><tr><td>9191</td><td>Collins</td><td>Oliver</td><td>AssocProf</td><td>M</td><td>5427</td><td>119</td><td>Barton</td></tr><tr><td>9199</td><td>Hughes</td><td>Brian</td><td>AssocProf</td><td>M</td><td>5666</td><td>119</td><td>Barton</td></tr><tr><td>9210</td><td>Joseph</td><td>Richard</td><td>Professor</td><td>M</td><td>5996</td><td>119</td><td>Barton</td></tr><tr><td>9379</td><td>Khurgin</td><td>Jacob</td><td>Professor</td><td>M</td><td>1060</td><td>119</td><td>Barton</td></tr><tr><td>9514</td><td>Prince</td><td>Jerry</td><td>AssocProf</td><td>M</td><td>5106</td><td>119</td><td>Barton</td></tr><tr><td>9643</td><td>Legendre</td><td>Geraldine</td><td>AssocProf</td><td>F</td><td>8972</td><td>288</td><td>Krieger</td></tr><tr><td>9811</td><td>Wu</td><td>Colin</td><td>AsstProf</td><td>M</td><td>2906</td><td>288</td><td>Krieger</td></tr><tr><td>9823</td><td>Pang</td><td>Jong-Shi</td><td>Professor</td><td>M</td><td>4366</td><td>288</td><td>Krieger</td></tr><tr><td>9824</td><td>Glaser</td><td>Robert</td><td>Instructor</td><td>M</td><td>4396</td><td>119</td><td>Barton</td></tr><tr><td>9826</td><td>Delcher</td><td>Arthur</td><td>Instructor</td><td>M</td><td>2956</td><td>329</td><td>NEB</td></tr><tr><td>9922</td><td>Hall</td><td>Leslie</td><td>AsstProf</td><td>F</td><td>7332</td><td>288</td><td>Krieger</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'AssocProf', 'y_data': 8}, {'x_data': 'Instructor', 'y_data': 8}, {'x_data': 'AsstProf', 'y_data': 15}, {'x_data': 'Professor', 'y_data': 27}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Rank', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

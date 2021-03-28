@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2667</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2666.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2668.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2667</td><td><h4>NL Queries: </h4><ol><li><p>Show the date and the corresponding sales of the journal which did not have any of the listed editors serving on the committee by a bar chart, show by the Sales in desc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Date , T1.Sales FROM journal EXCEPT SELECT T1.date , T1.theme , T1.sales FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID = T2.journal_ID ORDER BY T1.Sales DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2051@y_name@DESC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>journal_committee</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: journal_committee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: journal</h4><table><tr><th>Journal_ID</th><th>Date</th><th>Theme</th><th>Sales</th></tr><tr><td>1</td><td>September 9, 2001</td><td>Miami Dolphins</td><td>798</td></tr><tr><td>2</td><td>September 23, 2001</td><td>at Jacksonville Jaguars</td><td>994</td></tr><tr><td>4</td><td>October 7, 2001</td><td>at Baltimore Ravens</td><td>7494</td></tr><tr><td>5</td><td>October 14, 2001</td><td>Tampa Bay Buccaneers</td><td>4798</td></tr><tr><td>6</td><td>October 21, 2001</td><td>at Detroit Lions</td><td>2940</td></tr><tr><td>7</td><td>October 29, 2001</td><td>at Pittsburgh Steelers</td><td>1763</td></tr><tr><td>8</td><td>November 4, 2001</td><td>Jacksonville Jaguars</td><td>1232</td></tr><tr><td>9</td><td>November 12, 2001</td><td>Baltimore Ravens</td><td>6532</td></tr><tr><td>10</td><td>November 18, 2001</td><td>at Cincinnati Bengals</td><td>3421</td></tr><tr><td>11</td><td>November 25, 2001</td><td>Pittsburgh Steelers</td><td>3342</td></tr><tr><td>12</td><td>December 2, 2001</td><td>at Cleveland Browns</td><td>3534</td></tr><tr><td>13</td><td>December 9, 2001</td><td>at Minnesota Vikings</td><td>4271</td></tr><tr><td>14</td><td>December 16, 2001</td><td>Green Bay Packers</td><td>2804</td></tr><tr><td>15</td><td>December 22, 2001</td><td>at Oakland Raiders</td><td>1934</td></tr><tr><td>16</td><td>December 30, 2001</td><td>Cleveland Browns</td><td>3798</td></tr><tr><td>17</td><td>January 6, 2002</td><td>Cincinnati Bengals</td><td>5342</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'November 12, 2001', 'y_data': 6532}, {'x_data': 'October 14, 2001', 'y_data': 4798}, {'x_data': 'December 30, 2001', 'y_data': 3798}, {'x_data': 'November 18, 2001', 'y_data': 3421}, {'x_data': 'December 16, 2001', 'y_data': 2804}, {'x_data': 'December 22, 2001', 'y_data': 1934}, {'x_data': 'October 29, 2001', 'y_data': 1763}, {'x_data': 'November 4, 2001', 'y_data': 1232}, {'x_data': 'September 9, 2001', 'y_data': 798}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Sales'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1711</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1710.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1712.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1711</td><td><h4>NL Queries: </h4><ol><li><p>Find the total number of instructors for each department with a bar chart, and could you sort by the y axis in desc?</p></li><li><p>How many instructors are in each department? Show me a bar chart, and show by the y axis from high to low.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.dept_name , count(DISTINCT T3.id) FROM department AS T1 JOIN student AS T2 ON T1.dept_name = T2.dept_name JOIN instructor AS T3 ON T1.dept_name = T3.dept_name ORDER BY count(DISTINCT T3.id) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>630@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: department</h4><table><tr><th>dept_name</th><th>building</th><th>budget</th></tr><tr><td>Civil Eng.</td><td>Chandler</td><td>255041.46</td></tr><tr><td>Biology</td><td>Candlestick</td><td>647610.55</td></tr><tr><td>History</td><td>Taylor</td><td>699140.86</td></tr><tr><td>Physics</td><td>Wrigley</td><td>942162.76</td></tr><tr><td>Marketing</td><td>Lambeau</td><td>210627.58</td></tr><tr><td>Pol. Sci.</td><td>Whitman</td><td>573745.09</td></tr><tr><td>English</td><td>Palmer</td><td>611042.66</td></tr><tr><td>Accounting</td><td>Saucon</td><td>441840.92</td></tr><tr><td>Comp. Sci.</td><td>Lamberton</td><td>106378.69</td></tr><tr><td>Languages</td><td>Linderman</td><td>601283.6</td></tr><tr><td>Finance</td><td>Candlestick</td><td>866831.75</td></tr><tr><td>Geology</td><td>Palmer</td><td>406557.93</td></tr><tr><td>Cybernetics</td><td>Mercer</td><td>794541.46</td></tr><tr><td>Astronomy</td><td>Taylor</td><td>617253.94</td></tr><tr><td>Athletics</td><td>Bronfman</td><td>734550.7</td></tr><tr><td>Statistics</td><td>Taylor</td><td>395051.74</td></tr><tr><td>Psychology</td><td>Thompson</td><td>848175.04</td></tr><tr><td>Math</td><td>Brodhead</td><td>777605.11</td></tr><tr><td>Elec. Eng.</td><td>Main</td><td>276527.61</td></tr><tr><td>Mech. Eng.</td><td>Rauch</td><td>520350.65</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Statistics', 'y_data': 6}, {'x_data': 'Athletics', 'y_data': 5}, {'x_data': 'Marketing', 'y_data': 4}, {'x_data': 'English', 'y_data': 4}, {'x_data': 'Elec. Eng.', 'y_data': 4}, {'x_data': 'Cybernetics', 'y_data': 4}, {'x_data': 'Accounting', 'y_data': 4}, {'x_data': 'Pol. Sci.', 'y_data': 3}, {'x_data': 'Languages', 'y_data': 3}, {'x_data': 'Psychology', 'y_data': 2}, {'x_data': 'Physics', 'y_data': 2}, {'x_data': 'Mech. Eng.', 'y_data': 2}, {'x_data': 'Comp. Sci.', 'y_data': 2}, {'x_data': 'Biology', 'y_data': 2}, {'x_data': 'Geology', 'y_data': 1}, {'x_data': 'Finance', 'y_data': 1}, {'x_data': 'Astronomy', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'dept_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(DISTINCT T3.id)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

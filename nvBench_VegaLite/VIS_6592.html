@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6592</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6591.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6593.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6592</td><td><h4>NL Queries: </h4><ol><li><p>Show how many delegates in each county with a bar chart, and order in desc by the County_name.</p></li><li><p>Use a bar chart to show the number of delegates in each county, I want to list in descending by the x-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT County_name , COUNT(County_name) FROM county AS T1 JOIN election AS T2 ON T1.County_id = T2.District GROUP BY County_name ORDER BY County_name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1302@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>election</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: election&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: county</h4><table><tr><th>County_Id</th><th>County_name</th><th>Population</th><th>Zip_code</th></tr><tr><td>1</td><td>Howard</td><td>21000.0</td><td>D21</td></tr><tr><td>2</td><td>Baltimore County</td><td>90000.0</td><td>D08</td></tr><tr><td>3</td><td>Colony</td><td>79000.0</td><td>D02</td></tr><tr><td>4</td><td>Mansfield</td><td>87200.0</td><td>D09</td></tr><tr><td>5</td><td>Manning</td><td>13300.0</td><td>D11</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mansfield', 'y_data': 1}, {'x_data': 'Howard', 'y_data': 3}, {'x_data': 'Colony', 'y_data': 2}, {'x_data': 'Baltimore County', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'County_name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(County_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

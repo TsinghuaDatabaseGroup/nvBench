@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6919</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6918.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6920.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6919</td><td><h4>NL Queries: </h4><ol><li><p>Show order ids and the total quantity in each order by a scatter chart.</p></li><li><p>Show order ids and the total quantity in each order. Visualize by scatter chart.</p></li><li><p>Give the order ids for all orders, as well as the total product quantity in each in a scatter chart</p></li><li><p>Give the order ids for all orders, as well as the total product quantity in each. </p></li><li><p>Show me a scatter plot of order id and total number of product quantity for .</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT order_id , sum(product_quantity) FROM Order_items GROUP BY order_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>991</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>customers_and_invoices</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_invoices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Order_items</h4><table><tr><th>order_item_id</th><th>order_id</th><th>product_id</th><th>product_quantity</th><th>other_order_item_details</th></tr><tr><td>1</td><td>4</td><td>4</td><td>6</td><td>None</td></tr><tr><td>2</td><td>4</td><td>10</td><td>7</td><td>None</td></tr><tr><td>3</td><td>15</td><td>5</td><td>4</td><td>None</td></tr><tr><td>4</td><td>1</td><td>3</td><td>9</td><td>None</td></tr><tr><td>5</td><td>2</td><td>14</td><td>3</td><td>None</td></tr><tr><td>6</td><td>13</td><td>12</td><td>8</td><td>None</td></tr><tr><td>7</td><td>1</td><td>15</td><td>3</td><td>None</td></tr><tr><td>8</td><td>10</td><td>4</td><td>4</td><td>None</td></tr><tr><td>9</td><td>14</td><td>5</td><td>1</td><td>None</td></tr><tr><td>10</td><td>13</td><td>9</td><td>2</td><td>None</td></tr><tr><td>11</td><td>15</td><td>7</td><td>5</td><td>None</td></tr><tr><td>12</td><td>4</td><td>14</td><td>4</td><td>None</td></tr><tr><td>13</td><td>12</td><td>13</td><td>1</td><td>None</td></tr><tr><td>14</td><td>13</td><td>14</td><td>2</td><td>None</td></tr><tr><td>15</td><td>13</td><td>14</td><td>6</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 1, 'y_data': 12}, {'x_data': 2, 'y_data': 3}, {'x_data': 4, 'y_data': 17}, {'x_data': 10, 'y_data': 4}, {'x_data': 12, 'y_data': 1}, {'x_data': 13, 'y_data': 18}, {'x_data': 14, 'y_data': 1}, {'x_data': 15, 'y_data': 9}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'order_id'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'sum(product_quantity)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

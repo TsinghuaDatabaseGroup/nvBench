@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5703</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5702.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5704.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5703</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart showing the number of documents stored in each weekday, and list in asc by the Y please.</p></li><li><p>How many documents are stored? Bin the store date by weekday in a bar chart, and order by the y-axis from low to high.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Date_Stored , COUNT(Date_Stored) FROM All_documents AS T1 JOIN Ref_calendar AS T2 ON T1.date_stored = T2.calendar_date  ORDER BY COUNT(Date_Stored) ASC BIN Date_Stored BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>793@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Doc_Tracking_DB</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Tracking_DB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: All_documents</h4><table><tr><th>Document_ID</th><th>Date_Stored</th><th>Document_Type_Code</th><th>Document_Name</th><th>Document_Description</th><th>Other_Details</th></tr><tr><td>7</td><td>1976-06-15 03:40:06</td><td>CV</td><td>Robin CV</td><td>None</td><td>None</td></tr><tr><td>11</td><td>1986-10-14 17:53:39</td><td>CV</td><td>Marry CV</td><td>None</td><td>None</td></tr><tr><td>25</td><td>2008-06-08 12:45:38</td><td>BK</td><td>One hundred years of solitude</td><td>None</td><td>None</td></tr><tr><td>39</td><td>2012-07-03 09:48:46</td><td>BK</td><td>How to read a book</td><td>None</td><td>None</td></tr><tr><td>72</td><td>2012-07-03 09:48:46</td><td>CV</td><td>Alan CV</td><td>None</td><td>None</td></tr><tr><td>81</td><td>1995-01-01 03:52:11</td><td>BK</td><td>Hua Mulan</td><td>None</td><td>None</td></tr><tr><td>99</td><td>2008-06-08 12:45:38</td><td>CV</td><td>Leon CV</td><td>None</td><td>None</td></tr><tr><td>111</td><td>1987-11-05 06:11:22</td><td>PR</td><td>Learning features of CNN</td><td>None</td><td>None</td></tr><tr><td>119</td><td>2008-06-08 12:45:38</td><td>RV</td><td>Marriage and population</td><td>None</td><td>None</td></tr><tr><td>120</td><td>1997-03-10 15:24:00</td><td>RV</td><td>Society and tax</td><td>None</td><td>None</td></tr><tr><td>166</td><td>1997-03-10 15:24:00</td><td>PR</td><td>Are you talking to a machine</td><td>None</td><td>None</td></tr><tr><td>170</td><td>2009-08-18 03:29:08</td><td>RV</td><td>Population</td><td>None</td><td>None</td></tr><tr><td>230</td><td>1976-06-15 03:40:06</td><td>CV</td><td>Martin CV</td><td>None</td><td>None</td></tr><tr><td>252</td><td>1976-06-15 03:40:06</td><td>BK</td><td>Summer</td><td>None</td><td>None</td></tr><tr><td>260</td><td>1997-03-10 15:24:00</td><td>BK</td><td>Cats and me</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Fri', 'y_data': 0}, {'x_data': 'Sat', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Mon', 'y_data': 3}, {'x_data': 'Sun', 'y_data': 4}, {'x_data': 'Tue', 'y_data': 7}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date_Stored', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Date_Stored)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

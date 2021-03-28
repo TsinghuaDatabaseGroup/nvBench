@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5192</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5191.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5193.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5192</td><td><h4>NL Queries: </h4><ol><li><p>Return a histogram on what are the age and hometown of teachers?, could you show by the x axis from high to low?</p></li><li><p>What is the age and hometown of every teacher Visualize by bar chart, could you rank from high to low by the x-axis please?</p></li><li><p>Visualize a bar chart for what is the age and hometown of every teacher?, I want to order in descending by the Hometown.</p></li><li><p>Display a bar chart for what are the age and hometown of teachers?, and list from high to low by the bars.</p></li><li><p>A bar chart about what is the age and hometown of every teacher?, list from high to low by the bars.</p></li><li><p>Create a bar chart showing age across hometown, could you display by the X in descending?</p></li><li><p>What are the age and hometown of teachers Visualize by bar chart, and rank in descending by the X-axis please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Hometown , Age FROM teacher ORDER BY Hometown DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>711@x_name@DESC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>course_teach</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: course_teach&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: teacher</h4><table><tr><th>Teacher_ID</th><th>Name</th><th>Age</th><th>Hometown</th></tr><tr><td>1</td><td>Joseph Huts</td><td>32</td><td>Blackrod Urban District</td></tr><tr><td>2</td><td>Gustaaf Deloor</td><td>29</td><td>Bolton County Borough</td></tr><tr><td>3</td><td>Vicente Carretero</td><td>26</td><td>Farnworth Municipal Borough</td></tr><tr><td>4</td><td>John Deloor</td><td>33</td><td>Horwich Urban District</td></tr><tr><td>5</td><td>Kearsley Brown</td><td>45</td><td>Kearsley Urban District</td></tr><tr><td>6</td><td>Anne Walker</td><td>41</td><td>Little Lever Urban District</td></tr><tr><td>7</td><td>Lucy Wong</td><td>39</td><td>Turton Urban District</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Turton Urban District', 'y_data': 39}, {'x_data': 'Little Lever Urban District', 'y_data': 41}, {'x_data': 'Kearsley Urban District', 'y_data': 45}, {'x_data': 'Horwich Urban District', 'y_data': 33}, {'x_data': 'Farnworth Municipal Borough', 'y_data': 26}, {'x_data': 'Bolton County Borough', 'y_data': 29}, {'x_data': 'Blackrod Urban District', 'y_data': 32}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Hometown', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Age'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

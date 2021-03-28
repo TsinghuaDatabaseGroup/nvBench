@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5405</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5404.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5406.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5405</td><td><h4>NL Queries: </h4><ol><li><p>What other details can you tell me about students in reverse alphabetical order, and count them by a bar chart</p></li><li><p>List all the student details in reversed lexicographical order, and count them by a bar chart</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT other_student_details , COUNT(other_student_details) FROM Students GROUP BY other_student_details ORDER BY other_student_details DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2900</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>student_transcripts_tracking</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: student_transcripts_tracking&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Students</h4><table><tr><th>student_id</th><th>current_address_id</th><th>permanent_address_id</th><th>first_name</th><th>middle_name</th><th>last_name</th><th>cell_mobile_number</th><th>email_address</th><th>ssn</th><th>date_first_registered</th><th>date_left</th><th>other_student_details</th></tr><tr><td>1</td><td>10</td><td>15</td><td>Timmothy</td><td>Anna</td><td>Ward</td><td>(096)889-8954x524</td><td>erwin.zboncak@example.com</td><td>965</td><td>1971-02-05 07:28:23</td><td>1971-05-17 19:28:49</td><td>quia</td></tr><tr><td>2</td><td>12</td><td>5</td><td>Hobart</td><td>Lorenz</td><td>Balistreri</td><td>1-009-710-5151</td><td>swift.kolby@example.com</td><td>304246</td><td>1976-10-26 02:33:06</td><td>2013-10-05 17:41:28</td><td>autem</td></tr><tr><td>3</td><td>9</td><td>5</td><td>Warren</td><td>Violet</td><td>Gleichner</td><td>07661787471</td><td>johns.unique@example.net</td><td>3</td><td>2007-08-29 23:25:41</td><td>2007-03-31 09:53:19</td><td>facilis</td></tr><tr><td>4</td><td>7</td><td>11</td><td>Jarvis</td><td>Aaliyah</td><td>Carroll</td><td>09700166582</td><td>jillian26@example.net</td><td>141072406</td><td>2014-03-28 05:48:23</td><td>2007-08-02 04:12:58</td><td>atque</td></tr><tr><td>5</td><td>9</td><td>9</td><td>Milton</td><td>Vaughn</td><td>Christiansen</td><td>171-642-5684</td><td>lhartmann@example.org</td><td></td><td>1973-05-19 19:12:46</td><td>2007-11-28 12:50:21</td><td>laborum</td></tr><tr><td>6</td><td>6</td><td>3</td><td>Stanford</td><td>Mona</td><td>Rogahn</td><td>436.613.7683</td><td>skassulke@example.net</td><td>248</td><td>1997-03-20 16:47:25</td><td>2016-04-09 12:27:04</td><td>qui</td></tr><tr><td>7</td><td>15</td><td>3</td><td>Frida</td><td>Aisha</td><td>Huel</td><td>1-879-796-8987x164</td><td>baumbach.lucious@example.org</td><td>668</td><td>2018-03-13 09:56:22</td><td>1997-11-16 08:54:33</td><td>dolorum</td></tr><tr><td>8</td><td>1</td><td>5</td><td>Delaney</td><td>Judd</td><td>Ankunding</td><td>03174364122</td><td>dell43@example.net</td><td>402</td><td>1982-02-14 08:46:35</td><td>2004-12-08 05:29:11</td><td>voluptatem</td></tr><tr><td>9</td><td>2</td><td>15</td><td>Reva</td><td>Golda</td><td>Osinski</td><td>(507)365-8405</td><td>qo'kon@example.com</td><td>39</td><td>2017-01-04 08:10:25</td><td>1990-09-01 05:03:27</td><td>nesciunt</td></tr><tr><td>10</td><td>15</td><td>14</td><td>Helga</td><td>Cleve</td><td>Mohr</td><td>677.401.9382</td><td>nya.lesch@example.net</td><td>43</td><td>2009-09-25 00:14:25</td><td>2017-07-09 21:38:43</td><td>rerum</td></tr><tr><td>11</td><td>14</td><td>4</td><td>Gregg</td><td>Mossie</td><td>Schuppe</td><td>(462)246-7921</td><td>nbruen@example.org</td><td>494</td><td>1989-05-24 23:31:29</td><td>1975-10-09 00:49:27</td><td>omnis</td></tr><tr><td>12</td><td>14</td><td>9</td><td>Orrin</td><td>Neal</td><td>Kemmer</td><td>(982)153-1469x1733</td><td>beth42@example.org</td><td>6274274</td><td>2005-12-15 08:42:10</td><td>2006-08-04 17:26:49</td><td>non</td></tr><tr><td>13</td><td>9</td><td>8</td><td>Deon</td><td>Brooklyn</td><td>Weimann</td><td>(213)445-0399x85208</td><td>jhuel@example.com</td><td>68095</td><td>1986-02-24 21:12:23</td><td>2014-05-30 23:32:02</td><td>assumenda</td></tr><tr><td>14</td><td>12</td><td>11</td><td>Jordy</td><td>Osborne</td><td>Rempel</td><td>(605)919-3594x3661</td><td>gracie29@example.com</td><td>34458427</td><td>2004-12-24 12:36:46</td><td>1999-08-24 00:07:10</td><td>et</td></tr><tr><td>15</td><td>2</td><td>9</td><td>Jett</td><td>Alberta</td><td>Jaskolski</td><td>877.549.9067x8723</td><td>mya88@example.org</td><td>156</td><td>1982-06-19 13:15:18</td><td>1982-06-11 00:25:39</td><td>omnis</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'assumenda', 'y_data': 1}, {'x_data': 'atque', 'y_data': 1}, {'x_data': 'autem', 'y_data': 1}, {'x_data': 'dolorum', 'y_data': 1}, {'x_data': 'et', 'y_data': 1}, {'x_data': 'facilis', 'y_data': 1}, {'x_data': 'laborum', 'y_data': 1}, {'x_data': 'nesciunt', 'y_data': 1}, {'x_data': 'non', 'y_data': 1}, {'x_data': 'omnis', 'y_data': 2}, {'x_data': 'qui', 'y_data': 1}, {'x_data': 'quia', 'y_data': 1}, {'x_data': 'rerum', 'y_data': 1}, {'x_data': 'voluptatem', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'other_student_details', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(other_student_details)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

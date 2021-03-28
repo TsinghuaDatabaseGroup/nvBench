@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1989</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1988.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1990.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1989</td><td><h4>NL Queries: </h4><ol><li><p>Show different publishers together with the number of publications they have Plot them as bar chart, and I want to order by the bars in asc.</p></li><li><p>Draw a bar chart of publisher versus the total number, sort from low to high by the bars.</p></li><li><p>Show different publishers together with the number of publications they have in a bar chart, and I want to order by the bars in asc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Publisher , COUNT(*) FROM publication GROUP BY Publisher ORDER BY Publisher ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>364@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>book_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: book_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: publication</h4><table><tr><th>Publication_ID</th><th>Book_ID</th><th>Publisher</th><th>Publication_Date</th><th>Price</th></tr><tr><td>1</td><td>1</td><td>Pearson</td><td>August 2008</td><td>15000000.0</td></tr><tr><td>2</td><td>3</td><td>Thomson Reuters</td><td>March 2008</td><td>6000000.0</td></tr><tr><td>3</td><td>4</td><td>Wiley</td><td>June 2006</td><td>4100000.0</td></tr><tr><td>4</td><td>5</td><td>Wiley</td><td>October 2005</td><td>3000000.0</td></tr><tr><td>5</td><td>7</td><td>Springer Nature</td><td>August 2008</td><td>3000000.0</td></tr><tr><td>6</td><td>9</td><td>Pearson</td><td>March 2007</td><td>2000000.0</td></tr><tr><td>7</td><td>10</td><td>Bertelsmann</td><td>April 2007</td><td>2000000.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Bertelsmann', 'y_data': 1}, {'x_data': 'Pearson', 'y_data': 2}, {'x_data': 'Springer Nature', 'y_data': 1}, {'x_data': 'Thomson Reuters', 'y_data': 1}, {'x_data': 'Wiley', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Publisher', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

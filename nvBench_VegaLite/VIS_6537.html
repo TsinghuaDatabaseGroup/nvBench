@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6537</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6536.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6538.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6537</td><td><h4>NL Queries: </h4><ol><li><p>How many dogs for each size code? Return a bar chart, I want to display by the Y from low to high.</p></li><li><p>List the number of dogs for each size code in a bar chart, and display Y-axis from low to high order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT size_code , COUNT(size_code) FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id = T2.owner_id GROUP BY size_code ORDER BY COUNT(size_code) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1202@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>dog_kennels</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: dog_kennels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Owners</h4><table><tr><th>owner_id</th><th>first_name</th><th>last_name</th><th>street</th><th>city</th><th>state</th><th>zip_code</th><th>email_address</th><th>home_phone</th><th>cell_number</th></tr><tr><td>1</td><td>Nora</td><td>Haley</td><td>0647 Hintz Village Apt. 024</td><td>Lake Tia</td><td>Wisconsin</td><td>93165</td><td>lynn81@example.org</td><td>1-682-845-0116x63235</td><td>478.978.0729</td></tr><tr><td>2</td><td>Melisa</td><td>DuBuque</td><td>1204 Mae Highway Apt. 107</td><td>Port Reannamouth</td><td>Virginia</td><td>45244</td><td>ykris@example.com</td><td>(799)563-0260x454</td><td>(722)768-5439x484</td></tr><tr><td>3</td><td>Jaclyn</td><td>Stoltenberg</td><td>2635 Caitlyn Plains</td><td>Barrettburgh</td><td>Vermont</td><td>02647</td><td>hudson.favian@example.com</td><td>916.976.9480x13851</td><td>481-483-9083x37986</td></tr><tr><td>4</td><td>Tre</td><td>Hamill</td><td>692 Jaskolski Forges</td><td>Brakusfurt</td><td>Florida</td><td>87304</td><td>marks.gail@example.org</td><td>1-332-849-1908</td><td>739-136-7202</td></tr><tr><td>5</td><td>Johann</td><td>Fisher</td><td>68118 Daniel Row</td><td>Lake Valentin</td><td>NorthDakota</td><td>61019</td><td>zboncak.madonna@example.net</td><td>(544)034-1670</td><td>1-626-264-7659x1697</td></tr><tr><td>6</td><td>Kade</td><td>Rippin</td><td>51934 Treutel Harbor</td><td>Lake Carleyborough</td><td>Arizona</td><td>25609</td><td>margaretta.runte@example.net</td><td>318-052-6573</td><td>+70(4)9217952551</td></tr><tr><td>7</td><td>Emelie</td><td>Mertz</td><td>2417 Keara Stravenue Apt. 146</td><td>Lake Jennyferfort</td><td>NewYork</td><td>00589</td><td>angeline99@example.com</td><td>(058)997-7627</td><td>121.381.3316x6535</td></tr><tr><td>8</td><td>Rolando</td><td>Prohaska</td><td>57382 Yost Ridges</td><td>South Afton</td><td>Arkansas</td><td>86010</td><td>kturner@example.net</td><td>01802479758</td><td>(783)271-6744x4507</td></tr><tr><td>9</td><td>Adelle</td><td>Ondricka</td><td>9212 Rosenbaum Lights</td><td>East Hillardberg</td><td>Washington</td><td>92406</td><td>fschoen@example.net</td><td>066.264.7885</td><td>+00(2)4323592985</td></tr><tr><td>10</td><td>Lorenz</td><td>Nicolas</td><td>59509 Mellie Mountain</td><td>New Margaretteborough</td><td>SouthDakota</td><td>78297</td><td>ymaggio@example.com</td><td>085.557.0379x84348</td><td>559.874.3011x989</td></tr><tr><td>11</td><td>Gay</td><td>Feil</td><td>60352 Kayleigh Crossing Suite 700</td><td>Port Zackery</td><td>Indiana</td><td>35747</td><td>pearlie18@example.com</td><td>130-796-4589x05454</td><td>762.589.6117x1328</td></tr><tr><td>12</td><td>Orlando</td><td>Price</td><td>89011 Kertzmann Spring Suite 642</td><td>East Maribelbury</td><td>Mississippi</td><td>11990</td><td>christy49@example.org</td><td>363.948.1090</td><td>1-739-421-2225x38148</td></tr><tr><td>13</td><td>Cindy</td><td>Schmitt</td><td>6950 Katherine Forges Apt. 630</td><td>Beerton</td><td>NorthDakota</td><td>36871</td><td>wpfeffer@example.net</td><td>(094)747-5094x8134</td><td>633.455.3045x85484</td></tr><tr><td>14</td><td>Rachelle</td><td>Funk</td><td>15828 Spencer Extensions</td><td>West Leonard</td><td>Maryland</td><td>22731</td><td>edythe62@example.org</td><td>1-346-655-5842x768</td><td>(257)399-3116</td></tr><tr><td>15</td><td>Heather</td><td>Hauck</td><td>1858 Jan Park</td><td>South Daisyfurt</td><td>Pennsylvania</td><td>22693</td><td>ybergstrom@example.com</td><td>893-862-5295x61709</td><td>341.667.8085</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'SML', 'y_data': 2}, {'x_data': 'LGE', 'y_data': 4}, {'x_data': 'MED', 'y_data': 9}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'size_code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(size_code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

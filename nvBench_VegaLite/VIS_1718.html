@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1718</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1717.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1719.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1718</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart showing how many debates are held for each venue, and I want to show y-axis in asc order.</p></li><li><p>Bar chart x axis venue y axis how many venue, display y-axis from low to high order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Venue , COUNT(Venue) FROM debate GROUP BY Venue ORDER BY COUNT(Venue) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1077@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>debate</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: debate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: debate</h4><table><tr><th>Debate_ID</th><th>Date</th><th>Venue</th><th>Num_of_Audience</th></tr><tr><td>1</td><td>October 21, 2011</td><td>Manama , Bahrain</td><td>342</td></tr><tr><td>2</td><td>December 17, 2014</td><td>Doha , Qatar</td><td>134</td></tr><tr><td>3</td><td>August 3, 2015</td><td>Manama , Bahrain</td><td>90</td></tr><tr><td>4</td><td>October 27, 2015</td><td>Manama , Bahrain</td><td>209</td></tr><tr><td>5</td><td>January 12, 2017</td><td>Dubai , UAE</td><td>313</td></tr><tr><td>6</td><td>January 21, 2017</td><td>Abu Dhabi , UAE</td><td>159</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Abu Dhabi , UAE', 'y_data': 1}, {'x_data': 'Doha , Qatar', 'y_data': 1}, {'x_data': 'Dubai , UAE', 'y_data': 1}, {'x_data': 'Manama , Bahrain', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Venue', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Venue)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_732</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_731.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_733.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>732</td><td><h4>NL Queries: </h4><ol><li><p>For those female students with age is older than 18 who are not majoring in 600, tell me how many students of different first names using a bar chart, rank by the how many fname in desc please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Fname , COUNT(Fname) FROM Student WHERE Age > 18 AND Major != 600 AND Sex = 'F' GROUP BY Fname ORDER BY COUNT(Fname) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2662@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>restaurant_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: restaurant_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Student</h4><table><tr><th>StuID</th><th>LName</th><th>Fname</th><th>Age</th><th>Sex</th><th>Major</th><th>Advisor</th><th>city_code</th></tr><tr><td>1001</td><td>Smith</td><td>Linda</td><td>18</td><td>F</td><td>600</td><td>1121</td><td>BAL</td></tr><tr><td>1002</td><td>Kim</td><td>Tracy</td><td>19</td><td>F</td><td>600</td><td>7712</td><td>HKG</td></tr><tr><td>1003</td><td>Jones</td><td>Shiela</td><td>21</td><td>F</td><td>600</td><td>7792</td><td>WAS</td></tr><tr><td>1004</td><td>Kumar</td><td>Dinesh</td><td>20</td><td>M</td><td>600</td><td>8423</td><td>CHI</td></tr><tr><td>1005</td><td>Gompers</td><td>Paul</td><td>26</td><td>M</td><td>600</td><td>1121</td><td>YYZ</td></tr><tr><td>1006</td><td>Schultz</td><td>Andy</td><td>18</td><td>M</td><td>600</td><td>1148</td><td>BAL</td></tr><tr><td>1007</td><td>Apap</td><td>Lisa</td><td>18</td><td>F</td><td>600</td><td>8918</td><td>PIT</td></tr><tr><td>1008</td><td>Nelson</td><td>Jandy</td><td>20</td><td>F</td><td>600</td><td>9172</td><td>BAL</td></tr><tr><td>1009</td><td>Tai</td><td>Eric</td><td>19</td><td>M</td><td>600</td><td>2192</td><td>YYZ</td></tr><tr><td>1010</td><td>Lee</td><td>Derek</td><td>17</td><td>M</td><td>600</td><td>2192</td><td>HOU</td></tr><tr><td>1011</td><td>Adams</td><td>David</td><td>22</td><td>M</td><td>600</td><td>1148</td><td>PHL</td></tr><tr><td>1012</td><td>Davis</td><td>Steven</td><td>20</td><td>M</td><td>600</td><td>7723</td><td>PIT</td></tr><tr><td>1014</td><td>Norris</td><td>Charles</td><td>18</td><td>M</td><td>600</td><td>8741</td><td>DAL</td></tr><tr><td>1015</td><td>Lee</td><td>Susan</td><td>16</td><td>F</td><td>600</td><td>8721</td><td>HKG</td></tr><tr><td>1016</td><td>Schwartz</td><td>Mark</td><td>17</td><td>M</td><td>600</td><td>2192</td><td>DET</td></tr><tr><td>1017</td><td>Wilson</td><td>Bruce</td><td>27</td><td>M</td><td>600</td><td>1148</td><td>LON</td></tr><tr><td>1018</td><td>Leighton</td><td>Michael</td><td>20</td><td>M</td><td>600</td><td>1121</td><td>PIT</td></tr><tr><td>1019</td><td>Pang</td><td>Arthur</td><td>18</td><td>M</td><td>600</td><td>2192</td><td>WAS</td></tr><tr><td>1020</td><td>Thornton</td><td>Ian</td><td>22</td><td>M</td><td>520</td><td>7271</td><td>NYC</td></tr><tr><td>1021</td><td>Andreou</td><td>George</td><td>19</td><td>M</td><td>520</td><td>8722</td><td>NYC</td></tr><tr><td>1022</td><td>Woods</td><td>Michael</td><td>17</td><td>M</td><td>540</td><td>8722</td><td>PHL</td></tr><tr><td>1023</td><td>Shieber</td><td>David</td><td>20</td><td>M</td><td>520</td><td>8722</td><td>NYC</td></tr><tr><td>1024</td><td>Prater</td><td>Stacy</td><td>18</td><td>F</td><td>540</td><td>7271</td><td>BAL</td></tr><tr><td>1025</td><td>Goldman</td><td>Mark</td><td>18</td><td>M</td><td>520</td><td>7134</td><td>PIT</td></tr><tr><td>1026</td><td>Pang</td><td>Eric</td><td>19</td><td>M</td><td>520</td><td>7134</td><td>HKG</td></tr><tr><td>1027</td><td>Brody</td><td>Paul</td><td>18</td><td>M</td><td>520</td><td>8723</td><td>LOS</td></tr><tr><td>1028</td><td>Rugh</td><td>Eric</td><td>20</td><td>M</td><td>550</td><td>2311</td><td>ROC</td></tr><tr><td>1029</td><td>Han</td><td>Jun</td><td>17</td><td>M</td><td>100</td><td>2311</td><td>PEK</td></tr><tr><td>1030</td><td>Cheng</td><td>Lisa</td><td>21</td><td>F</td><td>550</td><td>2311</td><td>SFO</td></tr><tr><td>1031</td><td>Smith</td><td>Sarah</td><td>20</td><td>F</td><td>550</td><td>8772</td><td>PHL</td></tr><tr><td>1032</td><td>Brown</td><td>Eric</td><td>20</td><td>M</td><td>550</td><td>8772</td><td>ATL</td></tr><tr><td>1033</td><td>Simms</td><td>William</td><td>18</td><td>M</td><td>550</td><td>8772</td><td>NAR</td></tr><tr><td>1034</td><td>Epp</td><td>Eric</td><td>18</td><td>M</td><td>50</td><td>5718</td><td>BOS</td></tr><tr><td>1035</td><td>Schmidt</td><td>Sarah</td><td>26</td><td>F</td><td>50</td><td>5718</td><td>WAS</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sarah', 'y_data': 2}, {'x_data': 'Lisa', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Fname', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Fname)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

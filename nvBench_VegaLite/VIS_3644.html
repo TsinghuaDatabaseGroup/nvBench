@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3644</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3643.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3645.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3644</td><td><h4>NL Queries: </h4><ol><li><p>What are the number of the descriptions for the aircrafts?, sort bar in ascending order.</p></li><li><p>List the number of the description of all aircrafts, and show in ascending by the bars.</p></li><li><p>A bar chart for what are the number of the descriptions for the aircrafts?, and sort by the names in ascending please.</p></li><li><p>A bar chart for listing the number of the description of all aircrafts, and order bars in ascending order.</p></li><li><p>What are the descriptions for the aircrafts, and count them by a bar chart, and order by the x-axis from low to high.</p></li><li><p>List the description of all aircrafts, and count them by a bar chart, and sort bar in ascending order.</p></li><li><p>Draw a bar chart of description versus the number of description, show in ascending by the bars.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Description , COUNT(Description) FROM aircraft GROUP BY Description ORDER BY Description ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>34@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>aircraft</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: aircraft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: aircraft</h4><table><tr><th>Aircraft_ID</th><th>Aircraft</th><th>Description</th><th>Max_Gross_Weight</th><th>Total_disk_area</th><th>Max_disk_Loading</th></tr><tr><td>1</td><td>Robinson R-22</td><td>Light utility helicopter</td><td>1,370 lb (635 kg)</td><td>497 ftÂ² (46.2 mÂ²)</td><td>2.6 lb/ftÂ² (14 kg/mÂ²)</td></tr><tr><td>2</td><td>Bell 206B3 JetRanger</td><td>Turboshaft utility helicopter</td><td>3,200 lb (1,451 kg)</td><td>872 ftÂ² (81.1 mÂ²)</td><td>3.7 lb/ftÂ² (18 kg/mÂ²)</td></tr><tr><td>3</td><td>CH-47D Chinook</td><td>Tandem rotor helicopter</td><td>50,000 lb (22,680 kg)</td><td>5,655 ftÂ² (526 mÂ²)</td><td>8.8 lb/ftÂ² (43 kg/mÂ²)</td></tr><tr><td>4</td><td>Mil Mi-26</td><td>Heavy-lift helicopter</td><td>123,500 lb (56,000 kg)</td><td>8,495 ftÂ² (789 mÂ²)</td><td>14.5 lb/ftÂ² (71 kg/mÂ²)</td></tr><tr><td>5</td><td>CH-53E Super Stallion</td><td>Heavy-lift helicopter</td><td>73,500 lb (33,300 kg)</td><td>4,900 ftÂ² (460 mÂ²)</td><td>15 lb/ftÂ² (72 kg/mÂ²)</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Heavy-lift helicopter', 'y_data': 2}, {'x_data': 'Light utility helicopter', 'y_data': 1}, {'x_data': 'Tandem rotor helicopter', 'y_data': 1}, {'x_data': 'Turboshaft utility helicopter', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Description', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Description)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

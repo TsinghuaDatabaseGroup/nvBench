@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6225</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6224.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6226.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6225</td><td><h4>NL Queries: </h4><ol><li><p>Show name and age for visitors who visited some museums more than once using a bar chart.</p></li><li><p>histogram, X-axis is the name and the Y is the age for visitors who visited some museums more than 1 times.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , Age FROM visitor AS t1 JOIN visit AS t2 ON t1.id = t2.visitor_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2412</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>museum_visit</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: museum_visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: visitor</h4><table><tr><th>ID</th><th>Name</th><th>Level_of_membership</th><th>Age</th></tr><tr><td>1</td><td>Gonzalo HiguaÃ­n </td><td>8</td><td>35</td></tr><tr><td>2</td><td>Guti Midfielder</td><td>5</td><td>28</td></tr><tr><td>3</td><td>Arjen Robben</td><td>1</td><td>27</td></tr><tr><td>4</td><td>RaÃºl Brown</td><td>2</td><td>56</td></tr><tr><td>5</td><td>Fernando Gago</td><td>6</td><td>36</td></tr><tr><td>6</td><td>Rafael van der Vaart</td><td>1</td><td>25</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Arjen Robben', 'y_data': 27}, {'x_data': 'Fernando Gago', 'y_data': 36}, {'x_data': 'Rafael van der Vaart', 'y_data': 25}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Age'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

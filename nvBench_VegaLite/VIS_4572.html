@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4572</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4571.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4573.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4572</td><td><h4>NL Queries: </h4><ol><li><p>List the names of all genres in alphabetical oder, together with its ratings in a bar chart.</p></li><li><p>List the names of all genres in alphabetical oder, together with its ratings. Plot them as bar chart.</p></li><li><p>Show me a bar chart for what are the names of all genres in alphabetical order, combined with its ratings?</p></li><li><p>Return a bar chart on what are the names of all genres in alphabetical order, combined with its ratings?</p></li><li><p>What are the names of all genres in alphabetical order, combined with its ratings. Show bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT g_name , rating FROM genre ORDER BY g_name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2428</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>music_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: music_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: genre</h4><table><tr><th>g_name</th><th>rating</th><th>most_popular_in</th></tr><tr><td>tagore</td><td>8</td><td>Bangladesh</td></tr><tr><td>nazrul</td><td>7</td><td>Bangladesh</td></tr><tr><td>folk</td><td>9</td><td>Sylhet,Chittagong,Kustia</td></tr><tr><td>modern</td><td>8</td><td>Bangladesh</td></tr><tr><td>blues</td><td>7</td><td>Canada</td></tr><tr><td>pop</td><td>9</td><td>America</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'blues', 'y_data': 7}, {'x_data': 'folk', 'y_data': 9}, {'x_data': 'modern', 'y_data': 8}, {'x_data': 'nazrul', 'y_data': 7}, {'x_data': 'pop', 'y_data': 9}, {'x_data': 'tagore', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'g_name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'rating'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

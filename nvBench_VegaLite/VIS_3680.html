@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3680</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3679.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3681.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3680</td><td><h4>NL Queries: </h4><ol><li><p>List all the customers in increasing order of IDs by a bar chart.</p></li><li><p>List all the customers in increasing order of IDs. Show me a bar chart.</p></li><li><p>Draw a bar chart for what is the ordered list of customer ids?</p></li><li><p>Give me a histogram to show the ordered list of customer ids?</p></li><li><p>What is the ordered list of customer ids. Visualize them with a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Customer_name , Customer_ID FROM customers ORDER BY customer_id ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1988</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_fnol</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_fnol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customers</h4><table><tr><th>Customer_ID</th><th>Customer_name</th></tr><tr><td>194</td><td>America Jaskolski</td></tr><tr><td>214</td><td>Ellsworth Paucek</td></tr><tr><td>256</td><td>Mrs. Hanna Willms</td></tr><tr><td>562</td><td>Dr. Diana Rath</td></tr><tr><td>582</td><td>Selena Gerhold</td></tr><tr><td>641</td><td>Dayana Robel</td></tr><tr><td>682</td><td>Mr. Edwardo Blanda I</td></tr><tr><td>756</td><td>Mr. Randal Lynch III</td></tr><tr><td>805</td><td>Mrs. Liza Heller V</td></tr><tr><td>826</td><td>Mrs. Lilly Graham III</td></tr><tr><td>882</td><td>Miss Felicita Reichel</td></tr><tr><td>892</td><td>Sydnie Friesen</td></tr><tr><td>923</td><td>David Ross</td></tr><tr><td>956</td><td>Cai Zhang</td></tr><tr><td>996</td><td>Jay Chou</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'America Jaskolski', 'y_data': 194}, {'x_data': 'Ellsworth Paucek', 'y_data': 214}, {'x_data': 'Mrs. Hanna Willms', 'y_data': 256}, {'x_data': 'Dr. Diana Rath', 'y_data': 562}, {'x_data': 'Selena Gerhold', 'y_data': 582}, {'x_data': 'Dayana Robel', 'y_data': 641}, {'x_data': 'Mr. Edwardo Blanda I', 'y_data': 682}, {'x_data': 'Mr. Randal Lynch III', 'y_data': 756}, {'x_data': 'Mrs. Liza Heller V', 'y_data': 805}, {'x_data': 'Mrs. Lilly Graham III', 'y_data': 826}, {'x_data': 'Miss Felicita Reichel', 'y_data': 882}, {'x_data': 'Sydnie Friesen', 'y_data': 892}, {'x_data': 'David Ross', 'y_data': 923}, {'x_data': 'Cai Zhang', 'y_data': 956}, {'x_data': 'Jay Cho', 'y_data': 996}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Customer_name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Customer_ID'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

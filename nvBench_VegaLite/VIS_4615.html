@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4615</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4614.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4616.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4615</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of gas stations for each manager in a bar chart, and sort from high to low by the y-axis.</p></li><li><p>How many gas stations dors each manager have? Plot a bar chart, and sort from high to low by the y-axis.</p></li><li><p>Draw a bar chart of manager name versus how many manager name, I want to sort how many manager name in desc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Manager_Name , COUNT(Manager_Name) FROM gas_station GROUP BY Manager_Name ORDER BY COUNT(Manager_Name) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1511@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>gas_company</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: gas_company&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: gas_station</h4><table><tr><th>Station_ID</th><th>Open_Year</th><th>Location</th><th>Manager_Name</th><th>Vice_Manager_Name</th><th>Representative_Name</th></tr><tr><td>1</td><td>1998</td><td>Herne Hill</td><td>BrianWingrave</td><td>Russell Denman</td><td>Clive Burr</td></tr><tr><td>2</td><td>1999</td><td>Channel Hill</td><td>SimonMarloe</td><td>Russell Brown</td><td>Rob Jefferies </td></tr><tr><td>3</td><td>2000</td><td>Reading North</td><td>Simon Cope Derek Marloe</td><td>James Colin </td><td>Dave Edwards Roger </td></tr><tr><td>4</td><td>2002</td><td>Herne St</td><td>Colin Denman</td><td>Martin Garnham</td><td>Ray Hughes</td></tr><tr><td>5</td><td>2003</td><td>Reading</td><td>Colin Denman</td><td>Martin Freeman</td><td>Andrew Russell</td></tr><tr><td>6</td><td>2004</td><td>Herne Ave</td><td>Tom Whit</td><td>Simon Gaywood</td><td>Tony Gibb</td></tr><tr><td>7</td><td>2005</td><td>Hennry Hill</td><td>Bryan Taylor</td><td>James Holland-Leader</td><td>Simon Gaywood</td></tr><tr><td>8</td><td>2006</td><td>Jane Ave</td><td>BryanDenman</td><td>James Holland-Leader</td><td>Simon Gaywood</td></tr><tr><td>9</td><td>2007</td><td>Maindy Hill</td><td>Tony Bristow</td><td>JameMarloe</td><td>Courtney Rowe</td></tr><tr><td>10</td><td>2008</td><td>Maindy Ave</td><td>Luke Rowe</td><td>TonyBristow</td><td>Chris Pyatt</td></tr><tr><td>11</td><td>2009</td><td>Newport Rd</td><td>Jon Rowe</td><td>Steve Parsons</td><td>Tim Read</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Colin Denman', 'y_data': 2}, {'x_data': 'Tony Bristow', 'y_data': 1}, {'x_data': 'Tom Whit', 'y_data': 1}, {'x_data': 'SimonMarloe', 'y_data': 1}, {'x_data': 'Simon Cope Derek Marloe', 'y_data': 1}, {'x_data': 'Luke Rowe', 'y_data': 1}, {'x_data': 'Jon Rowe', 'y_data': 1}, {'x_data': 'BryanDenman', 'y_data': 1}, {'x_data': 'Bryan Taylor', 'y_data': 1}, {'x_data': 'BrianWingrave', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Manager_Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Manager_Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

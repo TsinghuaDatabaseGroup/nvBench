@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5169</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5168.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5170.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5169</td><td><h4>NL Queries: </h4><ol><li><p>Find the number of the name of the project for which a scientist whose name contains ‘Smith’ is assigned to.</p></li><li><p>A pie chart for finding the number of the name of the project for which a scientist whose name contains ‘Smith’ is assigned to.</p></li><li><p>Find the name of the project for which a scientist whose name contains ‘Smith’ is assigned to, and count them by a pie chart</p></li><li><p>What is the name of the project that has a scientist assigned to it whose name contains 'Smith', and count them by a pie chart</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT T2.Name , COUNT(T2.Name) FROM assignedto AS T1 JOIN projects AS T2 ON T1.project = T2.code JOIN scientists AS T3 ON T1.scientist = T3.SSN WHERE T3.name LIKE '%Smith%' GROUP BY T2.Name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2732</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>scientist_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: scientist_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: assignedto</h4><table><tr><th>Scientist</th><th>Project</th></tr><tr><td>123234877</td><td>AeH1</td></tr><tr><td>152934485</td><td>AeH3</td></tr><tr><td>222364883</td><td>Ast3</td></tr><tr><td>326587417</td><td>Ast3</td></tr><tr><td>332154719</td><td>Bte1</td></tr><tr><td>546523478</td><td>Che1</td></tr><tr><td>631231482</td><td>Ast3</td></tr><tr><td>654873219</td><td>Che1</td></tr><tr><td>745685214</td><td>AeH3</td></tr><tr><td>845657245</td><td>Ast1</td></tr><tr><td>845657246</td><td>Ast2</td></tr><tr><td>332569843</td><td>AeH4</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Aerodynamics and Gas Mileage', 'y_data': 1}, {'x_data': 'Build Your Own Telescope', 'y_data': 2}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Name'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

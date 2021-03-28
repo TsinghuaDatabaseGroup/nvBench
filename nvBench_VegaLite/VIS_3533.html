@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3533</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3532.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3534.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3533</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart shows the distribution of All_Games and All_Games_Percent , and order in asc by the X-axis.</p></li><li><p>Plot all_games_percent by grouped by all games as a bar graph, and could you list bar in asc order please?</p></li><li><p>Give me the comparison about All_Games_Percent over the All_Games , could you list bar in asc order please?</p></li><li><p>Visualize a bar chart about the distribution of All_Games and All_Games_Percent , show by the x axis in ascending.</p></li><li><p>Return a bar chart about the distribution of All_Games and All_Games_Percent , and order in asc by the X-axis.</p></li><li><p>Give me the comparison about All_Games_Percent over the All_Games by a bar chart, order in asc by the X-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT All_Games , All_Games_Percent FROM basketball_match ORDER BY All_Games ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3140@x_name@ASC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>university_basketball</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: university_basketball&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: basketball_match</h4><table><tr><th>Team_ID</th><th>School_ID</th><th>Team_Name</th><th>ACC_Regular_Season</th><th>ACC_Percent</th><th>ACC_Home</th><th>ACC_Road</th><th>All_Games</th><th>All_Games_Percent</th><th>All_Home</th><th>All_Road</th><th>All_Neutral</th></tr><tr><td>1</td><td>1</td><td>North Carolina</td><td>14â2</td><td>.875</td><td>6â2</td><td>8â0</td><td>35â2</td><td>0.946</td><td>14â2</td><td>13â0</td><td>9â1</td></tr><tr><td>2</td><td>2</td><td>Duke</td><td>13â3</td><td>.813</td><td>7â1</td><td>6â2</td><td>28â6</td><td>0.824</td><td>15â1</td><td>8â2</td><td>5â3</td></tr><tr><td>3</td><td>4</td><td>Clemson</td><td>10â6</td><td>.625</td><td>7â1</td><td>3â5</td><td>24â10</td><td>0.706</td><td>14â2</td><td>6â5</td><td>4â3</td></tr><tr><td>4</td><td>5</td><td>Virginia Tech</td><td>9â7</td><td>.563</td><td>6â2</td><td>3â5</td><td>21â14</td><td>0.6</td><td>14â3</td><td>4â8</td><td>3â3</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '21–14', 'y_data': 0.6}, {'x_data': '24–10', 'y_data': 0.706}, {'x_data': '28–6', 'y_data': 0.8240000000000001}, {'x_data': '35–2', 'y_data': 0.946}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'All_Games', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'All_Games_Percent'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

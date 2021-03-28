@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4022</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4021.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4023.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4022</td><td><h4>NL Queries: </h4><ol><li><p>Find the name and access counts of all documents, in alphabetic order of the document name. Show bar chart.</p></li><li><p>Return a bar chart on what are the names of all the documents, as well as the access counts of each, ordered alphabetically?</p></li><li><p>Give me a histogram for what are the names of all the documents, as well as the access counts of each, ordered alphabetically?</p></li><li><p>What are the names of all the documents, as well as the access counts of each, ordered alphabetically. </p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT document_name , access_count FROM documents ORDER BY document_name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1153</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>document_management</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: document_management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: documents</h4><table><tr><th>document_code</th><th>document_structure_code</th><th>document_type_code</th><th>access_count</th><th>document_name</th></tr><tr><td>217</td><td>8</td><td>Book</td><td>1864</td><td>Learning English</td></tr><tr><td>621</td><td>1</td><td>Paper</td><td>8208</td><td>Research about Art history</td></tr><tr><td>958</td><td>8</td><td>Book</td><td>3769</td><td>Learning Database</td></tr><tr><td>961</td><td>5</td><td>Advertisement</td><td>6661</td><td>Summer Sails</td></tr><tr><td>989</td><td>9</td><td>Book</td><td>2910</td><td>Learning Japanese</td></tr><tr><td>930</td><td>9</td><td>CV</td><td>6345</td><td>David CV</td></tr><tr><td>928</td><td>8</td><td>Book</td><td>2045</td><td>How to cook pasta</td></tr><tr><td>510</td><td>6</td><td>Paper</td><td>3479</td><td>Humanity: a fact</td></tr><tr><td>706</td><td>9</td><td>Advertisement</td><td>8623</td><td>Winter Sails</td></tr><tr><td>465</td><td>9</td><td>CV</td><td>5924</td><td>John CV</td></tr><tr><td>713</td><td>8</td><td>CV</td><td>2294</td><td>Joe CV</td></tr><tr><td>566</td><td>5</td><td>Advertisement</td><td>3289</td><td>Spring Sails</td></tr><tr><td>349</td><td>9</td><td>Book</td><td>1219</td><td>Life about Claude Monet</td></tr><tr><td>675</td><td>1</td><td>Advertisement</td><td>7509</td><td>Fall Sails</td></tr><tr><td>714</td><td>6</td><td>Paper</td><td>9948</td><td>Relationships between History and Arts</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'David CV', 'y_data': 6345}, {'x_data': 'Fall Sails', 'y_data': 7509}, {'x_data': 'How to cook pasta', 'y_data': 2045}, {'x_data': 'Humanity: a fact', 'y_data': 3479}, {'x_data': 'Joe CV', 'y_data': 2294}, {'x_data': 'John CV', 'y_data': 5924}, {'x_data': 'Learning Database', 'y_data': 3769}, {'x_data': 'Learning English', 'y_data': 1864}, {'x_data': 'Learning Japanese', 'y_data': 2910}, {'x_data': 'Life about Claude Monet', 'y_data': 1219}, {'x_data': 'Relationships between History and Arts', 'y_data': 9948}, {'x_data': 'Research about Art history', 'y_data': 8208}, {'x_data': 'Spring Sails', 'y_data': 3289}, {'x_data': 'Summer Sails', 'y_data': 6661}, {'x_data': 'Winter Sails', 'y_data': 8623}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'document_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'access_count'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

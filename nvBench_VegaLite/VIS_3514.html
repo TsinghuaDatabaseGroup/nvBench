@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3514</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3513.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3515.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3514</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart showing the number of templates with a version number greater than 5 for each template type code, and I want to rank by the y-axis from high to low.</p></li><li><p>How many templates with version number later than 5 for each template type code? Show me a bar chart, and order by the y axis in descending.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Template_Type_Code , COUNT(Template_Type_Code) FROM Templates WHERE version_number > 5 GROUP BY Template_Type_Code ORDER BY COUNT(Template_Type_Code) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>754@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Doc_Template_Mgt</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Template_Mgt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Templates</h4><table><tr><th>Template_ID</th><th>Version_Number</th><th>Template_Type_Code</th><th>Date_Effective_From</th><th>Date_Effective_To</th><th>Template_Details</th></tr><tr><td>0</td><td>5</td><td>PP</td><td>2005-11-12 07:09:48</td><td>2008-01-05 14:19:28</td><td></td></tr><tr><td>1</td><td>9</td><td>PP</td><td>2010-09-24 01:15:11</td><td>1999-07-08 03:31:04</td><td></td></tr><tr><td>4</td><td>4</td><td>BK</td><td>2002-03-02 14:39:49</td><td>2001-04-18 09:29:52</td><td></td></tr><tr><td>6</td><td>2</td><td>PPT</td><td>1975-05-20 22:51:19</td><td>1992-05-02 20:06:11</td><td></td></tr><tr><td>7</td><td>8</td><td>PPT</td><td>1993-10-07 02:33:04</td><td>1975-07-16 04:52:10</td><td></td></tr><tr><td>8</td><td>3</td><td>BK</td><td>1983-07-16 21:16:16</td><td>1976-10-28 10:08:50</td><td></td></tr><tr><td>9</td><td>2</td><td>BK</td><td>1997-04-17 08:29:44</td><td>1994-12-07 13:26:23</td><td></td></tr><tr><td>10</td><td>1</td><td>PPT</td><td>2003-06-05 04:03:45</td><td>2007-06-06 06:18:53</td><td></td></tr><tr><td>11</td><td>6</td><td>BK</td><td>1996-02-04 11:27:24</td><td>1995-09-19 22:27:48</td><td></td></tr><tr><td>14</td><td>7</td><td>AD</td><td>1975-10-20 02:28:58</td><td>1979-11-04 08:58:39</td><td></td></tr><tr><td>15</td><td>9</td><td>CV</td><td>1986-12-09 14:51:36</td><td>1993-03-24 14:30:23</td><td></td></tr><tr><td>16</td><td>5</td><td>CV</td><td>2012-04-05 07:11:42</td><td>1980-05-07 12:15:47</td><td></td></tr><tr><td>18</td><td>5</td><td>PP</td><td>1984-08-07 13:36:26</td><td>1998-05-12 12:51:29</td><td></td></tr><tr><td>19</td><td>7</td><td>AD</td><td>1999-06-21 11:10:30</td><td>1974-09-14 06:34:39</td><td></td></tr><tr><td>20</td><td>6</td><td>BK</td><td>1986-11-14 12:20:18</td><td>2008-08-08 18:36:43</td><td></td></tr><tr><td>21</td><td>9</td><td>AD</td><td>2002-08-25 13:26:23</td><td>2015-09-06 01:08:44</td><td></td></tr><tr><td>22</td><td>0</td><td>PP</td><td>2005-02-20 00:31:34</td><td>1989-11-24 19:06:06</td><td></td></tr><tr><td>23</td><td>2</td><td>BK</td><td>1979-12-24 10:28:16</td><td>2000-10-22 11:57:12</td><td></td></tr><tr><td>24</td><td>8</td><td>PP</td><td>2008-08-01 13:57:26</td><td>1973-01-12 14:13:34</td><td></td></tr><tr><td>25</td><td>5</td><td>PP</td><td>1979-10-20 21:23:20</td><td>2006-02-06 23:52:04</td><td></td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'AD', 'y_data': 3}, {'x_data': 'PP', 'y_data': 2}, {'x_data': 'BK', 'y_data': 2}, {'x_data': 'PPT', 'y_data': 1}, {'x_data': 'CV', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Template_Type_Code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Template_Type_Code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

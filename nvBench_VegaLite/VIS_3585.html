@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3585</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3584.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3586.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3585</td><td><h4>NL Queries: </h4><ol><li><p>How many students taking a course who received an A or C? Group by students' first name with a bar chart, I want to rank X-axis from low to high order please.</p></li><li><p>Find the number of students who took some course and got A or C and group by first name in a bar chart, list X in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT STU_FNAME , COUNT(STU_FNAME) FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num = T2.stu_num WHERE T2.enroll_grade = 'C' OR T2.enroll_grade = 'A' GROUP BY STU_FNAME ORDER BY STU_FNAME ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>576@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: student</h4><table><tr><th>STU_NUM</th><th>STU_LNAME</th><th>STU_FNAME</th><th>STU_INIT</th><th>STU_DOB</th><th>STU_HRS</th><th>STU_CLASS</th><th>STU_GPA</th><th>STU_TRANSFER</th><th>DEPT_CODE</th><th>STU_PHONE</th><th>PROF_NUM</th></tr><tr><td>321452</td><td>Bowser</td><td>William</td><td>C</td><td>1975-2-12</td><td>42</td><td>So</td><td>2.84</td><td>0</td><td>BIOL</td><td>2134</td><td>205</td></tr><tr><td>324257</td><td>Smithson</td><td>Anne</td><td>K</td><td>1981-11-15</td><td>81</td><td>Jr</td><td>3.27</td><td>1</td><td>CIS</td><td>2256</td><td>222</td></tr><tr><td>324258</td><td>Brewer</td><td>Juliette</td><td></td><td>1969-8-23</td><td>36</td><td>So</td><td>2.26</td><td>1</td><td>ACCT</td><td>2256</td><td>228</td></tr><tr><td>324269</td><td>Oblonski</td><td>Walter</td><td>H</td><td>1976-9-16</td><td>66</td><td>Jr</td><td>3.09</td><td>0</td><td>CIS</td><td>2114</td><td>222</td></tr><tr><td>324273</td><td>Smith</td><td>John</td><td>D</td><td>1958-12-30</td><td>102</td><td>Sr</td><td>2.11</td><td>1</td><td>ENGL</td><td>2231</td><td>199</td></tr><tr><td>324274</td><td>Katinga</td><td>Raphael</td><td>P</td><td>1979-10-21</td><td>114</td><td>Sr</td><td>3.15</td><td>0</td><td>ACCT</td><td>2267</td><td>228</td></tr><tr><td>324291</td><td>Robertson</td><td>Gerald</td><td>T</td><td>1973-4-8</td><td>120</td><td>Sr</td><td>3.87</td><td>0</td><td>EDU</td><td>2267</td><td>311</td></tr><tr><td>324299</td><td>Smith</td><td>John</td><td>B</td><td>1986-11-30</td><td>15</td><td>Fr</td><td>2.92</td><td>0</td><td>ACCT</td><td>2315</td><td>230</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Anne', 'y_data': 1}, {'x_data': 'William', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'STU_FNAME', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(STU_FNAME)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

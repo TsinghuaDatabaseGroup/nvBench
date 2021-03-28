@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2468</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2467.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2469.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2468</td><td><h4>NL Queries: </h4><ol><li><p>Show the transaction type and the number of transactions by a pie chart.</p></li><li><p>Show the transaction type and the number of transactions. Show the proportion.</p></li><li><p>Pie chart. what are the different transaction types, and how many transactions of each have taken place?</p></li><li><p>What are the different transaction types, and how many transactions of each have taken place. Plot them as pie chart.</p></li><li><p>I want to know the proportion of the total number for each transaction type.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT transaction_type , count(*) FROM Financial_transactions GROUP BY transaction_type</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1031</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>customers_card_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_card_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Financial_transactions</h4><table><tr><th>transaction_id</th><th>previous_transaction_id</th><th>account_id</th><th>card_id</th><th>transaction_type</th><th>transaction_date</th><th>transaction_amount</th><th>transaction_comment</th><th>other_transaction_details</th></tr><tr><td>1</td><td>925</td><td>15</td><td>1</td><td>Payment</td><td>2018-03-24 06:41:41</td><td>1701.23</td><td>None</td><td>None</td></tr><tr><td>2</td><td>494</td><td>3</td><td>2</td><td>Refund</td><td>2018-03-24 12:08:55</td><td>1931.76</td><td>None</td><td>None</td></tr><tr><td>3</td><td>642</td><td>4</td><td>3</td><td>Payment</td><td>2018-03-24 09:08:27</td><td>486.56</td><td>None</td><td>None</td></tr><tr><td>4</td><td>457</td><td>15</td><td>4</td><td>Refund</td><td>2018-03-23 21:59:28</td><td>1336.21</td><td>None</td><td>None</td></tr><tr><td>5</td><td>947</td><td>13</td><td>5</td><td>Refund</td><td>2018-03-23 21:43:32</td><td>357.06</td><td>None</td><td>None</td></tr><tr><td>6</td><td>958</td><td>12</td><td>6</td><td>Refund</td><td>2018-03-24 11:48:28</td><td>1967.75</td><td>None</td><td>None</td></tr><tr><td>7</td><td>368</td><td>1</td><td>6</td><td>Refund</td><td>2018-03-24 05:13:42</td><td>1483.05</td><td>None</td><td>None</td></tr><tr><td>8</td><td>924</td><td>6</td><td>7</td><td>Refund</td><td>2018-03-24 14:47:05</td><td>1194.48</td><td>None</td><td>None</td></tr><tr><td>9</td><td>296</td><td>9</td><td>6</td><td>Payment</td><td>2018-03-24 05:31:43</td><td>1475.56</td><td>None</td><td>None</td></tr><tr><td>10</td><td>495</td><td>5</td><td>7</td><td>Payment</td><td>2018-03-24 05:45:57</td><td>1795.66</td><td>None</td><td>None</td></tr><tr><td>11</td><td>333</td><td>11</td><td>7</td><td>Refund</td><td>2018-03-24 10:39:09</td><td>462.63</td><td>None</td><td>None</td></tr><tr><td>12</td><td>986</td><td>10</td><td>9</td><td>Payment</td><td>2018-03-24 15:17:49</td><td>1658.32</td><td>None</td><td>None</td></tr><tr><td>13</td><td>885</td><td>14</td><td>11</td><td>Refund</td><td>2018-03-24 17:00:41</td><td>1298.73</td><td>None</td><td>None</td></tr><tr><td>14</td><td>965</td><td>10</td><td>12</td><td>Refund</td><td>2018-03-24 16:31:34</td><td>945.43</td><td>None</td><td>None</td></tr><tr><td>15</td><td>203</td><td>8</td><td>12</td><td>Payment</td><td>2018-03-24 10:48:34</td><td>1529.97</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Payment', 'y_data': 6}, {'x_data': 'Refund', 'y_data': 9}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'transaction_type'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

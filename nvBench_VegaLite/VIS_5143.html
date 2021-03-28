@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5143</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5142.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5144.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5143</td><td><h4>NL Queries: </h4><ol><li><p>Show how many carrriers for each shops in a bar chart, could you list y-axis in asc order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Shop_Name , COUNT(Shop_Name) FROM stock AS T1 JOIN device AS T2 ON T1.Device_ID = T2.Device_ID JOIN shop AS T3 ON T1.Shop_ID = T3.Shop_ID GROUP BY Shop_Name ORDER BY COUNT(Shop_Name) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1147@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>device</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: stock</h4><table><tr><th>Shop_ID</th><th>Device_ID</th><th>Quantity</th></tr><tr><td>1</td><td>6</td><td>100</td></tr><tr><td>2</td><td>6</td><td>110</td></tr><tr><td>3</td><td>6</td><td>134</td></tr><tr><td>4</td><td>6</td><td>56</td></tr><tr><td>1</td><td>4</td><td>200</td></tr><tr><td>11</td><td>6</td><td>112</td></tr><tr><td>3</td><td>4</td><td>124</td></tr><tr><td>9</td><td>4</td><td>51</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'ATnT', 'y_data': 1}, {'x_data': 'Apple', 'y_data': 1}, {'x_data': 'Best Buy', 'y_data': 1}, {'x_data': 'Gelli repair', 'y_data': 1}, {'x_data': 'Dinas Device', 'y_data': 2}, {'x_data': 'Ferndale', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Shop_Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Shop_Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

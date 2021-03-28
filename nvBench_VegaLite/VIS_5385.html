@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5385</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5384.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5386.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5385</td><td><h4>NL Queries: </h4><ol><li><p>Show each premise type and the number of premises in that type with a bar chart.</p></li><li><p>Show each premise type and the number of premises in that type. Visualize by bar chart.</p></li><li><p>Create a bar chart showing the total number across premises type</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT premises_type , count(*) FROM premises GROUP BY premises_type</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1012</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_campaigns_ecommerce</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_campaigns_ecommerce&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: premises</h4><table><tr><th>premise_id</th><th>premises_type</th><th>premise_details</th></tr><tr><td>1</td><td>Warehouse</td><td>036 Lueilwitz Harbor</td></tr><tr><td>2</td><td>Warehouse</td><td>676 Kelly Spur</td></tr><tr><td>3</td><td>Residence</td><td>27839 Carissa Tunnel Suite 048</td></tr><tr><td>4</td><td>Residence</td><td>2219 Barrows Tunnel Apt. 893</td></tr><tr><td>5</td><td>Office</td><td>38291 Jerde Light Apt. 713</td></tr><tr><td>6</td><td>Office</td><td>5585 Abbott Walk</td></tr><tr><td>7</td><td>Residence</td><td>5510 Veum Green</td></tr><tr><td>8</td><td>Warehouse</td><td>7230 Tillman Glens Suite 202</td></tr><tr><td>9</td><td>Warehouse</td><td>62282 Wiza Glen Apt. 430</td></tr><tr><td>10</td><td>Office</td><td>07318 Annetta Motorway</td></tr><tr><td>11</td><td>Office</td><td>00100 Green Mountains Apt. 653</td></tr><tr><td>12</td><td>Office</td><td>33294 William Lodge Apt. 953</td></tr><tr><td>13</td><td>Office</td><td>2760 Austin Station</td></tr><tr><td>14</td><td>Residence</td><td>5109 Jules Squares Apt. 082</td></tr><tr><td>15</td><td>Office</td><td>867 Emard Drives Apt. 066</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Office', 'y_data': 7}, {'x_data': 'Residence', 'y_data': 4}, {'x_data': 'Warehouse', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'premises_type', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

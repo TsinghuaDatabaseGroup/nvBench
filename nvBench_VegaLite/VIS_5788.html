@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5788</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5787.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5789.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5788</td><td><h4>NL Queries: </h4><ol><li><p>Return the number of the lot details of lots that belong to investors with details "l"?</p></li><li><p>A pie chart for returning the number of the lot details of lots that belong to investors with details "l"?</p></li><li><p>Return the lot details of lots that belong to investors with details "l", and count them by a pie chart</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT lot_details , COUNT(lot_details) FROM INVESTORS AS T1 JOIN LOTS AS T2 ON T1.investor_id = T2.investor_id WHERE T1.Investor_details = "l" GROUP BY lot_details</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3000</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>tracking_share_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_share_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: INVESTORS</h4><table><tr><th>investor_id</th><th>Investor_details</th></tr><tr><td>1</td><td>z</td></tr><tr><td>2</td><td>z</td></tr><tr><td>3</td><td>d</td></tr><tr><td>4</td><td>d</td></tr><tr><td>5</td><td>b</td></tr><tr><td>6</td><td>k</td></tr><tr><td>7</td><td>l</td></tr><tr><td>8</td><td>t</td></tr><tr><td>9</td><td>y</td></tr><tr><td>10</td><td>r</td></tr><tr><td>11</td><td>q</td></tr><tr><td>12</td><td>c</td></tr><tr><td>13</td><td>o</td></tr><tr><td>14</td><td>w</td></tr><tr><td>15</td><td>i</td></tr><tr><td>16</td><td>y</td></tr><tr><td>17</td><td>k</td></tr><tr><td>18</td><td>w</td></tr><tr><td>19</td><td>l</td></tr><tr><td>20</td><td>j</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'h', 'y_data': 1}, {'x_data': 'm', 'y_data': 2}, {'x_data': 's', 'y_data': 1}, {'x_data': 'z', 'y_data': 1}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(lot_details)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'lot_details'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

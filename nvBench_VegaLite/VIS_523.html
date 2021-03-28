@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_523</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_522.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_524.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>523</td><td><h4>NL Queries: </h4><ol><li><p>Plot a scatter chart, to show the correlation between support and consider rates for each candidate.</p></li><li><p>A scatter showing the correlation between support and consider rates for each candidate.</p></li><li><p>What is the relationship between support and consider rates of each candidate?</p></li><li><p>Plot a scatter chart, support rate by consider_rate.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT Support_rate , Consider_rate FROM candidate</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>399</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>candidate_poll</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: candidate_poll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: candidate</h4><table><tr><th>Candidate_ID</th><th>People_ID</th><th>Poll_Source</th><th>Date</th><th>Support_rate</th><th>Consider_rate</th><th>Oppose_rate</th><th>Unsure_rate</th></tr><tr><td>1</td><td>1</td><td>WNBC/Marist Poll</td><td>Feb 12â15, 2007</td><td>0.25</td><td>0.3</td><td>0.43</td><td>0.2</td></tr><tr><td>2</td><td>3</td><td>WNBC/Marist Poll</td><td>Feb 12â15, 2007</td><td>0.17</td><td>0.42</td><td>0.32</td><td>0.9</td></tr><tr><td>3</td><td>4</td><td>FOX News/Opinion Dynamics Poll</td><td>Feb 13â14, 2007</td><td>0.18</td><td>0.34</td><td>0.44</td><td>0.3</td></tr><tr><td>4</td><td>6</td><td>Newsweek Poll</td><td>Nov 9â10, 2006</td><td>0.33</td><td>0.2</td><td>0.45</td><td>0.2</td></tr><tr><td>5</td><td>7</td><td>Newsweek Poll</td><td>Nov 9â10, 2006</td><td>0.24</td><td>0.3</td><td>0.32</td><td>0.4</td></tr><tr><td>6</td><td>9</td><td>Newsweek Poll</td><td>Nov 9â10, 2006</td><td>0.24</td><td>0.27</td><td>0.43</td><td>0.2</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 0.25, 'y_data': 0.3}, {'x_data': 0.33, 'y_data': 0.2}, {'x_data': 0.24, 'y_data': 0.27}, {'x_data': 0.18, 'y_data': 0.34}, {'x_data': 0.24, 'y_data': 0.3}, {'x_data': 0.17, 'y_data': 0.42}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'Support_rate'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Consider_rate'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

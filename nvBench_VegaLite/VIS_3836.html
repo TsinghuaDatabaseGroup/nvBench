@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3836</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3835.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3837.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3836</td><td><h4>NL Queries: </h4><ol><li><p>Bar chart of the total number from each headquarters, order in asc by the Headquarters.</p></li><li><p>List all headquarters and the number of companies in each headquarter with a bar chart, show from low to high by the Headquarters.</p></li><li><p>For each headquarter, what are the headquarter and how many companies are centered there Visualize by bar chart, and rank in asc by the x axis please.</p></li><li><p>List all headquarters and the number of companies in each headquarter, and order bar in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Headquarters , count(*) FROM company GROUP BY headquarters ORDER BY Headquarters ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1498@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>gas_company</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: gas_company&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: company</h4><table><tr><th>Company_ID</th><th>Rank</th><th>Company</th><th>Headquarters</th><th>Main_Industry</th><th>Sales_billion</th><th>Profits_billion</th><th>Assets_billion</th><th>Market_Value</th></tr><tr><td>1</td><td>1</td><td>ExxonMobil</td><td>USA</td><td>Oil and gas</td><td>433.5</td><td>41.1</td><td>331.1</td><td>407.4</td></tr><tr><td>2</td><td>3</td><td>General Electric</td><td>USA</td><td>Conglomerate</td><td>147.3</td><td>14.2</td><td>717.2</td><td>213.7</td></tr><tr><td>3</td><td>4</td><td>Royal Dutch Shell</td><td>Netherlands</td><td>Oil and gas</td><td>470.2</td><td>30.9</td><td>340.5</td><td>227.6</td></tr><tr><td>4</td><td>5</td><td>Industrial and Commercial Bank of China</td><td>China</td><td>Banking</td><td>82.6</td><td>25.1</td><td>2039.1</td><td>237.4</td></tr><tr><td>5</td><td>6</td><td>HSBC</td><td>UK</td><td>Banking</td><td>102.0</td><td>16.2</td><td>2550.0</td><td>164.3</td></tr><tr><td>6</td><td>7</td><td>PetroChina</td><td>China</td><td>Oil and gas</td><td>310.1</td><td>20.6</td><td>304.7</td><td>294.7</td></tr><tr><td>7</td><td>8</td><td>Berkshire Hathaway</td><td>USA</td><td>Conglomerate</td><td>143.7</td><td>10.3</td><td>392.6</td><td>202.2</td></tr><tr><td>8</td><td>9</td><td>Wells Fargo</td><td>USA</td><td>Banking</td><td>87.6</td><td>15.9</td><td>1313.9</td><td>178.7</td></tr><tr><td>9</td><td>10</td><td>Petrobras</td><td>Brazil</td><td>Oil and gas</td><td>145.9</td><td>20.1</td><td>319.4</td><td>180.0</td></tr><tr><td>10</td><td>11</td><td>BP</td><td>UK</td><td>Oil and gas</td><td>375.5</td><td>25.7</td><td>292.5</td><td>147.4</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Brazil', 'y_data': 1}, {'x_data': 'China', 'y_data': 2}, {'x_data': 'Netherlands', 'y_data': 1}, {'x_data': 'UK', 'y_data': 2}, {'x_data': 'USA', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Headquarters', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

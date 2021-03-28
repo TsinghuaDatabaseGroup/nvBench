@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5337</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5336.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5338.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5337</td><td><h4>NL Queries: </h4><ol><li><p>Find the order dates of the orders with price above 1000, and count them by a line chart</p></li><li><p>What are the order dates of orders with price higher than 1000, and count them by a line chart</p></li><li><p>A line chart for finding the number of the order dates of the orders with price above 1000.</p></li><li><p>What are the number of the order dates of orders with price higher than 1000?</p></li><li><p>A line chart for what are the number of the order dates of orders with price higher than 1000?</p></li><li><p>Find the number of the order dates of the orders with price above 1000.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Order_Date , COUNT(Order_Date) FROM Customer_Orders AS T1 JOIN ORDER_ITEMS AS T2 ON T1.Order_ID = T2.Order_ID JOIN Products AS T3 ON T2.Product_ID = T3.Product_ID WHERE T3.Product_price > 1000 GROUP BY Order_Date</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>868</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Drama_Workshop_Groups</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Drama_Workshop_Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customer_Orders</h4><table><tr><th>Order_ID</th><th>Customer_ID</th><th>Store_ID</th><th>Order_Date</th><th>Planned_Delivery_Date</th><th>Actual_Delivery_Date</th><th>Other_Order_Details</th></tr><tr><td>1</td><td>516</td><td>231</td><td>1994-08-03 12:34:58</td><td>1977-03-11 03:58:19</td><td>1992-07-21 22:11:11</td><td>None</td></tr><tr><td>2</td><td>418</td><td>229</td><td>2014-07-10 10:56:01</td><td>1996-08-26 19:19:59</td><td>1998-08-22 17:57:32</td><td>None</td></tr><tr><td>3</td><td>712</td><td>229</td><td>1981-06-20 16:29:43</td><td>1980-12-19 05:49:35</td><td>2011-04-13 07:15:35</td><td>None</td></tr><tr><td>4</td><td>240</td><td>229</td><td>1999-11-20 18:48:05</td><td>1973-08-20 08:52:39</td><td>2004-03-27 23:30:12</td><td>None</td></tr><tr><td>5</td><td>418</td><td>150</td><td>1973-02-16 19:28:34</td><td>1990-09-25 07:14:01</td><td>2004-04-23 21:19:39</td><td>None</td></tr><tr><td>6</td><td>556</td><td>344</td><td>1988-11-13 15:42:13</td><td>2012-05-19 00:38:52</td><td>2015-06-20 20:51:17</td><td>None</td></tr><tr><td>7</td><td>546</td><td>291</td><td>1998-03-10 14:01:00</td><td>2014-06-18 09:42:23</td><td>1972-08-15 19:12:14</td><td>None</td></tr><tr><td>8</td><td>240</td><td>231</td><td>1979-09-01 06:29:01</td><td>1996-05-17 09:10:57</td><td>1996-02-16 04:20:17</td><td>None</td></tr><tr><td>9</td><td>240</td><td>344</td><td>1993-11-22 14:56:28</td><td>1984-05-07 12:05:33</td><td>1976-05-20 03:24:23</td><td>None</td></tr><tr><td>10</td><td>546</td><td>518</td><td>1985-05-29 01:20:18</td><td>1977-07-08 16:35:46</td><td>2003-12-16 23:37:19</td><td>None</td></tr><tr><td>11</td><td>304</td><td>421</td><td>2000-07-03 21:41:50</td><td>1994-08-08 03:08:23</td><td>1990-11-14 03:53:06</td><td>None</td></tr><tr><td>12</td><td>516</td><td>231</td><td>2011-01-05 08:01:07</td><td>2004-04-24 01:52:57</td><td>1993-09-16 23:20:05</td><td>None</td></tr><tr><td>13</td><td>240</td><td>512</td><td>2003-06-24 11:44:51</td><td>1979-05-15 03:00:09</td><td>2011-04-23 06:39:09</td><td>None</td></tr><tr><td>14</td><td>546</td><td>444</td><td>1971-05-12 10:12:46</td><td>1987-03-21 18:50:27</td><td>2016-10-18 16:11:20</td><td>None</td></tr><tr><td>15</td><td>712</td><td>231</td><td>2008-04-02 18:00:15</td><td>1994-11-12 04:49:11</td><td>1996-04-13 19:05:34</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1981-06-20', 'y_data': 2}, {'x_data': '1985-05-29', 'y_data': 1}, {'x_data': '1988-11-13', 'y_data': 1}, {'x_data': '1994-08-03', 'y_data': 1}, {'x_data': '1998-03-10', 'y_data': 1}, {'x_data': '1999-11-20', 'y_data': 2}, {'x_data': '2000-07-03', 'y_data': 1}, {'x_data': '2008-04-02', 'y_data': 1}, {'x_data': '2011-01-05', 'y_data': 3}, {'x_data': '2014-07-10', 'y_data': 1}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Order_Date', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Order_Date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

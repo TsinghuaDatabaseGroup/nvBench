@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_708</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_707.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_709.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>708</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of documents in different ending date and group by ending date with a line chart, and sort in ascending by the x-axis.</p></li><li><p>How many documents in different ending date? Return a line chart grouping by ending date, and rank from low to high by the Date_in_Locaton_To.</p></li><li><p>Can you draw the trend of how many date in locaton to over the date in locaton to?, order Date_in_Locaton_To in ascending order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Date_in_Locaton_To , COUNT(Date_in_Locaton_To) FROM Document_locations GROUP BY Date_in_Locaton_To ORDER BY Date_in_Locaton_To ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>773@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Doc_Tracking_DB</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Tracking_DB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Document_locations</h4><table><tr><th>Document_ID</th><th>Location_Code</th><th>Date_in_Location_From</th><th>Date_in_Locaton_To</th></tr><tr><td>7</td><td>e</td><td>2017-01-06 23:17:22</td><td>2008-06-08 12:45:38</td></tr><tr><td>11</td><td>x</td><td>2017-01-06 23:17:22</td><td>2012-07-03 09:48:46</td></tr><tr><td>81</td><td>c</td><td>1972-03-31 09:47:22</td><td>1987-11-05 06:11:22</td></tr><tr><td>81</td><td>c</td><td>2017-01-06 23:17:22</td><td>2010-11-26 19:22:50</td></tr><tr><td>81</td><td>x</td><td>2008-06-08 12:45:38</td><td>1976-06-15 03:40:06</td></tr><tr><td>111</td><td>x</td><td>1986-10-14 17:53:39</td><td>2010-11-26 19:22:50</td></tr><tr><td>119</td><td>b</td><td>2017-01-06 23:17:22</td><td>1995-01-01 03:52:11</td></tr><tr><td>166</td><td>b</td><td>1985-05-13 12:19:43</td><td>1986-10-14 17:53:39</td></tr><tr><td>166</td><td>b</td><td>1986-10-14 17:53:39</td><td>2010-11-26 19:22:50</td></tr><tr><td>170</td><td>x</td><td>1997-03-10 15:24:00</td><td>1976-06-15 03:40:06</td></tr><tr><td>230</td><td>e</td><td>1972-03-31 09:47:22</td><td>1987-11-05 06:11:22</td></tr><tr><td>230</td><td>e</td><td>2010-11-26 19:22:50</td><td>2017-01-06 23:17:22</td></tr><tr><td>252</td><td>n</td><td>2017-01-06 23:17:22</td><td>1997-03-10 15:24:00</td></tr><tr><td>252</td><td>x</td><td>1972-03-31 09:47:22</td><td>2009-08-18 03:29:08</td></tr><tr><td>260</td><td>e</td><td>2009-08-18 03:29:08</td><td>1986-10-14 17:53:39</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1976-06-15', 'y_data': 2}, {'x_data': '1986-10-14', 'y_data': 2}, {'x_data': '1987-11-05', 'y_data': 2}, {'x_data': '1995-01-01', 'y_data': 1}, {'x_data': '1997-03-10', 'y_data': 1}, {'x_data': '2008-06-08', 'y_data': 1}, {'x_data': '2009-08-18', 'y_data': 1}, {'x_data': '2010-11-26', 'y_data': 3}, {'x_data': '2012-07-03', 'y_data': 1}, {'x_data': '2017-01-06', 'y_data': 1}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date_in_Locaton_To', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Date_in_Locaton_To)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

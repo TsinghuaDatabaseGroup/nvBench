@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5465</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5464.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5466.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5465</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart on what are the id and name of the mountains that have at least 2 photos?, list from high to low by the bar.</p></li><li><p>Draw a bar chart for what are the id and name of the mountains that have at least 2 photos?, sort by the bars in descending.</p></li><li><p>What are the id and name of the mountains that have at least 2 photos Show bar chart, and list by the bar in descending please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.name , T1.id FROM mountain AS T1 JOIN photos AS T2 ON T1.id = T2.mountain_id ORDER BY T1.name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2337@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>mountain_photos</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: mountain_photos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: mountain</h4><table><tr><th>id</th><th>name</th><th>Height</th><th>Prominence</th><th>Range</th><th>Country</th></tr><tr><td>1</td><td>Abune Yosef / Guliba Amba</td><td>4260.0</td><td>1909.0</td><td>Lasta Massif</td><td>Ethiopia</td></tr><tr><td>2</td><td>Ioll / Yoll</td><td>4220.0</td><td>350.0</td><td>Kollo Massif</td><td>Ethiopia</td></tr><tr><td>3</td><td>Bada</td><td>4195.0</td><td>1605.0</td><td>Arsi Mountains</td><td>Ethiopia</td></tr><tr><td>4</td><td>Kaka / Kecha / Chiqe</td><td>4193.0</td><td>1215.0</td><td>Arsi Mountains</td><td>Ethiopia</td></tr><tr><td>5</td><td>Jbel Toubkal</td><td>4167.0</td><td>3755.0</td><td>Toubkal Atlas</td><td>Morocco</td></tr><tr><td>6</td><td>Muhavura</td><td>4127.0</td><td>1530.0</td><td>Virunga Mountains</td><td>Rwanda Uganda</td></tr><tr><td>7</td><td>Hey / Hay</td><td>4125.0</td><td>660.0</td><td>Semien Mountains</td><td>Ethiopia</td></tr><tr><td>8</td><td>Guna</td><td>4120.0</td><td>1510.0</td><td>Guna Massif</td><td>Ethiopia</td></tr><tr><td>9</td><td>Choqa / Choke / Birhan</td><td>4100.0</td><td>2225.0</td><td>Choqa Mountains</td><td>Ethiopia</td></tr><tr><td>10</td><td>Ouanoukrim</td><td>4088.0</td><td>420.0</td><td>Toubkal Atlas</td><td>Morocco</td></tr><tr><td>11</td><td>Chilalo</td><td>4071.0</td><td>610.0</td><td>Arsi Mountains</td><td>Ethiopia</td></tr><tr><td>12</td><td>Mount Cameroon</td><td>4070.0</td><td>3931.0</td><td>Cameroon line</td><td>Cameroon</td></tr><tr><td>13</td><td>Inatye</td><td>4070.0</td><td>500.0</td><td>Semien Mountains</td><td>Ethiopia</td></tr><tr><td>14</td><td>Ighil Mgoun</td><td>4068.0</td><td>1904.0</td><td>Central High Atlas</td><td>Morocco</td></tr><tr><td>15</td><td>Weshema / Wasema?</td><td>4030.0</td><td>420.0</td><td>Bale Mountains</td><td>Ethiopia</td></tr><tr><td>16</td><td>Oldoinyo Lesatima</td><td>4001.0</td><td>2081.0</td><td>Aberdare Range</td><td>Kenya</td></tr><tr><td>17</td><td>Jebel n'Tarourt / Tifnout / Iferouane</td><td>3996.0</td><td>910.0</td><td>Toubkal Atlas</td><td>Morocco</td></tr><tr><td>18</td><td>Muggia</td><td>3950.0</td><td>500.0</td><td>Lasta Massif</td><td>Ethiopia</td></tr><tr><td>19</td><td>Dubbai</td><td>3941.0</td><td>1540.0</td><td>Tigray Mountains</td><td>Ethiopia</td></tr><tr><td>20</td><td>Taska nâZat</td><td>3912.0</td><td>460.0</td><td>Toubkal Atlas</td><td>Morocco</td></tr><tr><td>21</td><td>AksouÃ¢l</td><td>3903.0</td><td>450.0</td><td>Toubkal Atlas</td><td>Morocco</td></tr><tr><td>22</td><td>Mount Kinangop</td><td>3902.0</td><td>530.0</td><td>Aberdare Range</td><td>Kenya</td></tr><tr><td>23</td><td>Cimbia</td><td>3900.0</td><td>590.0</td><td>Kollo Massif</td><td>Ethiopia</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Taska n’Zat', 'y_data': 20}, {'x_data': 'Mount Cameroon', 'y_data': 12}, {'x_data': 'Ighil Mgoun', 'y_data': 14}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

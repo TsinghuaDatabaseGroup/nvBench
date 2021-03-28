@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2467</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2466.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2468.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2467</td><td><h4>NL Queries: </h4><ol><li><p>Please use a bar chart to compare the number of customers of each customer's move in date, note that you should bin move in date into Year interval, and list total number in descending order.</p></li><li><p>What is the proportion of each customer's move in date? You can show me a bar chart that bins move in date into Year interval, sort from high to low by the the number of date moved in.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_moved_in , COUNT(date_moved_in) FROM Customers AS T1 JOIN Customer_Events AS T2 ON T1.customer_id = T2.customer_id  ORDER BY COUNT(date_moved_in) DESC BIN date_moved_in BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2097@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>local_govt_and_lot</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_and_lot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customers</h4><table><tr><th>customer_id</th><th>customer_details</th></tr><tr><td>4</td><td>Mr. Raul Prosacco</td></tr><tr><td>5</td><td>Esteban Senger</td></tr><tr><td>16</td><td>Tyrique Durgan II</td></tr><tr><td>17</td><td>Malcolm Farrell</td></tr><tr><td>19</td><td>Sabryna Moore PhD</td></tr><tr><td>21</td><td>Dr. Haylie Hilll III</td></tr><tr><td>31</td><td>Monty Sauer III</td></tr><tr><td>41</td><td>Jayme Marquardt</td></tr><tr><td>63</td><td>Vincenza Price</td></tr><tr><td>69</td><td>Elva Boehm</td></tr><tr><td>76</td><td>Kyleigh Schuster</td></tr><tr><td>79</td><td>Oma Smith</td></tr><tr><td>82</td><td>Bridgette Nitzsche PhD</td></tr><tr><td>87</td><td>Jeff McCullough MD</td></tr><tr><td>91</td><td>Mackenzie Hettinger V</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2015', 'y_data': 9}, {'x_data': '2016', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_moved_in', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_moved_in)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

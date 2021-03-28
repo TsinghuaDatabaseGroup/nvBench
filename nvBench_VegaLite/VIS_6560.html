@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6560</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6559.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6561.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6560</td><td><h4>NL Queries: </h4><ol><li><p>Show the names of products and the number of events they are in, sorted by the number of events in descending order by a bar chart.</p></li><li><p>Show the names of products and the number of events they are in, sorted by the number of events in descending order. Visualize by bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Product_Name , COUNT(*) FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID = T2.Product_ID GROUP BY T1.Product_Name ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2808</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>solvency_ii</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: solvency_ii&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Products</h4><table><tr><th>Product_ID</th><th>Product_Type_Code</th><th>Product_Name</th><th>Product_Price</th></tr><tr><td>1</td><td>Books</td><td>Business Policy</td><td>1336.26</td></tr><tr><td>3</td><td>Food</td><td>Special Dinning</td><td>2894.94</td></tr><tr><td>5</td><td>Clothes</td><td>Men suits</td><td>3298.84</td></tr><tr><td>6</td><td>Electronics</td><td>TV Equipments</td><td>932.25</td></tr><tr><td>7</td><td>Books</td><td>Business Policy B</td><td>3215.66</td></tr><tr><td>10</td><td>Electronics</td><td>TV Equipments</td><td>4427.49</td></tr><tr><td>11</td><td>Electronics</td><td>Conference Equipments</td><td>3289.47</td></tr><tr><td>18</td><td>Books</td><td>Trading Policy</td><td>3228.49</td></tr><tr><td>20</td><td>Books</td><td>Trading Policy B</td><td>4343.83</td></tr><tr><td>22</td><td>Food</td><td>Dinning</td><td>3574.56</td></tr><tr><td>24</td><td>Food</td><td>Dinning</td><td>4895.86</td></tr><tr><td>26</td><td>Food</td><td>Dinning</td><td>2339.97</td></tr><tr><td>29</td><td>Food</td><td>Special Dinning</td><td>502.15</td></tr><tr><td>34</td><td>Electronics</td><td>TV Equipments</td><td>970.77</td></tr><tr><td>45</td><td>Clothes</td><td>Men suits</td><td>3541.17</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'TV Equipments', 'y_data': 5}, {'x_data': 'Special Dinning', 'y_data': 4}, {'x_data': 'Men suits', 'y_data': 2}, {'x_data': 'Conference Equipments', 'y_data': 1}, {'x_data': 'Dinning', 'y_data': 1}, {'x_data': 'Trading Policy', 'y_data': 1}, {'x_data': 'Trading Policy B', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Product_Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

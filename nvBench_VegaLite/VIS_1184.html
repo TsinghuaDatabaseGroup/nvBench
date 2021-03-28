@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1184</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1183.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1185.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1184</td><td><h4>NL Queries: </h4><ol><li><p>Show the names of countries and the average speed of roller coasters from each country Plot them as bar chart, and could you show y-axis from high to low order?</p></li><li><p>Show the names of countries and the average speed of roller coasters from each country with a bar chart, and I want to display by the y axis from high to low.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Name , avg(T2.Speed) FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID = T2.Country_ID GROUP BY T1.Name ORDER BY avg(T2.Speed) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2683@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>roller_coaster</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: roller_coaster&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: country</h4><table><tr><th>Country_ID</th><th>Name</th><th>Population</th><th>Area</th><th>Languages</th></tr><tr><td>1</td><td>Austria</td><td>8206524</td><td>83871</td><td>German</td></tr><tr><td>2</td><td>Finland</td><td>5261008</td><td>338145</td><td>Finnish Swedish</td></tr><tr><td>3</td><td>Sweden</td><td>9047752</td><td>449964</td><td>Swedish</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sweden', 'y_data': 67}, {'x_data': 'Austria', 'y_data': 58.66666666666666}, {'x_data': 'Finland', 'y_data': 47.45}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'avg(T2.Speed)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2130</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2129.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2131.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2130</td><td><h4>NL Queries: </h4><ol><li><p>Show each author and the number of workshops they submitted to with a bar chart, and display in asc by the Y-axis please.</p></li><li><p>How many workshops did each author submit to? Return the author name and the number of workshops Plot them as bar chart, and I want to show by the y axis from low to high.</p></li><li><p>How many workshops did each author submit to? Return the author name and the number of workshops in a bar chart, rank Y-axis from low to high order.</p></li><li><p>Visualize a bar chart for how many workshops did each author submit to? Return the author name and the number of workshops, sort workshop_id) in ascending order.</p></li><li><p>Show each author and the number of workshops they submitted to Show bar chart, show in asc by the total number.</p></li><li><p>Give me a histogram for how many workshops did each author submit to? Return the author name and the number of workshops, and show total number in asc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Author , COUNT(DISTINCT T1.workshop_id) FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID = T2.Submission_ID ORDER BY COUNT(DISTINCT T1.workshop_id) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3266@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>workshop_paper</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: workshop_paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: acceptance</h4><table><tr><th>Submission_ID</th><th>Workshop_ID</th><th>Result</th></tr><tr><td>2</td><td>5</td><td>Accepted</td></tr><tr><td>2</td><td>3</td><td>Rejected</td></tr><tr><td>3</td><td>2</td><td>Rejected</td></tr><tr><td>4</td><td>6</td><td>Rejected</td></tr><tr><td>5</td><td>6</td><td>Rejected</td></tr><tr><td>1</td><td>1</td><td>Accepted</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Jeff Lloyd', 'y_data': 1}, {'x_data': 'Sherman Smith', 'y_data': 1}, {'x_data': 'Steve Niehaus', 'y_data': 1}, {'x_data': 'Steve Raible', 'y_data': 1}, {'x_data': 'Sammy Green', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Author', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(DISTINCT T1.workshop_id)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

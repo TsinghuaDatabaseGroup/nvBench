@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7185</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7184.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7186.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7185</td><td><h4>NL Queries: </h4><ol><li><p>Give me the times and numbers of all trains that go to Chennai with a pie chart.</p></li><li><p>Give me the times and numbers of all trains that go to Chennai.</p></li><li><p>Show me the proportion of times and numbers of all trains that go to Chennai with a pie chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT time , train_number FROM train WHERE destination = 'Chennai'</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2832</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>station_weather</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: station_weather&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: train</h4><table><tr><th>id</th><th>train_number</th><th>name</th><th>origin</th><th>destination</th><th>time</th><th>interval</th></tr><tr><td>1</td><td>16724</td><td>Ananthapuri Express</td><td>Trivandrum</td><td>Chennai</td><td>17:15</td><td>Daily</td></tr><tr><td>2</td><td>16127</td><td>Guruvayur Express</td><td>Chennai</td><td>Guruvayur</td><td>22:10</td><td>Daily</td></tr><tr><td>3</td><td>16128</td><td>Guruvayur Express</td><td>Guruvayur</td><td>Chennai</td><td>4:49</td><td>Daily</td></tr><tr><td>4</td><td>16723</td><td>Ananthapuri Express</td><td>Chennai</td><td>Trivandrum</td><td>11:35</td><td>Daily</td></tr><tr><td>5</td><td>16382</td><td>Jayanthi Janatha Express</td><td>Kanniyakumari</td><td>Mumbai</td><td>06:30</td><td>Daily</td></tr><tr><td>6</td><td>16525</td><td>Island Express</td><td>Kanniyakumari</td><td>Bangalore</td><td>11:15</td><td>Daily</td></tr><tr><td>7</td><td>56701</td><td>Madurai Fast Passenger</td><td>Quilon</td><td>Madurai</td><td>21:49</td><td>Daily</td></tr><tr><td>8</td><td>56700</td><td>Quilon Fast Passenger</td><td>Madurai</td><td>Quilon Junction</td><td>04:55</td><td>Daily</td></tr><tr><td>9</td><td>16526</td><td>Island Express</td><td>Bangalore</td><td>Kanniyakumari</td><td>16:59</td><td>Daily</td></tr><tr><td>10</td><td>16381</td><td>Jayanthi Janatha Express</td><td>Mumbai</td><td>Kanniyakumari</td><td>10:38</td><td>Daily</td></tr><tr><td>11</td><td>16650</td><td>Parasuram Express</td><td>Nagercoil</td><td>Mangalore</td><td>04:20</td><td>Daily</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '17:15', 'y_data': 16724}, {'x_data': '4:49', 'y_data': 16128}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'train_number'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'time'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

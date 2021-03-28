@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4997</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4996.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4998.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4997</td><td><h4>NL Queries: </h4><ol><li><p>Compare the number of participants in each participant type code using a bar chart, and could you rank from low to high by the Y-axis please?</p></li><li><p>Bar chart x axis participant type code y axis the number of participant type code, and list in ascending by the y-axis.</p></li><li><p>Please draw a histogram to show the total number of participants in each type code, and I want to show by the y-axis from low to high please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Participant_Type_Code , COUNT(Participant_Type_Code) FROM Participants GROUP BY Participant_Type_Code ORDER BY COUNT(Participant_Type_Code) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2127@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>local_govt_in_alabama</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_in_alabama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Participants</h4><table><tr><th>Participant_ID</th><th>Participant_Type_Code</th><th>Participant_Details</th></tr><tr><td>9</td><td>Organizer</td><td>Karlee Batz</td></tr><tr><td>26</td><td>Organizer</td><td>Vilma Schinner</td></tr><tr><td>28</td><td>Organizer</td><td>Lupe Deckow</td></tr><tr><td>36</td><td>Organizer</td><td>Kenyatta Kuhn</td></tr><tr><td>37</td><td>Participant</td><td>Miss Kaci Lebsack</td></tr><tr><td>38</td><td>Organizer</td><td>Macy Mayer DDS</td></tr><tr><td>60</td><td>Participant</td><td>Dewitt Walter</td></tr><tr><td>63</td><td>Participant</td><td>Prof. Michelle Maggio Jr.</td></tr><tr><td>64</td><td>Participant</td><td>Dr. Jaydon Renner</td></tr><tr><td>66</td><td>Participant</td><td>Justyn Lebsack</td></tr><tr><td>75</td><td>Participant</td><td>Berniece Weimann</td></tr><tr><td>86</td><td>Organizer</td><td>Neil Blick</td></tr><tr><td>90</td><td>Participant</td><td>Dedrick Ebert</td></tr><tr><td>96</td><td>Organizer</td><td>Miss Joyce Cremin</td></tr><tr><td>98</td><td>Participant</td><td>Dr. Kris Deckow</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Organizer', 'y_data': 7}, {'x_data': 'Participant', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Participant_Type_Code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Participant_Type_Code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

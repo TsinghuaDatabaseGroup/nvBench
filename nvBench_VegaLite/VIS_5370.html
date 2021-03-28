@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5370</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5369.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5371.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5370</td><td><h4>NL Queries: </h4><ol><li><p>Show names of technicians who are assigned to repair machines with value point more than 70, and count them by a bar chart, and I want to display from high to low by the X.</p></li><li><p>A bar chart for what are the number of the names of the technicians that are assigned to repair machines with more point values than 70?, I want to order by the bar from high to low.</p></li><li><p>What are the names of the technicians that are assigned to repair machines with more point values than 70, and count them by a bar chart, and I want to order by the bar from high to low.</p></li><li><p>What are the number of the names of the technicians that are assigned to repair machines with more point values than 70?, and could you order by the x-axis in descending?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , COUNT(Name) FROM repair_assignment AS T1 JOIN machine AS T2 ON T1.machine_id = T2.machine_id JOIN technician AS T3 ON T1.technician_ID = T3.technician_ID WHERE T2.value_points > 70 GROUP BY Name ORDER BY Name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2162@x_name@DESC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>machine_repair</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: machine_repair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: repair_assignment</h4><table><tr><th>technician_id</th><th>repair_ID</th><th>Machine_ID</th></tr><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td><td>3</td></tr><tr><td>1</td><td>4</td><td>7</td></tr><tr><td>1</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>8</td><td>7</td></tr><tr><td>5</td><td>5</td><td>2</td></tr><tr><td>7</td><td>2</td><td>4</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tony Sewell', 'y_data': 1}, {'x_data': 'Joe Sewell', 'y_data': 5}, {'x_data': 'Eddie Collins', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

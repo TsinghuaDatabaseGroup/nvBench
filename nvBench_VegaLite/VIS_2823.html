@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2823</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2822.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2824.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2823</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart showing how many shops in each location, and I want to display in descending by the y-axis.</p></li><li><p>Create a bar chart showing how many location across location, list Y from high to low order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Location , COUNT(Location) FROM shop GROUP BY Location ORDER BY COUNT(Location) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1150@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>device</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: shop</h4><table><tr><th>Shop_ID</th><th>Shop_Name</th><th>Location</th><th>Open_Date</th><th>Open_Year</th></tr><tr><td>1</td><td>Dinas Device</td><td>Dinas</td><td>1 January</td><td>2014</td></tr><tr><td>2</td><td>Best Buy</td><td>Cymmer</td><td>15 July</td><td>2006</td></tr><tr><td>3</td><td>Ferndale</td><td>Blaenllechau</td><td>8 November</td><td>2009</td></tr><tr><td>4</td><td>Apple</td><td>Blaenllechau</td><td>10 June</td><td>2009</td></tr><tr><td>5</td><td>Pentre store</td><td>Pentre</td><td>24 February</td><td>2011</td></tr><tr><td>6</td><td>Tynewydd repair</td><td>Porth</td><td>11 April</td><td>2007</td></tr><tr><td>7</td><td>Dinas store</td><td>Dinas</td><td>13 January</td><td>2009</td></tr><tr><td>8</td><td>Naval repair</td><td>Penygraig</td><td>10 December</td><td>2010</td></tr><tr><td>9</td><td>Gelli repair</td><td>Gelli</td><td>21 August</td><td>2013</td></tr><tr><td>10</td><td>Naval's shop</td><td>Penygraig</td><td>27 January</td><td>2014</td></tr><tr><td>11</td><td>ATnT</td><td>Maerdy</td><td>23â24 December</td><td>2015</td></tr><tr><td>12</td><td>National Cellphone</td><td>Wattstown</td><td>18 February</td><td>2017</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Penygraig', 'y_data': 2}, {'x_data': 'Dinas', 'y_data': 2}, {'x_data': 'Blaenllecha', 'y_data': 2}, {'x_data': 'Wattstown', 'y_data': 1}, {'x_data': 'Porth', 'y_data': 1}, {'x_data': 'Pentre', 'y_data': 1}, {'x_data': 'Maerdy', 'y_data': 1}, {'x_data': 'Gelli', 'y_data': 1}, {'x_data': 'Cymmer', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Location', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Location)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3831</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3830.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3832.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3831</td><td><h4>NL Queries: </h4><ol><li><p>What is the number of each allergie that the student with first name Lisa has? Draw a bar chart, and could you list by the x-axis in ascending?</p></li><li><p>What is the number of each allergie the girl named Lisa has? Plot them as bar chart, could you list by the x-axis in ascending?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Allergy , COUNT(T1.Allergy) FROM Allergy_type AS T1 JOIN Has_allergy AS T2 ON T1.Allergy = T2.Allergy JOIN Student AS T3 ON T3.StuID = T2.StuID WHERE T3.Fname = "Lisa" GROUP BY T1.Allergy ORDER BY T1.Allergy ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>56@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>allergy_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: allergy_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Allergy_type</h4><table><tr><th>Allergy</th><th>AllergyType</th></tr><tr><td>Eggs</td><td>food</td></tr><tr><td>Nuts</td><td>food</td></tr><tr><td>Milk</td><td>food</td></tr><tr><td>Shellfish</td><td>food</td></tr><tr><td>Anchovies</td><td>food</td></tr><tr><td>Wheat</td><td>food</td></tr><tr><td>Soy</td><td>food</td></tr><tr><td>Ragweed</td><td>environmental</td></tr><tr><td>Tree Pollen</td><td>environmental</td></tr><tr><td>Grass Pollen</td><td>environmental</td></tr><tr><td>Cat</td><td>animal</td></tr><tr><td>Dog</td><td>animal</td></tr><tr><td>Rodent</td><td>animal</td></tr><tr><td>Bee Stings</td><td>animal</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Anchovies', 'y_data': 1}, {'x_data': 'Cat', 'y_data': 1}, {'x_data': 'Dog', 'y_data': 1}, {'x_data': 'Eggs', 'y_data': 1}, {'x_data': 'Grass Pollen', 'y_data': 2}, {'x_data': 'Milk', 'y_data': 1}, {'x_data': 'Ragweed', 'y_data': 1}, {'x_data': 'Shellfish', 'y_data': 1}, {'x_data': 'Tree Pollen', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Allergy', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Allergy)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

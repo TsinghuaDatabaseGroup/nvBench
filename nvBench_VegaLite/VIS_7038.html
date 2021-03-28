@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7038</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7037.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7039.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7038</td><td><h4>NL Queries: </h4><ol><li><p>How many departments whose budget is more than the average budget in each building? Show me a bar chart, list by the total number in asc.</p></li><li><p>Give the number of departments with greater than average budget in each building with a bar chart, and order the number of building from low to high order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT building , COUNT(building) FROM department WHERE budget > (SELECT avg(budget) FROM department) GROUP BY building ORDER BY COUNT(building) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>657@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: department</h4><table><tr><th>dept_name</th><th>building</th><th>budget</th></tr><tr><td>Civil Eng.</td><td>Chandler</td><td>255041.46</td></tr><tr><td>Biology</td><td>Candlestick</td><td>647610.55</td></tr><tr><td>History</td><td>Taylor</td><td>699140.86</td></tr><tr><td>Physics</td><td>Wrigley</td><td>942162.76</td></tr><tr><td>Marketing</td><td>Lambeau</td><td>210627.58</td></tr><tr><td>Pol. Sci.</td><td>Whitman</td><td>573745.09</td></tr><tr><td>English</td><td>Palmer</td><td>611042.66</td></tr><tr><td>Accounting</td><td>Saucon</td><td>441840.92</td></tr><tr><td>Comp. Sci.</td><td>Lamberton</td><td>106378.69</td></tr><tr><td>Languages</td><td>Linderman</td><td>601283.6</td></tr><tr><td>Finance</td><td>Candlestick</td><td>866831.75</td></tr><tr><td>Geology</td><td>Palmer</td><td>406557.93</td></tr><tr><td>Cybernetics</td><td>Mercer</td><td>794541.46</td></tr><tr><td>Astronomy</td><td>Taylor</td><td>617253.94</td></tr><tr><td>Athletics</td><td>Bronfman</td><td>734550.7</td></tr><tr><td>Statistics</td><td>Taylor</td><td>395051.74</td></tr><tr><td>Psychology</td><td>Thompson</td><td>848175.04</td></tr><tr><td>Math</td><td>Brodhead</td><td>777605.11</td></tr><tr><td>Elec. Eng.</td><td>Main</td><td>276527.61</td></tr><tr><td>Mech. Eng.</td><td>Rauch</td><td>520350.65</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Brodhead', 'y_data': 1}, {'x_data': 'Bronfman', 'y_data': 1}, {'x_data': 'Linderman', 'y_data': 1}, {'x_data': 'Mercer', 'y_data': 1}, {'x_data': 'Palmer', 'y_data': 1}, {'x_data': 'Thompson', 'y_data': 1}, {'x_data': 'Whitman', 'y_data': 1}, {'x_data': 'Wrigley', 'y_data': 1}, {'x_data': 'Candlestick', 'y_data': 2}, {'x_data': 'Taylor', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'building', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(building)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

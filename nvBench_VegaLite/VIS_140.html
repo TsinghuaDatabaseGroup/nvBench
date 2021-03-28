@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_140</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_139.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_141.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>140</td><td><h4>NL Queries: </h4><ol><li><p>A line chart for what are the number of the distinct visit dates?</p></li><li><p>What are the number of the distinct visit dates?</p></li><li><p>What are the distinct visit dates, and count them by a line chart</p></li><li><p>Find all the distinct visit dates, and count them by a line chart</p></li><li><p>Show me a line chart of how the number of visit date change over the visit date</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Visit_Date , COUNT(Visit_Date) FROM VISITS BIN Visit_Date BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>895</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Theme_park</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Theme_park&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: VISITS</h4><table><tr><th>Visit_ID</th><th>Tourist_Attraction_ID</th><th>Tourist_ID</th><th>Visit_Date</th><th>Visit_Details</th></tr><tr><td>183</td><td>6653</td><td>377</td><td>2004-08-21 03:06:14</td><td></td></tr><tr><td>268</td><td>5076</td><td>204</td><td>2013-08-06 05:35:51</td><td></td></tr><tr><td>273</td><td>9360</td><td>211</td><td>2013-10-27 09:56:08</td><td></td></tr><tr><td>302</td><td>6476</td><td>377</td><td>1990-08-15 14:24:10</td><td></td></tr><tr><td>356</td><td>6476</td><td>439</td><td>1980-11-26 02:08:00</td><td></td></tr><tr><td>381</td><td>6523</td><td>211</td><td>2017-03-19 08:48:19</td><td></td></tr><tr><td>416</td><td>6476</td><td>841</td><td>2008-11-09 01:28:01</td><td></td></tr><tr><td>479</td><td>6852</td><td>439</td><td>1989-08-24 20:26:37</td><td></td></tr><tr><td>563</td><td>6852</td><td>610</td><td>1993-02-01 15:27:20</td><td></td></tr><tr><td>612</td><td>9919</td><td>204</td><td>2007-09-17 10:12:45</td><td></td></tr><tr><td>729</td><td>6476</td><td>513</td><td>1998-05-12 00:50:20</td><td></td></tr><tr><td>776</td><td>8698</td><td>513</td><td>2010-10-04 01:34:12</td><td></td></tr><tr><td>781</td><td>6852</td><td>779</td><td>2018-01-09 20:39:52</td><td></td></tr><tr><td>866</td><td>8429</td><td>545</td><td>1971-12-16 06:41:26</td><td></td></tr><tr><td>909</td><td>8698</td><td>779</td><td>1998-12-10 02:46:43</td><td></td></tr><tr><td>937</td><td>6523</td><td>541</td><td>1996-01-08 13:23:41</td><td></td></tr><tr><td>962</td><td>9919</td><td>610</td><td>2007-09-03 04:30:01</td><td></td></tr><tr><td>968</td><td>6852</td><td>377</td><td>1974-12-31 23:18:24</td><td></td></tr><tr><td>977</td><td>8698</td><td>500</td><td>2001-11-13 10:08:28</td><td></td></tr><tr><td>999</td><td>2701</td><td>610</td><td>1990-11-12 00:54:50</td><td></td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1971~1975', 'y_data': 2}, {'x_data': '1976~1980', 'y_data': 1}, {'x_data': '1981~1985', 'y_data': 0}, {'x_data': '1986~1990', 'y_data': 3}, {'x_data': '1991~1995', 'y_data': 1}, {'x_data': '1996~2000', 'y_data': 3}, {'x_data': '2001~2005', 'y_data': 2}, {'x_data': '2006~2010', 'y_data': 4}, {'x_data': '2011~2015', 'y_data': 2}, {'x_data': '2016~2018', 'y_data': 2}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Visit_Date', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Visit_Date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

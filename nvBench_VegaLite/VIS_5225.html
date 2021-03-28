@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5225</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5224.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5226.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5225</td><td><h4>NL Queries: </h4><ol><li><p>Show the total number of each type of each thing using a pie chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Type_of_Thing_Code , COUNT(Type_of_Thing_Code) FROM Things AS T1 JOIN Organizations AS T2 ON T1.organization_id = T2.organization_id GROUP BY Type_of_Thing_Code</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2086</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>local_govt_and_lot</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_and_lot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Things</h4><table><tr><th>thing_id</th><th>organization_id</th><th>Type_of_Thing_Code</th><th>service_type_code</th><th>service_details</th></tr><tr><td>1</td><td>8</td><td>Electronics</td><td>Check</td><td>Unsatisfied</td></tr><tr><td>2</td><td>8</td><td>Electronics</td><td>Cleanning</td><td>Satisfied</td></tr><tr><td>10</td><td>8</td><td>Commen</td><td>Check</td><td>Satisfied</td></tr><tr><td>14</td><td>10</td><td>Furniture</td><td>Cleanning</td><td>Satisfied</td></tr><tr><td>26</td><td>8</td><td>Electronics</td><td>Cleanning</td><td>Unsatisfied</td></tr><tr><td>35</td><td>7</td><td>Electronics</td><td>Cleanning</td><td>Satisfied</td></tr><tr><td>45</td><td>8</td><td>Commen</td><td>Check</td><td>Satisfied</td></tr><tr><td>46</td><td>8</td><td>Commen</td><td>Check</td><td>Satisfied</td></tr><tr><td>47</td><td>10</td><td>Commen</td><td>Cleanning</td><td>Satisfied</td></tr><tr><td>58</td><td>8</td><td>Electronics</td><td>Check</td><td>Satisfied</td></tr><tr><td>68</td><td>10</td><td>Commen</td><td>Cleanning</td><td>Unsatisfied</td></tr><tr><td>80</td><td>8</td><td>Furniture</td><td>Check</td><td>Unsatisfied</td></tr><tr><td>84</td><td>8</td><td>Commen</td><td>Check</td><td>Unsatisfied</td></tr><tr><td>85</td><td>8</td><td>Commen</td><td>Cleanning</td><td>Unsatisfied</td></tr><tr><td>92</td><td>7</td><td>Commen</td><td>Check</td><td>Unsatisfied</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Commen', 'y_data': 8}, {'x_data': 'Electronics', 'y_data': 5}, {'x_data': 'Furniture', 'y_data': 2}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Type_of_Thing_Code)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Type_of_Thing_Code'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

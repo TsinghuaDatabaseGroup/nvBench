@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7162</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7161.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7163.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7162</td><td><h4>NL Queries: </h4><ol><li><p>What are the names and ids of customers whose address contains TN Show bar chart, and rank in asc by the y-axis.</p></li><li><p>Return the names and ids of customers who have TN in their address by a bar chart, and sort in ascending by the y axis please.</p></li><li><p>Return the names and ids of customers who have TN in their address Show bar chart, and order by the total number in asc please.</p></li><li><p>Return a histogram on what are the names and ids of customers whose address contains TN?, rank in asc by the y-axis.</p></li><li><p>what are the names and ids of customers whose address contains TN?, and sort in ascending by the y axis please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT customer_name , customer_id FROM customers WHERE customer_address LIKE "%TN%" ORDER BY customer_id ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1126@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>department_store</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: department_store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customers</h4><table><tr><th>customer_id</th><th>payment_method_code</th><th>customer_code</th><th>customer_name</th><th>customer_address</th><th>customer_phone</th><th>customer_email</th></tr><tr><td>1</td><td>Credit Card</td><td>401</td><td>Ahmed</td><td>75099 Tremblay Port Apt. 163
+South Norrisland, SC 80546</td><td>254-072-4068x33935</td><td>margarett.vonrueden@example.com</td></tr><tr><td>2</td><td>Credit Card</td><td>665</td><td>Chauncey</td><td>8408 Lindsay Court
+East Dasiabury, IL 72656-3552</td><td>+41(8)1897032009</td><td>stiedemann.sigrid@example.com</td></tr><tr><td>3</td><td>Direct Debit</td><td>844</td><td>Lukas</td><td>7162 Rodolfo Knoll Apt. 502
+Lake Annalise, TN 35791-8871</td><td>197-417-3557</td><td>joelle.monahan@example.com</td></tr><tr><td>4</td><td>Direct Debit</td><td>662</td><td>Lexus</td><td>9581 Will Flat Suite 272
+East Cathryn, WY 30751-4404</td><td>+08(3)8056580281</td><td>gbrekke@example.com</td></tr><tr><td>5</td><td>Credit Card</td><td>848</td><td>Tara</td><td>5065 Mraz Fields Apt. 041
+East Chris, NH 41624</td><td>1-064-498-6609x051</td><td>nicholas44@example.com</td></tr><tr><td>6</td><td>Credit Card</td><td>916</td><td>Jon</td><td>841 Goyette Unions
+South Dionbury, NC 62021</td><td>(443)013-3112x528</td><td>cconroy@example.net</td></tr><tr><td>7</td><td>Credit Card</td><td>172</td><td>Cristobal</td><td>8327 Christiansen Lakes Suite 409
+Schneiderland, IA 93624</td><td>877-150-8674x63517</td><td>shawna.cummerata@example.net</td></tr><tr><td>8</td><td>Direct Debit</td><td>927</td><td>Adah</td><td>5049 Hand Land
+Coymouth, IL 97300-7731</td><td>1-695-364-7586x59256</td><td>kathlyn24@example.org</td></tr><tr><td>9</td><td>Credit Card</td><td>808</td><td>Yasmeen</td><td>3558 Witting Meadow Apt. 483
+Lake Moriahbury, OH 91556-2122</td><td>587.398.2400x31176</td><td>ludwig54@example.net</td></tr><tr><td>10</td><td>Credit Card</td><td>887</td><td>Karson</td><td>7308 Joan Lake Suite 346
+Lizethtown, DE 56522</td><td>857-844-9339x40140</td><td>moriah91@example.com</td></tr><tr><td>11</td><td>Direct Debit</td><td>611</td><td>Cordell</td><td>362 Fisher Forge Apt. 900
+New Mckenna, CA 98525-5674</td><td>(730)934-8249</td><td>qstokes@example.org</td></tr><tr><td>12</td><td>Credit Card</td><td>182</td><td>Darron</td><td>84445 Elinor Glens
+Port Zita, SD 39410</td><td>117.822.3577</td><td>gwisozk@example.net</td></tr><tr><td>13</td><td>Credit Card</td><td>589</td><td>Kenya</td><td>338 Floy Mountains Suite 589
+Yesseniaville, TN 60847</td><td>08023680831</td><td>maxime86@example.net</td></tr><tr><td>14</td><td>Direct Debit</td><td>240</td><td>Abbie</td><td>983 Elinore Passage
+Darrionborough, SC 53915-0479</td><td>07594320656</td><td>celine.bogan@example.com</td></tr><tr><td>15</td><td>Credit Card</td><td>980</td><td>Lyric</td><td>649 Ocie Lights
+Wyatttown, UT 12697</td><td>1-472-036-0434</td><td>schultz.arnoldo@example.net</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Lukas', 'y_data': 3}, {'x_data': 'Kenya', 'y_data': 13}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'customer_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'customer_id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

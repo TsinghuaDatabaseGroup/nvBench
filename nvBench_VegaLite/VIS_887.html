@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_887</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_886.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_888.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>887</td><td><h4>NL Queries: </h4><ol><li><p>For each product which has problems, what are the number of problems and the product id. Visualize by scatter chart.</p></li><li><p>For each product with some problems, list the count of problems and the product id. Show the correlation.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT count(*) , T1.product_id FROM problems AS T1 JOIN product AS T2 ON T1.product_id = T2.product_id GROUP BY T2.product_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3036</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>tracking_software_problems</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_software_problems&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: problems</h4><table><tr><th>problem_id</th><th>product_id</th><th>closure_authorised_by_staff_id</th><th>reported_by_staff_id</th><th>date_problem_reported</th><th>date_problem_closed</th><th>problem_description</th><th>other_problem_details</th></tr><tr><td>1</td><td>4</td><td>4</td><td>2</td><td>1978-06-26 19:10:17</td><td>2012-07-22 19:24:26</td><td>x</td><td>p</td></tr><tr><td>2</td><td>8</td><td>3</td><td>10</td><td>1988-11-07 16:09:31</td><td>1973-06-07 04:13:51</td><td>w</td><td>p</td></tr><tr><td>3</td><td>1</td><td>4</td><td>1</td><td>1995-05-14 08:32:56</td><td>1997-02-26 05:06:15</td><td>r</td><td>i</td></tr><tr><td>4</td><td>13</td><td>8</td><td>7</td><td>1973-10-12 10:51:23</td><td>1993-06-19 10:02:59</td><td>y</td><td>c</td></tr><tr><td>5</td><td>4</td><td>12</td><td>11</td><td>1986-11-13 07:30:55</td><td>2013-05-24 20:33:11</td><td>a</td><td>k</td></tr><tr><td>6</td><td>1</td><td>5</td><td>4</td><td>2010-10-05 02:25:37</td><td>1998-07-03 14:53:59</td><td>p</td><td>l</td></tr><tr><td>7</td><td>2</td><td>2</td><td>7</td><td>1996-04-19 15:54:13</td><td>1974-09-20 13:42:19</td><td>a</td><td>l</td></tr><tr><td>8</td><td>2</td><td>4</td><td>1</td><td>1976-12-18 23:54:41</td><td>1982-08-26 10:58:01</td><td>w</td><td>f</td></tr><tr><td>9</td><td>15</td><td>14</td><td>13</td><td>2010-10-11 13:36:00</td><td>1995-06-10 18:41:08</td><td>i</td><td>v</td></tr><tr><td>10</td><td>4</td><td>13</td><td>10</td><td>1993-12-29 23:22:21</td><td>1990-04-13 21:15:50</td><td>d</td><td>s</td></tr><tr><td>11</td><td>5</td><td>1</td><td>14</td><td>1970-02-23 17:46:12</td><td>1971-02-06 15:23:23</td><td>d</td><td>v</td></tr><tr><td>12</td><td>6</td><td>9</td><td>2</td><td>1970-05-20 15:38:46</td><td>1997-10-18 20:09:57</td><td>j</td><td>c</td></tr><tr><td>13</td><td>1</td><td>9</td><td>5</td><td>1971-06-15 02:50:52</td><td>2004-06-20 01:08:25</td><td>c</td><td>f</td></tr><tr><td>14</td><td>1</td><td>6</td><td>13</td><td>1977-10-22 15:48:13</td><td>1970-09-05 08:04:43</td><td>s</td><td>s</td></tr><tr><td>15</td><td>7</td><td>9</td><td>10</td><td>1970-10-27 16:35:34</td><td>1999-09-28 21:29:12</td><td>r</td><td>m</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 4, 'y_data': 1}, {'x_data': 2, 'y_data': 2}, {'x_data': 3, 'y_data': 4}, {'x_data': 1, 'y_data': 5}, {'x_data': 1, 'y_data': 6}, {'x_data': 1, 'y_data': 7}, {'x_data': 1, 'y_data': 8}, {'x_data': 1, 'y_data': 13}, {'x_data': 1, 'y_data': 15}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'count(*)'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'product_id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

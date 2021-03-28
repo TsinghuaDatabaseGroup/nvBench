@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4019</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4018.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4020.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4019</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of courses each instructor taught with a bar chart grouping by course code, and could you sort by the bars in ascending?</p></li><li><p>How many courses each teacher taught? Show me a bar chart grouping by course code, sort names in ascending order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT CRS_CODE , COUNT(CRS_CODE) FROM CLASS AS T1 JOIN employee AS T2 ON T1.prof_num = T2.emp_num GROUP BY CRS_CODE ORDER BY CRS_CODE ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>524@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: CLASS</h4><table><tr><th>CLASS_CODE</th><th>CRS_CODE</th><th>CLASS_SECTION</th><th>CLASS_TIME</th><th>CLASS_ROOM</th><th>PROF_NUM</th></tr><tr><td>10012</td><td>ACCT-211</td><td>1</td><td>MWF 8:00-8:50 a.m.</td><td>BUS311</td><td>105</td></tr><tr><td>10013</td><td>ACCT-211</td><td>2</td><td>MWF 9:00-9:50 a.m.</td><td>BUS200</td><td>105</td></tr><tr><td>10014</td><td>ACCT-211</td><td>3</td><td>TTh 2:30-3:45 p.m.</td><td>BUS252</td><td>342</td></tr><tr><td>10015</td><td>ACCT-212</td><td>1</td><td>MWF 10:00-10:50 a.m.</td><td>BUS311</td><td>301</td></tr><tr><td>10016</td><td>ACCT-212</td><td>2</td><td>Th 6:00-8:40 p.m.</td><td>BUS252</td><td>301</td></tr><tr><td>10017</td><td>CIS-220</td><td>1</td><td>MWF 9:00-9:50 a.m.</td><td>KLR209</td><td>228</td></tr><tr><td>10018</td><td>CIS-220</td><td>2</td><td>MWF 9:00-9:50 a.m.</td><td>KLR211</td><td>114</td></tr><tr><td>10019</td><td>CIS-220</td><td>3</td><td>MWF 10:00-10:50 a.m.</td><td>KLR209</td><td>228</td></tr><tr><td>10020</td><td>CIS-420</td><td>1</td><td>W 6:00-8:40 p.m.</td><td>KLR209</td><td>162</td></tr><tr><td>10021</td><td>QM-261</td><td>1</td><td>MWF 8:00-8:50 a.m.</td><td>KLR200</td><td>114</td></tr><tr><td>10022</td><td>QM-261</td><td>2</td><td>TTh 1:00-2:15 p.m.</td><td>KLR200</td><td>114</td></tr><tr><td>10023</td><td>QM-362</td><td>1</td><td>MWF 11:00-11:50 a.m.</td><td>KLR200</td><td>162</td></tr><tr><td>10024</td><td>QM-362</td><td>2</td><td>TTh 2:30-3:45 p.m.</td><td>KLR200</td><td>162</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'ACCT-211', 'y_data': 3}, {'x_data': 'ACCT-212', 'y_data': 2}, {'x_data': 'CIS-220', 'y_data': 3}, {'x_data': 'CIS-420', 'y_data': 1}, {'x_data': 'QM-261', 'y_data': 2}, {'x_data': 'QM-362', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'CRS_CODE', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(CRS_CODE)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4936</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4935.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4937.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4936</td><td><h4>NL Queries: </h4><ol><li><p>What are the number of the descriptions of the service types with product price above 100?, order by the X-axis in ascending.</p></li><li><p>A bar chart for giveing me the number of the descriptions of the service types that cost more than 100, I want to display by the x-axis from low to high.</p></li><li><p>Give me the number of the descriptions of the service types that cost more than 100, and I want to display by the x-axis from low to high.</p></li><li><p>Give me the descriptions of the service types that cost more than 100, and count them by a bar chart, and sort by the Service_Type_Description from low to high please.</p></li><li><p>What are the descriptions of the service types with product price above 100, and count them by a bar chart, I want to sort by the bars in asc.</p></li><li><p>A bar chart for what are the number of the descriptions of the service types with product price above 100?, and order by the X-axis in ascending.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Service_Type_Description , COUNT(Service_Type_Description) FROM Ref_Service_Types AS T1 JOIN Services AS T2 ON T1.Service_Type_Code = T2.Service_Type_Code WHERE T2.Product_Price > 100 GROUP BY Service_Type_Description ORDER BY Service_Type_Description ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>884@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Drama_Workshop_Groups</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Drama_Workshop_Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Ref_Service_Types</h4><table><tr><th>Service_Type_Code</th><th>Parent_Service_Type_Code</th><th>Service_Type_Description</th></tr><tr><td>1</td><td>1</td><td>provide photo service</td></tr><tr><td>2</td><td>1</td><td>provide dinning service</td></tr><tr><td>3</td><td>1</td><td>provide filming service</td></tr><tr><td>4</td><td>1</td><td>provide adv promoting service</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'provide adv promoting service', 'y_data': 2}, {'x_data': 'provide dinning service', 'y_data': 5}, {'x_data': 'provide filming service', 'y_data': 3}, {'x_data': 'provide photo service', 'y_data': 5}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Service_Type_Description', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Service_Type_Description)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

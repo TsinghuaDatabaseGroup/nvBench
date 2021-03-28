@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3839</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3838.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3840.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3839</td><td><h4>NL Queries: </h4><ol><li><p>Show each gender code and the corresponding count of guests sorted by the count in descending order by a bar chart.</p></li><li><p>Show each gender code and the corresponding count of guests sorted by the count in descending order. Show bar chart.</p></li><li><p>Sort the gender codes in descending order of their corresponding number of guests. Return both the gender codes and counts in a bar chart.</p></li><li><p>Sort the gender codes in descending order of their corresponding number of guests. Return both the gender codes and counts. Show bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT gender_code , COUNT(*) FROM Guests GROUP BY gender_code ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>94</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>apartment_rentals</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: apartment_rentals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Guests</h4><table><tr><th>guest_id</th><th>gender_code</th><th>guest_first_name</th><th>guest_last_name</th><th>date_of_birth</th></tr><tr><td>1</td><td>Male</td><td>Kip</td><td>DuBuque</td><td>1995-11-04 07:09:57</td></tr><tr><td>2</td><td>Unknown</td><td>Rebeca</td><td>Runolfsdottir</td><td>1974-05-12 21:53:58</td></tr><tr><td>3</td><td>Female</td><td>Keon</td><td>Treutel</td><td>1974-08-20 09:28:05</td></tr><tr><td>4</td><td>Female</td><td>Gabe</td><td>Bode</td><td>2007-09-11 19:01:39</td></tr><tr><td>5</td><td>Female</td><td>Lou</td><td>Grady</td><td>1997-01-15 17:37:40</td></tr><tr><td>6</td><td>Unknown</td><td>Josefina</td><td>Jerde</td><td>1978-03-08 04:43:04</td></tr><tr><td>7</td><td>Female</td><td>Mozell</td><td>Toy</td><td>1997-01-20 17:11:31</td></tr><tr><td>8</td><td>Unknown</td><td>Keith</td><td>Hoeger</td><td>2001-06-18 20:05:55</td></tr><tr><td>9</td><td>Female</td><td>Crystal</td><td>Runolfsson</td><td>1971-01-04 04:22:58</td></tr><tr><td>10</td><td>Female</td><td>Nikki</td><td>Lehner</td><td>1980-06-20 18:15:39</td></tr><tr><td>11</td><td>Male</td><td>Gregoria</td><td>Schowalter</td><td>2015-02-03 23:34:13</td></tr><tr><td>12</td><td>Male</td><td>Louvenia</td><td>Crona</td><td>1983-08-26 15:45:08</td></tr><tr><td>13</td><td>Female</td><td>Else</td><td>Roberts</td><td>1971-11-02 01:51:56</td></tr><tr><td>14</td><td>Female</td><td>Juvenal</td><td>Kautzer</td><td>2003-07-29 22:08:15</td></tr><tr><td>15</td><td>Female</td><td>Tamia</td><td>Mante</td><td>2013-02-22 11:26:22</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Female', 'y_data': 9}, {'x_data': 'Male', 'y_data': 3}, {'x_data': 'Unknown', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'gender_code', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

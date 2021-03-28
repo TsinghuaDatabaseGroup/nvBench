@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2678</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2677.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2679.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2678</td><td><h4>NL Queries: </h4><ol><li><p>What are the payment date of the payment with amount paid higher than 300 or with payment type is 'Check, and count them by a bar chart, and I want to rank y-axis in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT payment_date , COUNT(payment_date) FROM payments WHERE amount_paid > 300 OR payment_type_code = 'Check'  ORDER BY COUNT(payment_date) ASC BIN payment_date BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2616@y_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>products_for_hire</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: products_for_hire&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: payments</h4><table><tr><th>payment_id</th><th>booking_id</th><th>customer_id</th><th>payment_type_code</th><th>amount_paid_in_full_yn</th><th>payment_date</th><th>amount_due</th><th>amount_paid</th></tr><tr><td>1</td><td>6</td><td>15</td><td>Check</td><td>1</td><td>2018-03-09 16:28:00</td><td>369.52</td><td>206.27</td></tr><tr><td>2</td><td>9</td><td>12</td><td>Cash</td><td>1</td><td>2018-03-03 13:39:44</td><td>278.6</td><td>666.45</td></tr><tr><td>3</td><td>5</td><td>7</td><td>Credit Card</td><td>0</td><td>2018-03-22 15:00:23</td><td>840.06</td><td>135.7</td></tr><tr><td>4</td><td>6</td><td>1</td><td>Check</td><td>0</td><td>2018-03-22 02:28:11</td><td>678.29</td><td>668.4</td></tr><tr><td>5</td><td>8</td><td>11</td><td>Cash</td><td>1</td><td>2018-03-23 20:36:04</td><td>830.25</td><td>305.65</td></tr><tr><td>6</td><td>15</td><td>8</td><td>Check</td><td>0</td><td>2018-03-19 12:39:31</td><td>410.1</td><td>175.54</td></tr><tr><td>7</td><td>1</td><td>8</td><td>Cash</td><td>1</td><td>2018-03-02 06:25:45</td><td>482.26</td><td>602.8</td></tr><tr><td>8</td><td>9</td><td>14</td><td>Cash</td><td>1</td><td>2018-03-12 23:00:55</td><td>653.18</td><td>505.23</td></tr><tr><td>9</td><td>3</td><td>7</td><td>Direct Debit</td><td>0</td><td>2018-03-12 23:23:56</td><td>686.85</td><td>321.58</td></tr><tr><td>10</td><td>13</td><td>10</td><td>Credit Card</td><td>1</td><td>2018-03-23 13:24:33</td><td>486.75</td><td>681.21</td></tr><tr><td>11</td><td>14</td><td>15</td><td>Credit Card</td><td>1</td><td>2018-03-03 03:07:00</td><td>259.18</td><td>464.06</td></tr><tr><td>12</td><td>14</td><td>9</td><td>Cash</td><td>0</td><td>2018-02-27 10:50:39</td><td>785.73</td><td>685.32</td></tr><tr><td>13</td><td>15</td><td>14</td><td>Direct Debit</td><td>0</td><td>2018-03-03 14:22:51</td><td>665.58</td><td>307.14</td></tr><tr><td>14</td><td>5</td><td>5</td><td>Direct Debit</td><td>1</td><td>2018-03-17 15:51:52</td><td>407.51</td><td>704.41</td></tr><tr><td>15</td><td>4</td><td>12</td><td>Credit Card</td><td>1</td><td>2018-03-17 03:07:45</td><td>631.93</td><td>334.2</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sun', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Tue', 'y_data': 1}, {'x_data': 'Mon', 'y_data': 3}, {'x_data': 'Fri', 'y_data': 4}, {'x_data': 'Sat', 'y_data': 5}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'payment_date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(payment_date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

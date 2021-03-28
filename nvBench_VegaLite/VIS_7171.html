@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7171</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7170.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7172.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7171</td><td><h4>NL Queries: </h4><ol><li><p>Find the maximum capacity among rooms in each building with a bar chart, rank by the X-axis from high to low.</p></li><li><p>Bar chart x axis building y axis maximal capacity, show by the X-axis from high to low.</p></li><li><p>What is the greatest capacity for rooms in each building? Draw a bar chart, list bar in desc order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT building , max(capacity) FROM classroom GROUP BY building ORDER BY building DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>623@x_name@DESC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: classroom</h4><table><tr><th>building</th><th>room_number</th><th>capacity</th></tr><tr><td>Lamberton</td><td>134</td><td>10</td></tr><tr><td>Chandler</td><td>375</td><td>10</td></tr><tr><td>Fairchild</td><td>145</td><td>27</td></tr><tr><td>Nassau</td><td>45</td><td>92</td></tr><tr><td>Grace</td><td>40</td><td>34</td></tr><tr><td>Whitman</td><td>134</td><td>120</td></tr><tr><td>Lamberton</td><td>143</td><td>10</td></tr><tr><td>Taylor</td><td>812</td><td>115</td></tr><tr><td>Saucon</td><td>113</td><td>109</td></tr><tr><td>Painter</td><td>86</td><td>97</td></tr><tr><td>Alumni</td><td>547</td><td>26</td></tr><tr><td>Alumni</td><td>143</td><td>47</td></tr><tr><td>Drown</td><td>757</td><td>18</td></tr><tr><td>Saucon</td><td>180</td><td>15</td></tr><tr><td>Whitman</td><td>434</td><td>32</td></tr><tr><td>Saucon</td><td>844</td><td>24</td></tr><tr><td>Bronfman</td><td>700</td><td>12</td></tr><tr><td>Polya</td><td>808</td><td>28</td></tr><tr><td>Gates</td><td>707</td><td>65</td></tr><tr><td>Gates</td><td>314</td><td>10</td></tr><tr><td>Main</td><td>45</td><td>30</td></tr><tr><td>Taylor</td><td>183</td><td>71</td></tr><tr><td>Power</td><td>972</td><td>10</td></tr><tr><td>Garfield</td><td>119</td><td>59</td></tr><tr><td>Rathbone</td><td>261</td><td>60</td></tr><tr><td>Stabler</td><td>105</td><td>113</td></tr><tr><td>Power</td><td>717</td><td>12</td></tr><tr><td>Main</td><td>425</td><td>22</td></tr><tr><td>Lambeau</td><td>348</td><td>51</td></tr><tr><td>Chandler</td><td>804</td><td>11</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Whitman', 'y_data': 120}, {'x_data': 'Taylor', 'y_data': 115}, {'x_data': 'Stabler', 'y_data': 113}, {'x_data': 'Saucon', 'y_data': 109}, {'x_data': 'Rathbone', 'y_data': 60}, {'x_data': 'Power', 'y_data': 12}, {'x_data': 'Polya', 'y_data': 28}, {'x_data': 'Painter', 'y_data': 97}, {'x_data': 'Nassa', 'y_data': 92}, {'x_data': 'Main', 'y_data': 30}, {'x_data': 'Lamberton', 'y_data': 10}, {'x_data': 'Lambea', 'y_data': 51}, {'x_data': 'Grace', 'y_data': 34}, {'x_data': 'Gates', 'y_data': 65}, {'x_data': 'Garfield', 'y_data': 59}, {'x_data': 'Fairchild', 'y_data': 27}, {'x_data': 'Drown', 'y_data': 18}, {'x_data': 'Chandler', 'y_data': 11}, {'x_data': 'Bronfman', 'y_data': 12}, {'x_data': 'Alumni', 'y_data': 47}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'building', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'max(capacity)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

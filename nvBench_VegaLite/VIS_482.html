@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_482</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_481.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_483.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>482</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a scatter chart on how many assets does each maintenance contract contain? List the number and the contract id.</p></li><li><p> how many assets does each maintenance contract contain? List the number and the contract id.</p></li><li><p>How many assets does each maintenance contract contain? List the number and the contract id with a scatter chart.</p></li><li><p>How many assets does each maintenance contract contain? List the number and the contract id. Plot them as scatter chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT count(*) , T1.maintenance_contract_id FROM Maintenance_Contracts AS T1 JOIN Assets AS T2 ON T1.maintenance_contract_id = T2.maintenance_contract_id GROUP BY T1.maintenance_contract_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>125</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>assets_maintenance</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: assets_maintenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Maintenance_Contracts</h4><table><tr><th>maintenance_contract_id</th><th>maintenance_contract_company_id</th><th>contract_start_date</th><th>contract_end_date</th><th>other_contract_details</th></tr><tr><td>1</td><td>15</td><td>2017-09-13 11:51:29</td><td>2018-03-16 21:21:50</td><td>None</td></tr><tr><td>2</td><td>9</td><td>2017-12-18 11:43:16</td><td>2018-03-22 06:00:37</td><td>None</td></tr><tr><td>3</td><td>11</td><td>2017-05-06 02:32:19</td><td>2018-03-20 14:02:54</td><td>None</td></tr><tr><td>4</td><td>13</td><td>2018-01-24 00:06:30</td><td>2018-03-02 16:12:23</td><td>None</td></tr><tr><td>5</td><td>4</td><td>2017-10-28 05:13:21</td><td>2018-02-27 17:36:59</td><td>None</td></tr><tr><td>6</td><td>7</td><td>2018-03-07 10:59:11</td><td>2018-03-14 10:17:43</td><td>None</td></tr><tr><td>7</td><td>13</td><td>2017-09-01 05:34:02</td><td>2018-02-27 05:03:22</td><td>None</td></tr><tr><td>8</td><td>8</td><td>2017-11-23 11:26:12</td><td>2018-03-02 22:26:54</td><td>None</td></tr><tr><td>9</td><td>6</td><td>2017-04-21 00:03:07</td><td>2018-03-07 19:30:50</td><td>None</td></tr><tr><td>10</td><td>6</td><td>2017-06-14 01:46:59</td><td>2018-03-09 10:40:10</td><td>None</td></tr><tr><td>11</td><td>15</td><td>2017-05-04 13:39:18</td><td>2018-03-14 20:21:10</td><td>None</td></tr><tr><td>12</td><td>6</td><td>2017-12-06 20:09:39</td><td>2018-03-06 13:47:14</td><td>None</td></tr><tr><td>13</td><td>14</td><td>2017-07-23 05:07:37</td><td>2018-03-05 21:24:36</td><td>None</td></tr><tr><td>14</td><td>10</td><td>2017-09-19 17:57:17</td><td>2018-03-15 06:45:00</td><td>None</td></tr><tr><td>15</td><td>6</td><td>2017-05-14 11:57:50</td><td>2018-03-23 17:29:21</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 2, 'y_data': 2}, {'x_data': 2, 'y_data': 6}, {'x_data': 2, 'y_data': 7}, {'x_data': 2, 'y_data': 8}, {'x_data': 1, 'y_data': 10}, {'x_data': 2, 'y_data': 11}, {'x_data': 1, 'y_data': 12}, {'x_data': 1, 'y_data': 13}, {'x_data': 1, 'y_data': 14}, {'x_data': 1, 'y_data': 15}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'count(*)'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'maintenance_contract_id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

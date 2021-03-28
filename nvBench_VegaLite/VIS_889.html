@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_889</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_888.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_890.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>889</td><td><h4>NL Queries: </h4><ol><li><p>What are the hometowns of gymnasts and the corresponding number of gymnasts, and rank y-axis in ascending order.</p></li><li><p>Return a bar chart on how many gymnasts are from each hometown?, and rank by the Y from low to high.</p></li><li><p>How many gymnasts are from each hometown Plot them as bar chart, rank in asc by the total number please.</p></li><li><p>Show me a bar chart for how many gymnasts are from each hometown?, and I want to show from low to high by the total number.</p></li><li><p>Draw a bar chart for what are the hometowns of gymnasts and the corresponding number of gymnasts?, and rank by the Y from low to high.</p></li><li><p>Display a bar chart for what are the hometowns of gymnasts and the corresponding number of gymnasts?, and rank y-axis in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Hometown , COUNT(*) FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID = T2.People_ID GROUP BY T2.Hometown ORDER BY COUNT(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1521@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>gymnast</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: gymnast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: gymnast</h4><table><tr><th>Gymnast_ID</th><th>Floor_Exercise_Points</th><th>Pommel_Horse_Points</th><th>Rings_Points</th><th>Vault_Points</th><th>Parallel_Bars_Points</th><th>Horizontal_Bar_Points</th><th>Total_Points</th></tr><tr><td>1.0</td><td>9.725</td><td>9.737</td><td>9.512</td><td>9.575</td><td>9.762</td><td>9.75</td><td>58.061</td></tr><tr><td>2.0</td><td>9.7</td><td>9.625</td><td>9.625</td><td>9.65</td><td>9.587</td><td>9.737</td><td>57.924</td></tr><tr><td>4.0</td><td>8.987</td><td>9.75</td><td>9.75</td><td>9.65</td><td>9.787</td><td>9.725</td><td>57.649</td></tr><tr><td>6.0</td><td>9.762</td><td>9.325</td><td>9.475</td><td>9.762</td><td>9.562</td><td>9.55</td><td>57.436</td></tr><tr><td>7.0</td><td>9.687</td><td>9.675</td><td>9.3</td><td>9.537</td><td>9.725</td><td>9.5</td><td>57.424</td></tr><tr><td>8.0</td><td>9.65</td><td>9.712</td><td>9.487</td><td>9.637</td><td>9.5</td><td>9.412</td><td>57.398</td></tr><tr><td>10.0</td><td>9.412</td><td>9.525</td><td>9.712</td><td>9.55</td><td>9.625</td><td>9.55</td><td>57.374</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Bonao', 'y_data': 1}, {'x_data': 'Los Alcarrizos', 'y_data': 1}, {'x_data': 'Santiago de los Caballeros', 'y_data': 1}, {'x_data': 'Santo Domingo', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Hometown', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

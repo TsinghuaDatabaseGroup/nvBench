@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3763</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3762.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3764.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3763</td><td><h4>NL Queries: </h4><ol><li><p>what are different nationalities of people and the corresponding number of people from each nation?, order from high to low by the y axis.</p></li><li><p>Draw a bar chart for how many people are there of each nationality?, order from high to low by the y-axis.</p></li><li><p>What are different nationalities of people and the corresponding number of people from each nation Visualize by bar chart, and order from high to low by the Y-axis.</p></li><li><p>Visualize a bar chart for how many people are there of each nationality?, list in descending by the Y please.</p></li><li><p>How many people are there of each nationality Visualize by bar chart, order Y from high to low order please.</p></li><li><p>Return a bar chart on what are different nationalities of people and the corresponding number of people from each nation?, and order Y from high to low order please.</p></li><li><p>Draw a bar chart of nationality versus the total number, and sort from high to low by the total number.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Nationality , COUNT(*) FROM people GROUP BY Nationality ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2594@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>poker_player</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: poker_player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: people</h4><table><tr><th>People_ID</th><th>Nationality</th><th>Name</th><th>Birth_Date</th><th>Height</th></tr><tr><td>1</td><td>Russia</td><td>Aleksey Ostapenko</td><td>May 26, 1986</td><td>207.0</td></tr><tr><td>2</td><td>Bulgaria</td><td>Teodor Salparov</td><td>August 16, 1982</td><td>182.0</td></tr><tr><td>3</td><td>Russia</td><td>Roman Bragin</td><td>April 17, 1987</td><td>187.0</td></tr><tr><td>4</td><td>Russia</td><td>Sergey Grankin</td><td>January 22, 1987</td><td>193.0</td></tr><tr><td>5</td><td>Russia</td><td>Yevgeni Sivozhelez</td><td>August 8, 1986</td><td>196.0</td></tr><tr><td>6</td><td>Russia</td><td>Maksim Botin</td><td>July 14, 1983</td><td>194.0</td></tr><tr><td>7</td><td>Russia</td><td>Semen Poltavskiy</td><td>February 8, 1981</td><td>205.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Russia', 'y_data': 6}, {'x_data': 'Bulgaria', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Nationality', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

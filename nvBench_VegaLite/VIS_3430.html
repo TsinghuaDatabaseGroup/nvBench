@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3430</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3429.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3431.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3430</td><td><h4>NL Queries: </h4><ol><li><p>Retrieve the close dates of all the policies associated with the customer whose name contains "Diana", bin the close dates into the day of week interval and count them for a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Date_Closed , COUNT(Date_Closed) FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id = t2.customer_id WHERE t1.customer_name LIKE "%Diana%" BIN Date_Closed BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1990</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_fnol</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_fnol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customers</h4><table><tr><th>Customer_ID</th><th>Customer_name</th></tr><tr><td>194</td><td>America Jaskolski</td></tr><tr><td>214</td><td>Ellsworth Paucek</td></tr><tr><td>256</td><td>Mrs. Hanna Willms</td></tr><tr><td>562</td><td>Dr. Diana Rath</td></tr><tr><td>582</td><td>Selena Gerhold</td></tr><tr><td>641</td><td>Dayana Robel</td></tr><tr><td>682</td><td>Mr. Edwardo Blanda I</td></tr><tr><td>756</td><td>Mr. Randal Lynch III</td></tr><tr><td>805</td><td>Mrs. Liza Heller V</td></tr><tr><td>826</td><td>Mrs. Lilly Graham III</td></tr><tr><td>882</td><td>Miss Felicita Reichel</td></tr><tr><td>892</td><td>Sydnie Friesen</td></tr><tr><td>923</td><td>David Ross</td></tr><tr><td>956</td><td>Cai Zhang</td></tr><tr><td>996</td><td>Jay Chou</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 0}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Thur', 'y_data': 2}, {'x_data': 'Fri', 'y_data': 0}, {'x_data': 'Sat', 'y_data': 0}, {'x_data': 'Sun', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date_Closed', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Date_Closed)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

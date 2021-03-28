@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5507</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5506.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5508.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5507</td><td><h4>NL Queries: </h4><ol><li><p>For each denomination, return the denomination and the count of schools with that denomination Visualize by bar chart, order X-axis in desc order.</p></li><li><p>Create a bar chart showing the total number across denomination, I want to sort by the Denomination from high to low.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Denomination , COUNT(*) FROM school GROUP BY Denomination ORDER BY Denomination DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2724@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>school_player</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: school_player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: school</h4><table><tr><th>School_ID</th><th>School</th><th>Location</th><th>Enrollment</th><th>Founded</th><th>Denomination</th><th>Boys_or_Girls</th><th>Day_or_Boarding</th><th>Year_Entered_Competition</th><th>School_Colors</th></tr><tr><td>1</td><td>St Aloysius' College</td><td>Milsons Point</td><td>1200.0</td><td>1879.0</td><td>Catholic</td><td>Boys</td><td>Day</td><td>1929.0</td><td>Royal Blue and Gold</td></tr><tr><td>2</td><td>Barker College</td><td>Hornsby</td><td>2300.0</td><td>1890.0</td><td>Anglican</td><td>Boys only to Yr 9 Co-ed Year 10 to 12</td><td>Day & Boarding</td><td>1929.0</td><td>Red & Blue</td></tr><tr><td>3</td><td>Cranbrook School</td><td>Bellevue Hill</td><td>1000.0</td><td>1918.0</td><td>Anglican</td><td>Boys</td><td>Day & Boarding</td><td>1929.0</td><td>Red, White & Blue</td></tr><tr><td>4</td><td>Knox Grammar School</td><td>Wahroonga</td><td>1850.0</td><td>1924.0</td><td>Uniting Church</td><td>Boys</td><td>Day & Boarding</td><td>1929.0</td><td>Black & Blue</td></tr><tr><td>5</td><td>Trinity Grammar School</td><td>Summer Hill</td><td>2200.0</td><td>1913.0</td><td>Anglican</td><td>Boys</td><td>Day & Boarding</td><td>1929.0</td><td>Green and White</td></tr><tr><td>6</td><td>Waverley College</td><td>Waverley</td><td>1430.0</td><td>1903.0</td><td>Catholic</td><td>Boys</td><td>Day</td><td>1944.0</td><td>Royal Blue and Gold</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Uniting Church', 'y_data': 1}, {'x_data': 'Catholic', 'y_data': 2}, {'x_data': 'Anglican', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Denomination', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

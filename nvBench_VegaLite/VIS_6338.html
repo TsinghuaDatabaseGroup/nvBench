@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6338</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6337.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6339.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6338</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart for what are the number of the phone numbers for each employee?, rank x axis in asc order please.</p></li><li><p>What are the number of the phone numbers for each employee?, and sort by the x axis in asc please.</p></li><li><p>Plot the number of phone by grouped by phone as a bar graph, and could you list X in asc order please?</p></li><li><p>List the number of the phone numbers of all employees, list in asc by the names please.</p></li><li><p>What are the phone numbers for each employee, and count them by a bar chart, and list from low to high by the X please.</p></li><li><p>List the phone numbers of all employees, and count them by a bar chart, and list in asc by the names please.</p></li><li><p>A bar chart for listing the number of the phone numbers of all employees, display Phone in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Phone , COUNT(Phone) FROM EMPLOYEE GROUP BY Phone ORDER BY Phone ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>435@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>chinook_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: chinook_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: EMPLOYEE</h4><table><tr><th>EmployeeId</th><th>LastName</th><th>FirstName</th><th>Title</th><th>ReportsTo</th><th>BirthDate</th><th>HireDate</th><th>Address</th><th>City</th><th>State</th><th>Country</th><th>PostalCode</th><th>Phone</th><th>Fax</th><th>Email</th></tr><tr><td>1</td><td>Adams</td><td>Andrew</td><td>General Manager</td><td>nan</td><td>1962-02-18 00:00:00</td><td>2002-08-14 00:00:00</td><td>11120 Jasper Ave NW</td><td>Edmonton</td><td>AB</td><td>Canada</td><td>T5K 2N1</td><td>+1 (780) 428-9482</td><td>+1 (780) 428-3457</td><td>andrew@chinookcorp.com</td></tr><tr><td>2</td><td>Edwards</td><td>Nancy</td><td>Sales Manager</td><td>1.0</td><td>1958-12-08 00:00:00</td><td>2002-05-01 00:00:00</td><td>825 8 Ave SW</td><td>Calgary</td><td>AB</td><td>Canada</td><td>T2P 2T3</td><td>+1 (403) 262-3443</td><td>+1 (403) 262-3322</td><td>nancy@chinookcorp.com</td></tr><tr><td>3</td><td>Peacock</td><td>Jane</td><td>Sales Support Agent</td><td>2.0</td><td>1973-08-29 00:00:00</td><td>2002-04-01 00:00:00</td><td>1111 6 Ave SW</td><td>Calgary</td><td>AB</td><td>Canada</td><td>T2P 5M5</td><td>+1 (403) 262-3443</td><td>+1 (403) 262-6712</td><td>jane@chinookcorp.com</td></tr><tr><td>4</td><td>Park</td><td>Margaret</td><td>Sales Support Agent</td><td>2.0</td><td>1947-09-19 00:00:00</td><td>2003-05-03 00:00:00</td><td>683 10 Street SW</td><td>Calgary</td><td>AB</td><td>Canada</td><td>T2P 5G3</td><td>+1 (403) 263-4423</td><td>+1 (403) 263-4289</td><td>margaret@chinookcorp.com</td></tr><tr><td>5</td><td>Johnson</td><td>Steve</td><td>Sales Support Agent</td><td>2.0</td><td>1965-03-03 00:00:00</td><td>2003-10-17 00:00:00</td><td>7727B 41 Ave</td><td>Calgary</td><td>AB</td><td>Canada</td><td>T3B 1Y7</td><td>1 (780) 836-9987</td><td>1 (780) 836-9543</td><td>steve@chinookcorp.com</td></tr><tr><td>6</td><td>Mitchell</td><td>Michael</td><td>IT Manager</td><td>1.0</td><td>1973-07-01 00:00:00</td><td>2003-10-17 00:00:00</td><td>5827 Bowness Road NW</td><td>Calgary</td><td>AB</td><td>Canada</td><td>T3B 0C5</td><td>+1 (403) 246-9887</td><td>+1 (403) 246-9899</td><td>michael@chinookcorp.com</td></tr><tr><td>7</td><td>King</td><td>Robert</td><td>IT Staff</td><td>6.0</td><td>1970-05-29 00:00:00</td><td>2004-01-02 00:00:00</td><td>590 Columbia Boulevard West</td><td>Lethbridge</td><td>AB</td><td>Canada</td><td>T1K 5N8</td><td>+1 (403) 456-9986</td><td>+1 (403) 456-8485</td><td>robert@chinookcorp.com</td></tr><tr><td>8</td><td>Callahan</td><td>Laura</td><td>IT Staff</td><td>6.0</td><td>1968-01-09 00:00:00</td><td>2004-03-04 00:00:00</td><td>923 7 ST NW</td><td>Lethbridge</td><td>AB</td><td>Canada</td><td>T1H 1Y8</td><td>+1 (403) 467-3351</td><td>+1 (403) 467-8772</td><td>laura@chinookcorp.com</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '+1 (403) 246-9887', 'y_data': 1}, {'x_data': '+1 (403) 262-3443', 'y_data': 2}, {'x_data': '+1 (403) 263-4423', 'y_data': 1}, {'x_data': '+1 (403) 456-9986', 'y_data': 1}, {'x_data': '+1 (403) 467-3351', 'y_data': 1}, {'x_data': '+1 (780) 428-9482', 'y_data': 1}, {'x_data': '1 (780) 836-9987', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Phone', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Phone)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

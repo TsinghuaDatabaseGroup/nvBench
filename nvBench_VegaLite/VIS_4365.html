@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4365</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4364.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4366.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4365</td><td><h4>NL Queries: </h4><ol><li><p>Calculate the number of actors in each duration of actors using a bar chart.</p></li><li><p>Group and count the durations for each actor with a bar graph.</p></li><li><p>Bar chart x axis duration y axis how many duration</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Duration , COUNT(Duration) FROM actor GROUP BY Duration</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2444</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>musical</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: musical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: actor</h4><table><tr><th>Actor_ID</th><th>Name</th><th>Musical_ID</th><th>Character</th><th>Duration</th><th>age</th></tr><tr><td>1</td><td>Ray Meagher</td><td>1</td><td>Alf Stewart</td><td>1988â</td><td>26</td></tr><tr><td>2</td><td>Tom Oliver</td><td>1</td><td>Lou Carpenter</td><td>1988, 1992â</td><td>22</td></tr><tr><td>3</td><td>Lynne McGranger</td><td>2</td><td>Irene Roberts</td><td>1993â</td><td>21</td></tr><tr><td>4</td><td>Kate Ritchie</td><td>2</td><td>Sally Fletcher</td><td>1988â2008, 2013</td><td>20</td></tr><tr><td>5</td><td>Alan Fletcher</td><td>4</td><td>Karl Kennedy</td><td>1994â</td><td>20</td></tr><tr><td>6</td><td>Jackie Woodburne</td><td>6</td><td>Susan Kennedy</td><td>1994â</td><td>20</td></tr><tr><td>7</td><td>Ryan Moloney</td><td>6</td><td>Toadfish Rebecchi</td><td>1995, 1996â</td><td>18</td></tr><tr><td>8</td><td>Ian Smith</td><td>6</td><td>Harold Bishop</td><td>1987â1991, 1996â2009, 2011</td><td>17</td></tr><tr><td>9</td><td>Stefan Dennis</td><td>6</td><td>Paul Robinson</td><td>1985â1992, 1993, 2004â</td><td>17</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1985–1992, 1993, 2004—', 'y_data': 1}, {'x_data': '1987–1991, 1996–2009, 2011', 'y_data': 1}, {'x_data': '1988, 1992—', 'y_data': 1}, {'x_data': '1988–2008, 2013', 'y_data': 1}, {'x_data': '1988—', 'y_data': 1}, {'x_data': '1993—', 'y_data': 1}, {'x_data': '1994—', 'y_data': 2}, {'x_data': '1995, 1996—', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Duration', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Duration)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

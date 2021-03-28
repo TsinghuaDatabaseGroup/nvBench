@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2010</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2009.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2011.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2010</td><td><h4>NL Queries: </h4><ol><li><p>Show how many registration date from each registration date, and I want to display Y in desc order.</p></li><li><p>Give me a bar chart shows the distinct registration date, and bin the date into the weekday interval in a bar chart, and sort by the y axis from high to low please.</p></li><li><p>Report the distinct registration date and bin the date into the weekday interval in a bar chart, and sort by the y axis from high to low please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Registration_Date , COUNT(Registration_Date) FROM VOTING_RECORD  ORDER BY COUNT(Registration_Date) DESC BIN Registration_Date BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3206@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>voter_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: voter_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: VOTING_RECORD</h4><table><tr><th>StuID</th><th>Registration_Date</th><th>Election_Cycle</th><th>President_Vote</th><th>Vice_President_Vote</th><th>Secretary_Vote</th><th>Treasurer_Vote</th><th>Class_President_Vote</th><th>Class_Senator_Vote</th></tr><tr><td>1001</td><td>08/30/2015</td><td>Spring</td><td>1004</td><td>1007</td><td>1010</td><td>1035</td><td>1001</td><td>1028</td></tr><tr><td>1002</td><td>08/30/2014</td><td>Spring</td><td>1014</td><td>1007</td><td>1020</td><td>1025</td><td>1021</td><td>1028</td></tr><tr><td>1003</td><td>08/30/2013</td><td>Spring</td><td>1004</td><td>1017</td><td>1030</td><td>1035</td><td>1031</td><td>1028</td></tr><tr><td>1004</td><td>08/30/2013</td><td>Spring</td><td>1024</td><td>1017</td><td>1020</td><td>1035</td><td>1011</td><td>1028</td></tr><tr><td>1005</td><td>08/30/2012</td><td>Spring</td><td>1024</td><td>1017</td><td>1010</td><td>1035</td><td>1021</td><td>1028</td></tr><tr><td>1001</td><td>08/30/2015</td><td>Fall</td><td>1004</td><td>1007</td><td>1010</td><td>1035</td><td>1021</td><td>1028</td></tr><tr><td>1002</td><td>08/30/2014</td><td>Fall</td><td>1004</td><td>1007</td><td>1020</td><td>1035</td><td>1021</td><td>1028</td></tr><tr><td>1003</td><td>08/30/2013</td><td>Fall</td><td>1004</td><td>1017</td><td>1020</td><td>1035</td><td>1031</td><td>1028</td></tr><tr><td>1004</td><td>08/30/2013</td><td>Fall</td><td>1024</td><td>1017</td><td>1020</td><td>1035</td><td>1011</td><td>1018</td></tr><tr><td>1005</td><td>08/30/2012</td><td>Fall</td><td>1024</td><td>1017</td><td>1010</td><td>1035</td><td>1021</td><td>1028</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Thur', 'y_data': 2}, {'x_data': 'Sun', 'y_data': 2}, {'x_data': 'Sat', 'y_data': 2}, {'x_data': 'Fri', 'y_data': 2}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Mon', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Registration_Date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Registration_Date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

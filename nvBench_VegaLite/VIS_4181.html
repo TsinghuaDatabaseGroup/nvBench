@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4181</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4180.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4182.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4181</td><td><h4>NL Queries: </h4><ol><li><p>Give me a histogram for what are the memories and carriers of phones?, list bars from low to high order.</p></li><li><p>A bar chart about what are the memories and carriers of phones?, sort x-axis from low to high order please.</p></li><li><p>Bar graph to show mean memory in g from different carrier, rank in asc by the X.</p></li><li><p>What are the memories and carriers of phones Show bar chart, could you rank by the X-axis from low to high?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Carrier , AVG(Memory_in_G) FROM phone GROUP BY Carrier ORDER BY Carrier ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2573@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>phone_market</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: phone_market&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: phone</h4><table><tr><th>Name</th><th>Phone_ID</th><th>Memory_in_G</th><th>Carrier</th><th>Price</th></tr><tr><td>IPhone 5s</td><td>1</td><td>32</td><td>Sprint</td><td>320.0</td></tr><tr><td>IPhone 6</td><td>5</td><td>128</td><td>Sprint</td><td>480.0</td></tr><tr><td>IPhone 6s</td><td>2</td><td>128</td><td>TMobile</td><td>699.0</td></tr><tr><td>IPhone 7</td><td>4</td><td>16</td><td>TMobile</td><td>899.0</td></tr><tr><td>IPhone X</td><td>3</td><td>64</td><td>TMobile</td><td>1000.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sprint', 'y_data': 80}, {'x_data': 'TMobile', 'y_data': 69.33333333333333}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Carrier', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'AVG(Memory_in_G)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

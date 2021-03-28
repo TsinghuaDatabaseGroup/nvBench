@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6210</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6209.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6211.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6210</td><td><h4>NL Queries: </h4><ol><li><p>Bar chart x axis document description y axis how many document description, and list bars in ascending order please.</p></li><li><p>How many documents for each document description? Show me a bar chart, and could you display x-axis in asc order please?</p></li><li><p>List the number of documents for each document description in a bar chart, and I want to sort by the bars from low to high.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Document_Description , COUNT(Document_Description) FROM Documents GROUP BY Document_Description ORDER BY Document_Description ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>763@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Doc_Template_Mgt</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Template_Mgt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Documents</h4><table><tr><th>Document_ID</th><th>Template_ID</th><th>Document_Name</th><th>Document_Description</th><th>Other_Details</th></tr><tr><td>0</td><td>7</td><td>Introduction of OS</td><td>n</td><td>None</td></tr><tr><td>1</td><td>25</td><td>Understanding DB</td><td>y</td><td>None</td></tr><tr><td>3</td><td>6</td><td>Summer Show</td><td>u</td><td>None</td></tr><tr><td>76</td><td>20</td><td>Robbin CV</td><td>y</td><td>None</td></tr><tr><td>80</td><td>14</td><td>Welcome to NY</td><td>h</td><td>None</td></tr><tr><td>82</td><td>11</td><td>Data base</td><td>w</td><td>None</td></tr><tr><td>2394</td><td>10</td><td>Customer reviews</td><td>y</td><td>None</td></tr><tr><td>3830</td><td>14</td><td>Do not panic</td><td>k</td><td>None</td></tr><tr><td>33930</td><td>1</td><td>How Google people work</td><td>z</td><td>None</td></tr><tr><td>50123</td><td>22</td><td>Learning French</td><td>r</td><td>None</td></tr><tr><td>651512</td><td>21</td><td>How to write a CV</td><td>f</td><td>None</td></tr><tr><td>801801</td><td>4</td><td>How to read a book</td><td>w</td><td>None</td></tr><tr><td>3540024</td><td>8</td><td>Palm reading</td><td>y</td><td>None</td></tr><tr><td>16514113</td><td>25</td><td>A history of Arts</td><td>h</td><td>None</td></tr><tr><td>385906526</td><td>11</td><td>About Korea</td><td>b</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '', 'y_data': 1}, {'x_data': 'b', 'y_data': 1}, {'x_data': 'f', 'y_data': 1}, {'x_data': 'h', 'y_data': 2}, {'x_data': 'k', 'y_data': 1}, {'x_data': 'n', 'y_data': 1}, {'x_data': 'r', 'y_data': 1}, {'x_data': 'w', 'y_data': 2}, {'x_data': 'y', 'y_data': 4}, {'x_data': 'z', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Document_Description', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Document_Description)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

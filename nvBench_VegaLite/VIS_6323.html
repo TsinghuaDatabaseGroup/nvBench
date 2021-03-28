@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6323</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6322.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6324.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6323</td><td><h4>NL Queries: </h4><ol><li><p>Return a histogram on what is the code of each role and the number of employees in each role?, and I want to display bars in ascending order.</p></li><li><p>Show all role codes and the number of employees in each role Show bar chart, and show by the X-axis in ascending.</p></li><li><p>Show all role codes and the number of employees in each role by a bar chart, could you sort from low to high by the names?</p></li><li><p>Bar chart x axis role code y axis the total number, order X-axis from low to high order please.</p></li><li><p>What is the code of each role and the number of employees in each role Show bar chart, order X-axis from low to high order please.</p></li><li><p>Give me a histogram for what is the code of each role and the number of employees in each role?, could you sort from low to high by the names?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Role_Code , count(*) FROM Employees GROUP BY role_code ORDER BY Role_Code ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>782@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Doc_Tracking_DB</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Tracking_DB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Employees</h4><table><tr><th>Employee_ID</th><th>Role_Code</th><th>Employee_Name</th><th>Gender_MFU</th><th>Date_of_Birth</th><th>Other_Details</th></tr><tr><td>25</td><td>HR</td><td>Leo</td><td></td><td>1973-02-15 17:16:00</td><td>None</td></tr><tr><td>30</td><td>MG</td><td>Ebba</td><td></td><td>1979-09-20 12:50:15</td><td>None</td></tr><tr><td>38</td><td>ED</td><td>Stephanie</td><td>1</td><td>2012-03-30 23:02:28</td><td>None</td></tr><tr><td>55</td><td>ED</td><td>Harley</td><td></td><td>1972-02-18 11:53:30</td><td>None</td></tr><tr><td>57</td><td>ED</td><td>Armani</td><td></td><td>1988-12-08 06:13:33</td><td>None</td></tr><tr><td>71</td><td>ED</td><td>Gussie</td><td></td><td>1973-04-04 21:41:22</td><td>None</td></tr><tr><td>99</td><td>ED</td><td>Izabella</td><td>1</td><td>1977-07-04 16:25:21</td><td>None</td></tr><tr><td>123</td><td>PT</td><td>Hugh</td><td></td><td>2010-03-15 00:17:13</td><td>None</td></tr><tr><td>136</td><td>ED</td><td>Mallie</td><td></td><td>1980-12-11 20:28:20</td><td>None</td></tr><tr><td>138</td><td>ED</td><td>Beatrice</td><td>1</td><td>2013-04-02 23:55:48</td><td>None</td></tr><tr><td>156</td><td>PR</td><td>Diego</td><td></td><td>1998-05-30 12:54:10</td><td>None</td></tr><tr><td>159</td><td>PR</td><td>Arno</td><td></td><td>2010-06-10 20:36:34</td><td>None</td></tr><tr><td>173</td><td>PR</td><td>Alene</td><td>1</td><td>1980-10-14 12:23:10</td><td>None</td></tr><tr><td>181</td><td>PR</td><td>Ettie</td><td>1</td><td>1988-08-03 00:11:14</td><td>None</td></tr><tr><td>183</td><td>PR</td><td>Jeramie</td><td></td><td>1993-08-21 05:22:10</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'ED', 'y_data': 7}, {'x_data': 'HR', 'y_data': 1}, {'x_data': 'MG', 'y_data': 1}, {'x_data': 'PR', 'y_data': 5}, {'x_data': 'PT', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Role_Code', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

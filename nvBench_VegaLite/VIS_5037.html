@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5037</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5036.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5038.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5037</td><td><h4>NL Queries: </h4><ol><li><p>Display a scatter chart for how many games has each stadium held?</p></li><li><p>Show me a scatter chart for how many games has each stadium held?</p></li><li><p>How many games has each stadium held. Show scatter chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT T1.id , count(*) FROM stadium AS T1 JOIN game AS T2 ON T1.id = T2.stadium_id GROUP BY T1.id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1476</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>game_injury</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: game_injury&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: stadium</h4><table><tr><th>id</th><th>name</th><th>Home_Games</th><th>Average_Attendance</th><th>Total_Attendance</th><th>Capacity_Percentage</th></tr><tr><td>1</td><td>Cowboys Stadium</td><td>8</td><td>87047.0</td><td>696377.0</td><td>108.8</td></tr><tr><td>2</td><td>FedExField</td><td>8</td><td>83172.0</td><td>665380.0</td><td>90.7</td></tr><tr><td>3</td><td>New Meadowlands Stadium</td><td>8</td><td>79019.0</td><td>632156.0</td><td>95.8</td></tr><tr><td>4</td><td>New Meadowlands Stadium</td><td>8</td><td>78596.0</td><td>628768.0</td><td>95.3</td></tr><tr><td>5</td><td>Invesco Field at Mile High</td><td>8</td><td>74908.0</td><td>599264.0</td><td>98.4</td></tr><tr><td>6</td><td>Bank of America Stadium</td><td>8</td><td>72620.0</td><td>580965.0</td><td>98.4</td></tr><tr><td>7</td><td>M&T Bank Stadium</td><td>8</td><td>71227.0</td><td>569817.0</td><td>100.3</td></tr><tr><td>8</td><td>Reliant Stadium</td><td>8</td><td>71080.0</td><td>568643.0</td><td>100.0</td></tr><tr><td>9</td><td>Lambeau Field</td><td>8</td><td>70795.0</td><td>566362.0</td><td>97.1</td></tr><tr><td>10</td><td>Louisiana Superdome</td><td>8</td><td>70038.0</td><td>560304.0</td><td>96.0</td></tr><tr><td>11</td><td>Lincoln Financial Field</td><td>8</td><td>69144.0</td><td>553152.0</td><td>102.3</td></tr><tr><td>12</td><td>LP Field</td><td>8</td><td>69143.0</td><td>553144.0</td><td>100.0</td></tr><tr><td>13</td><td>Gillette Stadium</td><td>8</td><td>68756.0</td><td>550048.0</td><td>100.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 1, 'y_data': 2}, {'x_data': 2, 'y_data': 2}, {'x_data': 3, 'y_data': 2}, {'x_data': 4, 'y_data': 2}, {'x_data': 5, 'y_data': 2}, {'x_data': 6, 'y_data': 1}, {'x_data': 7, 'y_data': 2}, {'x_data': 8, 'y_data': 1}, {'x_data': 9, 'y_data': 1}, {'x_data': 10, 'y_data': 3}, {'x_data': 11, 'y_data': 1}, {'x_data': 12, 'y_data': 1}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'id'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

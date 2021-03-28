@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2898</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2897.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2899.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2898</td><td><h4>NL Queries: </h4><ol><li><p>Return a histogram on what are the different role codes for users, and how many users have each?, rank by the total number in ascending please.</p></li><li><p>Bar graph to show the total number from different role code, order by the the total number in ascending please.</p></li><li><p>What are the different role codes for users, and how many users have each Show bar chart, and rank by the total number in ascending please.</p></li><li><p>Find the number of users in each role Plot them as bar chart, display total number from low to high order please.</p></li><li><p>what are the different role codes for users, and how many users have each?, list in ascending by the Y please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT role_code , count(*) FROM users GROUP BY role_code ORDER BY count(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1152@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>document_management</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: document_management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: users</h4><table><tr><th>user_id</th><th>role_code</th><th>user_name</th><th>user_login</th><th>password</th></tr><tr><td>1</td><td>PROJ-MGR</td><td>dickens.elta</td><td>0</td><td>e72b5a2d50b39a8760764a5f7a9d68ca2f076877</td></tr><tr><td>2</td><td>DBA</td><td>tremblay.raheem</td><td>1</td><td>9bc25a040d5647ced5ec32e1a455e90fafc10bcb</td></tr><tr><td>3</td><td>DBA</td><td>lynn.haley</td><td>0</td><td>90db8f51449e6c39e2a01f0b649d5a92fe76bbbb</td></tr><tr><td>4</td><td>PROJ-MGR</td><td>ycremin</td><td>0</td><td>f6977378f409f5d2d230016a6678a582e14f43b0</td></tr><tr><td>5</td><td>PROJ-MGR</td><td>larson.vesta</td><td>1</td><td>da383455a05a824606c54e99f671c4d6a2ddae26</td></tr><tr><td>6</td><td>DBA</td><td>amelie53</td><td>0</td><td>6aa66440864ff8143fe7dee5940a6af3460bad07</td></tr><tr><td>7</td><td>DBA</td><td>jacklyn.schmitt</td><td>1</td><td>3f6affa583bfdf7fac6faeb2ca418431909d4b39</td></tr><tr><td>8</td><td>PROJ-MGR</td><td>joanne.deckow</td><td>0</td><td>20241478f890508ac47870cfba472e1db04a71ca</td></tr><tr><td>9</td><td>PROJ-MGR</td><td>dickinson.lenora</td><td>0</td><td>a0fe5434a5f4c218e37b0082f2408b357feb0fa6</td></tr><tr><td>10</td><td>DBA</td><td>heller.harley</td><td>1</td><td>11af7569a5c1e8b455add5755e18131be2ac8636</td></tr><tr><td>11</td><td>DBA</td><td>roger.o'conner</td><td>0</td><td>3d478d7056d6417966f6b1676f6ec81b3094f44f</td></tr><tr><td>12</td><td>DBA</td><td>gussie00</td><td>1</td><td>75f7b5ed8e70e86467155e003ccda6fce1011c29</td></tr><tr><td>13</td><td>PROJ-MGR</td><td>johanna.fisher</td><td>1</td><td>1fb26eea854962d41512827bf90a5b7ce4b359d8</td></tr><tr><td>14</td><td>DBA</td><td>faye30</td><td>0</td><td>27cca8f94136f0e8971b5ca555a21ff756871b27</td></tr><tr><td>15</td><td>PROJ-MGR</td><td>glenna.simonis</td><td>1</td><td>95f489fc0921bbb3e7d661a550ae208b88d9b11a</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'PROJ-MGR', 'y_data': 7}, {'x_data': 'DBA', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'role_code', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

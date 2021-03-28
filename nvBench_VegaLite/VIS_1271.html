@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1271</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1270.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1272.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1271</td><td><h4>NL Queries: </h4><ol><li><p>Show the shortest duration and lowest rating of songs grouped by genre using a bar chart, could you rank in asc by the bar please?</p></li><li><p>Let the shortest duration as bar chart's X-axis and the most poorly rated song for each genre as the Y, show in asc by the min(T1.duration).</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT min(T1.duration) , min(T2.rating) FROM files AS T1 JOIN song AS T2 ON T1.f_id = T2.f_id GROUP BY min(T1.duration) ORDER BY min(T1.duration) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2431@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>music_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: music_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: files</h4><table><tr><th>f_id</th><th>artist_name</th><th>file_size</th><th>duration</th><th>formats</th></tr><tr><td>1</td><td>Shrikanta</td><td>3.78 MB</td><td>3:45</td><td>mp4</td></tr><tr><td>2</td><td>Prity</td><td>4.12 MB</td><td>2:56</td><td>mp3</td></tr><tr><td>3</td><td>Farida</td><td>3.69 MB</td><td>4:12</td><td>mp4</td></tr><tr><td>4</td><td>Enrique</td><td>4.58 MB</td><td>5:23</td><td>mp4</td></tr><tr><td>5</td><td>Michel</td><td>5.10 MB</td><td>4:34</td><td>mp3</td></tr><tr><td>6</td><td>Topu</td><td>4.10 MB</td><td>4:30</td><td>mp4</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2:56', 'y_data': 5}, {'x_data': '3:45', 'y_data': 8}, {'x_data': '4:12', 'y_data': 7}, {'x_data': '4:30', 'y_data': 10}, {'x_data': '4:34', 'y_data': 8}, {'x_data': '5:23', 'y_data': 6}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'min(T1.duration)', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'min(T2.rating)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

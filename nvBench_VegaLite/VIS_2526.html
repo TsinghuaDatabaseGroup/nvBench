@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2526</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2525.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2527.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2526</td><td><h4>NL Queries: </h4><ol><li><p>Just list the resident id and details in a bar chart, and rank in ascending by the resident_id.</p></li><li><p>Bar chart x axis other details y axis resident_id, could you list Y in ascending order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT other_details , resident_id FROM Residents ORDER BY resident_id ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2108@y_name@ASC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>local_govt_and_lot</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: local_govt_and_lot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Residents</h4><table><tr><th>resident_id</th><th>property_id</th><th>date_moved_in</th><th>date_moved_out</th><th>other_details</th></tr><tr><td>6</td><td>954</td><td>2017-06-17 15:43:33</td><td>2017-12-18 03:46:04</td><td>Anderson Batz</td></tr><tr><td>10</td><td>605</td><td>2015-03-27 12:00:00</td><td>2018-03-17 07:48:09</td><td>Miss Naomie Osinski</td></tr><tr><td>23</td><td>879</td><td>2015-03-27 12:00:00</td><td>2017-11-14 06:28:48</td><td>Jess Wyman</td></tr><tr><td>28</td><td>629</td><td>2015-03-27 12:00:00</td><td>2017-10-05 02:47:31</td><td>Miss Alanis Lockman</td></tr><tr><td>37</td><td>669</td><td>2015-03-27 12:00:00</td><td>2018-01-30 10:20:59</td><td>Prof. Arvel Kozey</td></tr><tr><td>38</td><td>748</td><td>2015-03-27 12:00:00</td><td>2017-12-30 23:55:10</td><td>Chaim Swaniawski</td></tr><tr><td>43</td><td>108</td><td>2015-03-27 12:00:00</td><td>2018-02-22 06:24:15</td><td>Elroy Schuster</td></tr><tr><td>45</td><td>954</td><td>2015-03-27 12:00:00</td><td>2017-10-14 10:23:42</td><td>Prof. Nasir Hoppe</td></tr><tr><td>47</td><td>669</td><td>2015-03-27 12:00:00</td><td>2017-10-10 02:25:53</td><td>Tiffany Jaskolski</td></tr><tr><td>58</td><td>107</td><td>2015-03-27 12:00:00</td><td>2017-11-29 21:24:08</td><td>Tomasa Hoeger</td></tr><tr><td>67</td><td>120</td><td>2016-09-27 12:00:00</td><td>2017-10-23 16:40:19</td><td>Terrill Bernhard</td></tr><tr><td>83</td><td>445</td><td>2016-09-27 12:00:00</td><td>2018-01-19 01:35:51</td><td>Loy Walter</td></tr><tr><td>87</td><td>748</td><td>2016-09-27 12:00:00</td><td>2018-01-28 13:19:54</td><td>Mrs. Raphaelle Fisher</td></tr><tr><td>88</td><td>107</td><td>2016-09-27 12:00:00</td><td>2018-02-03 11:30:20</td><td>Jacques Glover II</td></tr><tr><td>90</td><td>373</td><td>2016-09-27 12:00:00</td><td>2017-11-19 03:11:44</td><td>Cassie Johnson</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Anderson Batz', 'y_data': 6}, {'x_data': 'Jess Wyman', 'y_data': 23}, {'x_data': 'Miss Alanis Lockman', 'y_data': 28}, {'x_data': 'Elroy Schuster', 'y_data': 43}, {'x_data': 'Prof. Nasir Hoppe', 'y_data': 45}, {'x_data': 'Tiffany Jaskolski', 'y_data': 47}, {'x_data': 'Terrill Bernhard', 'y_data': 67}, {'x_data': 'Loy Walter', 'y_data': 83}, {'x_data': 'Mrs. Raphaelle Fisher', 'y_data': 87}, {'x_data': 'Jacques Glover II', 'y_data': 88}, {'x_data': 'Cassie Johnson', 'y_data': 90}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'other_details', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'resident_id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

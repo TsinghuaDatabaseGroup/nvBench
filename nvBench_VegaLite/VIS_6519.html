@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6519</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6518.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6520.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6519</td><td><h4>NL Queries: </h4><ol><li><p>Tell me the distribution of the number of trains at each arrival time with a bar chart, could you display in descending by the x axis?</p></li><li><p>Create a bar chart showing how many arrival across arrival, I want to display by the names from high to low.</p></li><li><p>Visualize a bar chart, the x-axis is the arrival time, and the y-axis is the total number of trains in each arrival time, and order names in descending order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Arrival , COUNT(Arrival) FROM train GROUP BY Arrival ORDER BY Arrival DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2659@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>railway</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: railway&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: train</h4><table><tr><th>Train_ID</th><th>Train_Num</th><th>Name</th><th>From</th><th>Arrival</th><th>Railway_ID</th></tr><tr><td>1</td><td>51195</td><td>Wardha-Ballarshah Pass</td><td>Wardha</td><td>08:54</td><td>1</td></tr><tr><td>2</td><td>12139</td><td>Sewagram Exp</td><td>Mumbai CST</td><td>09:08</td><td>1</td></tr><tr><td>3</td><td>12140</td><td>Ballarshah-Mumbai Pass</td><td>Ballarshah</td><td>09:48</td><td>2</td></tr><tr><td>4</td><td>57135</td><td>Nagpur-Kazipet Pass</td><td>Nagpur</td><td>23:44</td><td>3</td></tr><tr><td>5</td><td>57136</td><td>Kazipet-Nagpur Pass</td><td>Kazipet</td><td>05:09</td><td>5</td></tr><tr><td>6</td><td>16094</td><td>Lucknow-Chennai Exp</td><td>Lucknow</td><td>13:04</td><td>5</td></tr><tr><td>7</td><td>16032</td><td>Andaman Exp</td><td>Jammu Tawi</td><td>13:04</td><td>7</td></tr><tr><td>8</td><td>16031</td><td>Andaman Exp</td><td>Chennai</td><td>23:39</td><td>9</td></tr><tr><td>9</td><td>11401</td><td>Nandigram Exp</td><td>Mumbai CST</td><td>13:28</td><td>10</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '23:44', 'y_data': 1}, {'x_data': '23:39', 'y_data': 1}, {'x_data': '13:28', 'y_data': 1}, {'x_data': '13:04', 'y_data': 2}, {'x_data': '09:48', 'y_data': 1}, {'x_data': '09:08', 'y_data': 1}, {'x_data': '08:54', 'y_data': 1}, {'x_data': '05:09', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Arrival', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Arrival)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

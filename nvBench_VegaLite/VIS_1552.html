@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1552</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1551.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1553.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1552</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of flights in each destination city with a bar chart, order bars in descending order.</p></li><li><p>Can you give a histogram to compare the number of flights to each destination city?, order bars in descending order.</p></li><li><p>How many flights in each destination city? Return a bar chart, and order by the destination from high to low please.</p></li><li><p>Show me how many destination by destination in a histogram, order bars in descending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT destination , COUNT(destination) FROM Flight GROUP BY destination ORDER BY destination DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1407@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>flight_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: flight_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Flight</h4><table><tr><th>flno</th><th>origin</th><th>destination</th><th>distance</th><th>departure_date</th><th>arrival_date</th><th>price</th><th>aid</th></tr><tr><td>99</td><td>Los Angeles</td><td>Washington D.C.</td><td>2308</td><td>04/12/2005 09:30</td><td>04/12/2005 09:40</td><td>235.98</td><td>1</td></tr><tr><td>13</td><td>Los Angeles</td><td>Chicago</td><td>1749</td><td>04/12/2005 08:45</td><td>04/12/2005 08:45</td><td>220.98</td><td>3</td></tr><tr><td>346</td><td>Los Angeles</td><td>Dallas</td><td>1251</td><td>04/12/2005 11:50</td><td>04/12/2005 07:05</td><td>182.0</td><td>2</td></tr><tr><td>387</td><td>Los Angeles</td><td>Boston</td><td>2606</td><td>04/12/2005 07:03</td><td>04/12/2005 05:03</td><td>261.56</td><td>6</td></tr><tr><td>7</td><td>Los Angeles</td><td>Sydney</td><td>7487</td><td>04/12/2005 05:30</td><td>04/12/2005 11:10</td><td>278.56</td><td>3</td></tr><tr><td>2</td><td>Los Angeles</td><td>Tokyo</td><td>5478</td><td>04/12/2005 06:30</td><td>04/12/2005 03:55</td><td>780.99</td><td>9</td></tr><tr><td>33</td><td>Los Angeles</td><td>Honolulu</td><td>2551</td><td>04/12/2005 09:15</td><td>04/12/2005 11:15</td><td>375.23</td><td>7</td></tr><tr><td>34</td><td>Los Angeles</td><td>Honolulu</td><td>2551</td><td>04/12/2005 12:45</td><td>04/12/2005 03:18</td><td>425.98</td><td>5</td></tr><tr><td>76</td><td>Chicago</td><td>Los Angeles</td><td>1749</td><td>04/12/2005 08:32</td><td>04/12/2005 10:03</td><td>220.98</td><td>9</td></tr><tr><td>68</td><td>Chicago</td><td>New York</td><td>802</td><td>04/12/2005 09:00</td><td>04/12/2005 12:02</td><td>202.45</td><td>10</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Washington D.C.', 'y_data': 1}, {'x_data': 'Tokyo', 'y_data': 1}, {'x_data': 'Sydney', 'y_data': 1}, {'x_data': 'New York', 'y_data': 1}, {'x_data': 'Los Angeles', 'y_data': 1}, {'x_data': 'Honolul', 'y_data': 2}, {'x_data': 'Dallas', 'y_data': 1}, {'x_data': 'Chicago', 'y_data': 1}, {'x_data': 'Boston', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'destination', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(destination)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

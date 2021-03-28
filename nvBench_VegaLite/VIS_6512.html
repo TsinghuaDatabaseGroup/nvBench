@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6512</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6511.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6513.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6512</td><td><h4>NL Queries: </h4><ol><li><p>For all the claims whose claimed amount is larger than the average, bin the settlement date into the day of week interval and count them for visualizing a bar chart, display y-axis in descending order.</p></li><li><p>Among all the claims, which claims have a claimed amount larger than the average? Please Bin the date it was settled into weekday interval and count them to show a bar chart, and display by the y axis from high to low.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Date_Claim_Settled , COUNT(Date_Claim_Settled) FROM Claims WHERE Amount_Claimed > ( SELECT avg(Amount_Claimed) FROM Claims )  ORDER BY COUNT(Date_Claim_Settled) DESC BIN Date_Claim_Settled BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1992@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_policies</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_policies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Claims</h4><table><tr><th>Claim_ID</th><th>Policy_ID</th><th>Date_Claim_Made</th><th>Date_Claim_Settled</th><th>Amount_Claimed</th><th>Amount_Settled</th></tr><tr><td>143</td><td>744</td><td>2017-03-11</td><td>2017-11-03</td><td>43884</td><td>1085</td></tr><tr><td>423</td><td>552</td><td>2016-08-12</td><td>2018-01-27</td><td>79134</td><td>1724</td></tr><tr><td>442</td><td>473</td><td>2017-02-24</td><td>2018-01-21</td><td>70088</td><td>1189</td></tr><tr><td>486</td><td>141</td><td>2018-06-14</td><td>2017-12-20</td><td>69696</td><td>1638</td></tr><tr><td>546</td><td>744</td><td>2017-05-03</td><td>2017-12-22</td><td>46479</td><td>1091</td></tr><tr><td>563</td><td>141</td><td>2016-08-02</td><td>2017-09-04</td><td>41078</td><td>1570</td></tr><tr><td>569</td><td>473</td><td>2018-07-15</td><td>2017-11-19</td><td>49743</td><td>930</td></tr><tr><td>571</td><td>858</td><td>2017-08-03</td><td>2018-02-18</td><td>89632</td><td>1528</td></tr><tr><td>621</td><td>744</td><td>2016-12-18</td><td>2018-01-11</td><td>43708</td><td>1652</td></tr><tr><td>761</td><td>473</td><td>2016-08-26</td><td>2017-09-04</td><td>83703</td><td>1372</td></tr><tr><td>801</td><td>738</td><td>2017-10-21</td><td>2018-01-05</td><td>3326</td><td>1353</td></tr><tr><td>843</td><td>143</td><td>2017-10-14</td><td>2018-02-20</td><td>10209</td><td>1639</td></tr><tr><td>935</td><td>143</td><td>2018-07-13</td><td>2017-11-22</td><td>70674</td><td>1637</td></tr><tr><td>957</td><td>352</td><td>2018-11-08</td><td>2017-09-15</td><td>38280</td><td>1050</td></tr><tr><td>965</td><td>119</td><td>2017-07-17</td><td>2018-03-09</td><td>35824</td><td>1636</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Wed', 'y_data': 2}, {'x_data': 'Sun', 'y_data': 2}, {'x_data': 'Sat', 'y_data': 1}, {'x_data': 'Mon', 'y_data': 1}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Thur', 'y_data': 0}, {'x_data': 'Fri', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date_Claim_Settled', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Date_Claim_Settled)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

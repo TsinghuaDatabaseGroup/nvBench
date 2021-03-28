@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4415</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4414.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4416.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4415</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a bar chart for how many orchestras does each record company manage?, could you list by the x-axis in desc please?</p></li><li><p>How many orchestras does each record company manage Show bar chart, and I want to list in desc by the bars.</p></li><li><p>Display a bar chart for how many orchestras does each record company manage?, and I want to show by the names from high to low.</p></li><li><p>Draw a bar chart of record company versus the total number, I want to show by the names from high to low.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Record_Company , COUNT(*) FROM orchestra GROUP BY Record_Company ORDER BY Record_Company DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2494@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>orchestra</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: orchestra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: orchestra</h4><table><tr><th>Orchestra_ID</th><th>Orchestra</th><th>Conductor_ID</th><th>Record_Company</th><th>Year_of_Founded</th><th>Major_Record_Format</th></tr><tr><td>1</td><td>London Symphony Orchestra</td><td>1</td><td>Mercury Records</td><td>2003.0</td><td>CD</td></tr><tr><td>2</td><td>Columbia Symphony Orchestra</td><td>2</td><td>Columbia Masterworks</td><td>2009.0</td><td>CD / LP</td></tr><tr><td>3</td><td>Royal Concertgebouw Orchestra</td><td>3</td><td>Philips</td><td>2008.0</td><td>CD</td></tr><tr><td>4</td><td>Royal Danish Orchestra</td><td>4</td><td>Kultur</td><td>2002.0</td><td>DVD</td></tr><tr><td>5</td><td>Detroit Symphony Orchestra</td><td>5</td><td>Decca Records</td><td>2002.0</td><td>CD</td></tr><tr><td>6</td><td>Montreal Symphony Orchestra</td><td>6</td><td>Decca Records</td><td>2004.0</td><td>CD</td></tr><tr><td>7</td><td>Seattle Symphony Orchestra</td><td>7</td><td>Delos Records</td><td>2002.0</td><td>CD</td></tr><tr><td>8</td><td>Chicago Symphony Orchestra</td><td>8</td><td>Deutsche Grammophon</td><td>2003.0</td><td>CD</td></tr><tr><td>9</td><td>Kirov Orchestra</td><td>9</td><td>Philips Classics Records</td><td>2008.0</td><td>CD</td></tr><tr><td>10</td><td>Philharmonia Orchestra</td><td>10</td><td>Koch Records / Naxos Records</td><td>2006.0</td><td>CD</td></tr><tr><td>11</td><td>Orchestre de Paris</td><td>11</td><td>EMI</td><td>2007.0</td><td>CD</td></tr><tr><td>12</td><td>San Francisco Symphony Orchestra</td><td>12</td><td>RCA</td><td>2008.0</td><td>CD</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'RCA', 'y_data': 1}, {'x_data': 'Philips Classics Records', 'y_data': 1}, {'x_data': 'Philips', 'y_data': 1}, {'x_data': 'Mercury Records', 'y_data': 1}, {'x_data': 'Kultur', 'y_data': 1}, {'x_data': 'Koch Records / Naxos Records', 'y_data': 1}, {'x_data': 'EMI', 'y_data': 1}, {'x_data': 'Deutsche Grammophon', 'y_data': 1}, {'x_data': 'Delos Records', 'y_data': 1}, {'x_data': 'Decca Records', 'y_data': 2}, {'x_data': 'Columbia Masterworks', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Record_Company', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

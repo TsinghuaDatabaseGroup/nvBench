@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4246</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4245.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4247.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4246</td><td><h4>NL Queries: </h4><ol><li><p>What are the names and ids of all makers with more than 3 models, and display by the FullName in ascending.</p></li><li><p>Show me a bar chart for what are the names and ids of all makers with more than 3 models?, show FullName in ascending order.</p></li><li><p>Draw a bar chart for what are the names and ids of all makers with more than 3 models?, sort from low to high by the FullName.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT FullName , Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id = T2.Maker ORDER BY FullName ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>431@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>car_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: car_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: CAR_MAKERS</h4><table><tr><th>Id</th><th>Maker</th><th>FullName</th><th>Country</th></tr><tr><td>1</td><td>amc</td><td>American Motor Company</td><td>1</td></tr><tr><td>2</td><td>volkswagen</td><td>Volkswagen</td><td>2</td></tr><tr><td>3</td><td>bmw</td><td>BMW</td><td>2</td></tr><tr><td>4</td><td>gm</td><td>General Motors</td><td>1</td></tr><tr><td>5</td><td>ford</td><td>Ford Motor Company</td><td>1</td></tr><tr><td>6</td><td>chrysler</td><td>Chrysler</td><td>1</td></tr><tr><td>7</td><td>citroen</td><td>Citroen</td><td>3</td></tr><tr><td>8</td><td>nissan</td><td>Nissan Motors</td><td>4</td></tr><tr><td>9</td><td>fiat</td><td>Fiat</td><td>5</td></tr><tr><td>11</td><td>honda</td><td>Honda</td><td>4</td></tr><tr><td>12</td><td>mazda</td><td>Mazda</td><td>4</td></tr><tr><td>13</td><td>daimler benz</td><td>Daimler Benz</td><td>2</td></tr><tr><td>14</td><td>opel</td><td>Opel</td><td>2</td></tr><tr><td>15</td><td>peugeaut</td><td>Peugeaut</td><td>3</td></tr><tr><td>16</td><td>renault</td><td>Renault</td><td>3</td></tr><tr><td>17</td><td>saab</td><td>Saab</td><td>6</td></tr><tr><td>18</td><td>subaru</td><td>Subaru</td><td>4</td></tr><tr><td>19</td><td>toyota</td><td>Toyota</td><td>4</td></tr><tr><td>20</td><td>triumph</td><td>Triumph</td><td>7</td></tr><tr><td>21</td><td>volvo</td><td>Volvo</td><td>6</td></tr><tr><td>22</td><td>kia</td><td>Kia Motors</td><td>8</td></tr><tr><td>23</td><td>hyundai</td><td>Hyundai</td><td>8</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Chrysler', 'y_data': 6}, {'x_data': 'General Motors', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'FullName', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

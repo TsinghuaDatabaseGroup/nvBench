@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1239</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1238.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1240.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1239</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of customers for each gender in a scatter chart</p></li><li><p>Show the number of customers for each gender. Show scatter chart.</p></li><li><p>Return a scatter on how many customers are there of each gender?</p></li><li><p>Display a scatter chart for how many customers are there of each gender?</p></li><li><p>How many customers are there of each gender. Visualize by scatter chart.</p></li><li><p>Scatter plot to show gender on x axis and the total number on y axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT gender , count(*) FROM Customers GROUP BY gender</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>925</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>customers_and_invoices</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_invoices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customers</h4><table><tr><th>customer_id</th><th>customer_first_name</th><th>customer_middle_initial</th><th>customer_last_name</th><th>gender</th><th>email_address</th><th>login_name</th><th>login_password</th><th>phone_number</th><th>town_city</th><th>state_county_province</th><th>country</th></tr><tr><td>1</td><td>Dee</td><td>A</td><td>Larkin</td><td>1</td><td>thora.torphy@example.org</td><td>xhartmann</td><td>77789d292604ea04406f</td><td>241.796.1219x37862</td><td>North Nellie</td><td>WestVirginia</td><td>USA</td></tr><tr><td>2</td><td>Brennon</td><td>H</td><td>Weimann</td><td>0</td><td>roosevelt.collier@example.org</td><td>shayne.lesch</td><td>ce97a3e4539347daab96</td><td>(943)219-4234x415</td><td>South Isabell</td><td>Oklahoma</td><td>USA</td></tr><tr><td>3</td><td>Joesph</td><td>K</td><td>Schaefer</td><td>0</td><td>homenick.ambrose@example.net</td><td>feeney.lauriane</td><td>a6c7a7064c36b038d402</td><td>(488)524-5345</td><td>New Nikolas</td><td>Arkansas</td><td>USA</td></tr><tr><td>4</td><td>Zita</td><td>L</td><td>Trantow</td><td>0</td><td>destinee06@example.com</td><td>rubye.padberg</td><td>eb32d2933362d38faff7</td><td>(193)465-6674x4952</td><td>Ellaburgh</td><td>Colorado</td><td>USA</td></tr><tr><td>5</td><td>Murl</td><td>B</td><td>Shanahan</td><td>1</td><td>jovani64@example.com</td><td>jankunding</td><td>398c1603aec3e9de2684</td><td>1-546-447-9843x13741</td><td>North Helmerbury</td><td>Idaho</td><td>USA</td></tr><tr><td>6</td><td>Vesta</td><td>E</td><td>Leuschke</td><td>1</td><td>philip94@example.org</td><td>zdeckow</td><td>bdbc3c18cf28303c4f6a</td><td>+69(0)7149212554</td><td>North Devonte</td><td>Mississippi</td><td>USA</td></tr><tr><td>7</td><td>Dangelo</td><td>M</td><td>Spinka</td><td>1</td><td>zullrich@example.net</td><td>camilla.dubuque</td><td>180a37476c537e78d3de</td><td>1-904-787-7320</td><td>West Khaliltown</td><td>Kansas</td><td>USA</td></tr><tr><td>8</td><td>Meaghan</td><td>M</td><td>Keeling</td><td>0</td><td>pyundt@example.org</td><td>lowe.wilber</td><td>e67856613cd71f1b2884</td><td>06015518212</td><td>Kenshire</td><td>Mississippi</td><td>USA</td></tr><tr><td>9</td><td>Abbey</td><td>B</td><td>Ruecker</td><td>0</td><td>anastacio45@example.org</td><td>dubuque.gina</td><td>d7629de5171fe29106c8</td><td>1-344-593-4896x425</td><td>Bruenchester</td><td>California</td><td>USA</td></tr><tr><td>10</td><td>Devin</td><td>V</td><td>Glover</td><td>0</td><td>udeckow@example.com</td><td>ypowlowski</td><td>604f9062a5a0de83ef9d</td><td>197-955-3766</td><td>Lake Eusebiomouth</td><td>Florida</td><td>USA</td></tr><tr><td>11</td><td>Neoma</td><td>G</td><td>Hauck</td><td>1</td><td>michel92@example.org</td><td>ahmad.hagenes</td><td>035f2ba1e2a675c4f426</td><td>+95(0)1523064649</td><td>New Rachellefort</td><td>Alabama</td><td>USA</td></tr><tr><td>12</td><td>Jensen</td><td>M</td><td>Muller</td><td>0</td><td>lew.nicolas@example.org</td><td>pbecker</td><td>5fe7c12dc3176ddf67c4</td><td>(650)406-8761</td><td>Carleefort</td><td>Montana</td><td>USA</td></tr><tr><td>13</td><td>Kieran</td><td>A</td><td>Auer</td><td>0</td><td>nnolan@example.org</td><td>sophia97</td><td>d4ade599672bccdabeee</td><td>(157)046-6255x98627</td><td>Lake Freemanville</td><td>Kentucky</td><td>USA</td></tr><tr><td>14</td><td>Percival</td><td>B</td><td>Kessler</td><td>1</td><td>jacobi.shanon@example.org</td><td>lucy.jast</td><td>178613c20728eec256db</td><td>(791)562-7792x45732</td><td>Port Hollie</td><td>Louisiana</td><td>USA</td></tr><tr><td>15</td><td>Ruby</td><td>K</td><td>Boyle</td><td>0</td><td>gwolff@example.net</td><td>dthiel</td><td>eff2c0dbf972481ba23c</td><td>1-546-302-5676</td><td>East Stephaniafort</td><td>SouthDakota</td><td>USA</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 0, 'y_data': 9}, {'x_data': 1, 'y_data': 6}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'gender'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

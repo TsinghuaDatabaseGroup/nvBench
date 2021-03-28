@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5804</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5803.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5805.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5804</td><td><h4>NL Queries: </h4><ol><li><p>Show the total number from each state province county, and could you display from low to high by the bar?</p></li><li><p>Show each state and the number of addresses in each state Show bar chart, list from low to high by the names.</p></li><li><p>Show each state and the number of addresses in each state by a bar chart, and could you display from low to high by the bar?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT state_province_county , count(*) FROM addresses GROUP BY state_province_county ORDER BY state_province_county ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1010@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_and_products_contacts</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_products_contacts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: addresses</h4><table><tr><th>address_id</th><th>line_1_number_building</th><th>city</th><th>zip_postcode</th><th>state_province_county</th><th>country</th></tr><tr><td>1</td><td>4315 Kerluke Canyon Apt. 800</td><td>Hertafurt</td><td>740</td><td>Nevada</td><td>USA</td></tr><tr><td>2</td><td>319 Kozey Highway Suite 973</td><td>Edgardoberg</td><td>282</td><td>Colorado</td><td>USA</td></tr><tr><td>3</td><td>592 Frederique Ridge</td><td>Gilbertmouth</td><td>167</td><td>Virginia</td><td>USA</td></tr><tr><td>4</td><td>01868 Laverna Green</td><td>Lake Floyd</td><td>041</td><td>Oklahoma</td><td>USA</td></tr><tr><td>5</td><td>6017 Price Greens</td><td>Gibsonfurt</td><td>873</td><td>District of Columbia</td><td>USA</td></tr><tr><td>6</td><td>037 Luella Path</td><td>North Jairo</td><td>126</td><td>Maryland</td><td>USA</td></tr><tr><td>7</td><td>044 Greenfelder Fort</td><td>East Rickey</td><td>564</td><td>Louisiana</td><td>USA</td></tr><tr><td>8</td><td>2676 Connelly Islands Apt. 199</td><td>West Kaiatown</td><td>770</td><td>Oregon</td><td>USA</td></tr><tr><td>9</td><td>6830 Alexanne Forks Apt. 925</td><td>Agustinstad</td><td>248</td><td>Illinois</td><td>USA</td></tr><tr><td>10</td><td>918 Lauren Drive</td><td>Gleasonland</td><td>116</td><td>Kentucky</td><td>USA</td></tr><tr><td>11</td><td>70345 Marvin Glens Apt. 669</td><td>Lake Katheryn</td><td>505</td><td>Kentucky</td><td>USA</td></tr><tr><td>12</td><td>65854 McKenzie Tunnel</td><td>North Lisandroport</td><td>202</td><td>Maine</td><td>USA</td></tr><tr><td>13</td><td>494 Bruen Radial Apt. 723</td><td>Estaland</td><td>381</td><td>Idaho</td><td>USA</td></tr><tr><td>14</td><td>794 Doyle Lake Apt. 531</td><td>West Muriel</td><td>571</td><td>Vermont</td><td>USA</td></tr><tr><td>15</td><td>9590 Rogahn Point Apt. 466</td><td>Port Montytown</td><td>037</td><td>SouthDakota</td><td>USA</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Colorado', 'y_data': 1}, {'x_data': 'District of Columbia', 'y_data': 1}, {'x_data': 'Idaho', 'y_data': 1}, {'x_data': 'Illinois', 'y_data': 1}, {'x_data': 'Kentucky', 'y_data': 2}, {'x_data': 'Louisiana', 'y_data': 1}, {'x_data': 'Maine', 'y_data': 1}, {'x_data': 'Maryland', 'y_data': 1}, {'x_data': 'Nevada', 'y_data': 1}, {'x_data': 'Oklahoma', 'y_data': 1}, {'x_data': 'Oregon', 'y_data': 1}, {'x_data': 'SouthDakota', 'y_data': 1}, {'x_data': 'Vermont', 'y_data': 1}, {'x_data': 'Virginia', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'state_province_county', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

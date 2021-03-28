@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1803</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1802.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1804.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1803</td><td><h4>NL Queries: </h4><ol><li><p>Display a bar chart for what are the ids and names of the web accelerators that are compatible with two or more browsers?, display from low to high by the x-axis please.</p></li><li><p>What are the ids and names of the web accelerators that are compatible with two or more browsers Visualize by bar chart, could you rank bars in ascending order please?</p></li><li><p>Visualize a bar chart for what are the ids and names of the web accelerators that are compatible with two or more browsers?, and rank in ascending by the names.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT name , id FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id = T1.id ORDER BY name ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>375@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>browser_web</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: browser_web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: web_client_accelerator</h4><table><tr><th>id</th><th>name</th><th>Operating_system</th><th>Client</th><th>Connection</th></tr><tr><td>1</td><td>CACHEbox</td><td>Appliance (Linux)</td><td>End user, ISP</td><td>Broadband, Satellite, Wireless, Fiber, DSL</td></tr><tr><td>2</td><td>CProxy</td><td>Windows</td><td>user</td><td>up to 756kbit/s</td></tr><tr><td>3</td><td>Fasterfox</td><td>Windows, Mac, Linux and Mobile devices</td><td>user</td><td>Dialup, Wireless, Broadband, DSL</td></tr><tr><td>4</td><td>fasTun</td><td>Any</td><td>All</td><td>Any</td></tr><tr><td>5</td><td>Freewire</td><td>Windows, except NT and 95</td><td>ISP</td><td>Dial-up</td></tr><tr><td>6</td><td>Google Web Accelerator (discontinued)</td><td>Windows</td><td>user/Google server</td><td>Broadband</td></tr><tr><td>7</td><td>Heigh Speed</td><td>Windows</td><td>All</td><td>Any</td></tr><tr><td>8</td><td>Netfury</td><td>Windows, Mac</td><td>End User, ISP</td><td>Dial-up, Broadband, DSL, ISDN, Satellite, Wireless</td></tr><tr><td>9</td><td>Nitro</td><td>Windows, Mac</td><td>End User, ISP</td><td>Dial-up, Broadband, DSL, ISDN, Satellite, Wireless</td></tr><tr><td>10</td><td>ONSPEED</td><td>Windows, Mac and Mobile devices</td><td>user</td><td>Dialup, Wireless, Broadband, DSL</td></tr><tr><td>11</td><td>Opera Turbo</td><td>Android, Linux, Mac and Windows devices</td><td>user/Opera server</td><td>Any</td></tr><tr><td>12</td><td>Polipo</td><td>Unix (Linux, *BSD, Mac OS X, others), Windows</td><td>user/ISP</td><td>Any</td></tr><tr><td>13</td><td>Propel</td><td>Windows, Mac</td><td>End User, ISP</td><td>Dial, DSL, ISDN, Satellite, wireless</td></tr><tr><td>14</td><td>Proxyconn Web Accelerator</td><td>Windows, Mac, Mobile devices</td><td>user</td><td>Dialup, Wireless, Broadband, DSL</td></tr><tr><td>15</td><td>RabbIT</td><td>Any system with Java 1.6 VM available</td><td>ISP</td><td>Any</td></tr><tr><td>16</td><td>Squid</td><td>Unix (Linux, *BSD, Mac OS X, others), Windows</td><td>user/ISP</td><td>Any</td></tr><tr><td>17</td><td>Toonel</td><td>Windows, Linux, Mac OS, Symbian, WindowsMobile</td><td>user/ISP</td><td>Any</td></tr><tr><td>18</td><td>WinGate</td><td>Windows (2000 onwards)</td><td>All</td><td>Any</td></tr><tr><td>19</td><td>Ziproxy</td><td>Unix (Linux, *BSD, Mac OS X, others)</td><td>ISP</td><td>Any</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'CACHEbox', 'y_data': 1}, {'x_data': 'CProxy', 'y_data': 2}, {'x_data': 'Fasterfox', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'id'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

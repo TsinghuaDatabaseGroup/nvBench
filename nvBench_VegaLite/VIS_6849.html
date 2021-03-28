@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6849</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6848.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6850.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6849</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart about the distribution of  date_address_to and the average of monthly_rental , and group by attribute other_details and bin date_address_to by weekday.</p></li><li><p>Draw a bar chart about the distribution of  date_address_to and the average of monthly_rental , and group by attribute other_details and bin date_address_to by weekday.</p></li><li><p>Visualize a bar chart about the distribution of  date_address_to and the average of monthly_rental , and group by attribute other_details and bin date_address_to by weekday.</p></li><li><p>Show me about the distribution of  date_address_to and the average of monthly_rental , and group by attribute other_details and bin date_address_to by weekday in a bar chart.</p></li><li><p>Find  date_address_to and the average of monthly_rental , and group by attribute other_details and bin date_address_to by weekday, and visualize them by a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_address_to , AVG(monthly_rental) FROM Student_Addresses GROUP BY other_details ORDER BY monthly_rental DESC BIN date_address_to BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>211</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Stacked Bar</p><p><b>DB: </b>behavior_monitoring</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: behavior_monitoring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Student_Addresses</h4><table><tr><th>student_id</th><th>address_id</th><th>date_address_from</th><th>date_address_to</th><th>monthly_rental</th><th>other_details</th></tr><tr><td>6</td><td>12</td><td>2017-10-16 13:56:34</td><td>2018-03-15 10:37:19</td><td>826.4319</td><td>house</td></tr><tr><td>3</td><td>18</td><td>2017-06-19 12:39:39</td><td>2018-03-02 00:19:57</td><td>1113.0996</td><td>house</td></tr><tr><td>8</td><td>1</td><td>2017-10-31 12:40:34</td><td>2018-02-25 05:21:34</td><td>1297.3186</td><td>apartment</td></tr><tr><td>7</td><td>3</td><td>2017-04-28 06:27:14</td><td>2018-03-23 09:52:56</td><td>894.0958</td><td>house</td></tr><tr><td>13</td><td>16</td><td>2018-03-23 08:25:36</td><td>2018-03-12 17:21:24</td><td>1297.807</td><td>apartment</td></tr><tr><td>11</td><td>12</td><td>2018-02-18 06:58:49</td><td>2018-02-27 04:45:57</td><td>747.5312</td><td>house</td></tr><tr><td>4</td><td>1</td><td>2017-06-22 12:20:52</td><td>2018-03-04 17:04:35</td><td>756.6745</td><td>house</td></tr><tr><td>2</td><td>8</td><td>2017-07-21 10:13:10</td><td>2018-03-20 09:02:48</td><td>1287.5604</td><td>house</td></tr><tr><td>7</td><td>13</td><td>2018-01-13 22:56:06</td><td>2018-03-22 17:56:20</td><td>1067.8383</td><td>house</td></tr><tr><td>4</td><td>2</td><td>2017-09-10 19:41:10</td><td>2018-03-04 06:51:19</td><td>1132.742</td><td>house</td></tr><tr><td>8</td><td>16</td><td>2018-01-12 13:23:23</td><td>2018-03-04 06:05:45</td><td>683.0735</td><td>house</td></tr><tr><td>5</td><td>13</td><td>2017-03-29 18:22:55</td><td>2018-03-14 09:12:05</td><td>1036.8462</td><td>apartment</td></tr><tr><td>2</td><td>3</td><td>2017-08-12 18:28:31</td><td>2018-03-06 21:41:20</td><td>800.1214</td><td>house</td></tr><tr><td>2</td><td>8</td><td>2017-04-18 05:36:44</td><td>2018-03-07 04:29:28</td><td>865.2615</td><td>house</td></tr><tr><td>9</td><td>9</td><td>2018-02-04 02:28:04</td><td>2018-03-12 02:57:48</td><td>679.2988</td><td>house</td></tr><tr><td>13</td><td>19</td><td>2017-08-17 11:51:00</td><td>2018-03-04 13:24:28</td><td>644.9306</td><td>apartment</td></tr><tr><td>15</td><td>1</td><td>2018-03-05 19:28:26</td><td>2018-03-15 04:44:58</td><td>1032.8717</td><td>apartment</td></tr><tr><td>12</td><td>10</td><td>2017-09-23 05:16:17</td><td>2018-03-05 21:12:37</td><td>1032.9782</td><td>apartment</td></tr><tr><td>1</td><td>5</td><td>2017-11-12 04:24:02</td><td>2018-03-14 17:00:44</td><td>1007.2597</td><td>apartment</td></tr><tr><td>10</td><td>18</td><td>2017-10-09 17:31:44</td><td>2018-03-18 03:28:47</td><td>620.2801</td><td>house</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 1164.5, 'classify': 'apartment'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'apartment'}, {'x_data': 'Wed', 'y_data': 1021.5, 'classify': 'apartment'}, {'x_data': 'Thur', 'y_data': 1032, 'classify': 'apartment'}, {'x_data': 'Fri', 'y_data': 0, 'classify': 'apartment'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'apartment'}, {'x_data': 'Sun', 'y_data': 970.5, 'classify': 'apartment'}, {'x_data': 'Mon', 'y_data': 679, 'classify': 'house'}, {'x_data': 'Tue', 'y_data': 944.6666666666666, 'classify': 'house'}, {'x_data': 'Wed', 'y_data': 865, 'classify': 'house'}, {'x_data': 'Thur', 'y_data': 946.5, 'classify': 'house'}, {'x_data': 'Fri', 'y_data': 1003.5, 'classify': 'house'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'house'}, {'x_data': 'Sun', 'y_data': 797.75, 'classify': 'house'}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_address_to', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'AVG(monthly_rental)'}, 'color': {'field': 'classify'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

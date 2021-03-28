@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5326</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5325.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5327.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5326</td><td><h4>NL Queries: </h4><ol><li><p>For each building, show the name of the building and the number of institutions in it Plot them as bar chart, and rank in desc by the Y-axis please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , count(*) FROM building AS T1 JOIN institution AS T2 ON T1.building_id = T2.building_id GROUP BY T1.building_id ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2626@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>protein_institute</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: protein_institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: building</h4><table><tr><th>building_id</th><th>Name</th><th>Street_address</th><th>Years_as_tallest</th><th>Height_feet</th><th>Floors</th></tr><tr><td>0</td><td>Citizens Bank Building</td><td>701 North Franklin Street</td><td>1913â1915</td><td>145</td><td>12</td></tr><tr><td>1</td><td>Tampa City Hall</td><td>315 John F. Kennedy Boulevard</td><td>1915â1926</td><td>160</td><td>10</td></tr><tr><td>2</td><td>Floridan Hotel</td><td>905 Franklin Street</td><td>1926â1966</td><td>204</td><td>17</td></tr><tr><td>3</td><td>Franklin Exchange Building</td><td>655 North Franklin Street</td><td>1966â1972</td><td>280</td><td>22</td></tr><tr><td>4</td><td>Park Tower</td><td>400 North Tampa Street</td><td>1972â1981</td><td>458</td><td>36</td></tr><tr><td>5</td><td>One Tampa City Center</td><td>201 North Franklin Street</td><td>1981â1986</td><td>537</td><td>39</td></tr><tr><td>6</td><td>Bank of America Tower</td><td>101 East Kennedy Boulevard</td><td>1986â1992</td><td>577</td><td>42</td></tr><tr><td>7</td><td>100 North Tampa</td><td>100 North Tampa Street</td><td>1992âpresent</td><td>579</td><td>42</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tampa City Hall', 'y_data': 2}, {'x_data': 'One Tampa City Center', 'y_data': 2}, {'x_data': 'Franklin Exchange Building', 'y_data': 2}, {'x_data': 'Citizens Bank Building', 'y_data': 2}, {'x_data': 'Park Tower', 'y_data': 1}, {'x_data': 'Floridan Hotel', 'y_data': 1}, {'x_data': '100 North Tampa', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

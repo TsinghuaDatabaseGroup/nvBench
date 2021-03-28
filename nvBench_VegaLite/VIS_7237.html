@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7237</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7236.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7238.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7237</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart about what are the names and number of hours spent training for each player who trains for less than 1500 hours?, and order HS from low to high order.</p></li><li><p>What are the names and number of hours spent training for each player who trains for less than 1500 hours Visualize by bar chart, and could you list by the total number from low to high?</p></li><li><p>Find the name and training hours of players whose hours are below 1500 Show bar chart, and rank by the total number in asc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT pName , HS FROM Player WHERE HS < 1500 ORDER BY HS ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2790@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>soccer_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: soccer_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Player</h4><table><tr><th>pID</th><th>pName</th><th>yCard</th><th>HS</th></tr><tr><td>10001</td><td>Andrew</td><td>no</td><td>1200</td></tr><tr><td>20002</td><td>Blake</td><td>no</td><td>1600</td></tr><tr><td>30003</td><td>Charles</td><td>no</td><td>300</td></tr><tr><td>40004</td><td>David</td><td>yes</td><td>1600</td></tr><tr><td>40002</td><td>Drago</td><td>yes</td><td>1600</td></tr><tr><td>50005</td><td>Eddie</td><td>yes</td><td>600</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Charles', 'y_data': 300}, {'x_data': 'Eddie', 'y_data': 600}, {'x_data': 'Andrew', 'y_data': 1200}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'pName', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'HS'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

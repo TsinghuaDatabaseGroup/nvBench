@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1476</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1475.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1477.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1476</td><td><h4>NL Queries: </h4><ol><li><p>Return a bar chart showing how many members have visited for each college.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Name , COUNT(T1.Name) FROM college AS T1 JOIN member AS T2 ON T1.College_ID = T2.College_ID GROUP BY T1.Name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1089</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>decoration_competition</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: decoration_competition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: college</h4><table><tr><th>College_ID</th><th>Name</th><th>Leader_Name</th><th>College_Location</th></tr><tr><td>1</td><td>Saskatchewan School</td><td>Ousame Tounkara</td><td>Ottawa</td></tr><tr><td>2</td><td>B.C. School</td><td>Ryan Thelwell</td><td>Minnesota</td></tr><tr><td>3</td><td>Calgary School</td><td>Andre Arlain</td><td>St. Francis Xavier</td></tr><tr><td>4</td><td>Edmonton School</td><td>Samir Chahine</td><td>McGill</td></tr><tr><td>5</td><td>Toronto School</td><td>Roger Dunbrack</td><td>Western Ontario</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'B.C. School', 'y_data': 1}, {'x_data': 'Calgary School', 'y_data': 2}, {'x_data': 'Edmonton School', 'y_data': 3}, {'x_data': 'Saskatchewan School', 'y_data': 2}, {'x_data': 'Toronto School', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

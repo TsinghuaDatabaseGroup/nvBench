@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1108</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1107.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1109.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1108</td><td><h4>NL Queries: </h4><ol><li><p>Show different ways to get to attractions and the number of attractions that can be accessed in the corresponding way in a bar chart, I want to rank total number from high to low order.</p></li><li><p>Plot the total number by grouped by how to get there as a bar graph, rank from high to low by the Y-axis.</p></li><li><p>List all the possible ways to get to attractions, together with the number of attractions accessible by these methods in a bar chart, and show y-axis in desc order.</p></li><li><p>Show different ways to get to attractions and the number of attractions that can be accessed in the corresponding way Plot them as bar chart, could you display by the y axis in descending please?</p></li><li><p>List all the possible ways to get to attractions, together with the number of attractions accessible by these methods Visualize by bar chart, could you show total number in desc order?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT How_to_Get_There , COUNT(*) FROM Tourist_Attractions GROUP BY How_to_Get_There ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>888@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Theme_park</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Theme_park&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Tourist_Attractions</h4><table><tr><th>Tourist_Attraction_ID</th><th>Attraction_Type_Code</th><th>Location_ID</th><th>How_to_Get_There</th><th>Name</th><th>Description</th><th>Opening_Hours</th><th>Other_Details</th></tr><tr><td>2113</td><td>2</td><td>579</td><td>bus</td><td>art museum</td><td>None</td><td>None</td><td>None</td></tr><tr><td>2701</td><td>6</td><td>417</td><td>walk</td><td>UK gallery</td><td>None</td><td>None</td><td>None</td></tr><tr><td>5076</td><td>2</td><td>868</td><td>shuttle</td><td>flying elephant</td><td>None</td><td>None</td><td>None</td></tr><tr><td>5265</td><td>5</td><td>603</td><td>bus</td><td>film festival</td><td>None</td><td>None</td><td>None</td></tr><tr><td>6476</td><td>3</td><td>417</td><td>shuttle</td><td>US museum</td><td>None</td><td>None</td><td>None</td></tr><tr><td>6523</td><td>9</td><td>858</td><td>walk</td><td>fun games</td><td>None</td><td>None</td><td>None</td></tr><tr><td>6653</td><td>9</td><td>655</td><td>walk</td><td>history gallery</td><td>None</td><td>None</td><td>None</td></tr><tr><td>6852</td><td>5</td><td>858</td><td>walk</td><td>exploration trial</td><td>None</td><td>None</td><td>None</td></tr><tr><td>7067</td><td>5</td><td>417</td><td>bus</td><td>haunted mansion</td><td>None</td><td>None</td><td>None</td></tr><tr><td>8429</td><td>9</td><td>867</td><td>walk</td><td>presidents hall</td><td>None</td><td>None</td><td>None</td></tr><tr><td>8449</td><td>2</td><td>579</td><td>bus</td><td>impressions de France</td><td>None</td><td>None</td><td>None</td></tr><tr><td>8698</td><td>5</td><td>661</td><td>bus</td><td>jungle cruise</td><td>None</td><td>None</td><td>None</td></tr><tr><td>9360</td><td>5</td><td>868</td><td>shuttle</td><td>fun shops</td><td>None</td><td>None</td><td>None</td></tr><tr><td>9561</td><td>2</td><td>759</td><td>bus</td><td>cafe</td><td>None</td><td>None</td><td>None</td></tr><tr><td>9919</td><td>6</td><td>579</td><td>shuttle</td><td>parking</td><td>None</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'bus', 'y_data': 6}, {'x_data': 'walk', 'y_data': 5}, {'x_data': 'shuttle', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'How_to_Get_There', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

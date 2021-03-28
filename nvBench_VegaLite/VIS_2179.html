@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2179</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2178.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2180.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2179</td><td><h4>NL Queries: </h4><ol><li><p>Show the relationship between accout id and account name for all accounts by the customer with first name 'Meaghan' in a scatter chart.</p></li><li><p>What is the relationship between accout id and account name for all accounts by the customer with first name 'Meaghan'? Return a scatter chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT account_id , account_name FROM Accounts AS T1 JOIN Customers AS T2 ON T1.customer_id = T2.customer_id WHERE T2.customer_first_name = 'Meaghan'</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>983</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>customers_and_invoices</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_invoices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Accounts</h4><table><tr><th>account_id</th><th>customer_id</th><th>date_account_opened</th><th>account_name</th><th>other_account_details</th></tr><tr><td>1</td><td>8</td><td>2016-07-30 22:22:24</td><td>900</td><td>Regular</td></tr><tr><td>2</td><td>3</td><td>2017-05-29 16:45:17</td><td>520</td><td>VIP</td></tr><tr><td>3</td><td>8</td><td>2012-05-04 18:50:32</td><td>323</td><td>Regular</td></tr><tr><td>4</td><td>15</td><td>2011-03-29 15:06:59</td><td>390</td><td>VIP</td></tr><tr><td>5</td><td>15</td><td>2014-08-11 18:15:14</td><td>935</td><td>Regular</td></tr><tr><td>6</td><td>12</td><td>2014-05-30 12:16:52</td><td>371</td><td>Regular</td></tr><tr><td>7</td><td>13</td><td>2015-11-03 08:04:15</td><td>398</td><td>VIP</td></tr><tr><td>8</td><td>9</td><td>2009-06-13 11:41:52</td><td>710</td><td>Regular</td></tr><tr><td>9</td><td>8</td><td>2010-10-22 13:33:45</td><td>337</td><td>Regular</td></tr><tr><td>10</td><td>15</td><td>2016-04-25 21:49:17</td><td>429</td><td>VIP</td></tr><tr><td>11</td><td>13</td><td>2012-07-09 23:40:15</td><td>191</td><td>VIP</td></tr><tr><td>12</td><td>8</td><td>2015-02-02 09:47:08</td><td>601</td><td>Regular</td></tr><tr><td>13</td><td>13</td><td>2010-06-16 09:35:00</td><td>272</td><td>Regular</td></tr><tr><td>14</td><td>13</td><td>2014-12-28 07:29:42</td><td>861</td><td>VIP</td></tr><tr><td>15</td><td>6</td><td>2008-05-04 22:15:56</td><td>662</td><td>VIP</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 1, 'y_data': 900}, {'x_data': 3, 'y_data': 323}, {'x_data': 9, 'y_data': 337}, {'x_data': 12, 'y_data': 601}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'account_id'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'account_name'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

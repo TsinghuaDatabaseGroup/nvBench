@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3814</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3813.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3815.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3814</td><td><h4>NL Queries: </h4><ol><li><p>What are the paragraph texts for the document with the name 'Customer reviews', and count them by a pie chart</p></li><li><p>Show all paragraph texts for the document "Customer reviews", and count them by a pie chart</p></li><li><p>A pie chart for what are the number of the paragraph texts for the document with the name 'Customer reviews'?</p></li><li><p>What are the number of the paragraph texts for the document with the name 'Customer reviews'?</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Paragraph_Text , COUNT(Paragraph_Text) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id = T2.document_id WHERE T2.document_name = "Customer reviews" GROUP BY Paragraph_Text</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>747</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>cre_Doc_Template_Mgt</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Doc_Template_Mgt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Paragraphs</h4><table><tr><th>Paragraph_ID</th><th>Document_ID</th><th>Paragraph_Text</th><th>Other_Details</th></tr><tr><td>7</td><td>2394</td><td>Korea</td><td>None</td></tr><tr><td>9</td><td>3</td><td>Somalia</td><td>None</td></tr><tr><td>65</td><td>50123</td><td>Palestinian Territory</td><td>None</td></tr><tr><td>241</td><td>651512</td><td>Jersey</td><td>None</td></tr><tr><td>3708</td><td>33930</td><td>UK</td><td>None</td></tr><tr><td>9946</td><td>385906526</td><td>Fiji</td><td>None</td></tr><tr><td>16615</td><td>80</td><td>Japan</td><td>None</td></tr><tr><td>1104059</td><td>3830</td><td>Senegal</td><td>None</td></tr><tr><td>243399026</td><td>651512</td><td>Indonesia</td><td>None</td></tr><tr><td>280120913</td><td>2394</td><td>Ukraine</td><td>None</td></tr><tr><td>510442723</td><td>2394</td><td>Korea</td><td>None</td></tr><tr><td>571212310</td><td>16514113</td><td>Brazil</td><td>None</td></tr><tr><td>608931827</td><td>80</td><td>Micronesia</td><td>None</td></tr><tr><td>765713812</td><td>16514113</td><td>Ireland</td><td>None</td></tr><tr><td>946335436</td><td>3540024</td><td>Papua New Guinea</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Korea', 'y_data': 2}, {'x_data': 'Ukraine', 'y_data': 1}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Paragraph_Text)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Paragraph_Text'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

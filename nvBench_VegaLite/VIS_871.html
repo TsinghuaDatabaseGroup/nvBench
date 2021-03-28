@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_871</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_870.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_872.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>871</td><td><h4>NL Queries: </h4><ol><li><p>Give me a bar chart showing the number of customers who has an account for each customer last name, show by the x-axis from low to high.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT customer_last_name , COUNT(customer_last_name) FROM Customers AS T1 JOIN Accounts AS T2 ON T1.customer_id = T2.customer_id GROUP BY customer_last_name ORDER BY customer_last_name ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1030@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_card_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_card_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Customers</h4><table><tr><th>customer_id</th><th>customer_first_name</th><th>customer_last_name</th><th>customer_address</th><th>customer_phone</th><th>customer_email</th><th>other_customer_details</th></tr><tr><td>1</td><td>Aniyah</td><td>Feest</td><td>55975 Theodore Estates
+Lake Brody, VT 57078</td><td>(673)872-5338</td><td>fahey.dorian@example.com</td><td>None</td></tr><tr><td>2</td><td>Susie</td><td>Wiza</td><td>6478 Moen Isle Suite 910
+Schimmelmouth, VT 96364-4898</td><td>679-845-8645x94312</td><td>idickinson@example.com</td><td>None</td></tr><tr><td>3</td><td>Marcel</td><td>Brekke</td><td>1965 Abernathy Plains
+Port Lilla, LA 44867</td><td>1-511-656-6664</td><td>nichole.rodriguez@example.com</td><td>None</td></tr><tr><td>4</td><td>Art</td><td>Turcotte</td><td>6862 Domenic Port
+New Elbert, DE 86980-8517</td><td>941-213-6716x675</td><td>enrique59@example.com</td><td>None</td></tr><tr><td>5</td><td>Armani</td><td>Farrell</td><td>3031 Ludwig Square
+Unaview, SC 86336-3287</td><td>224-123-1012</td><td>dauer@example.net</td><td>None</td></tr><tr><td>6</td><td>Kiel</td><td>Schinner</td><td>19935 Allie Bypass Apt. 409
+Coleberg, FL 69194-5357</td><td>1-564-044-3909</td><td>ebert.omer@example.net</td><td>None</td></tr><tr><td>7</td><td>Izabella</td><td>Erdman</td><td>23793 Athena Inlet Apt. 455
+Schmidtmouth, NH 15794</td><td>751.049.9948</td><td>kling.catalina@example.com</td><td>None</td></tr><tr><td>8</td><td>Elyssa</td><td>Lind</td><td>094 Julianne Mill
+Webstertown, KY 91980-4004</td><td>+12(6)9024410984</td><td>dell13@example.com</td><td>None</td></tr><tr><td>9</td><td>Faustino</td><td>Langworth</td><td>0748 Lola Union Apt. 874
+Reynoldsfurt, NM 94584-3767</td><td>284.749.0453</td><td>ahomenick@example.org</td><td>None</td></tr><tr><td>10</td><td>Axel</td><td>Effertz</td><td>936 Lula Overpass
+East Alisonville, NH 14890</td><td>+90(8)1290735932</td><td>kyra.murazik@example.org</td><td>None</td></tr><tr><td>11</td><td>Frederic</td><td>Swift</td><td>7127 Hilpert Parks
+South Johnfort, SD 67577-9504</td><td>1-207-977-5182</td><td>keegan16@example.com</td><td>None</td></tr><tr><td>12</td><td>Bryce</td><td>Rath</td><td>74962 Hugh Mills
+North Laurenland, KY 46376</td><td>(415)237-0701x3115</td><td>grady.general@example.org</td><td>None</td></tr><tr><td>13</td><td>Serenity</td><td>Effertz</td><td>71560 Eulah Squares
+Torphyberg, OK 34312-0380</td><td>1-894-567-2283</td><td>schaden.katrina@example.net</td><td>None</td></tr><tr><td>14</td><td>Blanche</td><td>Huels</td><td>47286 Mraz Park Apt. 424
+Jocelynfurt, OH 59023-2787</td><td>(703)950-4708x8972</td><td>huels.antonina@example.com</td><td>None</td></tr><tr><td>15</td><td>Nat</td><td>Davis</td><td>163 Collier Square
+New Ceciltown, AL 64723-5646</td><td>246-469-4472x359</td><td>earlene.carroll@example.net</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Effertz', 'y_data': 2}, {'x_data': 'Huels', 'y_data': 1}, {'x_data': 'Langworth', 'y_data': 1}, {'x_data': 'Lind', 'y_data': 1}, {'x_data': 'Rath', 'y_data': 1}, {'x_data': 'Schinner', 'y_data': 1}, {'x_data': 'Turcotte', 'y_data': 1}, {'x_data': 'Wiza', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'customer_last_name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(customer_last_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

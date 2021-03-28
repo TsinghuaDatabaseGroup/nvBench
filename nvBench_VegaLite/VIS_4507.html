@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4507</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4506.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4508.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4507</td><td><h4>NL Queries: </h4><ol><li><p>Please compare the number of names of parties using a bar chart, show x axis in asc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.Party , COUNT(T2.Party) FROM election AS T1 JOIN party AS T2 ON T1.Party = T2.Party_ID GROUP BY T2.Party ORDER BY T2.Party ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1306@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>election</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: election&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: election</h4><table><tr><th>Election_ID</th><th>Counties_Represented</th><th>District</th><th>Delegate</th><th>Party</th><th>First_Elected</th><th>Committee</th></tr><tr><td>1</td><td>09.1 9A</td><td>1</td><td>Bates, Gail H. Gail H. Bates</td><td>1</td><td>2002.0</td><td>Appropriations</td></tr><tr><td>2</td><td>09.1 9A</td><td>1</td><td>Miller, Warren E. Warren E. Miller</td><td>1</td><td>2003.0</td><td>Economic Matters</td></tr><tr><td>3</td><td>12.1 12A</td><td>2</td><td>DeBoy, Steven J. Sr. Steven J. DeBoy, Sr.</td><td>2</td><td>2002.0</td><td>Appropriations</td></tr><tr><td>4</td><td>12.1 12A</td><td>3</td><td>Malone, James E. Jr. James E. Malone, Jr.</td><td>2</td><td>1994.0</td><td>Environmental Matters (Vice-Chair)</td></tr><tr><td>5</td><td>12.2 12B</td><td>2</td><td>Bobo, Elizabeth Elizabeth Bobo</td><td>3</td><td>1994.0</td><td>Environmental Matters</td></tr><tr><td>6</td><td>13</td><td>1</td><td>Pendergrass, Shane E. Shane Pendergrass</td><td>4</td><td>1994.0</td><td>Health and Government Operations</td></tr><tr><td>7</td><td>13</td><td>4</td><td>Guzzone, Guy Guy Guzzone</td><td>1</td><td>2006.0</td><td>Appropriations</td></tr><tr><td>8</td><td>13</td><td>3</td><td>Turner, Frank S. Frank S. Turner</td><td>7</td><td>1994.0</td><td>Ways and Means</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Democratic', 'y_data': 2}, {'x_data': 'Independence', 'y_data': 1}, {'x_data': 'Liberal', 'y_data': 1}, {'x_data': 'Working Families', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Party', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Party)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

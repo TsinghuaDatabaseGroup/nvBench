@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6754</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6753.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6755.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6754</td><td><h4>NL Queries: </h4><ol><li><p>Compare the number of chips from different company names for the phone whose screen mode type is "Graphics" with a bar chart, list by the Company_name in asc please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Company_name , COUNT(Company_name) FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type = "Graphics" GROUP BY Company_name ORDER BY Company_name ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2565@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>phone_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: phone_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: screen_mode</h4><table><tr><th>Graphics_mode</th><th>Char_cells</th><th>Pixels</th><th>Hardware_colours</th><th>used_kb</th><th>map</th><th>Type</th></tr><tr><td>0.0</td><td>80 Ã 32</td><td>640 Ã 256</td><td>2.0</td><td>20.0</td><td>3000â7FFF</td><td>Graphics</td></tr><tr><td>1.0</td><td>40 Ã 32</td><td>320 Ã 256</td><td>4.0</td><td>20.0</td><td>3000â7FFF</td><td>Graphics</td></tr><tr><td>2.0</td><td>20 Ã 32</td><td>160 Ã 256</td><td>8.0</td><td>20.0</td><td>3000â7FFF</td><td>Graphics</td></tr><tr><td>3.0</td><td>80 Ã 25</td><td>640 Ã 200</td><td>2.0</td><td>16.0</td><td>4000â7FFF</td><td>Text</td></tr><tr><td>4.0</td><td>40 Ã 32</td><td>320 Ã 256</td><td>2.0</td><td>10.0</td><td>5800â7FFF</td><td>Graphics</td></tr><tr><td>5.0</td><td>20 Ã 32</td><td>160 Ã 256</td><td>4.0</td><td>10.0</td><td>5800â7FFF</td><td>Graphics</td></tr><tr><td>6.0</td><td>40 Ã 25</td><td>320 Ã 200</td><td>2.0</td><td>8.0</td><td>6000â7FFF</td><td>Text</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Nokia Corporation', 'y_data': 2}, {'x_data': 'Samsung Electronics Co Ltd', 'y_data': 2}, {'x_data': 'Sony Mobile Communications', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Company_name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Company_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

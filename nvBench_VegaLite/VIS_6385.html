@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6385</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6384.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6386.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6385</td><td><h4>NL Queries: </h4><ol><li><p>How many drama workshop groups are there in each city? Return both the city and the count Plot them as bar chart, order in ascending by the x-axis.</p></li><li><p>Show me a bar chart for how many drama workshop groups are there in each city? Return both the city and the count, order by the x axis in asc.</p></li><li><p>Show all cities along with the number of drama workshop groups in each city with a bar chart, and rank by the X in ascending.</p></li><li><p>Give me a histogram for how many drama workshop groups are there in each city? Return both the city and the count, display from low to high by the X-axis.</p></li><li><p>Show all cities along with the number of drama workshop groups in each city Visualize by bar chart, and list names in ascending order.</p></li><li><p>How many drama workshop groups are there in each city? Return both the city and the count with a bar chart, and order in ascending by the x-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT City_Town , count(*) FROM Addresses AS T1 JOIN Drama_Workshop_Groups AS T2 ON T1.Address_ID = T2.Address_ID GROUP BY T1.City_Town ORDER BY City_Town ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>882@x_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>cre_Drama_Workshop_Groups</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Drama_Workshop_Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Addresses</h4><table><tr><th>Address_ID</th><th>Line_1</th><th>Line_2</th><th>City_Town</th><th>State_County</th><th>Other_Details</th></tr><tr><td>110</td><td>4753 Dach Highway</td><td>Suite 846</td><td>Feliciaberg</td><td>Florida</td><td>None</td></tr><tr><td>124</td><td>391 Vandervort Fall Apt. 446</td><td>Apt. 107</td><td>West Sherwoodstad</td><td>Indiana</td><td>None</td></tr><tr><td>148</td><td>809 Izabella Islands</td><td>Suite 271</td><td>Schadenville</td><td>Ohio</td><td>None</td></tr><tr><td>15</td><td>3720 Vito View Apt. 148</td><td>Apt. 584</td><td>New Jaquelinmouth</td><td>Ohio</td><td>None</td></tr><tr><td>180</td><td>8835 Boehm Greens</td><td>Apt. 741</td><td>Chrisside</td><td>Maryland</td><td>None</td></tr><tr><td>19</td><td>77667 Nathan Union Apt. 606</td><td>Apt. 114</td><td>Desireefort</td><td>WestVirginia</td><td>None</td></tr><tr><td>192</td><td>545 Lula Mission</td><td>Suite 311</td><td>East Aracely</td><td>Oklahoma</td><td>None</td></tr><tr><td>201</td><td>2893 Jenkins Station Suite 815</td><td>Suite 570</td><td>Monahanshire</td><td>Kentucky</td><td>None</td></tr><tr><td>207</td><td>87789 Reilly Canyon Suite 872</td><td>Apt. 136</td><td>Rueckermouth</td><td>Maryland</td><td>None</td></tr><tr><td>230</td><td>0855 Ziemann Island</td><td>Apt. 597</td><td>Purdyville</td><td>SouthCarolina</td><td>None</td></tr><tr><td>266</td><td>2082 Runolfsson Cliffs</td><td>Apt. 460</td><td>Macejkovicchester</td><td>Alaska</td><td>None</td></tr><tr><td>286</td><td>51237 Maiya Center</td><td>Suite 714</td><td>New Lonzoville</td><td>Nebraska</td><td>None</td></tr><tr><td>314</td><td>70561 Vicenta Islands Apt. 873</td><td>Apt. 352</td><td>Cronaborough</td><td>Ohio</td><td>None</td></tr><tr><td>362</td><td>384 Fahey Flat Apt. 886</td><td>Suite 583</td><td>South Birdie</td><td>Pennsylvania</td><td>None</td></tr><tr><td>369</td><td>899 Okuneva Haven</td><td>Apt. 615</td><td>Jasthaven</td><td>Delaware</td><td>None</td></tr><tr><td>374</td><td>956 Aliyah Cape</td><td>Suite 226</td><td>South Eugenia</td><td>Washington</td><td>None</td></tr><tr><td>383</td><td>788 Flossie Junction Apt. 770</td><td>Apt. 861</td><td>Nataliamouth</td><td>WestVirginia</td><td>None</td></tr><tr><td>39</td><td>9799 Andres Shoal</td><td>Apt. 012</td><td>North Antonina</td><td>SouthDakota</td><td>None</td></tr><tr><td>74</td><td>8682 Boyle Glen</td><td>Apt. 012</td><td>Lindberg</td><td>Alabama</td><td>None</td></tr><tr><td>98</td><td>32128 Klocko Oval</td><td>Suite 184</td><td>Port Maximeview</td><td>Arizona</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Chrisside', 'y_data': 1}, {'x_data': 'Feliciaberg', 'y_data': 1}, {'x_data': 'Jasthaven', 'y_data': 2}, {'x_data': 'Macejkovicchester', 'y_data': 1}, {'x_data': 'Monahanshire', 'y_data': 1}, {'x_data': 'Nataliamouth', 'y_data': 2}, {'x_data': 'New Lonzoville', 'y_data': 2}, {'x_data': 'Port Maximeview', 'y_data': 1}, {'x_data': 'Purdyville', 'y_data': 1}, {'x_data': 'Rueckermouth', 'y_data': 1}, {'x_data': 'South Eugenia', 'y_data': 1}, {'x_data': 'West Sherwoodstad', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'City_Town', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

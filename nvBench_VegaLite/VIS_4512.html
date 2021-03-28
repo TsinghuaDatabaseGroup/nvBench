@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4512</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4511.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4513.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4512</td><td><h4>NL Queries: </h4><ol><li><p>Draw a bar chart for what is minimum age for different job title?, and I want to rank in desc by the y axis.</p></li><li><p>Show minimal age from each job, I want to rank by the minimal age from high to low.</p></li><li><p>How old is the youngest person for each job Visualize by bar chart, and I want to rank by the minimal age from high to low.</p></li><li><p>What is minimum age for different job title, show in descending by the total number.</p></li><li><p>Return a bar chart on how old is the youngest person for each job?, and I want to rank by the minimal age from high to low.</p></li><li><p>what is minimum age for different job title?, and rank by the y-axis from high to low.</p></li><li><p>how old is the youngest person for each job?, and show y-axis in descending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT job , min(age) FROM Person GROUP BY job ORDER BY min(age) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2463@y_name@DESC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>network_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: network_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Person</h4><table><tr><th>name</th><th>age</th><th>city</th><th>gender</th><th>job</th></tr><tr><td>Alice</td><td>25</td><td>new york city</td><td>female</td><td>student</td></tr><tr><td>Bob</td><td>35</td><td>salt lake city</td><td>male</td><td>engineer</td></tr><tr><td>Zach</td><td>45</td><td>austin</td><td>male</td><td>doctor</td></tr><tr><td>Dan</td><td>26</td><td>chicago</td><td>female</td><td>student</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'doctor', 'y_data': 45}, {'x_data': 'engineer', 'y_data': 35}, {'x_data': 'student', 'y_data': 25}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'job', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'min(age)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2324</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2323.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2325.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2324</td><td><h4>NL Queries: </h4><ol><li><p>What are the famous titles and ages of each artist, listed in descending order by age using a bar chart.</p></li><li><p>Give me a histogram showing the famous titles and ages of each artist with the age in descending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Famous_Title , Age FROM artist ORDER BY Age DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2437</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>music_4</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: music_4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: artist</h4><table><tr><th>Artist_ID</th><th>Artist</th><th>Age</th><th>Famous_Title</th><th>Famous_Release_date</th></tr><tr><td>1</td><td>Gorgoroth</td><td>34</td><td>Bergen 1996</td><td>November 2007</td></tr><tr><td>2</td><td>Ophiolatry</td><td>35</td><td>Transmutation</td><td>January 21, 2008</td></tr><tr><td>3</td><td>Ophiolatry</td><td>22</td><td>Antievangelistical Process (re-release)</td><td>2009</td></tr><tr><td>4</td><td>Black Flame</td><td>18</td><td>Imperivm</td><td>June 23, 2008</td></tr><tr><td>5</td><td>Tangorodrim</td><td>35</td><td>Unholy Metal Way (re-release)</td><td>2009</td></tr><tr><td>6</td><td>Tangorodrim</td><td>27</td><td>Those Who Unleashed (re-release)</td><td>2009</td></tr><tr><td>7</td><td>Triumfall</td><td>49</td><td>Antithesis of All Flesh</td><td>June 15, 2009</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Antithesis of All Flesh', 'y_data': 49}, {'x_data': 'Transmutation', 'y_data': 35}, {'x_data': 'Unholy Metal Way (re-release)', 'y_data': 35}, {'x_data': 'Bergen 1996', 'y_data': 34}, {'x_data': 'Those Who Unleashed (re-release)', 'y_data': 27}, {'x_data': 'Antievangelistical Process (re-release)', 'y_data': 22}, {'x_data': 'Imperivm', 'y_data': 18}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Famous_Title', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Age'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

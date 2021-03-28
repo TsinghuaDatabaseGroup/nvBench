@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_440</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_439.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_441.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>440</td><td><h4>NL Queries: </h4><ol><li><p>Create a bar chart showing the total number across bedtype, and I want to show y axis from low to high order please.</p></li><li><p>What are the number of rooms for each bed type Show bar chart, order by the total number from low to high.</p></li><li><p>Return a bar chart on what are the number of rooms for each bed type?, and order by the total number from low to high.</p></li><li><p>A bar chart about what are the number of rooms for each bed type?, display Y in asc order.</p></li><li><p>Find the number of rooms for each bed type Visualize by bar chart, sort y-axis in ascending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT bedType , count(*) FROM Rooms GROUP BY bedType ORDER BY count(*) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1967@y_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>inn_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: inn_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Rooms</h4><table><tr><th>RoomId</th><th>roomName</th><th>beds</th><th>bedType</th><th>maxOccupancy</th><th>basePrice</th><th>decor</th></tr><tr><td>RND</td><td>Recluse and defiance</td><td>1</td><td>King</td><td>2</td><td>150</td><td>modern</td></tr><tr><td>IBS</td><td>Interim but salutary</td><td>1</td><td>King</td><td>2</td><td>150</td><td>traditional</td></tr><tr><td>AOB</td><td>Abscond or bolster</td><td>2</td><td>Queen</td><td>4</td><td>175</td><td>traditional</td></tr><tr><td>MWC</td><td>Mendicant with cryptic</td><td>2</td><td>Double</td><td>4</td><td>125</td><td>modern</td></tr><tr><td>HBB</td><td>Harbinger but bequest</td><td>1</td><td>Queen</td><td>2</td><td>100</td><td>modern</td></tr><tr><td>IBD</td><td>Immutable before decorum</td><td>2</td><td>Queen</td><td>4</td><td>150</td><td>rustic</td></tr><tr><td>TAA</td><td>Thrift and accolade</td><td>1</td><td>Double</td><td>2</td><td>75</td><td>modern</td></tr><tr><td>CAS</td><td>Convoke and sanguine</td><td>2</td><td>King</td><td>4</td><td>175</td><td>traditional</td></tr><tr><td>RTE</td><td>Riddle to exculpate</td><td>2</td><td>Queen</td><td>4</td><td>175</td><td>rustic</td></tr><tr><td>FNA</td><td>Frugal not apropos</td><td>2</td><td>King</td><td>4</td><td>250</td><td>traditional</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Double', 'y_data': 2}, {'x_data': 'King', 'y_data': 4}, {'x_data': 'Queen', 'y_data': 4}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'bedType', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

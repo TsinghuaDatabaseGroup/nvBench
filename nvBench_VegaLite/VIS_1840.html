@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1840</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1839.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1841.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1840</td><td><h4>NL Queries: </h4><ol><li><p>What are all the different product names, and how many complains has each received Show bar chart, and rank Y-axis in descending order.</p></li><li><p>List the name of all products along with the number of complaints that they have received, order in desc by the y-axis.</p></li><li><p>what are all the different product names, and how many complains has each received?, and order from high to low by the Y please.</p></li><li><p>Draw a bar chart for what are all the different product names, and how many complains has each received?, show from high to low by the Y-axis.</p></li><li><p>List the name of all products along with the number of complaints that they have received with a bar chart, and show from high to low by the Y-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT product_name , count(*) FROM products AS t1 JOIN complaints AS t2 ON t1.product_id = t2.product_id GROUP BY t1.product_name ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>911@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customer_complaints</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customer_complaints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: products</h4><table><tr><th>product_id</th><th>parent_product_id</th><th>product_category_code</th><th>date_product_first_available</th><th>date_product_discontinued</th><th>product_name</th><th>product_description</th><th>product_price</th></tr><tr><td>117</td><td>4</td><td>Food</td><td>1988-09-29 17:54:50</td><td>1987-12-20 13:46:16</td><td>Chocolate</td><td>Handmade chocolate</td><td>2.88</td></tr><tr><td>118</td><td>3</td><td>Book</td><td>1974-06-25 12:26:47</td><td>1991-08-20 05:22:31</td><td>The Great Gatsby</td><td>American novel</td><td>35.0</td></tr><tr><td>119</td><td>8</td><td>Hardware</td><td>1994-12-18 15:13:19</td><td>1997-07-02 18:26:16</td><td>Keyboard</td><td>Designed for games</td><td>109.99</td></tr><tr><td>120</td><td>9</td><td>Hardware</td><td>1998-06-20 15:04:11</td><td>1980-06-26 10:40:19</td><td>Mouse</td><td>Blue tooth mouse</td><td>23.35</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Chocolate', 'y_data': 6}, {'x_data': 'The Great Gatsby', 'y_data': 4}, {'x_data': 'Mouse', 'y_data': 1}, {'x_data': 'Keyboard', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'product_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

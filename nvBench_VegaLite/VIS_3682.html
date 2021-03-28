@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3682</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3681.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3683.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3682</td><td><h4>NL Queries: </h4><ol><li><p>Find the transaction type descriptions and dates if the share count is smaller than 10, group by transaction type, count the date of transaction, and bin the date into the weekday interval, I want to display y axis from high to low order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.date_of_transaction , COUNT(T2.date_of_transaction) FROM Ref_Transaction_Types AS T1 JOIN TRANSACTIONS AS T2 ON T1.transaction_type_code = T2.transaction_type_code WHERE T2.share_count < 10 GROUP BY transaction_type_description ORDER BY COUNT(date_of_transaction) DESC BIN date_of_transaction BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2985@y_name@DESC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Stacked Bar</p><p><b>DB: </b>tracking_share_transactions</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_share_transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Ref_Transaction_Types</h4><table><tr><th>transaction_type_code</th><th>transaction_type_description</th></tr><tr><td>SALE</td><td>Sale</td></tr><tr><td>PUR</td><td>Purchase</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sun', 'y_data': 1, 'classify': 'Purchase'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Wed', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Thur', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Mon', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Fri', 'y_data': 0, 'classify': 'Purchase'}, {'x_data': 'Sun', 'y_data': 1, 'classify': 'Sale'}, {'x_data': 'Sat', 'y_data': 0, 'classify': 'Sale'}, {'x_data': 'Wed', 'y_data': 0, 'classify': 'Sale'}, {'x_data': 'Tue', 'y_data': 0, 'classify': 'Sale'}, {'x_data': 'Thur', 'y_data': 0, 'classify': 'Sale'}, {'x_data': 'Mon', 'y_data': 0, 'classify': 'Sale'}, {'x_data': 'Fri', 'y_data': 0, 'classify': 'Sale'}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_of_transaction', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_of_transaction)'}, 'color': {'field': 'classify'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

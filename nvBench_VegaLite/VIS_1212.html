@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1212</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1211.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1213.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1212</td><td><h4>NL Queries: </h4><ol><li><p>Show average of budget in different year and group by department creation time with a line chart.</p></li><li><p>Plot the average of budget in billions over creation in a line chart</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Creation , AVG(Budget_in_Billions) FROM department GROUP BY Creation</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1101</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Line</p><p><b>DB: </b>department_management</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: department_management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: department</h4><table><tr><th>Department_ID</th><th>Name</th><th>Creation</th><th>Ranking</th><th>Budget_in_Billions</th><th>Num_Employees</th></tr><tr><td>1</td><td>State</td><td>1789</td><td>1</td><td>9.96</td><td>30266.0</td></tr><tr><td>2</td><td>Treasury</td><td>1789</td><td>2</td><td>11.1</td><td>115897.0</td></tr><tr><td>3</td><td>Defense</td><td>1947</td><td>3</td><td>439.3</td><td>3000000.0</td></tr><tr><td>4</td><td>Justice</td><td>1870</td><td>4</td><td>23.4</td><td>112557.0</td></tr><tr><td>5</td><td>Interior</td><td>1849</td><td>5</td><td>10.7</td><td>71436.0</td></tr><tr><td>6</td><td>Agriculture</td><td>1889</td><td>6</td><td>77.6</td><td>109832.0</td></tr><tr><td>7</td><td>Commerce</td><td>1903</td><td>7</td><td>6.2</td><td>36000.0</td></tr><tr><td>8</td><td>Labor</td><td>1913</td><td>8</td><td>59.7</td><td>17347.0</td></tr><tr><td>9</td><td>Health and Human Services</td><td>1953</td><td>9</td><td>543.2</td><td>67000.0</td></tr><tr><td>10</td><td>Housing and Urban Development</td><td>1965</td><td>10</td><td>46.2</td><td>10600.0</td></tr><tr><td>11</td><td>Transportation</td><td>1966</td><td>11</td><td>58.0</td><td>58622.0</td></tr><tr><td>12</td><td>Energy</td><td>1977</td><td>12</td><td>21.5</td><td>116100.0</td></tr><tr><td>13</td><td>Education</td><td>1979</td><td>13</td><td>62.8</td><td>4487.0</td></tr><tr><td>14</td><td>Veterans Affairs</td><td>1989</td><td>14</td><td>73.2</td><td>235000.0</td></tr><tr><td>15</td><td>Homeland Security</td><td>2002</td><td>15</td><td>44.6</td><td>208000.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1789-01-01', 'y_data': 10}, {'x_data': '1849-01-01', 'y_data': 10}, {'x_data': '1870-01-01', 'y_data': 23}, {'x_data': '1889-01-01', 'y_data': 77}, {'x_data': '1903-01-01', 'y_data': 6}, {'x_data': '1913-01-01', 'y_data': 59}, {'x_data': '1947-01-01', 'y_data': 439}, {'x_data': '1953-01-01', 'y_data': 543}, {'x_data': '1965-01-01', 'y_data': 46}, {'x_data': '1966-01-01', 'y_data': 58}, {'x_data': '1977-01-01', 'y_data': 21}, {'x_data': '1979-01-01', 'y_data': 62}, {'x_data': '1989-01-01', 'y_data': 73}, {'x_data': '2002-01-01', 'y_data': 44}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Creation', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'AVG(Budget_in_Billions)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

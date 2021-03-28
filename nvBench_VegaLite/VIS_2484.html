@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2484</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2483.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2485.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2484</td><td><h4>NL Queries: </h4><ol><li><p>Find the total rating ratio for each channel owner. Visualize by bar chart.</p></li><li><p>Show me a bar chart for what is the total rating of channel for each channel owner?</p></li><li><p>A bar chart about what is the total rating of channel for each channel owner?</p></li><li><p>What is the total rating of channel for each channel owner. Plot them as bar chart.</p></li><li><p>Draw a bar chart of owner versus total number of rating in percent</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Owner , sum(Rating_in_percent) FROM channel GROUP BY OWNER</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2625</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>program_share</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: program_share&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: channel</h4><table><tr><th>Channel_ID</th><th>Name</th><th>Owner</th><th>Share_in_percent</th><th>Rating_in_percent</th></tr><tr><td>1</td><td>CCTV-1</td><td>CCTV</td><td>4.9</td><td>0.54</td></tr><tr><td>2</td><td>Hunan Satellite TV</td><td>HBS</td><td>4.81</td><td>0.53</td></tr><tr><td>3</td><td>CCTV-8</td><td>CCTV</td><td>3.76</td><td>0.41</td></tr><tr><td>4</td><td>CCTV-13</td><td>CCTV</td><td>2.91</td><td>0.32</td></tr><tr><td>5</td><td>CCTV-3</td><td>CCTV</td><td>2.86</td><td>0.31</td></tr><tr><td>6</td><td>CCTV-6</td><td>CCTV</td><td>2.73</td><td>0.3</td></tr><tr><td>7</td><td>CCTV-14</td><td>CCTV</td><td>2.6</td><td>0.29</td></tr><tr><td>8</td><td>CCTV-4</td><td>CCTV</td><td>2.33</td><td>0.26</td></tr><tr><td>9</td><td>Anhui Satellite TV</td><td>Anhui Television</td><td>1.78</td><td>0.2</td></tr><tr><td>10</td><td>Shandong Satellite TV</td><td>Shandong Television</td><td>1.74</td><td>0.19</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Anhui Television', 'y_data': 0.2}, {'x_data': 'CCTV', 'y_data': 2.43}, {'x_data': 'HBS', 'y_data': 0.53}, {'x_data': 'Shandong Television', 'y_data': 0.19}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Owner', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'sum(Rating_in_percent)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

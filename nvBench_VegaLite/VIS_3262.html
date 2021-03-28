@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3262</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3261.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3263.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3262</td><td><h4>NL Queries: </h4><ol><li><p>Visualize the name and their component amounts with a bar chart for all furnitures that have more than 10 components, sort from high to low by the total number please.</p></li><li><p>Find the component amounts and names of all furnitures that have more than 10 components, order by the Num_of_Component in descending.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , Num_of_Component FROM furniture WHERE Num_of_Component > 10 ORDER BY Num_of_Component DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2308@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>manufacturer</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: manufacturer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: furniture</h4><table><tr><th>Furniture_ID</th><th>Name</th><th>Num_of_Component</th><th>Market_Rate</th></tr><tr><td>1</td><td>Billiard table</td><td>14</td><td>52.5</td></tr><tr><td>2</td><td>Chabudai</td><td>4</td><td>40.0</td></tr><tr><td>3</td><td>Bookcase</td><td>6</td><td>1.0</td></tr><tr><td>4</td><td>Hatstand</td><td>5</td><td>0.5</td></tr><tr><td>5</td><td>Bench</td><td>5</td><td>3.5</td></tr><tr><td>6</td><td>Four-poster bed</td><td>3</td><td>2.0</td></tr><tr><td>7</td><td>Dining set</td><td>12</td><td>0.5</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Billiard table', 'y_data': 14}, {'x_data': 'Dining set', 'y_data': 12}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Num_of_Component'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

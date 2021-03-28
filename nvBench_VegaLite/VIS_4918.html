@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4918</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4917.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4919.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4918</td><td><h4>NL Queries: </h4><ol><li><p>Compare the number of the names of phones by a bar chart, and order in descending by the x-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , COUNT(Name) FROM phone_market AS T1 JOIN market AS T2 ON T1.Market_ID = T2.Market_ID JOIN phone AS T3 ON T1.Phone_ID = T3.Phone_ID GROUP BY Name ORDER BY Name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2577@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>phone_market</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: phone_market&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: phone_market</h4><table><tr><th>Market_ID</th><th>Phone_ID</th><th>Num_of_stock</th></tr><tr><td>1</td><td>1</td><td>2232</td></tr><tr><td>2</td><td>2</td><td>4324</td></tr><tr><td>1</td><td>4</td><td>874</td></tr><tr><td>5</td><td>1</td><td>682</td></tr><tr><td>2</td><td>3</td><td>908</td></tr><tr><td>6</td><td>3</td><td>1632</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'IPhone X', 'y_data': 2}, {'x_data': 'IPhone 7', 'y_data': 1}, {'x_data': 'IPhone 6s', 'y_data': 1}, {'x_data': 'IPhone 5s', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

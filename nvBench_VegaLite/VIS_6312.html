@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6312</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6311.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6313.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6312</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of addrens history for each customer in a bar chart, and could you rank from high to low by the x-axis?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.customer_name , COUNT(T2.customer_name) FROM customer_address_history AS T1 JOIN customers AS T2 ON T1.customer_id = T2.customer_id JOIN addresses AS T3 ON T1.address_id = T3.address_id GROUP BY T2.customer_name ORDER BY T2.customer_name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>995@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_and_products_contacts</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_products_contacts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customer_address_history</h4><table><tr><th>customer_id</th><th>address_id</th><th>date_from</th><th>date_to</th></tr><tr><td>12</td><td>7</td><td>2015-07-23 14:37:18</td><td>2018-03-07 12:04:20</td></tr><tr><td>12</td><td>2</td><td>2016-11-06 14:33:12</td><td>2018-03-14 21:36:28</td></tr><tr><td>3</td><td>9</td><td>2011-11-19 12:17:36</td><td>2018-03-22 10:20:16</td></tr><tr><td>13</td><td>15</td><td>2009-02-16 23:04:20</td><td>2018-03-07 17:47:47</td></tr><tr><td>3</td><td>12</td><td>2008-06-22 21:50:44</td><td>2018-03-13 00:08:29</td></tr><tr><td>11</td><td>10</td><td>2012-04-09 18:10:36</td><td>2018-03-11 20:16:56</td></tr><tr><td>11</td><td>10</td><td>2014-11-17 15:11:26</td><td>2018-03-08 23:31:30</td></tr><tr><td>2</td><td>13</td><td>2011-01-02 21:42:29</td><td>2018-02-25 19:55:00</td></tr><tr><td>13</td><td>11</td><td>2015-05-01 12:44:46</td><td>2018-03-24 06:20:36</td></tr><tr><td>12</td><td>3</td><td>2011-06-02 02:53:28</td><td>2018-03-10 00:47:18</td></tr><tr><td>6</td><td>1</td><td>2013-06-14 23:07:04</td><td>2018-03-16 14:49:28</td></tr><tr><td>14</td><td>12</td><td>2008-10-13 04:37:27</td><td>2018-03-19 10:10:53</td></tr><tr><td>13</td><td>5</td><td>2012-03-16 17:42:30</td><td>2018-02-27 07:31:19</td></tr><tr><td>7</td><td>13</td><td>2012-11-19 09:20:49</td><td>2018-03-11 20:11:21</td></tr><tr><td>7</td><td>3</td><td>2012-11-09 07:15:16</td><td>2018-03-09 12:03:31</td></tr><tr><td>2</td><td>4</td><td>2011-11-02 17:31:41</td><td>2018-03-07 05:29:10</td></tr><tr><td>9</td><td>13</td><td>2010-03-25 08:23:20</td><td>2018-03-09 16:41:55</td></tr><tr><td>6</td><td>12</td><td>2017-10-25 07:35:59</td><td>2018-03-11 21:40:52</td></tr><tr><td>7</td><td>3</td><td>2009-05-22 04:42:28</td><td>2018-03-18 11:13:27</td></tr><tr><td>12</td><td>9</td><td>2016-12-23 04:42:07</td><td>2018-03-20 01:13:38</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Sterling', 'y_data': 2}, {'x_data': 'Shany', 'y_data': 2}, {'x_data': 'Orion', 'y_data': 1}, {'x_data': 'Melissa', 'y_data': 3}, {'x_data': 'Madaline', 'y_data': 4}, {'x_data': 'Lela', 'y_data': 1}, {'x_data': 'Cheyenne', 'y_data': 2}, {'x_data': 'Cecelia', 'y_data': 3}, {'x_data': 'Buford', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'customer_name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(customer_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

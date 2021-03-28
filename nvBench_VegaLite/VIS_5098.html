@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5098</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5097.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5099.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5098</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a bar chart, group by name and compute each group's total number, and I want to list the number of name from high to low order please.</p></li><li><p>Show the name of all trains, count the name and show them with a bar chart, show by the Y-axis from high to low please.</p></li><li><p>Plot the number of name by grouped by name as a bar graph, and I want to list the number of name in desc order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , COUNT(Name) FROM train GROUP BY Name ORDER BY COUNT(Name) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3038@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>train_station</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: train_station&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: train</h4><table><tr><th>Train_ID</th><th>Name</th><th>Time</th><th>Service</th></tr><tr><td>1</td><td>Ananthapuri Express</td><td>17:15</td><td>Daily</td></tr><tr><td>2</td><td>Guruvayur Express</td><td>22:10</td><td>Daily</td></tr><tr><td>3</td><td>Guruvayur Express</td><td>4:49</td><td>Daily</td></tr><tr><td>4</td><td>Ananthapuri Express</td><td>11:35</td><td>Daily</td></tr><tr><td>5</td><td>Jayanthi Janatha Express</td><td>06:30</td><td>Daily</td></tr><tr><td>6</td><td>Island Express</td><td>11:15</td><td>Daily</td></tr><tr><td>7</td><td>Madurai Fast Passenger</td><td>21:49</td><td>Daily</td></tr><tr><td>8</td><td>Quilon Fast Passenger</td><td>04:55</td><td>Daily</td></tr><tr><td>9</td><td>Island Express</td><td>16:59</td><td>Daily</td></tr><tr><td>10</td><td>Jayanthi Janatha Express</td><td>10:38</td><td>Daily</td></tr><tr><td>11</td><td>Parasuram Express</td><td>04:20</td><td>Daily</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Jayanthi Janatha Express', 'y_data': 2}, {'x_data': 'Island Express', 'y_data': 2}, {'x_data': 'Guruvayur Express', 'y_data': 2}, {'x_data': 'Ananthapuri Express', 'y_data': 2}, {'x_data': 'Quilon Fast Passenger', 'y_data': 1}, {'x_data': 'Parasuram Express', 'y_data': 1}, {'x_data': 'Madurai Fast Passenger', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

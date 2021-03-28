@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3304</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3303.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3305.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3304</td><td><h4>NL Queries: </h4><ol><li><p>For all artist names who are not from the United States, show the total number of each year.</p></li><li><p>For all artist names who are not from the United States, show the total number of each year with a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Year_Join , COUNT(Year_Join) FROM artist WHERE country != 'United States' GROUP BY Year_Join</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2937</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>theme_gallery</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: theme_gallery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: artist</h4><table><tr><th>Artist_ID</th><th>Name</th><th>Country</th><th>Year_Join</th><th>Age</th></tr><tr><td>1</td><td>Vijay Singh</td><td>Fiji</td><td>1998</td><td>45</td></tr><tr><td>2</td><td>John Daly</td><td>United States</td><td>1991</td><td>46</td></tr><tr><td>3</td><td>Paul Azinger</td><td>United States</td><td>1993</td><td>47</td></tr><tr><td>4</td><td>Jeff Sluman</td><td>United States</td><td>1988</td><td>57</td></tr><tr><td>5</td><td>Mark Brooks</td><td>United States</td><td>1996</td><td>48</td></tr><tr><td>6</td><td>Nick Price</td><td>Zimbabwe</td><td>1994</td><td>48</td></tr><tr><td>7</td><td>Larry Nelson</td><td>United States</td><td>1981</td><td>50</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1994', 'y_data': 1}, {'x_data': '1995', 'y_data': 0}, {'x_data': '1996', 'y_data': 0}, {'x_data': '1997', 'y_data': 0}, {'x_data': '1998', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Year_Join', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Year_Join)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1174</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1173.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1175.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1174</td><td><h4>NL Queries: </h4><ol><li><p>Find the number of the "date became customers" of the customers whose ID is between 10 and 20, and order by the Y in ascending.</p></li><li><p>A bar chart for finding the number of the "date became customers" of the customers whose ID is between 10 and 20, and display by the y axis in asc please.</p></li><li><p>What are the dates when customers with ids between 10 and 20 became customers, and count them by a bar chart, and I want to rank y-axis in ascending order.</p></li><li><p>Find the "date became customers" of the customers whose ID is between 10 and 20, and count them by a bar chart, and order total number in ascending order please.</p></li><li><p>What are the number of the dates when customers with ids between 10 and 20 became customers?, I want to rank y-axis in ascending order.</p></li><li><p>A bar chart for what are the number of the dates when customers with ids between 10 and 20 became customers?, and I want to sort from low to high by the Y-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT date_became_customer , COUNT(date_became_customer) FROM customers WHERE customer_id BETWEEN 10 AND 20  ORDER BY COUNT(date_became_customer) ASC BIN date_became_customer BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>924@y_name@ASC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customers_and_addresses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customers_and_addresses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customers</h4><table><tr><th>customer_id</th><th>payment_method</th><th>customer_name</th><th>date_became_customer</th><th>other_customer_details</th></tr><tr><td>1</td><td>Cash</td><td>Dr. Julia Wuckert MD</td><td>2018-03-01 23:20:10</td><td>None</td></tr><tr><td>2</td><td>Cheque</td><td>Tillman Ernser</td><td>2018-02-28 11:37:44</td><td>None</td></tr><tr><td>3</td><td>Credit Card</td><td>Rodrick Heaney</td><td>2018-03-09 17:41:58</td><td>None</td></tr><tr><td>4</td><td>Credit Card</td><td>Prof. Alexzander Hamill</td><td>2018-02-24 00:20:18</td><td>VIP</td></tr><tr><td>5</td><td>Cheque</td><td>Prof. Reyes Berge II</td><td>2018-03-07 18:05:11</td><td>None</td></tr><tr><td>6</td><td>Cash</td><td>Maudie Kertzmann</td><td>2018-02-26 11:57:47</td><td>None</td></tr><tr><td>7</td><td>Credit Card</td><td>Mozell Morissette</td><td>2018-02-25 13:15:04</td><td>VIP</td></tr><tr><td>8</td><td>Credit Card</td><td>Eunice Morar</td><td>2018-03-21 01:01:04</td><td>None</td></tr><tr><td>9</td><td>Cheque</td><td>Devin Mills</td><td>2018-03-05 16:52:51</td><td>None</td></tr><tr><td>10</td><td>Cash</td><td>Kitty Padberg III</td><td>2018-03-22 18:09:09</td><td>None</td></tr><tr><td>11</td><td>Cheque</td><td>Salvatore Tillman</td><td>2018-03-04 00:17:48</td><td>None</td></tr><tr><td>12</td><td>Cheque</td><td>Clifford Pagac</td><td>2018-02-24 10:24:23</td><td>None</td></tr><tr><td>13</td><td>Credit Card</td><td>Miss Aliyah Witting</td><td>2018-03-05 07:19:45</td><td>None</td></tr><tr><td>14</td><td>Cheque</td><td>Alexane Kilback</td><td>2018-03-08 01:17:31</td><td>None</td></tr><tr><td>15</td><td>Cash</td><td>Prof. Ibrahim Bashirian</td><td>2018-03-15 02:54:27</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Fri', 'y_data': 0}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Mon', 'y_data': 1}, {'x_data': 'Sat', 'y_data': 1}, {'x_data': 'Sun', 'y_data': 1}, {'x_data': 'Thur', 'y_data': 3}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'date_became_customer', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(date_became_customer)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

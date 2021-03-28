@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5017</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5016.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5018.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5017</td><td><h4>NL Queries: </h4><ol><li><p>Show name and distance for all aircrafts by a bar chart.</p></li><li><p>Show name and distance for all aircrafts. Visualize by bar chart.</p></li><li><p>Return a histogram on what are the names and distances for all airplanes?</p></li><li><p>Return a bar chart on what are the names and distances for all airplanes?</p></li><li><p>What are the names and distances for all airplanes. Visualize by bar chart.</p></li><li><p>Show me distance by name in a histogram</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT name , distance FROM Aircraft</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1414</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>flight_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: flight_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Aircraft</h4><table><tr><th>aid</th><th>name</th><th>distance</th></tr><tr><td>1</td><td>Boeing 747-400</td><td>8430</td></tr><tr><td>2</td><td>Boeing 737-800</td><td>3383</td></tr><tr><td>3</td><td>Airbus A340-300</td><td>7120</td></tr><tr><td>4</td><td>British Aerospace Jetstream 41</td><td>1502</td></tr><tr><td>5</td><td>Embraer ERJ-145</td><td>1530</td></tr><tr><td>6</td><td>SAAB 340</td><td>2128</td></tr><tr><td>7</td><td>Piper Archer III</td><td>520</td></tr><tr><td>8</td><td>Tupolev 154</td><td>4103</td></tr><tr><td>16</td><td>Schwitzer 2-33</td><td>30</td></tr><tr><td>9</td><td>Lockheed L1011</td><td>6900</td></tr><tr><td>10</td><td>Boeing 757-300</td><td>4010</td></tr><tr><td>11</td><td>Boeing 777-300</td><td>6441</td></tr><tr><td>12</td><td>Boeing 767-400ER</td><td>6475</td></tr><tr><td>13</td><td>Airbus A320</td><td>2605</td></tr><tr><td>14</td><td>Airbus A319</td><td>1805</td></tr><tr><td>15</td><td>Boeing 727</td><td>1504</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Boeing 747-400', 'y_data': 8430}, {'x_data': 'Boeing 737-800', 'y_data': 3383}, {'x_data': 'Airbus A340-300', 'y_data': 7120}, {'x_data': 'British Aerospace Jetstream 41', 'y_data': 1502}, {'x_data': 'Embraer ERJ-145', 'y_data': 1530}, {'x_data': 'SAAB 340', 'y_data': 2128}, {'x_data': 'Piper Archer III', 'y_data': 520}, {'x_data': 'Tupolev 154', 'y_data': 4103}, {'x_data': 'Schwitzer 2-33', 'y_data': 30}, {'x_data': 'Lockheed L1011', 'y_data': 6900}, {'x_data': 'Boeing 757-300', 'y_data': 4010}, {'x_data': 'Boeing 777-300', 'y_data': 6441}, {'x_data': 'Boeing 767-400ER', 'y_data': 6475}, {'x_data': 'Airbus A320', 'y_data': 2605}, {'x_data': 'Airbus A319', 'y_data': 1805}, {'x_data': 'Boeing 727', 'y_data': 1504}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'distance'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

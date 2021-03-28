@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3023</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3022.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3024.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3023</td><td><h4>NL Queries: </h4><ol><li><p>List the number of counties of all appellations in a bar chart.</p></li><li><p>What is the number of counties for all appellations?</p></li><li><p>Return a bar chart about the number of counties for all appellations?</p></li><li><p>Plot the number of county by grouped by county as a bar graph</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT County , COUNT(County) FROM APPELLATIONS GROUP BY County</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3225</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>wine_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: wine_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: APPELLATIONS</h4><table><tr><th>No</th><th>Appelation</th><th>County</th><th>State</th><th>Area</th><th>isAVA</th></tr><tr><td>1</td><td>Alexander Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>2</td><td>Amador County</td><td>Amador</td><td>California</td><td>Sierra Foothills</td><td>No</td></tr><tr><td>3</td><td>Amador-Mendocino-Sonoma Counties</td><td>N/A</td><td>California</td><td>N/A</td><td>No</td></tr><tr><td>4</td><td>Anderson Valley</td><td>Mendocino</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>5</td><td>Arroyo Grande Valley</td><td>San Luis Obispo</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>6</td><td>Atlas Peak</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>7</td><td>Bennett Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>8</td><td>Calaveras County</td><td>Calaveras</td><td>California</td><td>Sierra Foothills</td><td>No</td></tr><tr><td>9</td><td>California</td><td>N/A</td><td>California</td><td>California</td><td>No</td></tr><tr><td>10</td><td>Carneros</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>11</td><td>Central Coast</td><td>N/A</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>12</td><td>Chalk Hill</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>13</td><td>Chalone</td><td>Monterey</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>14</td><td>Contra Costa County</td><td>Contra Costa</td><td>California</td><td>Santa Cruz Mountains</td><td>No</td></tr><tr><td>15</td><td>Dry Creek Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>16</td><td>Edna Valley</td><td>San Luis Obispo</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>17</td><td>Fiddletown</td><td>Amador</td><td>California</td><td>Sierra Foothills</td><td>Yes</td></tr><tr><td>18</td><td>Green Valley of Russian River Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>19</td><td>Guenoc Valley</td><td>Lake</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>20</td><td>Happy Canyon of Santa Barbara</td><td>Santa Barbara</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>21</td><td>Howell Mountain</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>22</td><td>Knights Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>23</td><td>Lake County</td><td>Lake</td><td>California</td><td>North Coast</td><td>No</td></tr><tr><td>24</td><td>Livermore Valley</td><td>Alameda</td><td>California</td><td>Santa Cruz Mountains</td><td>Yes</td></tr><tr><td>25</td><td>Lodi</td><td>San Joaquin</td><td>California</td><td>Central Valley</td><td>Yes</td></tr><tr><td>26</td><td>Mendocino County</td><td>Mendocino</td><td>California</td><td>North Coast</td><td>No</td></tr><tr><td>27</td><td>Monterey County</td><td>Monterey</td><td>California</td><td>Central Coast</td><td>No</td></tr><tr><td>28</td><td>Mount Harlan</td><td>San Benito</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>29</td><td>Mount Vedeer</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>30</td><td>Napa Valley</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>31</td><td>Napa-Sonoma counties</td><td>N/A</td><td>California</td><td>North Coast</td><td>No</td></tr><tr><td>32</td><td>North Coast</td><td>N/A</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>33</td><td>Oakville</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>34</td><td>Paso Robles</td><td>San Luis Obispo</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>35</td><td>Red Hills Lake County</td><td>Lake</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>36</td><td>Rockpile</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>37</td><td>Russian River Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>38</td><td>Rutherford</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>39</td><td>San Luis Obispo County</td><td>San Luis Obispo</td><td>California</td><td>Central Coast</td><td>No</td></tr><tr><td>40</td><td>Santa Barbara County</td><td>Santa Barbara</td><td>California</td><td>Central Coast</td><td>No</td></tr><tr><td>41</td><td>Santa Cruz Mountains</td><td>N/A</td><td>California</td><td>Santa Cruz Mountains</td><td>Yes</td></tr><tr><td>42</td><td>Santa Lucia Highlands</td><td>Monterey</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>43</td><td>Santa Maria Valley</td><td>Santa Barbara</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>44</td><td>Santa Ynez Valley</td><td>Santa Barbara</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>45</td><td>Shenandoah Valley</td><td>Amador</td><td>California</td><td>Sierra Foothills</td><td>Yes</td></tr><tr><td>46</td><td>Sierra Foothills</td><td>N/A</td><td>California</td><td>Sierra Foothills</td><td>Yes</td></tr><tr><td>47</td><td>Solano County</td><td>Solano</td><td>California</td><td>North Coast</td><td>No</td></tr><tr><td>48</td><td>Sonoma Coast</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>49</td><td>Sonoma County</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>No</td></tr><tr><td>50</td><td>Sonoma Valley</td><td>Sonoma</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>51</td><td>Sonoma-Lake Counties</td><td>N/A</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>52</td><td>Spring Mountain District</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>53</td><td>St. Helena</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>54</td><td>Sta. Rita Hills</td><td>Santa Barbara</td><td>California</td><td>Central Coast</td><td>Yes</td></tr><tr><td>55</td><td>Stags Leap District</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr><tr><td>56</td><td>Yolo County</td><td>Yolo</td><td>California</td><td>Central Valley</td><td>No</td></tr><tr><td>57</td><td>Yountville</td><td>Napa</td><td>California</td><td>North Coast</td><td>Yes</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Alameda', 'y_data': 1}, {'x_data': 'Amador', 'y_data': 3}, {'x_data': 'Calaveras', 'y_data': 1}, {'x_data': 'Contra Costa', 'y_data': 1}, {'x_data': 'Lake', 'y_data': 3}, {'x_data': 'Mendocino', 'y_data': 2}, {'x_data': 'Monterey', 'y_data': 3}, {'x_data': 'N/A', 'y_data': 8}, {'x_data': 'Napa', 'y_data': 11}, {'x_data': 'San Benito', 'y_data': 1}, {'x_data': 'San Joaquin', 'y_data': 1}, {'x_data': 'San Luis Obispo', 'y_data': 4}, {'x_data': 'Santa Barbara', 'y_data': 5}, {'x_data': 'Solano', 'y_data': 1}, {'x_data': 'Sonoma', 'y_data': 11}, {'x_data': 'Yolo', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'County', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(County)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

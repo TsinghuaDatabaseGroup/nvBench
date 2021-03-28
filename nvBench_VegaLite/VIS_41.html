@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_41</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_40.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_42.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>41</td><td><h4>NL Queries: </h4><ol><li><p>Show all allergies with number of students affected Show bar chart, could you show in descending by the total number?</p></li><li><p>Show the total number from each allergy, and I want to show from high to low by the total number please.</p></li><li><p>Show all allergies with number of students affected with a bar chart, display the total number in desc order.</p></li><li><p>Return a bar chart on how many students have each different allergy?, and display the total number in desc order.</p></li><li><p>How many students have each different allergy Show bar chart, and sort by the Y-axis in desc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Allergy , count(*) FROM Has_allergy GROUP BY Allergy ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>45@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>allergy_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: allergy_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Has_allergy</h4><table><tr><th>StuID</th><th>Allergy</th></tr><tr><td>1001</td><td>Cat</td></tr><tr><td>1002</td><td>Shellfish</td></tr><tr><td>1002</td><td>Tree Pollen</td></tr><tr><td>1003</td><td>Dog</td></tr><tr><td>1004</td><td>Nuts</td></tr><tr><td>1005</td><td>Nuts</td></tr><tr><td>1005</td><td>Tree Pollen</td></tr><tr><td>1006</td><td>Nuts</td></tr><tr><td>1007</td><td>Ragweed</td></tr><tr><td>1007</td><td>Tree Pollen</td></tr><tr><td>1007</td><td>Grass Pollen</td></tr><tr><td>1007</td><td>Eggs</td></tr><tr><td>1007</td><td>Milk</td></tr><tr><td>1007</td><td>Shellfish</td></tr><tr><td>1007</td><td>Anchovies</td></tr><tr><td>1007</td><td>Cat</td></tr><tr><td>1007</td><td>Dog</td></tr><tr><td>1009</td><td>Tree Pollen</td></tr><tr><td>1010</td><td>Ragweed</td></tr><tr><td>1010</td><td>Tree Pollen</td></tr><tr><td>1010</td><td>Grass Pollen</td></tr><tr><td>1010</td><td>Eggs</td></tr><tr><td>1010</td><td>Milk</td></tr><tr><td>1010</td><td>Shellfish</td></tr><tr><td>1010</td><td>Anchovies</td></tr><tr><td>1010</td><td>Cat</td></tr><tr><td>1010</td><td>Dog</td></tr><tr><td>1011</td><td>Ragweed</td></tr><tr><td>1012</td><td>Ragweed</td></tr><tr><td>1013</td><td>Ragweed</td></tr><tr><td>1014</td><td>Nuts</td></tr><tr><td>1015</td><td>Nuts</td></tr><tr><td>1015</td><td>Soy</td></tr><tr><td>1016</td><td>Nuts</td></tr><tr><td>1016</td><td>Milk</td></tr><tr><td>1017</td><td>Tree Pollen</td></tr><tr><td>1018</td><td>Nuts</td></tr><tr><td>1018</td><td>Soy</td></tr><tr><td>1019</td><td>Tree Pollen</td></tr><tr><td>1020</td><td>Tree Pollen</td></tr><tr><td>1021</td><td>Tree Pollen</td></tr><tr><td>1022</td><td>Nuts</td></tr><tr><td>1022</td><td>Anchovies</td></tr><tr><td>1023</td><td>Rodent</td></tr><tr><td>1023</td><td>Cat</td></tr><tr><td>1023</td><td>Nuts</td></tr><tr><td>1024</td><td>Ragweed</td></tr><tr><td>1024</td><td>Tree Pollen</td></tr><tr><td>1025</td><td>Tree Pollen</td></tr><tr><td>1026</td><td>Grass Pollen</td></tr><tr><td>1027</td><td>Tree Pollen</td></tr><tr><td>1028</td><td>Tree Pollen</td></tr><tr><td>1029</td><td>Soy</td></tr><tr><td>1029</td><td>Nuts</td></tr><tr><td>1029</td><td>Eggs</td></tr><tr><td>1030</td><td>Grass Pollen</td></tr><tr><td>1031</td><td>Nuts</td></tr><tr><td>1031</td><td>Shellfish</td></tr><tr><td>1031</td><td>Soy</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tree Pollen', 'y_data': 13}, {'x_data': 'Nuts', 'y_data': 11}, {'x_data': 'Ragweed', 'y_data': 6}, {'x_data': 'Soy', 'y_data': 4}, {'x_data': 'Shellfish', 'y_data': 4}, {'x_data': 'Grass Pollen', 'y_data': 4}, {'x_data': 'Cat', 'y_data': 4}, {'x_data': 'Milk', 'y_data': 3}, {'x_data': 'Eggs', 'y_data': 3}, {'x_data': 'Dog', 'y_data': 3}, {'x_data': 'Anchovies', 'y_data': 3}, {'x_data': 'Rodent', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Allergy', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1429</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1428.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1430.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1429</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart about the number of faults for different fault status of all the faults recoreded in the logs, list in desc by the X-axis please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT fault_status , COUNT(fault_status) FROM Fault_Log AS T1 JOIN Fault_Log_Parts AS T2 ON T1.fault_log_entry_id = T2.fault_log_entry_id GROUP BY fault_status ORDER BY fault_status DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>123@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>assets_maintenance</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: assets_maintenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Fault_Log</h4><table><tr><th>fault_log_entry_id</th><th>asset_id</th><th>recorded_by_staff_id</th><th>fault_log_entry_datetime</th><th>fault_description</th><th>other_fault_details</th></tr><tr><td>1</td><td>3</td><td>14</td><td>2018-03-21 04:25:00</td><td>system error</td><td>None</td></tr><tr><td>2</td><td>7</td><td>4</td><td>2018-03-13 09:43:05</td><td>system error</td><td>None</td></tr><tr><td>3</td><td>6</td><td>9</td><td>2018-02-24 09:28:20</td><td>system error</td><td>None</td></tr><tr><td>4</td><td>5</td><td>13</td><td>2018-02-28 02:07:36</td><td>failed parts</td><td>None</td></tr><tr><td>5</td><td>9</td><td>11</td><td>2018-03-02 03:14:46</td><td>system error</td><td>None</td></tr><tr><td>6</td><td>8</td><td>8</td><td>2018-02-28 20:15:25</td><td>failed parts</td><td>None</td></tr><tr><td>7</td><td>5</td><td>14</td><td>2018-03-05 09:44:08</td><td>system error</td><td>None</td></tr><tr><td>8</td><td>12</td><td>10</td><td>2018-03-19 04:24:18</td><td>failed parts</td><td>None</td></tr><tr><td>9</td><td>3</td><td>5</td><td>2018-03-06 15:52:54</td><td>system error</td><td>None</td></tr><tr><td>10</td><td>2</td><td>9</td><td>2018-03-03 10:41:52</td><td>failed parts</td><td>None</td></tr><tr><td>11</td><td>15</td><td>12</td><td>2018-03-21 15:02:17</td><td>failed parts</td><td>None</td></tr><tr><td>12</td><td>8</td><td>8</td><td>2018-03-10 07:08:34</td><td>system error</td><td>None</td></tr><tr><td>13</td><td>3</td><td>13</td><td>2018-03-11 14:00:39</td><td>system error</td><td>None</td></tr><tr><td>14</td><td>3</td><td>11</td><td>2018-02-27 11:34:20</td><td>failed parts</td><td>None</td></tr><tr><td>15</td><td>12</td><td>13</td><td>2018-03-01 08:52:58</td><td>system error</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Waiting', 'y_data': 3}, {'x_data': 'Return', 'y_data': 2}, {'x_data': 'Reported', 'y_data': 5}, {'x_data': 'Fixed', 'y_data': 5}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'fault_status', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(fault_status)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

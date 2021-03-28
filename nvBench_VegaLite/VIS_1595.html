@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1595</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1594.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1596.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1595</td><td><h4>NL Queries: </h4><ol><li><p>Group and count the state province attribute of the location table to visualize a bar chart.</p></li><li><p>Give me a bar chart to compare the number of state provinces located in different cities.</p></li><li><p>Create a bar chart showing the number of state province across state province</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT STATE_PROVINCE , COUNT(STATE_PROVINCE) FROM locations GROUP BY STATE_PROVINCE</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1625</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>hr_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: hr_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: locations</h4><table><tr><th>LOCATION_ID</th><th>STREET_ADDRESS</th><th>POSTAL_CODE</th><th>CITY</th><th>STATE_PROVINCE</th><th>COUNTRY_ID</th></tr><tr><td>1000</td><td>1297 Via Cola di Rie</td><td>989</td><td>Roma</td><td></td><td>IT</td></tr><tr><td>1100</td><td>93091 Calle della Testa</td><td>10934</td><td>Venice</td><td></td><td>IT</td></tr><tr><td>1200</td><td>2017 Shinjuku-ku</td><td>1689</td><td>Tokyo</td><td>Tokyo Prefecture</td><td>JP</td></tr><tr><td>1300</td><td>9450 Kamiya-cho</td><td>6823</td><td>Hiroshima</td><td></td><td>JP</td></tr><tr><td>1400</td><td>2014 Jabberwocky Rd</td><td>26192</td><td>Southlake</td><td>Texas</td><td>US</td></tr><tr><td>1500</td><td>2011 Interiors Blvd</td><td>99236</td><td>South San Francisco</td><td>California</td><td>US</td></tr><tr><td>1600</td><td>2007 Zagora St</td><td>50090</td><td>South Brunswick</td><td>New Jersey</td><td>US</td></tr><tr><td>1700</td><td>2004 Charade Rd</td><td>98199</td><td>Seattle</td><td>Washington</td><td>US</td></tr><tr><td>1800</td><td>147 Spadina Ave</td><td>M5V 2L7</td><td>Toronto</td><td>Ontario</td><td>CA</td></tr><tr><td>1900</td><td>6092 Boxwood St</td><td>YSW 9T2</td><td>Whitehorse</td><td>Yukon</td><td>CA</td></tr><tr><td>2000</td><td>40-5-12 Laogianggen</td><td>190518</td><td>Beijing</td><td></td><td>CN</td></tr><tr><td>2100</td><td>1298 Vileparle (E)</td><td>490231</td><td>Bombay</td><td>Maharashtra</td><td>IN</td></tr><tr><td>2200</td><td>12-98 Victoria Street</td><td>2901</td><td>Sydney</td><td>New South Wales</td><td>AU</td></tr><tr><td>2300</td><td>198 Clementi North</td><td>540198</td><td>Singapore</td><td></td><td>SG</td></tr><tr><td>2400</td><td>8204 Arthur St</td><td></td><td>London</td><td></td><td>UK</td></tr><tr><td>2500</td><td>"Magdalen Centre</td><td> The Oxford </td><td>OX9 9ZB</td><td>Oxford</td><td>Ox</td></tr><tr><td>2600</td><td>9702 Chester Road</td><td>9629850293</td><td>Stretford</td><td>Manchester</td><td>UK</td></tr><tr><td>2700</td><td>Schwanthalerstr. 7031</td><td>80925</td><td>Munich</td><td>Bavaria</td><td>DE</td></tr><tr><td>2800</td><td>Rua Frei Caneca 1360</td><td>01307-002</td><td>Sao Paulo</td><td>Sao Paulo</td><td>BR</td></tr><tr><td>2900</td><td>20 Rue des Corps-Saints</td><td>1730</td><td>Geneva</td><td>Geneve</td><td>CH</td></tr><tr><td>3000</td><td>Murtenstrasse 921</td><td>3095</td><td>Bern</td><td>BE</td><td>CH</td></tr><tr><td>3100</td><td>Pieter Breughelstraat 837</td><td>3029SK</td><td>Utrecht</td><td>Utrecht</td><td>NL</td></tr><tr><td>3200</td><td>Mariano Escobedo 9991</td><td>11932</td><td>Mexico City</td><td>"Distrito Federal</td><td>"</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '', 'y_data': 1}, {'x_data': 'Bavaria', 'y_data': 1}, {'x_data': 'California', 'y_data': 1}, {'x_data': 'Ontario', 'y_data': 1}, {'x_data': 'Oxford', 'y_data': 1}, {'x_data': 'Texas', 'y_data': 1}, {'x_data': 'Washington', 'y_data': 21}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'STATE_PROVINCE', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(STATE_PROVINCE)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

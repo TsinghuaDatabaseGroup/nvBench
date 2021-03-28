@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3368</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3367.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3369.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3368</td><td><h4>NL Queries: </h4><ol><li><p>Return a pie chart on what is the average price of the products for each category?</p></li><li><p>Visualize a pie chart with what is the average price of the products for each category?</p></li><li><p>What is the average price of the products for each category, Show a pie chart.</p></li><li><p>Return the average price of products that have each category code in a pie chart.</p></li><li><p>A pie chart about the average price of products that have each category code.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT product_category_code , avg(product_price) FROM products GROUP BY product_category_code</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>908</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>customer_complaints</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customer_complaints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: products</h4><table><tr><th>product_id</th><th>parent_product_id</th><th>product_category_code</th><th>date_product_first_available</th><th>date_product_discontinued</th><th>product_name</th><th>product_description</th><th>product_price</th></tr><tr><td>117</td><td>4</td><td>Food</td><td>1988-09-29 17:54:50</td><td>1987-12-20 13:46:16</td><td>Chocolate</td><td>Handmade chocolate</td><td>2.88</td></tr><tr><td>118</td><td>3</td><td>Book</td><td>1974-06-25 12:26:47</td><td>1991-08-20 05:22:31</td><td>The Great Gatsby</td><td>American novel</td><td>35.0</td></tr><tr><td>119</td><td>8</td><td>Hardware</td><td>1994-12-18 15:13:19</td><td>1997-07-02 18:26:16</td><td>Keyboard</td><td>Designed for games</td><td>109.99</td></tr><tr><td>120</td><td>9</td><td>Hardware</td><td>1998-06-20 15:04:11</td><td>1980-06-26 10:40:19</td><td>Mouse</td><td>Blue tooth mouse</td><td>23.35</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Book', 'y_data': 35}, {'x_data': 'Food', 'y_data': 2.88}, {'x_data': 'Hardware', 'y_data': 66.67}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'avg(product_price)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'product_category_code'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

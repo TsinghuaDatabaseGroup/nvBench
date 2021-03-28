@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6863</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6862.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6864.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6863</td><td><h4>NL Queries: </h4><ol><li><p>Show different citizenships and the maximum net worth of singers of each citizenship in a bar chart, I want to display y axis from low to high order.</p></li><li><p>For each citizenship, what is the maximum net worth Visualize by bar chart, and sort Y in asc order.</p></li><li><p>Show different citizenships and the maximum net worth of singers of each citizenship, and sort Y in asc order.</p></li><li><p>Show me maximal net worth millions by citizenship in a histogram, sort Y in asc order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Citizenship , max(Net_Worth_Millions) FROM singer GROUP BY Citizenship ORDER BY max(Net_Worth_Millions) ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2776@y_name@ASC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>singer</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: singer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: singer</h4><table><tr><th>Singer_ID</th><th>Name</th><th>Birth_Year</th><th>Net_Worth_Millions</th><th>Citizenship</th></tr><tr><td>1</td><td>Liliane Bettencourt</td><td>1944.0</td><td>30.0</td><td>France</td></tr><tr><td>2</td><td>Christy Walton</td><td>1948.0</td><td>28.8</td><td>United States</td></tr><tr><td>3</td><td>Alice Walton</td><td>1949.0</td><td>26.3</td><td>United States</td></tr><tr><td>4</td><td>Iris Fontbona</td><td>1942.0</td><td>17.4</td><td>Chile</td></tr><tr><td>5</td><td>Jacqueline Mars</td><td>1940.0</td><td>17.8</td><td>United States</td></tr><tr><td>6</td><td>Gina Rinehart</td><td>1953.0</td><td>17.0</td><td>Australia</td></tr><tr><td>7</td><td>Susanne Klatten</td><td>1962.0</td><td>14.3</td><td>Germany</td></tr><tr><td>8</td><td>Abigail Johnson</td><td>1961.0</td><td>12.7</td><td>United States</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Germany', 'y_data': 14.3}, {'x_data': 'Australia', 'y_data': 17}, {'x_data': 'Chile', 'y_data': 17.4}, {'x_data': 'United States', 'y_data': 28.8}, {'x_data': 'France', 'y_data': 30}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Citizenship', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'ascending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'max(Net_Worth_Millions)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

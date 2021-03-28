@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_117</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_116.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_118.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>117</td><td><h4>NL Queries: </h4><ol><li><p>How many countries does each continent have? Return a bar chart listing the continent name and the number of countries, and could you order from high to low by the X-axis please?</p></li><li><p>For each continent, list its name, and how many countries it has with a bar chart, and rank by the Continent in desc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T1.Continent , count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId = T2.Continent GROUP BY T1.ContId ORDER BY T1.Continent DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>420@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>car_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: car_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: CONTINENTS</h4><table><tr><th>ContId</th><th>Continent</th></tr><tr><td>1</td><td>america</td></tr><tr><td>2</td><td>europe</td></tr><tr><td>3</td><td>asia</td></tr><tr><td>4</td><td>africa</td></tr><tr><td>5</td><td>australia</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'europe', 'y_data': 6}, {'x_data': 'australia', 'y_data': 2}, {'x_data': 'asia', 'y_data': 2}, {'x_data': 'america', 'y_data': 3}, {'x_data': 'africa', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Continent', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

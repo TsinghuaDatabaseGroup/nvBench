@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_1901</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_1900.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_1902.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>1901</td><td><h4>NL Queries: </h4><ol><li><p>List the dates and vote percents of elections Show bar chart, and list y axis from high to low order.</p></li><li><p>Show vote_percent from each date, could you show y axis from high to low order please?</p></li><li><p>List the dates and vote percents of elections in a bar chart, and I want to order by the y-axis in desc.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Date , Vote_Percent FROM election ORDER BY Vote_Percent DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1326@y_name@DESC</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>election_representative</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: election_representative&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: election</h4><table><tr><th>Election_ID</th><th>Representative_ID</th><th>Date</th><th>Votes</th><th>Vote_Percent</th><th>Seats</th><th>Place</th></tr><tr><td>1</td><td>1</td><td>July 1942</td><td>9423.0</td><td>16.2</td><td>6.0</td><td>3.0</td></tr><tr><td>2</td><td>2</td><td>October 1942</td><td>11059.0</td><td>18.5</td><td>10.0</td><td>1.0</td></tr><tr><td>3</td><td>4</td><td>1946</td><td>13049.0</td><td>19.5</td><td>10.0</td><td>2.0</td></tr><tr><td>4</td><td>5</td><td>1949</td><td>14077.0</td><td>19.5</td><td>9.0</td><td>2.0</td></tr><tr><td>5</td><td>7</td><td>1953</td><td>12422.0</td><td>16.0</td><td>7.0</td><td>3.0</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1949', 'y_data': 19.5}, {'x_data': '1946', 'y_data': 19.5}, {'x_data': 'October 1942', 'y_data': 18.5}, {'x_data': 'July 1942', 'y_data': 16.2}, {'x_data': '1953', 'y_data': 16}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Date', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Vote_Percent'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

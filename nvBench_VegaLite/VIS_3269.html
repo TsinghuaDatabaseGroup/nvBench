@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3269</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3268.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3270.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3269</td><td><h4>NL Queries: </h4><ol><li><p>Show the number of documents in each day for all documents on project with details 'Graph Database project' and bin document date by year interval with a line chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Document_Date , COUNT(Document_Date) FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id = T2.project_id WHERE T2.project_details = 'Graph Database project' BIN Document_Date BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>855</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Line</p><p><b>DB: </b>cre_Docs_and_Epenses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Docs_and_Epenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Documents</h4><table><tr><th>Document_ID</th><th>Document_Type_Code</th><th>Project_ID</th><th>Document_Date</th><th>Document_Name</th><th>Document_Description</th><th>Other_Details</th></tr><tr><td>29</td><td>CV</td><td>30</td><td>2004-08-28 06:59:19</td><td>Review on UK files</td><td>None</td><td>None</td></tr><tr><td>42</td><td>BK</td><td>105</td><td>2012-12-27 19:09:18</td><td>Review on Canadian files</td><td>None</td><td>None</td></tr><tr><td>57</td><td>CV</td><td>195</td><td>1980-10-22 14:17:11</td><td>Review on French files</td><td>None</td><td>None</td></tr><tr><td>121</td><td>BK</td><td>105</td><td>1981-11-29 10:23:01</td><td>Review on USA files</td><td>None</td><td>None</td></tr><tr><td>181</td><td>PP</td><td>105</td><td>1970-06-17 14:03:21</td><td>Chapter on private files</td><td>None</td><td>None</td></tr><tr><td>192</td><td>PP</td><td>134</td><td>2013-01-26 15:15:25</td><td>Book on USA files</td><td>None</td><td>None</td></tr><tr><td>226</td><td>BK</td><td>30</td><td>1991-07-08 08:49:59</td><td>Review on UK files</td><td>None</td><td>None</td></tr><tr><td>227</td><td>BK</td><td>30</td><td>1970-03-06 07:34:49</td><td>Deontae files</td><td>None</td><td>None</td></tr><tr><td>240</td><td>BK</td><td>105</td><td>1971-06-09 19:03:41</td><td>Winona Book</td><td>None</td><td>None</td></tr><tr><td>300</td><td>FM</td><td>35</td><td>2007-09-26 02:39:11</td><td>Trenton Presentation</td><td>None</td><td>None</td></tr><tr><td>309</td><td>BK</td><td>35</td><td>1978-10-15 10:33:17</td><td>Noel CV</td><td>None</td><td>None</td></tr><tr><td>318</td><td>PP</td><td>134</td><td>1970-01-30 10:53:35</td><td>King Book</td><td>None</td><td>None</td></tr><tr><td>367</td><td>CV</td><td>134</td><td>1983-08-24 17:10:26</td><td>Jevon Paper</td><td>None</td><td>None</td></tr><tr><td>371</td><td>PP</td><td>105</td><td>1976-05-06 12:56:12</td><td>Katheryn statement</td><td>None</td><td>None</td></tr><tr><td>383</td><td>PP</td><td>35</td><td>2005-10-28 03:17:16</td><td>Review on UK files</td><td>None</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1970~1973', 'y_data': 2}, {'x_data': '1974~1977', 'y_data': 1}, {'x_data': '1978~1981', 'y_data': 1}, {'x_data': '1982~1985', 'y_data': 0}, {'x_data': '1986~1989', 'y_data': 0}, {'x_data': '1990~1993', 'y_data': 0}, {'x_data': '1994~1997', 'y_data': 0}, {'x_data': '1998~2001', 'y_data': 0}, {'x_data': '2002~2005', 'y_data': 0}, {'x_data': '2006~2009', 'y_data': 0}, {'x_data': '2010~2012', 'y_data': 1}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Document_Date', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Document_Date)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

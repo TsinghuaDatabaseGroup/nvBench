@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4086</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4085.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4087.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4086</td><td><h4>NL Queries: </h4><ol><li><p>原始数据没有weekday信息, list in desc by the y axis.</p></li><li><p>Give the years and official names of the cities of each competition, and sort the number of year in descending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Year , COUNT(Year) FROM city AS T1 JOIN farm_competition AS T2 ON T1.City_ID = T2.Host_city_ID  ORDER BY COUNT(Year) DESC BIN Year BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1386@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>farm</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: city</h4><table><tr><th>City_ID</th><th>Official_Name</th><th>Status</th><th>Area_km_2</th><th>Population</th><th>Census_Ranking</th></tr><tr><td>1</td><td>Grand Falls/Grand-Sault</td><td>Town</td><td>18.06</td><td>5706.0</td><td>636 of 5008</td></tr><tr><td>2</td><td>Perth-Andover</td><td>Village</td><td>8.89</td><td>1778.0</td><td>1442 of 5,008</td></tr><tr><td>3</td><td>Plaster Rock</td><td>Village</td><td>3.09</td><td>1135.0</td><td>1936 of 5,008</td></tr><tr><td>4</td><td>Drummond</td><td>Village</td><td>8.91</td><td>775.0</td><td>2418 of 5008</td></tr><tr><td>5</td><td>Aroostook</td><td>Village</td><td>2.24</td><td>351.0</td><td>3460 of 5008</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Tue', 'y_data': 2}, {'x_data': 'Wed', 'y_data': 1}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Sun', 'y_data': 1}, {'x_data': 'Sat', 'y_data': 1}, {'x_data': 'Mon', 'y_data': 0}, {'x_data': 'Fri', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Year', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Year)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

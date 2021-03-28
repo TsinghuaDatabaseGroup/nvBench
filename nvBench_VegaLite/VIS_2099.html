@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2099</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2098.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2100.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2099</td><td><h4>NL Queries: </h4><ol><li><p>Find the number of last names of teachers in alphabetical order of last name with a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT last_name , COUNT(last_name) FROM Teachers GROUP BY last_name ORDER BY last_name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>186</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>behavior_monitoring</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: behavior_monitoring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Teachers</h4><table><tr><th>teacher_id</th><th>address_id</th><th>first_name</th><th>middle_name</th><th>last_name</th><th>gender</th><th>cell_mobile_number</th><th>email_address</th><th>other_details</th></tr><tr><td>1</td><td>15</td><td>Lyla</td><td>Wilson</td><td>Medhurst</td><td>1</td><td>792.333.7714</td><td>ohammes@example.com</td><td>None</td></tr><tr><td>2</td><td>7</td><td>Sid</td><td>Tremayne</td><td>Brakus</td><td>1</td><td>202.626.1698x9242</td><td>deborah37@example.com</td><td>None</td></tr><tr><td>3</td><td>8</td><td>Trystan</td><td>Alexane</td><td>Schuster</td><td>1</td><td>583-467-0403x647</td><td>hilll.kitty@example.com</td><td>None</td></tr><tr><td>4</td><td>7</td><td>Donnie</td><td>Morgan</td><td>Kuhic</td><td>1</td><td>07928511102</td><td>destany.reichert@example.net</td><td>None</td></tr><tr><td>5</td><td>15</td><td>Aniya</td><td>Ian</td><td>Becker</td><td>1</td><td>599.373.0773x67706</td><td>hahn.isom@example.com</td><td>Dean</td></tr><tr><td>6</td><td>16</td><td>Citlalli</td><td>Ahmad</td><td>Kuhic</td><td>1</td><td>017.636.7409</td><td>kozey.adeline@example.org</td><td>None</td></tr><tr><td>7</td><td>3</td><td>Alvis</td><td>Macey</td><td>Schultz</td><td>1</td><td>944-154-5379x4990</td><td>everardo.lynch@example.net</td><td>None</td></tr><tr><td>8</td><td>13</td><td>Cecilia</td><td>Mitchel</td><td>Ward</td><td>0</td><td>809.852.7009</td><td>paula.abbott@example.org</td><td>None</td></tr><tr><td>9</td><td>2</td><td>Woodrow</td><td>Lilla</td><td>Goldner</td><td>1</td><td>084-270-4880</td><td>ierdman@example.com</td><td>None</td></tr><tr><td>10</td><td>8</td><td>Gregory</td><td>Ardith</td><td>Heller</td><td>0</td><td>908-759-1808x63115</td><td>valentina.yost@example.com</td><td>None</td></tr><tr><td>11</td><td>12</td><td>Edmond</td><td>Kailyn</td><td>Lang</td><td>0</td><td>(659)018-0143x379</td><td>lila58@example.com</td><td>None</td></tr><tr><td>12</td><td>10</td><td>Camren</td><td>Kendall</td><td>Moore</td><td>1</td><td>(381)799-4759x169</td><td>randy.gerhold@example.org</td><td>None</td></tr><tr><td>13</td><td>19</td><td>Stephanie</td><td>Tamara</td><td>Price</td><td>0</td><td>952.821.3392</td><td>kiana.lang@example.net</td><td>None</td></tr><tr><td>14</td><td>14</td><td>Evelyn</td><td>Keanu</td><td>Hansen</td><td>0</td><td>1-787-044-8336x606</td><td>maribel21@example.org</td><td>None</td></tr><tr><td>15</td><td>10</td><td>Hobart</td><td>Michel</td><td>Bergnaum</td><td>1</td><td>796-453-5175x64012</td><td>willms.lane@example.com</td><td>None</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Becker', 'y_data': 1}, {'x_data': 'Bergnaum', 'y_data': 1}, {'x_data': 'Brakus', 'y_data': 1}, {'x_data': 'Goldner', 'y_data': 1}, {'x_data': 'Hansen', 'y_data': 1}, {'x_data': 'Heller', 'y_data': 1}, {'x_data': 'Kuhic', 'y_data': 2}, {'x_data': 'Lang', 'y_data': 1}, {'x_data': 'Medhurst', 'y_data': 1}, {'x_data': 'Moore', 'y_data': 1}, {'x_data': 'Price', 'y_data': 1}, {'x_data': 'Schultz', 'y_data': 1}, {'x_data': 'Schuster', 'y_data': 1}, {'x_data': 'Ward', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'last_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(last_name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

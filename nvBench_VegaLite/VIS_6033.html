@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6033</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6032.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6034.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6033</td><td><h4>NL Queries: </h4><ol><li><p>Bar chart x axis gender y axis the total number, and could you list y-axis in descending order?</p></li><li><p>Find the number of dorms for each gender in a bar chart, and list from high to low by the total number.</p></li><li><p>How many dorms are there for each gender? Show me a bar chart, I want to list from high to low by the y-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT gender , count(*) FROM dorm GROUP BY gender ORDER BY count(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1210@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>dorm_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: dorm_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: dorm</h4><table><tr><th>dormid</th><th>dorm_name</th><th>student_capacity</th><th>gender</th></tr><tr><td>100</td><td>Smith Hall</td><td>85</td><td>X</td></tr><tr><td>110</td><td>Bud Jones Hall</td><td>116</td><td>M</td></tr><tr><td>140</td><td>Fawlty Towers</td><td>355</td><td>X</td></tr><tr><td>160</td><td>Dorm-plex 2000</td><td>400</td><td>X</td></tr><tr><td>109</td><td>Anonymous Donor Hall</td><td>128</td><td>F</td></tr><tr><td>117</td><td>University Hovels</td><td>40</td><td>X</td></tr><tr><td>104</td><td>Grad Student Asylum</td><td>256</td><td>X</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'X', 'y_data': 5}, {'x_data': 'M', 'y_data': 1}, {'x_data': 'F', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'gender', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5959</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5958.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5960.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5959</td><td><h4>NL Queries: </h4><ol><li><p>A bar chart about what are the different software platforms for devices, and how many devices have each?</p></li><li><p>what are the different software platforms for devices, and how many devices have each?</p></li><li><p>What are the different software platforms for devices, and how many devices have each. </p></li><li><p>Bar chart x axis software platform y axis the total number </p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Software_Platform , COUNT(*) FROM device GROUP BY Software_Platform</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1149</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>device</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: device</h4><table><tr><th>Device_ID</th><th>Device</th><th>Carrier</th><th>Package_Version</th><th>Applications</th><th>Software_Platform</th></tr><tr><td>1</td><td>BlackBerry Storm 9530</td><td>MTS Mobility</td><td>5.0.0.808</td><td>5.0.0.419</td><td>Android</td></tr><tr><td>2</td><td>Apple</td><td>Verizon Wireless</td><td>5.0.0.328</td><td>5.0.0.328</td><td>iOS</td></tr><tr><td>3</td><td>Huawei</td><td>Telus Mobility</td><td>5.0.0.419</td><td>5.0.0.419</td><td>Android</td></tr><tr><td>4</td><td>Xiaomi</td><td>Bell Mobility</td><td>5.0.0.419</td><td>5.0.0.419</td><td>Android</td></tr><tr><td>5</td><td>Samsung</td><td>Iusacell</td><td>4.7.0.208</td><td>4.7.0.151</td><td>Android</td></tr><tr><td>6</td><td>Galaxy</td><td>Vodafone AU</td><td>5.0.0.742</td><td>5.0.0.451</td><td>Android</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Android', 'y_data': 5}, {'x_data': 'iOS', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Software_Platform', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

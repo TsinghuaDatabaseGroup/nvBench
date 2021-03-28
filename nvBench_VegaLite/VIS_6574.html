@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6574</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6573.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6575.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6574</td><td><h4>NL Queries: </h4><ol><li><p>Please give me a pie chart showing institution types, along with the total enrollment for each type.</p></li><li><p>Please tell me the proportion of total enrollment for each type using a pie chart.</p></li><li><p>Give me a pie to show sum enrollment from different type.</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Type , sum(enrollment) FROM institution GROUP BY TYPE</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2630</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>protein_institute</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: protein_institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: institution</h4><table><tr><th>Institution_id</th><th>Institution</th><th>Location</th><th>Founded</th><th>Type</th><th>Enrollment</th><th>Team</th><th>Primary_Conference</th><th>building_id</th></tr><tr><td>0</td><td>Ave Maria University</td><td>Ave Maria, Florida</td><td>1998.0</td><td>Private</td><td>1200</td><td>Gyrenes</td><td>The Sun</td><td>1</td></tr><tr><td>1</td><td>Dakota State University</td><td>Madison, South Dakota</td><td>1881.0</td><td>Public</td><td>3102</td><td>Trojans</td><td>none</td><td>1</td></tr><tr><td>2</td><td>Edward Waters College</td><td>Jacksonville, Florida</td><td>1866.0</td><td>Private</td><td>800</td><td>Tigers</td><td>Gulf Coast (GCAC)</td><td>3</td></tr><tr><td>3</td><td>Haskell Indian Nations University</td><td>Lawrence, Kansas</td><td>1884.0</td><td>Tribal</td><td>1000</td><td>Fighting Indians</td><td>MCAC</td><td>5</td></tr><tr><td>4</td><td>Jamestown College</td><td>Jamestown, North Dakota</td><td>1883.0</td><td>Private</td><td>967</td><td>Jimmies</td><td>none</td><td>2</td></tr><tr><td>5</td><td>Lindenwood UniversityâBelleville</td><td>Belleville, Illinois</td><td>2003.0</td><td>Private</td><td>2600</td><td>Lynx</td><td>none</td><td>0</td></tr><tr><td>6</td><td>Mayville State University</td><td>Mayville, North Dakota</td><td>1889.0</td><td>Public</td><td>825</td><td>Comets</td><td>none</td><td>0</td></tr><tr><td>7</td><td>Menlo College</td><td>Atherton, California</td><td>1927.0</td><td>Private</td><td>650</td><td>Oaks</td><td>CalPac</td><td>4</td></tr><tr><td>8</td><td>Point University</td><td>West Point, Georgia</td><td>1937.0</td><td>Private</td><td>1035</td><td>Skyhawks</td><td>AAC</td><td>7</td></tr><tr><td>9</td><td>Valley City State University</td><td>Valley City, North Dakota</td><td>1890.0</td><td>Public</td><td>1340</td><td>Vikings</td><td>none</td><td>3</td></tr><tr><td>10</td><td>Webber International University</td><td>Babson Park, Florida</td><td>1927.0</td><td>Private</td><td>616</td><td>Warriors</td><td>The Sun</td><td>5</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Private', 'y_data': 7868}, {'x_data': 'Public', 'y_data': 5267}, {'x_data': 'Tribal', 'y_data': 1000}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'sum(enrollment)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Type'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

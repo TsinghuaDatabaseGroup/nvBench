@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6060</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6059.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6061.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6060</td><td><h4>NL Queries: </h4><ol><li><p>Show all sport name and the number of students in a bar chart.</p></li><li><p>Show all sport name and the number of students. Show bar chart.</p></li><li><p>Give me a histogram for how many students play each sport?</p></li><li><p>Visualize a bar chart for how many students play each sport?</p></li><li><p>How many students play each sport. Show bar chart.</p></li><li><p>Bar chart x axis sportname y axis the total number </p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT SportName , count(*) FROM Sportsinfo GROUP BY sportname</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1462</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>game_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: game_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Sportsinfo</h4><table><tr><th>StuID</th><th>SportName</th><th>HoursPerWeek</th><th>GamesPlayed</th><th>OnScholarship</th></tr><tr><td>1001</td><td>Athletics</td><td>2</td><td>5</td><td>N</td></tr><tr><td>1002</td><td>Football</td><td>7</td><td>20</td><td>Y</td></tr><tr><td>1003</td><td>Football</td><td>45</td><td>18</td><td>Y</td></tr><tr><td>1005</td><td>Lacrosse</td><td>35</td><td>16</td><td>N</td></tr><tr><td>1015</td><td>Lacrosse</td><td>25</td><td>41</td><td>Y</td></tr><tr><td>1018</td><td>Lacrosse</td><td>39</td><td>25</td><td>N</td></tr><tr><td>1019</td><td>Swimming</td><td>8</td><td>16</td><td>Y</td></tr><tr><td>1019</td><td>Tennis</td><td>19</td><td>62</td><td>N</td></tr><tr><td>1022</td><td>Baseball</td><td>29</td><td>31</td><td>N</td></tr><tr><td>1023</td><td>Basketball</td><td>14</td><td>8</td><td>Y</td></tr><tr><td>1023</td><td>Tennis</td><td>1</td><td>56</td><td>Y</td></tr><tr><td>1026</td><td>Cricket</td><td>23</td><td>37</td><td>Y</td></tr><tr><td>1033</td><td>Soccer</td><td>45</td><td>45</td><td>Y</td></tr><tr><td>1035</td><td>Curling</td><td>50</td><td>94</td><td>N</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Athletics', 'y_data': 1}, {'x_data': 'Baseball', 'y_data': 1}, {'x_data': 'Basketball', 'y_data': 1}, {'x_data': 'Cricket', 'y_data': 1}, {'x_data': 'Curling', 'y_data': 1}, {'x_data': 'Football', 'y_data': 2}, {'x_data': 'Lacrosse', 'y_data': 3}, {'x_data': 'Soccer', 'y_data': 1}, {'x_data': 'Swimming', 'y_data': 1}, {'x_data': 'Tennis', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'SportName', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

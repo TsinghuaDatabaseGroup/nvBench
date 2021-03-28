@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4521</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4520.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4522.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4521</td><td><h4>NL Queries: </h4><ol><li><p>Return a histogram on how many actors have appeared in each musical?, and order y-axis in desc order please.</p></li><li><p>How many actors have appeared in each musical Plot them as bar chart, and could you rank from high to low by the the total number ?</p></li><li><p>how many actors have appeared in each musical?, could you rank in descending by the Y?</p></li><li><p>Show names of musicals and the number of actors who have appeared in the musicals in a bar chart, sort Y-axis in desc order.</p></li><li><p>Show names of musicals and the number of actors who have appeared in the musicals Show bar chart, could you rank from high to low by the the total number ?</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.Name , COUNT(*) FROM actor AS T1 JOIN musical AS T2 ON T1.Musical_ID = T2.Musical_ID GROUP BY T1.Musical_ID ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2443@y_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>musical</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: musical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: actor</h4><table><tr><th>Actor_ID</th><th>Name</th><th>Musical_ID</th><th>Character</th><th>Duration</th><th>age</th></tr><tr><td>1</td><td>Ray Meagher</td><td>1</td><td>Alf Stewart</td><td>1988â</td><td>26</td></tr><tr><td>2</td><td>Tom Oliver</td><td>1</td><td>Lou Carpenter</td><td>1988, 1992â</td><td>22</td></tr><tr><td>3</td><td>Lynne McGranger</td><td>2</td><td>Irene Roberts</td><td>1993â</td><td>21</td></tr><tr><td>4</td><td>Kate Ritchie</td><td>2</td><td>Sally Fletcher</td><td>1988â2008, 2013</td><td>20</td></tr><tr><td>5</td><td>Alan Fletcher</td><td>4</td><td>Karl Kennedy</td><td>1994â</td><td>20</td></tr><tr><td>6</td><td>Jackie Woodburne</td><td>6</td><td>Susan Kennedy</td><td>1994â</td><td>20</td></tr><tr><td>7</td><td>Ryan Moloney</td><td>6</td><td>Toadfish Rebecchi</td><td>1995, 1996â</td><td>18</td></tr><tr><td>8</td><td>Ian Smith</td><td>6</td><td>Harold Bishop</td><td>1987â1991, 1996â2009, 2011</td><td>17</td></tr><tr><td>9</td><td>Stefan Dennis</td><td>6</td><td>Paul Robinson</td><td>1985â1992, 1993, 2004â</td><td>17</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'The Book of Mormon', 'y_data': 4}, {'x_data': 'The Phantom of the Opera', 'y_data': 2}, {'x_data': 'Les Misérables', 'y_data': 2}, {'x_data': 'West Side Story', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

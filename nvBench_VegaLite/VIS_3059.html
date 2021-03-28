@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3059</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3058.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3060.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3059</td><td><h4>NL Queries: </h4><ol><li><p>List each language and the number of TV Channels using it in a bar chart.</p></li><li><p>List each language and the number of TV Channels using it. Visualize by bar chart.</p></li><li><p>For each language, list the number of TV Channels that use it. Plot them as bar chart.</p></li><li><p>Bar chart of the total number from each language</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Language , count(*) FROM TV_Channel GROUP BY LANGUAGE</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>3058</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>tvshow</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tvshow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: TV_Channel</h4><table><tr><th>id</th><th>series_name</th><th>Country</th><th>Language</th><th>Content</th><th>Pixel_aspect_ratio_PAR</th><th>Hight_definition_TV</th><th>Pay_per_view_PPV</th><th>Package_Option</th></tr><tr><td>700</td><td>Sky Radio</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>701</td><td>Sky Music</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>703</td><td>Music Box Italia</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3 / 16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>704</td><td>MTV Hits</td><td>Italy</td><td>Italian</td><td>music</td><td>16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>705</td><td>MTV Classic</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>706</td><td>MTV Rocks</td><td>United Kingdom</td><td>English</td><td>music</td><td>16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>707</td><td>MTV Dance</td><td>United Kingdom</td><td>English</td><td>music</td><td>16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>708</td><td>MTV Music</td><td>Italy</td><td>Italian</td><td>music</td><td>16:9</td><td>no</td><td>no</td><td>no ( FTV )</td></tr><tr><td>709</td><td>MTV Live HD</td><td>Poland</td><td>English</td><td>music</td><td>16:9</td><td>yes</td><td>no</td><td>Sky Famiglia + Sky HD</td></tr><tr><td>713</td><td>Radio Capital TiVÃ¹</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>no ( FTV )</td></tr><tr><td>714</td><td>myDeejay</td><td>Italy</td><td>Italian</td><td>music</td><td>16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>715</td><td>Match Music</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3 / 16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>717</td><td>Rock TV</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3 / 16:9</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>719</td><td>Hip Hop TV</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>Sky Famiglia</td></tr><tr><td>728</td><td>Classica</td><td>Italy</td><td>Italian</td><td>music</td><td>4:3</td><td>no</td><td>no</td><td>Option</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'English', 'y_data': 3}, {'x_data': 'Italian', 'y_data': 12}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Language', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_899</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_898.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_900.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>899</td><td><h4>NL Queries: </h4><ol><li><p>How many documents are created in each day? Bin the document date by year interval and group by document type with a group line chart, and I want to sort Document_Date in asc order.</p></li><li><p>Show the number of documents created in each day and bin document date by year interval and group by document type with a group line chart, and I want to order by the x-axis in asc.</p></li><li><p>How many documents are created in each day? Bin the document date by year interval and group by document type with a group line chart, I want to show Document_Date in ascending order please.</p></li><li><p>Show the number of documents created in each day and bin document date by year interval and group by document type with a group line chart, show from low to high by the Document_Date please.</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT Document_Date , COUNT(Document_Date) FROM Ref_document_types AS T1 JOIN Documents AS T2 ON T1.document_type_code = T2.document_type_code GROUP BY Document_Type_Name ORDER BY Document_Date ASC BIN Document_Date BY YEAR</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>848@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Grouping Line</p><p><b>DB: </b>cre_Docs_and_Epenses</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: cre_Docs_and_Epenses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Ref_document_types</h4><table><tr><th>Document_Type_Code</th><th>Document_Type_Name</th><th>Document_Type_Description</th></tr><tr><td>BK</td><td>Book</td><td>excellent</td></tr><tr><td>CV</td><td>CV</td><td>excellent</td></tr><tr><td>PT</td><td>Presentation</td><td>very good</td></tr><tr><td>PP</td><td>Paper</td><td>good</td></tr><tr><td>FM</td><td>Film</td><td>fun</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '1970~1973', 'y_data': 6, 'classify': 'Book'}, {'x_data': '1974~1977', 'y_data': 1, 'classify': 'Book'}, {'x_data': '1978~1981', 'y_data': 5, 'classify': 'Book'}, {'x_data': '1982~1985', 'y_data': 1, 'classify': 'Book'}, {'x_data': '1986~1989', 'y_data': 0, 'classify': 'Book'}, {'x_data': '1990~1993', 'y_data': 2, 'classify': 'Book'}, {'x_data': '1994~1997', 'y_data': 0, 'classify': 'Book'}, {'x_data': '1998~2001', 'y_data': 0, 'classify': 'Book'}, {'x_data': '2002~2005', 'y_data': 2, 'classify': 'Book'}, {'x_data': '2006~2009', 'y_data': 1, 'classify': 'Book'}, {'x_data': '2010~2013', 'y_data': 3, 'classify': 'Book'}, {'x_data': '1970~1973', 'y_data': 6, 'classify': 'CV'}, {'x_data': '1974~1977', 'y_data': 1, 'classify': 'CV'}, {'x_data': '1978~1981', 'y_data': 6, 'classify': 'CV'}, {'x_data': '1982~1985', 'y_data': 2, 'classify': 'CV'}, {'x_data': '1986~1989', 'y_data': 0, 'classify': 'CV'}, {'x_data': '1990~1993', 'y_data': 2, 'classify': 'CV'}, {'x_data': '1994~1997', 'y_data': 0, 'classify': 'CV'}, {'x_data': '1998~2001', 'y_data': 0, 'classify': 'CV'}, {'x_data': '2002~2005', 'y_data': 3, 'classify': 'CV'}, {'x_data': '2006~2009', 'y_data': 1, 'classify': 'CV'}, {'x_data': '2010~2013', 'y_data': 3, 'classify': 'CV'}, {'x_data': '1970~1973', 'y_data': 6, 'classify': 'Film'}, {'x_data': '1974~1977', 'y_data': 1, 'classify': 'Film'}, {'x_data': '1978~1981', 'y_data': 6, 'classify': 'Film'}, {'x_data': '1982~1985', 'y_data': 2, 'classify': 'Film'}, {'x_data': '1986~1989', 'y_data': 0, 'classify': 'Film'}, {'x_data': '1990~1993', 'y_data': 2, 'classify': 'Film'}, {'x_data': '1994~1997', 'y_data': 0, 'classify': 'Film'}, {'x_data': '1998~2001', 'y_data': 0, 'classify': 'Film'}, {'x_data': '2002~2005', 'y_data': 3, 'classify': 'Film'}, {'x_data': '2006~2009', 'y_data': 2, 'classify': 'Film'}, {'x_data': '2010~2013', 'y_data': 3, 'classify': 'Film'}, {'x_data': '1970~1973', 'y_data': 8, 'classify': 'Paper'}, {'x_data': '1974~1977', 'y_data': 2, 'classify': 'Paper'}, {'x_data': '1978~1981', 'y_data': 6, 'classify': 'Paper'}, {'x_data': '1982~1985', 'y_data': 2, 'classify': 'Paper'}, {'x_data': '1986~1989', 'y_data': 0, 'classify': 'Paper'}, {'x_data': '1990~1993', 'y_data': 2, 'classify': 'Paper'}, {'x_data': '1994~1997', 'y_data': 0, 'classify': 'Paper'}, {'x_data': '1998~2001', 'y_data': 0, 'classify': 'Paper'}, {'x_data': '2002~2005', 'y_data': 4, 'classify': 'Paper'}, {'x_data': '2006~2009', 'y_data': 2, 'classify': 'Paper'}, {'x_data': '2010~2013', 'y_data': 4, 'classify': 'Paper'}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Document_Date', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Document_Date)'}, 'color': {'field': 'classify'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

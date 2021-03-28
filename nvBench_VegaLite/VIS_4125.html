@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_4125</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_4124.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_4126.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>4125</td><td><h4>NL Queries: </h4><ol><li><p>List the state names and the number of customers living in each state with a bar chart, display bar from high to low order please.</p></li><li><p>List the state names and the number of customers living in each state, rank by the names in descending.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT state_province_county , count(*) FROM customer_addresses AS t1 JOIN addresses AS t2 ON t1.address_id = t2.address_id GROUP BY t2.state_province_county ORDER BY state_province_county DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>912@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>customer_deliveries</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: customer_deliveries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customer_addresses</h4><table><tr><th>customer_id</th><th>address_id</th><th>date_from</th><th>address_type</th><th>date_to</th></tr><tr><td>5</td><td>6</td><td>2016-09-06 19:23:46</td><td>House</td><td>2018-02-25 15:34:58</td></tr><tr><td>14</td><td>5</td><td>2016-12-21 03:49:54</td><td>House</td><td>2018-03-13 21:20:21</td></tr><tr><td>2</td><td>2</td><td>2014-06-09 06:31:49</td><td>Flat</td><td>2018-03-02 21:56:40</td></tr><tr><td>10</td><td>6</td><td>2011-05-24 21:49:34</td><td>House</td><td>2018-03-18 12:45:44</td></tr><tr><td>14</td><td>2</td><td>2011-12-06 16:49:10</td><td>Flat</td><td>2018-02-24 20:18:08</td></tr><tr><td>10</td><td>1</td><td>2012-05-24 11:47:54</td><td>House</td><td>2018-03-14 20:26:33</td></tr><tr><td>7</td><td>3</td><td>2016-08-17 17:45:20</td><td>Flat</td><td>2018-03-16 14:09:24</td></tr><tr><td>4</td><td>9</td><td>2009-08-03 03:17:03</td><td>House</td><td>2018-03-15 23:45:59</td></tr><tr><td>3</td><td>7</td><td>2010-12-29 11:01:39</td><td>House</td><td>2018-03-22 02:54:10</td></tr><tr><td>12</td><td>6</td><td>2012-08-31 15:41:03</td><td>Flat</td><td>2018-03-02 23:42:49</td></tr><tr><td>12</td><td>11</td><td>2008-04-02 08:23:13</td><td>Apartment</td><td>2018-03-17 12:51:37</td></tr><tr><td>14</td><td>10</td><td>2011-08-18 09:40:49</td><td>House</td><td>2018-03-06 15:48:13</td></tr><tr><td>1</td><td>11</td><td>2014-12-20 18:58:32</td><td>House</td><td>2018-02-27 00:53:48</td></tr><tr><td>8</td><td>6</td><td>2013-05-06 00:49:45</td><td>Flat</td><td>2018-03-05 01:34:02</td></tr><tr><td>12</td><td>5</td><td>2017-11-01 10:59:35</td><td>Flat</td><td>2018-03-09 05:05:17</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Wyoming', 'y_data': 1}, {'x_data': 'Tennessee', 'y_data': 4}, {'x_data': 'Nebraska', 'y_data': 1}, {'x_data': 'Michigan', 'y_data': 2}, {'x_data': 'Maine', 'y_data': 1}, {'x_data': 'Illinois', 'y_data': 1}, {'x_data': 'Idaho', 'y_data': 1}, {'x_data': 'Colorado', 'y_data': 2}, {'x_data': 'California', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'state_province_county', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6559</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6558.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6560.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6559</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a bar chart for what are the countries having at least one car maker? List name and id.</p></li><li><p>what are the countries having at least one car maker? List name and id.</p></li><li><p>What are the countries having at least one car maker? List name and id. Visualize by bar chart.</p></li><li><p>Give me a histogram for what are the names and ids of all countries with at least one car maker?</p></li><li><p>Return a bar chart on what are the names and ids of all countries with at least one car maker?</p></li><li><p>What are the names and ids of all countries with at least one car maker. Show bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT CountryName , CountryId FROM COUNTRIES AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId = T2.Country</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>411</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>car_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: car_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: COUNTRIES</h4><table><tr><th>CountryId</th><th>CountryName</th><th>Continent</th></tr><tr><td>1</td><td>usa</td><td>1</td></tr><tr><td>2</td><td>germany</td><td>2</td></tr><tr><td>3</td><td>france</td><td>2</td></tr><tr><td>4</td><td>japan</td><td>3</td></tr><tr><td>5</td><td>italy</td><td>2</td></tr><tr><td>6</td><td>sweden</td><td>2</td></tr><tr><td>7</td><td>uk</td><td>2</td></tr><tr><td>8</td><td>korea</td><td>3</td></tr><tr><td>9</td><td>russia</td><td>2</td></tr><tr><td>10</td><td>nigeria</td><td>4</td></tr><tr><td>11</td><td>australia</td><td>5</td></tr><tr><td>12</td><td>new zealand</td><td>5</td></tr><tr><td>13</td><td>egypt</td><td>4</td></tr><tr><td>14</td><td>mexico</td><td>1</td></tr><tr><td>15</td><td>brazil</td><td>1</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'usa', 'y_data': 1}, {'x_data': 'germany', 'y_data': 2}, {'x_data': 'france', 'y_data': 3}, {'x_data': 'japan', 'y_data': 4}, {'x_data': 'italy', 'y_data': 5}, {'x_data': 'sweden', 'y_data': 6}, {'x_data': 'uk', 'y_data': 7}, {'x_data': 'korea', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'CountryName', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'CountryId'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

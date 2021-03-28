@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5853</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5852.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5854.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5853</td><td><h4>NL Queries: </h4><ol><li><p>Find the number of records of each policy type and its type code Visualize by bar chart, and could you rank bar in ascending order?</p></li><li><p>For each policy type, return its type code and its count in the record Visualize by bar chart, could you rank bar in ascending order?</p></li><li><p>Bar chart x axis policy type code y axis the total number, and order in ascending by the X-axis.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Policy_Type_Code , count(*) FROM policies GROUP BY policy_type_code ORDER BY Policy_Type_Code ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1987@x_name@ASC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>insurance_and_eClaims</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: insurance_and_eClaims&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: policies</h4><table><tr><th>Policy_ID</th><th>Customer_ID</th><th>Policy_Type_Code</th><th>Start_Date</th><th>End_Date</th></tr><tr><td>125</td><td>808</td><td>Deputy</td><td>2018-02-10 08:56:30</td><td>2018-03-18 09:17:26</td></tr><tr><td>151</td><td>380</td><td>Jurisdiction</td><td>2017-12-20 06:02:31</td><td>2017-09-16 22:04:13</td></tr><tr><td>287</td><td>334</td><td>Jurisdiction</td><td>2017-03-16 18:16:52</td><td>2017-11-24 06:36:51</td></tr><tr><td>299</td><td>857</td><td>Uniformed</td><td>2018-03-13 12:30:19</td><td>2018-01-22 05:24:10</td></tr><tr><td>507</td><td>858</td><td>Uniformed</td><td>2017-03-19 03:11:19</td><td>2017-11-01 00:41:27</td></tr><tr><td>518</td><td>808</td><td>Uniformed</td><td>2016-05-11 14:56:17</td><td>2018-03-15 05:02:00</td></tr><tr><td>626</td><td>435</td><td>Uniformed</td><td>2016-05-14 19:09:36</td><td>2018-01-18 06:17:36</td></tr><tr><td>628</td><td>430</td><td>Deputy</td><td>2018-09-19 17:22:07</td><td>2018-01-01 23:58:06</td></tr><tr><td>703</td><td>380</td><td>Deputy</td><td>2016-06-04 00:10:01</td><td>2018-01-19 22:45:33</td></tr><tr><td>708</td><td>252</td><td>Normal</td><td>2018-07-21 10:36:53</td><td>2018-03-07 13:52:47</td></tr><tr><td>768</td><td>588</td><td>Uniformed</td><td>2017-01-01 01:48:08</td><td>2017-09-30 03:16:49</td></tr><tr><td>773</td><td>334</td><td>Uniformed</td><td>2017-02-11 01:53:11</td><td>2018-01-15 03:23:05</td></tr><tr><td>780</td><td>435</td><td>Uniformed</td><td>2016-08-02 01:46:25</td><td>2018-03-03 18:36:22</td></tr><tr><td>801</td><td>380</td><td>Uniformed</td><td>2018-09-05 22:15:23</td><td>2018-03-17 10:16:59</td></tr><tr><td>936</td><td>994</td><td>Jurisdiction</td><td>2016-07-23 04:08:35</td><td>2017-10-07 08:29:25</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Deputy', 'y_data': 3}, {'x_data': 'Jurisdiction', 'y_data': 3}, {'x_data': 'Normal', 'y_data': 1}, {'x_data': 'Uniformed', 'y_data': 8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Policy_Type_Code', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'count(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

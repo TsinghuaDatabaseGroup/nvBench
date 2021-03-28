@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2478</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2477.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2479.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2478</td><td><h4>NL Queries: </h4><ol><li><p>How many courses are provided in each year? Visualize with a line chart, and order x-axis in descending order.</p></li><li><p>Visualize the general trend of sum count(*) over the year, and show x-axis from high to low order.</p></li><li><p>Find the number of courses provided in each year with a line chart, could you display X in descending order?</p></li></ol><h4>VIS Query: </h4><p>Visualize LINE SELECT year , SUM(count(*)) FROM SECTION GROUP BY year ORDER BY year DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>640@x_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Line</p><p><b>DB: </b>college_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: SECTION</h4><table><tr><th>course_id</th><th>sec_id</th><th>semester</th><th>year</th><th>building</th><th>room_number</th><th>time_slot_id</th></tr><tr><td>313</td><td>1</td><td>Fall</td><td>2010</td><td>Chandler</td><td>804</td><td>N</td></tr><tr><td>747</td><td>1</td><td>Spring</td><td>2004</td><td>Gates</td><td>314</td><td>K</td></tr><tr><td>443</td><td>1</td><td>Spring</td><td>2010</td><td>Whitman</td><td>434</td><td>O</td></tr><tr><td>893</td><td>1</td><td>Fall</td><td>2007</td><td>Fairchild</td><td>145</td><td>B</td></tr><tr><td>663</td><td>1</td><td>Spring</td><td>2005</td><td>Fairchild</td><td>145</td><td>D</td></tr><tr><td>457</td><td>1</td><td>Spring</td><td>2001</td><td>Saucon</td><td>844</td><td>D</td></tr><tr><td>445</td><td>1</td><td>Spring</td><td>2001</td><td>Alumni</td><td>547</td><td>J</td></tr><tr><td>559</td><td>1</td><td>Fall</td><td>2002</td><td>Lamberton</td><td>134</td><td>J</td></tr><tr><td>239</td><td>1</td><td>Fall</td><td>2006</td><td>Taylor</td><td>183</td><td>C</td></tr><tr><td>802</td><td>1</td><td>Spring</td><td>2003</td><td>Saucon</td><td>113</td><td>J</td></tr><tr><td>158</td><td>1</td><td>Fall</td><td>2008</td><td>Whitman</td><td>434</td><td>F</td></tr><tr><td>735</td><td>1</td><td>Spring</td><td>2003</td><td>Drown</td><td>757</td><td>D</td></tr><tr><td>237</td><td>1</td><td>Spring</td><td>2008</td><td>Power</td><td>717</td><td>D</td></tr><tr><td>338</td><td>1</td><td>Spring</td><td>2007</td><td>Fairchild</td><td>145</td><td>G</td></tr><tr><td>376</td><td>1</td><td>Fall</td><td>2006</td><td>Power</td><td>717</td><td>K</td></tr><tr><td>927</td><td>1</td><td>Fall</td><td>2002</td><td>Saucon</td><td>180</td><td>F</td></tr><tr><td>692</td><td>1</td><td>Spring</td><td>2010</td><td>Taylor</td><td>183</td><td>I</td></tr><tr><td>867</td><td>1</td><td>Fall</td><td>2006</td><td>Taylor</td><td>183</td><td>E</td></tr><tr><td>561</td><td>1</td><td>Fall</td><td>2006</td><td>Main</td><td>45</td><td>L</td></tr><tr><td>604</td><td>1</td><td>Spring</td><td>2009</td><td>Bronfman</td><td>700</td><td>N</td></tr><tr><td>974</td><td>1</td><td>Fall</td><td>2003</td><td>Polya</td><td>808</td><td>H</td></tr><tr><td>959</td><td>1</td><td>Fall</td><td>2006</td><td>Saucon</td><td>180</td><td>M</td></tr><tr><td>702</td><td>1</td><td>Spring</td><td>2001</td><td>Saucon</td><td>113</td><td>O</td></tr><tr><td>631</td><td>1</td><td>Spring</td><td>2007</td><td>Taylor</td><td>183</td><td>E</td></tr><tr><td>334</td><td>1</td><td>Fall</td><td>2009</td><td>Taylor</td><td>812</td><td>O</td></tr><tr><td>274</td><td>1</td><td>Fall</td><td>2002</td><td>Main</td><td>425</td><td>N</td></tr><tr><td>366</td><td>1</td><td>Fall</td><td>2005</td><td>Saucon</td><td>844</td><td>O</td></tr><tr><td>545</td><td>1</td><td>Fall</td><td>2001</td><td>Saucon</td><td>180</td><td>P</td></tr><tr><td>486</td><td>1</td><td>Fall</td><td>2009</td><td>Whitman</td><td>134</td><td>K</td></tr><tr><td>426</td><td>1</td><td>Spring</td><td>2006</td><td>Lamberton</td><td>134</td><td>G</td></tr><tr><td>258</td><td>1</td><td>Fall</td><td>2007</td><td>Main</td><td>45</td><td>K</td></tr><tr><td>972</td><td>1</td><td>Spring</td><td>2009</td><td>Taylor</td><td>183</td><td>J</td></tr><tr><td>349</td><td>1</td><td>Spring</td><td>2008</td><td>Saucon</td><td>113</td><td>K</td></tr><tr><td>415</td><td>1</td><td>Fall</td><td>2010</td><td>Lamberton</td><td>134</td><td>D</td></tr><tr><td>137</td><td>1</td><td>Spring</td><td>2002</td><td>Fairchild</td><td>145</td><td>I</td></tr><tr><td>304</td><td>1</td><td>Fall</td><td>2009</td><td>Lamberton</td><td>143</td><td>H</td></tr><tr><td>468</td><td>1</td><td>Fall</td><td>2005</td><td>Lambeau</td><td>348</td><td>J</td></tr><tr><td>748</td><td>1</td><td>Fall</td><td>2003</td><td>Saucon</td><td>180</td><td>L</td></tr><tr><td>694</td><td>1</td><td>Fall</td><td>2002</td><td>Alumni</td><td>143</td><td>O</td></tr><tr><td>345</td><td>1</td><td>Spring</td><td>2008</td><td>Taylor</td><td>183</td><td>A</td></tr><tr><td>352</td><td>1</td><td>Spring</td><td>2006</td><td>Lambeau</td><td>348</td><td>M</td></tr><tr><td>581</td><td>1</td><td>Spring</td><td>2005</td><td>Alumni</td><td>547</td><td>G</td></tr><tr><td>493</td><td>1</td><td>Spring</td><td>2010</td><td>Lamberton</td><td>134</td><td>H</td></tr><tr><td>795</td><td>1</td><td>Spring</td><td>2004</td><td>Lamberton</td><td>143</td><td>D</td></tr><tr><td>793</td><td>1</td><td>Spring</td><td>2002</td><td>Nassau</td><td>45</td><td>F</td></tr><tr><td>237</td><td>2</td><td>Fall</td><td>2009</td><td>Fairchild</td><td>145</td><td>J</td></tr><tr><td>362</td><td>1</td><td>Fall</td><td>2005</td><td>Lamberton</td><td>143</td><td>I</td></tr><tr><td>642</td><td>1</td><td>Fall</td><td>2004</td><td>Saucon</td><td>113</td><td>D</td></tr><tr><td>808</td><td>1</td><td>Fall</td><td>2003</td><td>Polya</td><td>808</td><td>M</td></tr><tr><td>679</td><td>1</td><td>Spring</td><td>2010</td><td>Saucon</td><td>844</td><td>D</td></tr><tr><td>629</td><td>1</td><td>Spring</td><td>2003</td><td>Stabler</td><td>105</td><td>F</td></tr><tr><td>400</td><td>1</td><td>Spring</td><td>2007</td><td>Lambeau</td><td>348</td><td>M</td></tr><tr><td>599</td><td>1</td><td>Spring</td><td>2003</td><td>Chandler</td><td>804</td><td>D</td></tr><tr><td>760</td><td>1</td><td>Spring</td><td>2004</td><td>Garfield</td><td>119</td><td>A</td></tr><tr><td>843</td><td>1</td><td>Fall</td><td>2010</td><td>Fairchild</td><td>145</td><td>J</td></tr><tr><td>200</td><td>1</td><td>Spring</td><td>2007</td><td>Saucon</td><td>180</td><td>D</td></tr><tr><td>443</td><td>2</td><td>Spring</td><td>2002</td><td>Gates</td><td>707</td><td>K</td></tr><tr><td>612</td><td>1</td><td>Fall</td><td>2007</td><td>Lamberton</td><td>143</td><td>G</td></tr><tr><td>169</td><td>1</td><td>Spring</td><td>2007</td><td>Gates</td><td>314</td><td>A</td></tr><tr><td>791</td><td>1</td><td>Spring</td><td>2006</td><td>Polya</td><td>808</td><td>H</td></tr><tr><td>867</td><td>2</td><td>Fall</td><td>2010</td><td>Lamberton</td><td>134</td><td>M</td></tr><tr><td>489</td><td>1</td><td>Fall</td><td>2007</td><td>Lamberton</td><td>143</td><td>D</td></tr><tr><td>158</td><td>2</td><td>Spring</td><td>2008</td><td>Taylor</td><td>812</td><td>D</td></tr><tr><td>242</td><td>1</td><td>Fall</td><td>2009</td><td>Fairchild</td><td>145</td><td>C</td></tr><tr><td>960</td><td>1</td><td>Fall</td><td>2009</td><td>Lamberton</td><td>134</td><td>J</td></tr><tr><td>421</td><td>1</td><td>Fall</td><td>2004</td><td>Gates</td><td>707</td><td>E</td></tr><tr><td>105</td><td>1</td><td>Fall</td><td>2009</td><td>Chandler</td><td>375</td><td>C</td></tr><tr><td>591</td><td>1</td><td>Spring</td><td>2005</td><td>Saucon</td><td>180</td><td>F</td></tr><tr><td>192</td><td>1</td><td>Fall</td><td>2002</td><td>Polya</td><td>808</td><td>B</td></tr><tr><td>362</td><td>2</td><td>Fall</td><td>2006</td><td>Alumni</td><td>547</td><td>A</td></tr><tr><td>270</td><td>1</td><td>Spring</td><td>2010</td><td>Power</td><td>717</td><td>M</td></tr><tr><td>461</td><td>1</td><td>Fall</td><td>2002</td><td>Main</td><td>425</td><td>P</td></tr><tr><td>704</td><td>1</td><td>Spring</td><td>2008</td><td>Taylor</td><td>812</td><td>E</td></tr><tr><td>626</td><td>1</td><td>Fall</td><td>2006</td><td>Lamberton</td><td>143</td><td>B</td></tr><tr><td>105</td><td>2</td><td>Fall</td><td>2002</td><td>Taylor</td><td>183</td><td>C</td></tr><tr><td>696</td><td>1</td><td>Spring</td><td>2002</td><td>Saucon</td><td>180</td><td>E</td></tr><tr><td>962</td><td>1</td><td>Spring</td><td>2008</td><td>Nassau</td><td>45</td><td>L</td></tr><tr><td>362</td><td>3</td><td>Spring</td><td>2008</td><td>Bronfman</td><td>700</td><td>L</td></tr><tr><td>852</td><td>1</td><td>Spring</td><td>2008</td><td>Gates</td><td>707</td><td>F</td></tr><tr><td>949</td><td>1</td><td>Fall</td><td>2007</td><td>Saucon</td><td>180</td><td>B</td></tr><tr><td>482</td><td>1</td><td>Fall</td><td>2005</td><td>Whitman</td><td>434</td><td>H</td></tr><tr><td>527</td><td>1</td><td>Fall</td><td>2004</td><td>Saucon</td><td>113</td><td>M</td></tr><tr><td>476</td><td>1</td><td>Fall</td><td>2010</td><td>Drown</td><td>757</td><td>C</td></tr><tr><td>991</td><td>1</td><td>Spring</td><td>2008</td><td>Lamberton</td><td>134</td><td>J</td></tr><tr><td>408</td><td>1</td><td>Spring</td><td>2007</td><td>Taylor</td><td>812</td><td>C</td></tr><tr><td>319</td><td>1</td><td>Spring</td><td>2003</td><td>Rathbone</td><td>261</td><td>E</td></tr><tr><td>400</td><td>2</td><td>Fall</td><td>2003</td><td>Main</td><td>425</td><td>O</td></tr><tr><td>401</td><td>1</td><td>Fall</td><td>2003</td><td>Saucon</td><td>180</td><td>A</td></tr><tr><td>960</td><td>2</td><td>Fall</td><td>2006</td><td>Power</td><td>717</td><td>M</td></tr><tr><td>571</td><td>1</td><td>Spring</td><td>2004</td><td>Power</td><td>972</td><td>I</td></tr><tr><td>468</td><td>2</td><td>Fall</td><td>2007</td><td>Power</td><td>717</td><td>L</td></tr><tr><td>735</td><td>2</td><td>Spring</td><td>2010</td><td>Taylor</td><td>183</td><td>D</td></tr><tr><td>169</td><td>2</td><td>Fall</td><td>2002</td><td>Drown</td><td>757</td><td>L</td></tr><tr><td>496</td><td>1</td><td>Fall</td><td>2001</td><td>Taylor</td><td>812</td><td>I</td></tr><tr><td>200</td><td>2</td><td>Fall</td><td>2002</td><td>Chandler</td><td>375</td><td>D</td></tr><tr><td>875</td><td>1</td><td>Spring</td><td>2005</td><td>Power</td><td>717</td><td>P</td></tr><tr><td>603</td><td>1</td><td>Fall</td><td>2003</td><td>Taylor</td><td>812</td><td>P</td></tr><tr><td>408</td><td>2</td><td>Spring</td><td>2003</td><td>Taylor</td><td>183</td><td>J</td></tr><tr><td>338</td><td>2</td><td>Spring</td><td>2006</td><td>Stabler</td><td>105</td><td>J</td></tr><tr><td>864</td><td>1</td><td>Spring</td><td>2006</td><td>Power</td><td>972</td><td>D</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '2010-01-01', 'y_data': 11}, {'x_data': '2009-01-01', 'y_data': 9}, {'x_data': '2008-01-01', 'y_data': 10}, {'x_data': '2007-01-01', 'y_data': 12}, {'x_data': '2006-01-01', 'y_data': 13}, {'x_data': '2005-01-01', 'y_data': 8}, {'x_data': '2004-01-01', 'y_data': 7}, {'x_data': '2003-01-01', 'y_data': 12}, {'x_data': '2002-01-01', 'y_data': 13}, {'x_data': '2001-01-01', 'y_data': 5}]}, 'mark': {'type': 'line', 'interpolate': 'monotone'}, 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'year', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'SUM(count(*))'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

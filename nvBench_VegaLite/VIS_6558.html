@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_6558</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_6557.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_6559.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>6558</td><td><h4>NL Queries: </h4><ol><li><p>For those records from the products and each product's manufacturer, a bar chart shows the distribution of name and the average of code , and group by attribute name, and could you list bar in descending order?</p></li><li><p>For those records from the products and each product's manufacturer, give me the comparison about the average of code over the name , and group by attribute name, could you list bar in descending order?</p></li><li><p>For those records from the products and each product's manufacturer, give me the comparison about the average of code over the name , and group by attribute name by a bar chart, and display from high to low by the names.</p></li><li><p>For those records from the products and each product's manufacturer, show me about the distribution of name and the average of code , and group by attribute name in a bar chart, sort X in descending order.</p></li><li><p>For those records from the products and each product's manufacturer, draw a bar chart about the distribution of name and the average of code , and group by attribute name, I want to list from high to low by the bar.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.Name , T1.Code FROM products AS T1 JOIN Manufacturers AS T2 ON T1.manufacturer = T2.code GROUP BY T2.Name ORDER BY T2.Name DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2206@x_name@DESC</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>manufactory_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: manufactory_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: products</h4><table><tr><th>Code</th><th>Name</th><th>Price</th><th>Manufacturer</th></tr><tr><td>1</td><td>Hard drive</td><td>240</td><td>5</td></tr><tr><td>2</td><td>Memory</td><td>120</td><td>6</td></tr><tr><td>3</td><td>ZIP drive</td><td>150</td><td>4</td></tr><tr><td>4</td><td>Floppy disk</td><td>5</td><td>6</td></tr><tr><td>5</td><td>Monitor</td><td>240</td><td>1</td></tr><tr><td>6</td><td>DVD drive</td><td>180</td><td>2</td></tr><tr><td>7</td><td>CD drive</td><td>90</td><td>2</td></tr><tr><td>8</td><td>Printer</td><td>270</td><td>3</td></tr><tr><td>9</td><td>Toner cartridge</td><td>66</td><td>3</td></tr><tr><td>10</td><td>DVD burner</td><td>180</td><td>2</td></tr><tr><td>11</td><td>DVD drive</td><td>150</td><td>3</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Winchester', 'y_data': 3}, {'x_data': 'Sony', 'y_data': 5}, {'x_data': 'Iomega', 'y_data': 3}, {'x_data': 'Hewlett-Packard', 'y_data': 9.333333333333334}, {'x_data': 'Fujits', 'y_data': 1}, {'x_data': 'Creative Labs', 'y_data': 7.666666666666667}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'descending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'AVG(Code)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

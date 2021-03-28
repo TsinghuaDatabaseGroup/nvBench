@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2691</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2690.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2692.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2691</td><td><h4>NL Queries: </h4><ol><li><p>Find the minimum salary for the departments whose average salary is above the average payment of all instructors. Plot them as bar chart.</p></li><li><p>Display a bar chart for what is the lowest salary in departments with average salary greater than the overall average.</p></li><li><p>Give me a histogram for what is the lowest salary in departments with average salary greater than the overall average.</p></li><li><p>What is the lowest salary in departments with average salary greater than the overall average. Plot them as bar chart.</p></li><li><p>Bar chart of minimal salary from each dept name</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT dept_name , min(salary) FROM instructor GROUP BY dept_name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>619</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>college_2</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: college_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: instructor</h4><table><tr><th>ID</th><th>name</th><th>dept_name</th><th>salary</th></tr><tr><td>63395</td><td>McKinnon</td><td>Cybernetics</td><td>94333.99</td></tr><tr><td>78699</td><td>Pingr</td><td>Statistics</td><td>59303.62</td></tr><tr><td>96895</td><td>Mird</td><td>Marketing</td><td>119921.41</td></tr><tr><td>4233</td><td>Luo</td><td>English</td><td>88791.45</td></tr><tr><td>4034</td><td>Murata</td><td>Athletics</td><td>61387.56</td></tr><tr><td>50885</td><td>Konstantinides</td><td>Languages</td><td>32570.5</td></tr><tr><td>79653</td><td>Levine</td><td>Elec. Eng.</td><td>89805.83</td></tr><tr><td>50330</td><td>Shuming</td><td>Physics</td><td>108011.81</td></tr><tr><td>80759</td><td>Queiroz</td><td>Biology</td><td>45538.32</td></tr><tr><td>73623</td><td>Sullivan</td><td>Elec. Eng.</td><td>90038.09</td></tr><tr><td>97302</td><td>Bertolino</td><td>Mech. Eng.</td><td>51647.57</td></tr><tr><td>57180</td><td>Hau</td><td>Accounting</td><td>43966.29</td></tr><tr><td>74420</td><td>Voronina</td><td>Physics</td><td>121141.99</td></tr><tr><td>35579</td><td>Soisalon-Soininen</td><td>Psychology</td><td>62579.61</td></tr><tr><td>31955</td><td>Moreira</td><td>Accounting</td><td>71351.42</td></tr><tr><td>37687</td><td>Arias</td><td>Statistics</td><td>104563.38</td></tr><tr><td>6569</td><td>Mingoz</td><td>Finance</td><td>105311.38</td></tr><tr><td>16807</td><td>Yazdi</td><td>Athletics</td><td>98333.65</td></tr><tr><td>14365</td><td>Lembr</td><td>Accounting</td><td>32241.56</td></tr><tr><td>90643</td><td>Choll</td><td>Statistics</td><td>57807.09</td></tr><tr><td>81991</td><td>Valtchev</td><td>Biology</td><td>77036.18</td></tr><tr><td>95030</td><td>Arinb</td><td>Statistics</td><td>54805.11</td></tr><tr><td>15347</td><td>Bawa</td><td>Athletics</td><td>72140.88</td></tr><tr><td>74426</td><td>Kenje</td><td>Marketing</td><td>106554.73</td></tr><tr><td>42782</td><td>Vicentino</td><td>Elec. Eng.</td><td>34272.67</td></tr><tr><td>58558</td><td>Dusserre</td><td>Marketing</td><td>66143.25</td></tr><tr><td>63287</td><td>Jaekel</td><td>Athletics</td><td>103146.87</td></tr><tr><td>59795</td><td>Desyl</td><td>Languages</td><td>48803.38</td></tr><tr><td>22591</td><td>DAgostino</td><td>Psychology</td><td>59706.49</td></tr><tr><td>48570</td><td>Sarkar</td><td>Pol. Sci.</td><td>87549.8</td></tr><tr><td>79081</td><td>Ullman </td><td>Accounting</td><td>47307.1</td></tr><tr><td>52647</td><td>Bancilhon</td><td>Pol. Sci.</td><td>87958.01</td></tr><tr><td>25946</td><td>Liley</td><td>Languages</td><td>90891.69</td></tr><tr><td>36897</td><td>Morris</td><td>Marketing</td><td>43770.36</td></tr><tr><td>72553</td><td>Yin</td><td>English</td><td>46397.59</td></tr><tr><td>3199</td><td>Gustafsson</td><td>Elec. Eng.</td><td>82534.37</td></tr><tr><td>34175</td><td>Bondi</td><td>Comp. Sci.</td><td>115469.11</td></tr><tr><td>48507</td><td>Lent</td><td>Mech. Eng.</td><td>107978.47</td></tr><tr><td>65931</td><td>Pimenta</td><td>Cybernetics</td><td>79866.95</td></tr><tr><td>3335</td><td>Bourrier</td><td>Comp. Sci.</td><td>80797.83</td></tr><tr><td>64871</td><td>Gutierrez</td><td>Statistics</td><td>45310.53</td></tr><tr><td>95709</td><td>Sakurai</td><td>English</td><td>118143.98</td></tr><tr><td>43779</td><td>Romero</td><td>Astronomy</td><td>79070.08</td></tr><tr><td>77346</td><td>Mahmoud</td><td>Geology</td><td>99382.59</td></tr><tr><td>28097</td><td>Kean</td><td>English</td><td>35023.18</td></tr><tr><td>90376</td><td>Bietzk</td><td>Cybernetics</td><td>117836.5</td></tr><tr><td>28400</td><td>Atanassov</td><td>Statistics</td><td>84982.92</td></tr><tr><td>41930</td><td>Tung</td><td>Athletics</td><td>50482.03</td></tr><tr><td>19368</td><td>Wieland</td><td>Pol. Sci.</td><td>124651.41</td></tr><tr><td>99052</td><td>Dale</td><td>Cybernetics</td><td>93348.83</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Astronomy', 'y_data': 79070.08}, {'x_data': 'Comp. Sci.', 'y_data': 80797.83}, {'x_data': 'Cybernetics', 'y_data': 79866.95}, {'x_data': 'Finance', 'y_data': 105311.38}, {'x_data': 'Geology', 'y_data': 99382.59}, {'x_data': 'Marketing', 'y_data': 43770.36}, {'x_data': 'Mech. Eng.', 'y_data': 51647.57}, {'x_data': 'Physics', 'y_data': 108011.81}, {'x_data': 'Pol. Sci.', 'y_data': 87549.8}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'dept_name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'min(salary)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

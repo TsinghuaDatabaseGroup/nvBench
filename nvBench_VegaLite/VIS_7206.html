@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_7206</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_7205.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_7207.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>7206</td><td><h4>NL Queries: </h4><ol><li><p>Visualize a bar chart for how films are produced by each studio?, I want to display in descending by the Y.</p></li><li><p>List the studios of each film and the number of films produced by that studio by a bar chart, I want to display in descending by the Y.</p></li><li><p>How films are produced by each studio Show bar chart, display y axis in descending order please.</p></li><li><p>List the studios of each film and the number of films produced by that studio Show bar chart, and show the total number in desc order.</p></li><li><p>Show me the total number by studio in a histogram, and rank by the Y in descending please.</p></li><li><p>A bar chart about how films are produced by each studio?, display y axis in descending order please.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Studio , COUNT(*) FROM film GROUP BY Studio ORDER BY COUNT(*) DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1399@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>film_rank</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: film_rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: film</h4><table><tr><th>Film_ID</th><th>Title</th><th>Studio</th><th>Director</th><th>Gross_in_dollar</th></tr><tr><td>1</td><td>ET the Extra-Terrestrial</td><td>Universal</td><td>Steven Spielberg</td><td>435110554</td></tr><tr><td>2</td><td>Tootsie</td><td>Columbia</td><td>Sydney Pollack</td><td>177200000</td></tr><tr><td>3</td><td>An Officer and a Gentleman</td><td>Paramount / Lorimar</td><td>Taylor Hackford</td><td>129795554</td></tr><tr><td>4</td><td>Rocky III</td><td>United Artists</td><td>Sylvester Stallone</td><td>125049125</td></tr><tr><td>5</td><td>Porky's</td><td>20th Century Fox</td><td>Bob Clark</td><td>109492484</td></tr><tr><td>6</td><td>Star Trek II: The Wrath of Khan</td><td>Paramount</td><td>Nicholas Meyer</td><td>79912963</td></tr><tr><td>7</td><td>48 Hrs</td><td>Paramount</td><td>Walter Hill</td><td>78868508</td></tr><tr><td>8</td><td>Poltergeist</td><td>MGM</td><td>Tobe Hooper</td><td>76606280</td></tr><tr><td>9</td><td>The Best Little Whorehouse in Texas</td><td>Universal / RKO</td><td>Colin Higgins</td><td>69701637</td></tr><tr><td>10</td><td>Annie</td><td>Columbia / Rastar</td><td>John Huston</td><td>57059003</td></tr><tr><td>11</td><td>The Verdict</td><td>20th Century Fox</td><td>Sidney Lumet</td><td>53977250</td></tr><tr><td>12</td><td>Gandhi</td><td>Columbia</td><td>Richard Attenborough</td><td>52767889</td></tr><tr><td>13</td><td>First Blood</td><td>Orion / Carolco</td><td>Ted Kotcheff</td><td>47212904</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Paramount', 'y_data': 2}, {'x_data': 'Columbia', 'y_data': 2}, {'x_data': '20th Century Fox', 'y_data': 2}, {'x_data': 'Universal / RKO', 'y_data': 1}, {'x_data': 'Universal', 'y_data': 1}, {'x_data': 'United Artists', 'y_data': 1}, {'x_data': 'Paramount / Lorimar', 'y_data': 1}, {'x_data': 'Orion / Carolco', 'y_data': 1}, {'x_data': 'MGM', 'y_data': 1}, {'x_data': 'Columbia / Rastar', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Studio', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(*)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

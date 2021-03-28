@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_46</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_45.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_47.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>46</td><td><h4>NL Queries: </h4><ol><li><p>Show me the proportion on what are the ids and names of the battles that led to more than 10 people killed in total.</p></li><li><p>Pie chart. what are the ids and names of the battles that led to more than 10 people killed in total.</p></li><li><p>What are the ids and names of the battles that led to more than 10 people killed in total. </p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT T1.name , T1.id FROM battle AS T1 JOIN ship AS T2 ON T1.id = T2.lost_in_battle JOIN death AS T3 ON T2.id = T3.caused_by_ship_id</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>178</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>battle_death</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: battle_death&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: battle</h4><table><tr><th>id</th><th>name</th><th>date</th><th>bulgarian_commander</th><th>latin_commander</th><th>result</th></tr><tr><td>1</td><td>Battle of Adrianople</td><td>14 April 1205</td><td>Kaloyan</td><td>Baldwin I</td><td>Bulgarian victory</td></tr><tr><td>2</td><td>Battle of Serres</td><td>June 1205</td><td>Kaloyan</td><td>Unknown</td><td>Bulgarian victory</td></tr><tr><td>3</td><td>Battle of Rusion</td><td>31 January 1206</td><td>Kaloyan</td><td>Thierry de Termond</td><td>Bulgarian victory</td></tr><tr><td>4</td><td>Battle of Rodosto</td><td>February 1206</td><td>Kaloyan</td><td>Unknown</td><td>Bulgarian victory</td></tr><tr><td>5</td><td>Battle of Messinopolis</td><td>4 September 1207</td><td>Unknown</td><td>Boniface of Montferrat</td><td>Bulgarian victory</td></tr><tr><td>6</td><td>Battle of Boruy</td><td>June 1205</td><td>Boril</td><td>Henry I</td><td>Bulgarian victory</td></tr><tr><td>7</td><td>Battle of Philippopolis</td><td>31 June 1208</td><td>Boril</td><td>Henry I</td><td>Latin victory</td></tr><tr><td>8</td><td>Siege of Constantinople</td><td>1235</td><td>Ivan Asen II</td><td>John of Brienne</td><td>Two Year Truce</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Battle of Messinopolis', 'y_data': 5}, {'x_data': 'Battle of Boruy', 'y_data': 6}, {'x_data': 'Siege of Constantinople', 'y_data': 8}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'id'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'name'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

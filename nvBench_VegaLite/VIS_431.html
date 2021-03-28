@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_431</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_430.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_432.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>431</td><td><h4>NL Queries: </h4><ol><li><p>A pie chart for what are the number of the venues of all the matches? Sort them in the descending order of match date.</p></li><li><p>What are the number of the venues of all the matches? Sort them in the descending order of match date.</p></li><li><p>What are the venues of all the matches? Sort them in the descending order of match date, and count them by a pie chart</p></li><li><p>List venues of all matches in the order of their dates starting from the most recent one, and count them by a pie chart</p></li></ol><h4>VIS Query: </h4><p>Visualize PIE SELECT Venue , COUNT(Venue) FROM MATCH GROUP BY Venue ORDER BY date DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>480</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Pie</p><p><b>DB: </b>city_record</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: city_record&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: MATCH</h4><table><tr><th>Match_ID</th><th>Date</th><th>Venue</th><th>Score</th><th>Result</th><th>Competition</th></tr><tr><td>1</td><td>18 February 1992</td><td>Estadio CuscatlÃ¡n , San Salvador , El Salvador</td><td>1-0</td><td>2-0</td><td>Friendly match</td></tr><tr><td>2</td><td>19 July 1992</td><td>Estadio Rigoberto LÃ³pez , Managua , Nicaragua</td><td>3-0</td><td>5-0</td><td>1994 FIFA World Cup qualification</td></tr><tr><td>3</td><td>23 July 1992</td><td>Estadio CuscatlÃ¡n , San Salvador , El Salvador</td><td>1-0</td><td>5-1</td><td>1994 FIFA World Cup qualification</td></tr><tr><td>4</td><td>23 July 1992</td><td>Estadio CuscatlÃ¡n , San Salvador , El Salvador</td><td>3-0</td><td>5-1</td><td>1994 FIFA World Cup qualification</td></tr><tr><td>5</td><td>4 April 1993</td><td>Estadio CuscatlÃ¡n , San Salvador , El Salvador</td><td>1â0</td><td>2â1</td><td>1994 FIFA World Cup qualification</td></tr><tr><td>6</td><td>23 July 2000</td><td>Estadio CuscatlÃ¡n , San Salvador , El Salvador</td><td>2â1</td><td>7â1</td><td>2002 FIFA World Cup qualification</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Estadio Cuscatlán , San Salvador , El Salvador', 'y_data': 5}, {'x_data': 'Estadio Rigoberto López , Managua , Nicaragua', 'y_data': 1}]}, 'mark': 'arc', 'encoding': {'theta': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Venue)'}, 'color': {'field': 'x_data', 'type': 'nominal', 'title': 'Venue'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

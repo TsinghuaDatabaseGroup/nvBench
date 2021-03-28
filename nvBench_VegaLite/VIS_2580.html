@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2580</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2579.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2581.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2580</td><td><h4>NL Queries: </h4><ol><li><p>Find the status of orders which belong to the customer named "Jeramie", group by order status, and count them. Show the result with a bar chart.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT T2.order_status , COUNT(T2.order_status) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id WHERE T1.customer_name = "Jeramie" GROUP BY order_status</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2979</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>tracking_orders</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: tracking_orders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: customers</h4><table><tr><th>customer_id</th><th>customer_name</th><th>customer_details</th></tr><tr><td>1</td><td>Savannah</td><td>rerum</td></tr><tr><td>2</td><td>George</td><td>est</td></tr><tr><td>3</td><td>Alberto</td><td>deleniti</td></tr><tr><td>4</td><td>Leilani</td><td>sequi</td></tr><tr><td>5</td><td>Hadley</td><td>corrupti</td></tr><tr><td>6</td><td>Chaz</td><td>nostrum</td></tr><tr><td>7</td><td>Violet</td><td>consectetur</td></tr><tr><td>8</td><td>Parker</td><td>rerum</td></tr><tr><td>9</td><td>Devan</td><td>doloribus</td></tr><tr><td>10</td><td>Beulah</td><td>commodi</td></tr><tr><td>11</td><td>Hershel</td><td>vel</td></tr><tr><td>12</td><td>Conrad</td><td>eligendi</td></tr><tr><td>13</td><td>Samson</td><td>dicta</td></tr><tr><td>14</td><td>Mabelle</td><td>quidem</td></tr><tr><td>15</td><td>Jeramie</td><td>officia</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'On Road', 'y_data': 1}, {'x_data': 'Packing', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'order_status', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(order_status)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

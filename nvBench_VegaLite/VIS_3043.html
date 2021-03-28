@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3043</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3042.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3044.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3043</td><td><h4>NL Queries: </h4><ol><li><p>List all singer names in concerts in year 2014, and count them by a bar chart, could you display by the names from low to high?</p></li><li><p>What are the names of the singers who performed in a concert in 2014, and count them by a bar chart, display X-axis in ascending order.</p></li><li><p>What are the number of the names of the singers who performed in a concert in 2014?, display X-axis in ascending order.</p></li><li><p>A bar chart for what are the number of the names of the singers who performed in a concert in 2014?, and display bar from low to high order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Name , COUNT(Name) FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id = T2.singer_id JOIN concert AS T3 ON T1.concert_id = T3.concert_id WHERE T3.year = 2014 GROUP BY Name ORDER BY Name ASC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>692@x_name@ASC</p><p><b>Hardness: </b>Extra Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>concert_singer</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: concert_singer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: singer_in_concert</h4><table><tr><th>concert_ID</th><th>Singer_ID</th></tr><tr><td>1</td><td>2</td></tr><tr><td>1</td><td>3</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>3</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>5</td></tr><tr><td>4</td><td>4</td></tr><tr><td>5</td><td>6</td></tr><tr><td>5</td><td>3</td></tr><tr><td>6</td><td>2</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'John Nizinik', 'y_data': 1}, {'x_data': 'Justin Brown', 'y_data': 2}, {'x_data': 'Rose White', 'y_data': 1}, {'x_data': 'Timbaland', 'y_data': 1}, {'x_data': 'Tribal King', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Name', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

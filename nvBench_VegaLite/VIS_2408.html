@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_2408</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_2407.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_2409.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>2408</td><td><h4>NL Queries: </h4><ol><li><p>How old is each dog that was abandoned? Show in a bar chart, order by the y-axis in descending.</p></li><li><p>List the dog name and age of the dogs who have been abandoned in a bar chart, rank total number in descending order.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT name , age FROM Dogs WHERE abandoned_yn = 1 ORDER BY age DESC</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>1167@y_name@DESC</p><p><b>Hardness: </b>Medium</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>dog_kennels</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: dog_kennels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: Dogs</h4><table><tr><th>dog_id</th><th>owner_id</th><th>abandoned_yn</th><th>breed_code</th><th>size_code</th><th>name</th><th>age</th><th>date_of_birth</th><th>gender</th><th>weight</th><th>date_arrived</th><th>date_adopted</th><th>date_departed</th></tr><tr><td>1</td><td>3</td><td>1</td><td>ESK</td><td>LGE</td><td>Kacey</td><td>6</td><td>2012-01-27 05:11:53</td><td>1</td><td>7.57</td><td>2017-09-08 20:10:13</td><td>2018-03-06 16:32:11</td><td>2018-03-25 06:58:44</td></tr><tr><td>2</td><td>11</td><td>0</td><td>BUL</td><td>LGE</td><td>Hipolito</td><td>9</td><td>2013-02-13 05:15:21</td><td>0</td><td>1.72</td><td>2017-12-22 05:02:02</td><td>2018-03-25 08:12:51</td><td>2018-03-25 02:11:32</td></tr><tr><td>3</td><td>1</td><td>0</td><td>BUL</td><td>MED</td><td>Mavis</td><td>8</td><td>2008-05-19 15:54:49</td><td>1</td><td>8.04</td><td>2017-06-25 10:14:05</td><td>2018-03-07 21:45:43</td><td>2018-03-25 10:25:46</td></tr><tr><td>4</td><td>14</td><td>0</td><td>ESK</td><td>LGE</td><td>Houston</td><td>5</td><td>2008-10-09 22:38:53</td><td>0</td><td>2.18</td><td>2017-04-20 00:58:55</td><td>2018-03-18 15:12:50</td><td>2018-03-24 19:12:22</td></tr><tr><td>5</td><td>7</td><td>0</td><td>BUL</td><td>MED</td><td>Jeffrey</td><td>4</td><td>2018-03-17 04:05:12</td><td>0</td><td>1.39</td><td>2017-10-25 00:55:34</td><td>2018-02-27 11:54:35</td><td>2018-03-25 04:50:22</td></tr><tr><td>6</td><td>5</td><td>0</td><td>HUS</td><td>MED</td><td>Merritt</td><td>9</td><td>2015-02-26 21:31:22</td><td>1</td><td>9.8</td><td>2017-04-15 09:25:31</td><td>2018-03-08 15:03:00</td><td>2018-03-25 13:07:04</td></tr><tr><td>7</td><td>3</td><td>0</td><td>BUL</td><td>MED</td><td>Narciso</td><td>2</td><td>2017-09-19 05:39:09</td><td>1</td><td>9.48</td><td>2017-05-06 08:03:52</td><td>2018-02-27 00:27:57</td><td>2018-03-25 06:29:10</td></tr><tr><td>8</td><td>14</td><td>0</td><td>ESK</td><td>SML</td><td>George</td><td>2</td><td>2013-02-20 14:50:56</td><td>0</td><td>8.95</td><td>2017-10-16 20:06:21</td><td>2018-03-23 16:02:04</td><td>2018-03-25 02:47:40</td></tr><tr><td>9</td><td>2</td><td>0</td><td>BUL</td><td>MED</td><td>Bessie</td><td>4</td><td>2012-05-31 08:01:36</td><td>1</td><td>3.52</td><td>2018-01-17 11:44:16</td><td>2018-02-25 23:45:30</td><td>2018-03-25 06:46:07</td></tr><tr><td>10</td><td>6</td><td>0</td><td>HUS</td><td>MED</td><td>Troy</td><td>9</td><td>2012-07-11 17:15:10</td><td>0</td><td>8.96</td><td>2017-12-29 06:08:26</td><td>2018-03-18 07:47:40</td><td>2018-03-25 04:42:14</td></tr><tr><td>11</td><td>13</td><td>0</td><td>BUL</td><td>LGE</td><td>Betty</td><td>3</td><td>2012-10-14 14:44:37</td><td>0</td><td>8.16</td><td>2017-07-25 15:19:07</td><td>2018-03-14 08:05:18</td><td>2018-03-25 15:05:16</td></tr><tr><td>12</td><td>12</td><td>0</td><td>HUS</td><td>MED</td><td>Holden</td><td>8</td><td>2009-04-12 06:02:48</td><td>0</td><td>6.92</td><td>2017-10-24 04:45:13</td><td>2018-03-05 06:05:23</td><td>2018-03-25 14:15:41</td></tr><tr><td>13</td><td>8</td><td>0</td><td>HUS</td><td>SML</td><td>Jesus</td><td>2</td><td>2012-05-03 21:42:25</td><td>0</td><td>5.16</td><td>2018-01-02 03:15:29</td><td>2018-03-21 10:41:18</td><td>2018-03-25 05:07:47</td></tr><tr><td>14</td><td>14</td><td>1</td><td>ESK</td><td>MED</td><td>Lyric</td><td>4</td><td>2010-11-11 07:11:53</td><td>0</td><td>4.36</td><td>2017-06-18 19:45:38</td><td>2018-03-13 12:47:15</td><td>2018-03-24 23:48:59</td></tr><tr><td>15</td><td>10</td><td>1</td><td>BUL</td><td>MED</td><td>Evangeline</td><td>1</td><td>2008-05-30 12:51:34</td><td>1</td><td>4.01</td><td>2017-12-29 23:24:13</td><td>2018-03-10 15:06:43</td><td>2018-03-24 19:36:59</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Kacey', 'y_data': 6}, {'x_data': 'Lyric', 'y_data': 4}, {'x_data': 'Evangeline', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'age'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

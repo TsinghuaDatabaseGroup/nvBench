@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_194</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_193.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_195.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>194</td><td><h4>NL Queries: </h4><ol><li><p>List the height and weight of people in descending order of height in a scatter chart</p></li><li><p>List the height and weight of people in descending order of height. Show scatter chart.</p></li><li><p>Plot a scatter chart, height by weight.</p></li></ol><h4>VIS Query: </h4><p>Visualize SCATTER SELECT Height , Weight FROM people</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>351</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Scatter</p><p><b>DB: </b>body_builder</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: body_builder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: people</h4><table><tr><th>People_ID</th><th>Name</th><th>Height</th><th>Weight</th><th>Birth_Date</th><th>Birth_Place</th></tr><tr><td>1</td><td>Jack Campbell</td><td>182.0</td><td>80.0</td><td>January 1, 1992</td><td>Port Huron, Michigan</td></tr><tr><td>2</td><td>Ty Conklin</td><td>192.0</td><td>90.0</td><td>March 30, 1976</td><td>Anchorage, Alaska</td></tr><tr><td>3</td><td>Al Montoya</td><td>195.0</td><td>100.0</td><td>February 13, 1985</td><td>Glenview, Illinois</td></tr><tr><td>4</td><td>Mark Fayne</td><td>215.0</td><td>102.0</td><td>May 5, 1987</td><td>Nashua, New Hampshire</td></tr><tr><td>5</td><td>Cam Fowler</td><td>196.0</td><td>89.0</td><td>December 5, 1991</td><td>Farmington Hills, Michigan</td></tr><tr><td>6</td><td>Jake Gardiner</td><td>205.0</td><td>92.0</td><td>July 4, 1990</td><td>Minnetonka, Minnesota</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 215, 'y_data': 102}, {'x_data': 205, 'y_data': 92}, {'x_data': 196, 'y_data': 89}, {'x_data': 195, 'y_data': 100}, {'x_data': 192, 'y_data': 90}, {'x_data': 182, 'y_data': 80}]}, 'mark': 'point', 'encoding': {'x': {'field': 'x_data', 'type': 'quantitative', 'title': 'Height'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'Weight'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

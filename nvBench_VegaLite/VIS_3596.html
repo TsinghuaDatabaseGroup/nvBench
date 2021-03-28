@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3596</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3595.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3597.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3596</td><td><h4>NL Queries: </h4><ol><li><p>Give me a bar chart showing the total number of each minister.</p></li><li><p>Plot how many minister by grouped by minister as a bar graph</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Minister , COUNT(Minister) FROM party GROUP BY Minister</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2519</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>party_people</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: party_people&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: party</h4><table><tr><th>Party_ID</th><th>Minister</th><th>Took_office</th><th>Left_office</th><th>Region_ID</th><th>Party_name</th></tr><tr><td>1</td><td>Dr. Kwame Nkrumah (MP)</td><td>1957</td><td>1958</td><td>1</td><td>Convention Peoples Party</td></tr><tr><td>2</td><td>Kojo Botsio (MP)</td><td>1958</td><td>1959</td><td>2</td><td>Progress Party</td></tr><tr><td>3</td><td>Ebenezer Ako-Adjei (MP)</td><td>1959</td><td>1960</td><td>3</td><td>3</td></tr><tr><td>4</td><td>Imoru Egala (MP)</td><td>1960</td><td>1961</td><td>4</td><td>Convention Union Party</td></tr><tr><td>5</td><td>Ebenezer Ako-Adjei (MP)</td><td>1961</td><td>1962</td><td>5</td><td>Sinefine Party</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Dr. Kwame Nkrumah (MP)', 'y_data': 1}, {'x_data': 'Ebenezer Ako-Adjei (MP)', 'y_data': 2}, {'x_data': 'Imoru Egala (MP)', 'y_data': 1}, {'x_data': 'Kojo Botsio (MP)', 'y_data': 1}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Minister', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Minister)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

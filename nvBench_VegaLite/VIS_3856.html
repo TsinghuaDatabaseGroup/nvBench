@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_3856</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_3855.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_3857.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>3856</td><td><h4>NL Queries: </h4><ol><li><p>Show the total number of the last year of parties with the theme "Spring" or "Teqnology" with a bar chart, bin the last year into weekday interval, and count the first year.</p></li><li><p>What are the last year of the parties whose theme is "Spring" or "Teqnology"? Bin the last year into weekday interval and count them.</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT Last_year , COUNT(Last_year) FROM party WHERE Party_Theme = "Spring" OR Party_Theme = "Teqnology" BIN Last_year BY WEEKDAY</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2499</p><p><b>Hardness: </b>Hard</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>party_host</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: party_host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: party</h4><table><tr><th>Party_ID</th><th>Party_Theme</th><th>Location</th><th>First_year</th><th>Last_year</th><th>Number_of_hosts</th></tr><tr><td>1</td><td>Spring</td><td>Hemkade 48 Zaandam</td><td>2000</td><td>2001</td><td>5</td></tr><tr><td>2</td><td>Club Q-BASE</td><td>Hemkade 48 Zaandam</td><td>2002</td><td>2002</td><td>23</td></tr><tr><td>3</td><td>Hardcore Resurrection</td><td>Various locations</td><td>2000</td><td>2003</td><td>4</td></tr><tr><td>4</td><td>Teqnology</td><td>Heineken Music Hall Amsterdam</td><td>2002</td><td>2004</td><td>6</td></tr><tr><td>5</td><td>Qlubtempo</td><td>Hemkade 48 Zaandam, Heineken Music Hall Amsterdam</td><td>2001</td><td>2007</td><td>31</td></tr><tr><td>6</td><td>QrimeTime</td><td>Heineken Music Hall Amsterdam</td><td>2004</td><td>2007</td><td>4</td></tr><tr><td>7</td><td>In Qontrol</td><td>RAI Amsterdam</td><td>2004</td><td>2010</td><td>7</td></tr><tr><td>8</td><td>Houseqlassics</td><td>Various locations</td><td>1999</td><td>2010</td><td>18</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': 'Mon', 'y_data': 1}, {'x_data': 'Tue', 'y_data': 0}, {'x_data': 'Wed', 'y_data': 0}, {'x_data': 'Thur', 'y_data': 1}, {'x_data': 'Fri', 'y_data': 0}, {'x_data': 'Sat', 'y_data': 0}, {'x_data': 'Sun', 'y_data': 0}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'Last_year', 'sort': 'ascending'}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(Last_year)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>

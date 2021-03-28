@@ -1,0 +1,72 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head><title>VIS_5267</title><meta charset="utf-8" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+        <style media="screen">
+          /* Add space between Vega-Embed links  */
+          .vega-actions a {
+            margin-right: 5px;
+          }
+
+          table {
+            margin-left: 2.5%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+        </style>
+      </head>
+        <p style="margin-left:40%"><a class="button" href="./VIS_5266.html" target="top">Prev</a><a style="margin-left:5%" class="button" href="./VIS_5268.html" target="top">Next</a></p>
+        <body>
+        <table style="width:95%">
+          <thead>
+            <tr>
+              <th> # </td>
+              <th style="width:45%">Queries</td>
+              <th style="width:33%">Visualization</td>
+              <th style="width:17%">Properties</td>
+            </th>
+          </thead>
+          <tbody>
+    <tr><td>5267</td><td><h4>NL Queries: </h4><ol><li><p>List the name of all playlist, and count them by a bar chart</p></li><li><p>What are the number of the names of all the playlists?</p></li><li><p>What are the names of all the playlists, and count them by a bar chart</p></li><li><p>A bar chart for listing the number of the name of all playlist.</p></li><li><p>A bar chart for what are the number of the names of all the playlists?</p></li><li><p>List the number of the name of all playlist.</p></li><li><p>Bar chart x axis name y axis how many name</p></li></ol><h4>VIS Query: </h4><p>Visualize BAR SELECT name , COUNT(name) FROM playlists GROUP BY name</p></td><td><div id="vis1"></div></td><td><p><b>(NL, VIS) ID: </b>2855</p><p><b>Hardness: </b>Easy</p><p><b>Chart: </b>Bar</p><p><b>DB: </b>store_1</p></td></tr></tbody></table><h4 style='margin-left:5%'>Database: store_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The main table: playlists</h4><table><tr><th>id</th><th>name</th></tr><tr><td>1</td><td>Music</td></tr><tr><td>2</td><td>Movies</td></tr><tr><td>3</td><td>TV Shows</td></tr><tr><td>4</td><td>Audiobooks</td></tr><tr><td>5</td><td>90âs Music</td></tr><tr><td>6</td><td>Audiobooks</td></tr><tr><td>7</td><td>Movies</td></tr><tr><td>8</td><td>Music</td></tr><tr><td>9</td><td>Music Videos</td></tr><tr><td>10</td><td>TV Shows</td></tr><tr><td>11</td><td>Brazilian Music</td></tr><tr><td>12</td><td>Classical</td></tr><tr><td>13</td><td>Classical 101 - Deep Cuts</td></tr><tr><td>14</td><td>Classical 101 - Next Steps</td></tr><tr><td>15</td><td>Classical 101 - The Basics</td></tr><tr><td>16</td><td>Grunge</td></tr><tr><td>17</td><td>Heavy Metal Classic</td></tr><tr><td>18</td><td>On-The-Go 1</td></tr></table><script>var vlSpec1  = {'data': {'values': [{'x_data': '90’s Music', 'y_data': 1}, {'x_data': 'Audiobooks', 'y_data': 2}, {'x_data': 'Brazilian Music', 'y_data': 1}, {'x_data': 'Classical', 'y_data': 1}, {'x_data': 'Classical 101 - Deep Cuts', 'y_data': 1}, {'x_data': 'Classical 101 - Next Steps', 'y_data': 1}, {'x_data': 'Classical 101 - The Basics', 'y_data': 1}, {'x_data': 'Grunge', 'y_data': 1}, {'x_data': 'Heavy Metal Classic', 'y_data': 1}, {'x_data': 'Movies', 'y_data': 2}, {'x_data': 'Music', 'y_data': 2}, {'x_data': 'Music Videos', 'y_data': 1}, {'x_data': 'On-The-Go 1', 'y_data': 1}, {'x_data': 'TV Shows', 'y_data': 2}]}, 'mark': 'bar', 'encoding': {'x': {'field': 'x_data', 'type': 'nominal', 'title': 'name', 'sort': {'op': 'sum', 'field': 'y_data', 'order': 'descending'}}, 'y': {'field': 'y_data', 'type': 'quantitative', 'title': 'COUNT(name)'}}};
+
+        
+          // Embed the visualization in the container with id `vis`
+          vegaEmbed('#vis1', vlSpec1);
+          vegaEmbed('#vis2', vlSpec2);
+          vegaEmbed('#vis3', vlSpec3);
+          vegaEmbed('#vis4', vlSpec4);
+          vegaEmbed('#vis5', vlSpec5);
+          vegaEmbed('#vis6', vlSpec6);
+          vegaEmbed('#vis7', vlSpec7);
+          vegaEmbed('#vis8', vlSpec8);
+          vegaEmbed('#vis9', vlSpec9);
+          vegaEmbed('#vis10', vlSpec10);
+        </script>
+        <style>
+            .button {
+                display:inline-block;
+                width: 80px;
+                height: 15px;
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 15px;
+                
+            }
+        </style>
+        </body></html>
