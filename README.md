@@ -89,7 +89,7 @@ When you use the nvBench dataset and the corresponding baseline models, we would
 
 Publications
 ===========================
-For more techniq
+For more details, please refer to our research paper.
 - Yuyu Luo, Nan Tang, Guoliang Li, et al. [Synthesizing Natural Language to Visualization (NL2VIS) Benchmarks from NL2SQL Benchmarks](https://github.com/TsinghuaDatabaseGroup/nvBench). **SIGMOD 2021**
 
 Contributors
