@@ -5,11 +5,11 @@ This repository contains the corpus of NL2VIS, with JSON format and Vega-Lite fo
 
 ## Introduction to nvBench
 
-- **nvBench.json** stores the JSON format of (NL, VIS) pairs in the NVBench benchmark.
+- **nvBench.json** stores the JSON format of (NL, VIS) pairs in the nvBench benchmark.
 
-- **nvBench_VegaLite** contains all (NL, VIS) pairs in the NVBench benchmark, and renders the VIS using the [Vega-Lite](https://vega.github.io/vega-lite/) visualization library.
+- **nvBench_VegaLite** contains all (NL, VIS) pairs in the nvBench benchmark, and renders the VIS using the [Vega-Lite](https://vega.github.io/vega-lite/) visualization library.
 
-- **database** contains all DB used by the NVBench benchmark.
+- **database** contains all databases used by the NVBench benchmark.
 
 ### nvBench.json
 
@@ -68,6 +68,7 @@ Below is an example:
 ```
 
 Citation
+===========================
 When you use the nvBench dataset and the corresponding baseline models, we would appreciate it if you cite the following:
 
 ```
