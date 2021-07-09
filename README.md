@@ -100,3 +100,9 @@ Contributors
 |2|[Nan Tang](http://da.qcri.org/ntang/index.html)|Senior Scientist, Qatar Computing Research Institute|ntang@hbku.edu.qa
 |3|[Yuyu Luo](https://luoyuyu.vip)| PhD Student, Tsinghua University| luoyy18@mails.tsinghua.edu.cn
 ##### If you have any questions or feedbacks about this project, please feel free to contact Yuyu Luo (luoyy18@mails.tsinghua.edu.cn).
+
+
+License
+===========================
+nvBench is available under the
+[MIT license](https://opensource.org/licenses/MIT).
