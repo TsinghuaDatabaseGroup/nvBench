@@ -87,9 +87,9 @@ When you use the nvBench dataset and the corresponding baseline models, we would
 }
 ```
 
-Baseline NL2VIS Model
+NL2VIS Baselines
 ===========================
-Please adapt the Seq2Seq Baseline at the Spider [Repo](https://github.com/taoyds/spider/tree/master/baselines/seq2seq_attention_copy). Replace the data preprocessing part and fed the (NL, VIS) pairs in the nvBench for training and testing.
+Please adapt the Seq2Seq Baselines at the [Spider repository](https://github.com/taoyds/spider/tree/master/baselines/seq2seq_attention_copy). Replace the data preprocessing part and fed the (NL, VIS) pairs of nvBench for training and testing.
 
 Publications
 ===========================
